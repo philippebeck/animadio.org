@@ -1,4 +1,5 @@
-# [Animadio Official Site](https://animadio.org)
+[![Animadio Logo](img/logo.png)](https://animadio.org)
+# [Animadio Official WebSite](https://animadio.org)
 
 - Grid & Flexbox Layouts
 - CSS Variables Usage
