@@ -7,7 +7,7 @@
 -   Click anywhere on the page to enable & disable any design effect anywhere else
 -   Management of keyframes rules, animations & their options
 -   Complete & simple customization with directly modifiable CSS variables
--   More than 99% of pure CSS ; so all of this without JavaScript, it's a joke ?... No ?!
+-   More than 99% of pure CSS ; so all of that without JavaScript, it's a joke ?... No ?!
 
 ---
 
