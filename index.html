@@ -292,16 +292,64 @@
 
       <p>Installation can be done by 3 ways :</p>
       <ul>
-        <li>
+        <input id="cdn-main" class="block-tn-check" type="checkbox">
+        <li class="block-tn-relay">
           <h4>CDN</h4>
           <p>All of those CDN links take automatically the latest version, so you don't need to care about updates !</p>
 
-          <p>During development, add this tag to your HTML:
+          <!-- CDN Part -->
+          <p>During development, add one of those tags to your HTML :</p>
           <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-blood-base">link</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-lime-base">"stylesheet"</span><span class="color-salmon-base font-italic"> href=</span><span class="color-lime-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/animadio.css"</span><span class="color-silver-base">&gt;</span></pre>
-          </p>
+          <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-blood-base">link</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-lime-base">"stylesheet"</span><span class="color-salmon-base font-italic"> href=</span><span class="color-lime-base">"https://unpkg.com/animadio/dist/animadio.css"</span><span class="color-silver-base">&gt;</span></pre>
 
-          <p>Then in production, add one of those tags :
+          <p>Then in production, add one of those tags :</p>
           <pre class="bg-black-base"><span class="color-silver-base">&lt;</span><span class="color-blood-base">link</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-lime-base">"stylesheet"</span><span class="color-salmon-base font-italic"> href=</span><span class="color-lime-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/min/animadio.min.css"</span><span class="color-silver-base">&gt;</span></pre>
+          <pre class="bg-black-base"><span class="color-silver-base">&lt;</span><span class="color-blood-base">link</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-lime-base">"stylesheet"</span><span class="color-salmon-base font-italic"> href=</span><span class="color-lime-base">"https://unpkg.com/animadio/dist/min/animadio.min.css"</span><span class="color-silver-base">&gt;</span></pre>
+
+          <p>But if you only need a part of Animadio, you can use one of those 3 part files :</p>
+          <ul>
+            <li><span class="font-bold-italic color-red-deco-double-base">animadio-grid</span> who contains only <span class="color-red-base">Global & Grid parts</span></li>
+            <li><span class="font-bold-italic color-green-deco-double-base">animadio-elements</span> who contains only <span class="color-green-base">Global & Elements parts</span></li>
+            <li><span class="font-bold-italic color-blue-deco-double-base">animadio-states</span> who contains only <span class="color-blue-base">Global & States parts</span></li>
+          </ul>
+
+          <!-- Hidden CDN Part -->
+          <label for="cdn-main" class="btn-bg-red-base">Show the Other Links Tags</label>
+
+          <ul class="block-tn-goal hide-tn-base">
+            <li>
+              <h5>To Get Global + Grid Components</h5>
+              <p>For Development :</p>
+              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-blood-base">link</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-lime-base">"stylesheet"</span><span class="color-salmon-base font-italic"> href=</span><span class="color-lime-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/animadio-grid.css"</span><span class="color-silver-base">&gt;</span></pre>
+              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-blood-base">link</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-lime-base">"stylesheet"</span><span class="color-salmon-base font-italic"> href=</span><span class="color-lime-base">"https://unpkg.com/animadio/dist/animadio-grid.css"</span><span class="color-silver-base">&gt;</span></pre>
+
+              <p>For Production :</p>
+              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-blood-base">link</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-lime-base">"stylesheet"</span><span class="color-salmon-base font-italic"> href=</span><span class="color-lime-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/min/animadio-grid.min.css"</span><span class="color-silver-base">&gt;</span></pre>
+              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-blood-base">link</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-lime-base">"stylesheet"</span><span class="color-salmon-base font-italic"> href=</span><span class="color-lime-base">"https://unpkg.com/animadio/dist/min/animadio-grid.min.css"</span><span class="color-silver-base">&gt;</span></pre>
+            </li>
+
+            <li>
+              <h5>To Get Global + Elements Components</h5>
+              <p>For Development :</p>
+              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-blood-base">link</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-lime-base">"stylesheet"</span><span class="color-salmon-base font-italic"> href=</span><span class="color-lime-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/animadio-elements.css"</span><span class="color-silver-base">&gt;</span></pre>
+              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-blood-base">link</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-lime-base">"stylesheet"</span><span class="color-salmon-base font-italic"> href=</span><span class="color-lime-base">"https://unpkg.com/animadio/dist/animadio-elements.css"</span><span class="color-silver-base">&gt;</span></pre>
+
+              <p>For Production :</p>
+              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-blood-base">link</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-lime-base">"stylesheet"</span><span class="color-salmon-base font-italic"> href=</span><span class="color-lime-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/min/animadio-elements.min.css"</span><span class="color-silver-base">&gt;</span></pre>
+              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-blood-base">link</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-lime-base">"stylesheet"</span><span class="color-salmon-base font-italic"> href=</span><span class="color-lime-base">"https://unpkg.com/animadio/dist/min/animadio-elements.min.css"</span><span class="color-silver-base">&gt;</span></pre>
+            </li>
+
+            <li>
+              <h5>To Get Global + States Components</h5>
+              <p>For Development :</p>
+              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-blood-base">link</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-lime-base">"stylesheet"</span><span class="color-salmon-base font-italic"> href=</span><span class="color-lime-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/animadio-states.css"</span><span class="color-silver-base">&gt;</span></pre>
+              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-blood-base">link</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-lime-base">"stylesheet"</span><span class="color-salmon-base font-italic"> href=</span><span class="color-lime-base">"https://unpkg.com/animadio/dist/animadio-states.css"</span><span class="color-silver-base">&gt;</span></pre>
+
+              <p>For Production :</p>
+              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-blood-base">link</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-lime-base">"stylesheet"</span><span class="color-salmon-base font-italic"> href=</span><span class="color-lime-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/min/animadio-states.min.css"</span><span class="color-silver-base">&gt;</span></pre>
+              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-blood-base">link</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-lime-base">"stylesheet"</span><span class="color-salmon-base font-italic"> href=</span><span class="color-lime-base">"https://unpkg.com/animadio/dist/min/animadio-states.min.css"</span><span class="color-silver-base">&gt;</span></pre>
+            </li>
+          </ul>
 
           <figure>
             <a href="https://www.jsdelivr.com/package/npm/animadio">
@@ -314,8 +362,6 @@
               <img src="https://img.shields.io/jsdelivr/npm/hy/animadio.svg?label=jsDelivr+Yearly+Downloads" alt="jsDelivr Yearly Downloads">
             </a>
           </figure>
-
-          <pre class="bg-black-base"><span class="color-silver-base">&lt;</span><span class="color-blood-base">link</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-lime-base">"stylesheet"</span><span class="color-salmon-base font-italic"> href=</span><span class="color-lime-base">"https://unpkg.com/animadio/dist/min/animadio.min.css"</span><span class="color-silver-base">&gt;</span></pre>
         </li>
 
         <li>
