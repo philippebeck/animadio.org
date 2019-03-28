@@ -160,10 +160,66 @@
         <p>FRAMEWORK IN CONSTRUCTION !</p>
         <p>NO STABLE & COMPLETE FOR THE MOMENT !!</p>
       </blockquote>
+  <article class="block-tn-target2">
+    <h2>How to prepare for takeoff ?</h2>
+
+    <header>
+      <p>Immediate takeoff with Animadio, the only free & open-source framework that offers real interactivity to the click & much more :</p>
+      <ul>
+        <li>Eight types of selectors working with hundreds of class combinations</li>
+        <li>Possible concatenation of 99% of classes</li>
+        <li>Flexbox & Grid systems included with common options</li>
+        <li>Click anywhere on the page to enable & disable any design effect anywhere else</li>
+        <li>Management of keyframes rules, animations & their options</li>
+        <li>Complete & simple customization with directly modifiable CSS variables</li>
+        <li>More than 99% of pure CSS ; so all of that without JavaScript, it's a joke ?... No ?!</li>
+      </ul>
     </header>
 
     <section>
-      <h2>Content</h2>
+      <h3>CheckList</h3>
+
+      <ul>
+        <li>
+          <a href="#css-only">CSS Only</a>
+        </li>
+        <li>
+          <a href="#browsers">Browsers</a>
+        </li>
+        <li>
+          <a href="#content">Content</a>
+        </li>
+        <li>
+          <a href="#cdn">CDN</a>
+        </li>
+        <li>
+          <a href="#package-managers">Package Managers</a>
+        </li>
+        <li>
+          <a href="#download">Download</a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="css-only">
+      <h3>CSS Only</h3>
+      <p>Animadio is a CSS framework whose library is composed only of CSS source code: jQuery, or even Javascript, are not included or needed in production ...</p>
+      <p>Grunt is the only JavaScript app used in the framework developement side for recursive tasks (concat, source map, webkit &amp; min) to build the library file (but it can be used to concat CSS elements of your choice)</p>
+      <p>You can simply use the library &amp; if you want or if you need : you can overload the CSS variables.</p>
+      <figure>
+        <a href="https://github.com/animadio/animadio">
+          <img src="https://img.shields.io/github/languages/top/animadio/animadio.svg?label=CSS" alt="GitHub Top Language">
+        </a>
+      </figure>
+    </section>
+
+    <section id="browsers">
+      <h3>Browsers</h3>
+      <p>Animadio uses PostCSS with autoprefixer to provide a maximum of compatibility for all main browsers, including mainly Firefox, Chrome &amp; Opera, secondarily Edge, Safari &amp; Explorer (for some effects, especially all Skew animations)</p>
+    </section>
+
+    <section id="content">
+      <h3>Content</h3>
       <p>The library distribution is available here :<br>
         <code>dist/animadio.css</code><br>
         <code>dist/min/animadio.min.css</code>
@@ -190,202 +246,140 @@
       </figure>
     </section>
 
-    <section>
-      <h2>CSS Only</h2>
-      <p>Animadio is a CSS framework whose library is composed only of CSS source code: jQuery, or even Javascript, are not included or needed in production ...</p>
-      <p>Grunt is the only JavaScript app used in the framework developement side for recursive tasks (concat, source map, webkit &amp; min) to build the library file (but it can be used to concat CSS elements of your choice)</p>
-      <p>You can simply use the library &amp; if you want or if you need : you can overload the CSS variables.</p>
+    <input id="cdn-main" class="block-tn-check" type="checkbox">
+    <section id="cdn" class="block-tn-hub">
+      <h3>CDN</h3>
+      <p>All of those CDN links take automatically the latest version, so you don't need to care about updates !</p>
+
+      <!-- CDN Part -->
+      <p>During development, add one of those tags to your HTML :</p>
+      <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/animadio.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+      <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://unpkg.com/animadio/dist/animadio.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+
+      <p>Then in production, add one of those tags :</p>
+      <pre class="bg-black-base"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/min/animadio.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+      <pre class="bg-black-base"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://unpkg.com/animadio/dist/min/animadio.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+
+      <p>But if you only need a part of Animadio, you can use one of those 3 part files :</p>
+      <ul>
+        <li><span class="font-bold-italic color-red-deco-double-base">animadio-grid</span> who contains only <span class="color-red-base">Global & Grid parts</span></li>
+        <li><span class="font-bold-italic color-green-deco-double-base">animadio-elements</span> who contains only <span class="color-green-base">Global & Elements parts</span></li>
+        <li><span class="font-bold-italic color-blue-deco-double-base">animadio-states</span> who contains only <span class="color-blue-base">Global & States parts</span></li>
+      </ul>
+
+      <!-- Hidden CDN Part -->
+      <label for="cdn-main" class="btn-bg-red-base">Grid, Elements & States CDN Links</label>
+
+      <ul class="block-tn-goal hide-tn-base">
+        <li>
+          <h4><span class="font-bold-italic color-red-deco-double-base">Animadio-Grid</span> -> To Get <span class="color-red-base">Global + Grid</span> Components</h4>
+          <p>For Development :</p>
+          <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/animadio-grid.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+          <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://unpkg.com/animadio/dist/animadio-grid.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+
+          <p>For Production :</p>
+          <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/min/animadio-grid.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+          <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://unpkg.com/animadio/dist/min/animadio-grid.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+        </li>
+
+        <li>
+          <h4><span class="font-bold-italic color-green-deco-double-base">Animadio-Elements</span> -> To Get <span class="color-green-base">Global + Elements</span> Components</h4>
+          <p>For Development :</p>
+          <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/animadio-elements.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+          <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://unpkg.com/animadio/dist/animadio-elements.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+
+          <p>For Production :</p>
+          <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/min/animadio-elements.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+          <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://unpkg.com/animadio/dist/min/animadio-elements.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+        </li>
+
+        <li>
+          <h4><span class="font-bold-italic color-blue-deco-double-base">Animadio-States</span> -> To Get <span class="color-blue-base">Global + States</span> Components</h4>
+          <p>For Development :</p>
+          <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/animadio-states.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+          <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://unpkg.com/animadio/dist/animadio-states.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+
+          <p>For Production :</p>
+          <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/min/animadio-states.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+          <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://unpkg.com/animadio/dist/min/animadio-states.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+        </li>
+      </ul>
+
       <figure>
-        <a href="https://github.com/animadio/animadio">
-          <img src="https://img.shields.io/github/languages/top/animadio/animadio.svg?label=CSS" alt="GitHub Top Language">
+        <a href="https://www.jsdelivr.com/package/npm/animadio">
+          <img src="https://img.shields.io/jsdelivr/npm/hw/animadio.svg?label=jsDelivr+Weekly+Downloads" alt="jsDelivr Weekly Downloads">
+        </a>
+        <a href="https://www.jsdelivr.com/package/npm/animadio">
+          <img src="https://img.shields.io/jsdelivr/npm/hm/animadio.svg?label=jsDelivr+Montly+Downloads" alt="jsDelivr Montly Downloads">
+        </a>
+        <a href="https://www.jsdelivr.com/package/npm/animadio">
+          <img src="https://img.shields.io/jsdelivr/npm/hy/animadio.svg?label=jsDelivr+Yearly+Downloads" alt="jsDelivr Yearly Downloads">
         </a>
       </figure>
     </section>
 
-    <section>
-      <h2>Browsers</h2>
-      <p>Animadio uses PostCSS with autoprefixer to provide a maximum of compatibility for all main browsers, including mainly Firefox, Chrome &amp; Opera, secondarily Edge, Safari &amp; Explorer (for some effects, especially all Skew animations)</p>
-    </section>
-    </section>
+    <section id="package-managers">
+      <h3>Package Managers</h3>
 
-  <article class="block-tn-target2">
-    <h2>How to prepare for takeoff ?</h2>
-
-    <p>Immediate takeoff with Animadio, the only free & open-source framework that offers real interactivity to the click & much more :</p>
-    <ul>
-      <li>Eight types of selectors working with hundreds of class combinations</li>
-      <li>Possible concatenation of 99% of classes</li>
-      <li>Flexbox & Grid systems included with common options</li>
-      <li>Click anywhere on the page to enable & disable any design effect anywhere else</li>
-      <li>Management of keyframes rules, animations & their options</li>
-      <li>Complete & simple customization with directly modifiable CSS variables</li>
-      <li>More than 99% of pure CSS ; so all of that without JavaScript, it's a joke ?... No ?!</li>
-    </ul>
-    <section>
-      <h3>CheckList</h3>
+      <p>For the moment, Animadio is available through NPM, Atmosphere & Packagist ; but it will be available as soon as possible through RubyGems & PyPi !</p>
 
       <ul>
         <li>
-          <a href="#installation">Installation</a>
-        </li>
-        <li>
-          <a href="#basic-usage">Basic Usage</a>
-        </li>
-        <li>
-          <a href="#advanced-usage">Advanced Usage</a>
-        </li>
-      </ul>
-    </section>
-
-    <section id="installation">
-      <h3>Installation</h3>
-
-      <p>Installation can be done by 3 ways :</p>
-      <ul>
-        <input id="cdn-main" class="block-tn-check" type="checkbox">
-        <li class="block-tn-hub">
-          <h4>CDN</h4>
-          <p>All of those CDN links take automatically the latest version, so you don't need to care about updates !</p>
-
-          <!-- CDN Part -->
-          <p>During development, add one of those tags to your HTML :</p>
-          <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/animadio.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
-          <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://unpkg.com/animadio/dist/animadio.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
-
-          <p>Then in production, add one of those tags :</p>
-          <pre class="bg-black-base"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/min/animadio.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
-          <pre class="bg-black-base"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://unpkg.com/animadio/dist/min/animadio.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
-
-          <p>But if you only need a part of Animadio, you can use one of those 3 part files :</p>
-          <ul>
-            <li><span class="font-bold-italic color-red-deco-double-base">animadio-grid</span> who contains only <span class="color-red-base">Global & Grid parts</span></li>
-            <li><span class="font-bold-italic color-green-deco-double-base">animadio-elements</span> who contains only <span class="color-green-base">Global & Elements parts</span></li>
-            <li><span class="font-bold-italic color-blue-deco-double-base">animadio-states</span> who contains only <span class="color-blue-base">Global & States parts</span></li>
-          </ul>
-
-          <!-- Hidden CDN Part -->
-          <label for="cdn-main" class="btn-bg-red-base">Grid, Elements & States CDN Links</label>
-
-          <ul class="block-tn-goal hide-tn-base">
-            <li>
-              <h5><span class="font-bold-italic color-red-deco-double-base">Animadio-Grid</span> -> To Get <span class="color-red-base">Global + Grid</span> Components</h5>
-              <p>For Development :</p>
-              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/animadio-grid.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
-              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://unpkg.com/animadio/dist/animadio-grid.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
-
-              <p>For Production :</p>
-              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/min/animadio-grid.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
-              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://unpkg.com/animadio/dist/min/animadio-grid.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
-            </li>
-
-            <li>
-              <h5><span class="font-bold-italic color-green-deco-double-base">Animadio-Elements</span> -> To Get <span class="color-green-base">Global + Elements</span> Components</h5>
-              <p>For Development :</p>
-              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/animadio-elements.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
-              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://unpkg.com/animadio/dist/animadio-elements.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
-
-              <p>For Production :</p>
-              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/min/animadio-elements.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
-              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://unpkg.com/animadio/dist/min/animadio-elements.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
-            </li>
-
-            <li>
-              <h5><span class="font-bold-italic color-blue-deco-double-base">Animadio-States</span> -> To Get <span class="color-blue-base">Global + States</span> Components</h5>
-              <p>For Development :</p>
-              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/animadio-states.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
-              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://unpkg.com/animadio/dist/animadio-states.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
-
-              <p>For Production :</p>
-              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@latest/dist/min/animadio-states.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
-              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://unpkg.com/animadio/dist/min/animadio-states.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
-            </li>
-          </ul>
-
+          <h4>NPM</h4>
+          <pre class="bg-black-base"><span class="color-jade-base">$ npm i animadio</span></pre>
+          <pre class="bg-black-base"><span class="color-jade-base">$ yarn add animadio</span></pre>
           <figure>
-            <a href="https://www.jsdelivr.com/package/npm/animadio">
-              <img src="https://img.shields.io/jsdelivr/npm/hw/animadio.svg?label=jsDelivr+Weekly+Downloads" alt="jsDelivr Weekly Downloads">
+            <a href="https://www.npmjs.com/package/animadio">
+              <img src="https://img.shields.io/npm/v/animadio.svg?label=NPM" alt="NPM Version">
             </a>
-            <a href="https://www.jsdelivr.com/package/npm/animadio">
-              <img src="https://img.shields.io/jsdelivr/npm/hm/animadio.svg?label=jsDelivr+Montly+Downloads" alt="jsDelivr Montly Downloads">
+            <a href="https://www.npmjs.com/package/animadio">
+              <img src="https://img.shields.io/npm/dw/animadio.svg?label=Weekly+Downloads" alt="NPM Weekly Downloads">
             </a>
-            <a href="https://www.jsdelivr.com/package/npm/animadio">
-              <img src="https://img.shields.io/jsdelivr/npm/hy/animadio.svg?label=jsDelivr+Yearly+Downloads" alt="jsDelivr Yearly Downloads">
+            <a href="https://www.npmjs.com/package/animadio">
+              <img src="https://img.shields.io/npm/dm/animadio.svg?label=Montly+Downloads" alt="NPM Montly Downloads">
+            </a>
+            <a href="https://www.npmjs.com/package/animadio">
+              <img src="https://img.shields.io/npm/dy/animadio.svg?label=Yearly+Downloads" alt="NPM Yearly Downloads">
             </a>
           </figure>
         </li>
 
         <li>
-          <h4>Package Managers</h4>
-
-          <p>For the moment, Animadio is available through NPM, Atmosphere & Packagist ; but it will be available as soon as possible through RubyGems & PyPi !</p>
-
-          <ul>
-            <li>
-              <h5>NPM</h5>
-              <pre class="bg-black-base"><span class="color-jade-base">$ npm i animadio</span></pre>
-              <pre class="bg-black-base"><span class="color-jade-base">$ yarn add animadio</span></pre>
-              <figure>
-                <a href="https://www.npmjs.com/package/animadio">
-                  <img src="https://img.shields.io/npm/v/animadio.svg?label=NPM" alt="NPM Version">
-                </a>
-                <a href="https://www.npmjs.com/package/animadio">
-                  <img src="https://img.shields.io/npm/dw/animadio.svg?label=Weekly+Downloads" alt="NPM Weekly Downloads">
-                </a>
-                <a href="https://www.npmjs.com/package/animadio">
-                  <img src="https://img.shields.io/npm/dm/animadio.svg?label=Montly+Downloads" alt="NPM Montly Downloads">
-                </a>
-                <a href="https://www.npmjs.com/package/animadio">
-                  <img src="https://img.shields.io/npm/dy/animadio.svg?label=Yearly+Downloads" alt="NPM Yearly Downloads">
-                </a>
-              </figure>
-            </li>
-
-            <li>
-              <h5>Atmosphere</h5>
-              <pre class="bg-black-base"><span class="color-jade-base">$ meteor add animadio:animadio</span></pre>
-              <figure>
-                <a href="https://atmospherejs.com/animadio/animadio">
-                  <img src="https://img.shields.io/badge/meteor-animadio%3Aanimadio-blue.svg?label=Atmosphere" alt="Meteor Project">
-                </a>
-              </figure>
-            </li>
-
-            <li>
-              <h5>Packagist</h5>
-              <pre class="bg-black-base"><span class="color-jade-base">$ composer require animadio/animadio</span></pre>
-              <figure>
-                <a href="https://packagist.org/packages/animadio/animadio">
-                  <img src="https://img.shields.io/packagist/v/animadio/animadio.svg?label=Packagist" alt="Packagist Version">
-                </a>
-              </figure>
-            </li>
-          </ul>
+          <h4>Atmosphere</h4>
+          <pre class="bg-black-base"><span class="color-jade-base">$ meteor add animadio:animadio</span></pre>
+          <figure>
+            <a href="https://atmospherejs.com/animadio/animadio">
+              <img src="https://img.shields.io/badge/meteor-animadio%3Aanimadio-blue.svg?label=Atmosphere" alt="Meteor Project">
+            </a>
+          </figure>
         </li>
 
         <li>
-          <h4>Download</h4>
-          <p>If you prefer to download the files, you can choose between release or repository.</p>
-
-          <p>For the release, click on the button to choose it (take the latest) :</p>
-          <a class="btn-bg-red-base" href="https://github.com/animadio/animadio/releases">Latest Release</a>
-
-          <p>For the repository, just type this in your terminal :</p>
-          <pre class="bg-black-base"><span class="color-jade-base">$ git clone https://github.com/animadio/animadio.git</span></pre>
+          <h4>Packagist</h4>
+          <pre class="bg-black-base"><span class="color-jade-base">$ composer require animadio/animadio</span></pre>
           <figure>
-            <a href="https://github.com/animadio/animadio/tree/master">
-              <img src="https://img.shields.io/github/repo-size/animadio/animadio.svg?label=Repo+Size" alt="Repo Size">
+            <a href="https://packagist.org/packages/animadio/animadio">
+              <img src="https://img.shields.io/packagist/v/animadio/animadio.svg?label=Packagist" alt="Packagist Version">
             </a>
           </figure>
         </li>
       </ul>
     </section>
 
-    <section id="basic-usage">
-      <h3>Basic Usage</h3>
-    </section>
+    <section id="download">
+      <h3>Download</h3>
+      <p>If you prefer to download the files, you can choose between release or repository.</p>
 
-    <section id="advanced-usage">
-      <h3>Advanced Usage</h3>
+      <p>For the release, click on the button to choose it (take the latest) :</p>
+      <a class="btn-bg-red-base" href="https://github.com/animadio/animadio/releases">Latest Release</a>
+
+      <p>For the repository, just type this in your terminal :</p>
+      <pre class="bg-black-base"><span class="color-jade-base">$ git clone https://github.com/animadio/animadio.git</span></pre>
+      <figure>
+        <a href="https://github.com/animadio/animadio/tree/master">
+          <img src="https://img.shields.io/github/repo-size/animadio/animadio.svg?label=Repo+Size" alt="Repo Size">
+        </a>
+      </figure>
     </section>
   </article>
 
