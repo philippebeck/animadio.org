@@ -126,51 +126,75 @@
 
 <main class="block-tn-relay hide-tn-global container-80tn text-center-tn">
 
-  <article class="block-tn-target1">
-    <h2>CSS Framework</h2>
+  <header class="block-tn-target1 slider">
 
-    <header>
-      <figure>
-        <a href="https://animadio.org">
-          <img class="width-sm-base" src="img/logo.png" alt="Animadio Logo">
-        </a>
-      </figure>
-      <p>Grid &amp; Flexbox Layouts - Perform Complex Animations<br>
-        CSS Variables Usage - Reusable &amp; Customizable Elements<br>
-        Controls by Radio Buttons - No JavaScript needed
-      </p>
-    </header>
+    <!-- Slider Hidden Controls -->
+    <input id="slide-play" class="play-check" type="checkbox" checked>
+    <input id="slide-repeat" class="repeat-check" type="checkbox" checked>
+    <input id="slide-direction" class="direction-check" type="checkbox">
+    <input id="slide1" class="slider-radio1" type="radio" name="slider" checked>
+    <input id="slide2" class="slider-radio2" type="radio" name="slider">
+    <input id="slide3" class="slider-radio3" type="radio" name="slider">
+    <input id="slide4" class="slider-radio4" type="radio" name="slider">
+    <input id="slide5" class="slider-radio5" type="radio" name="slider">
 
-    <figure>
-      <figure>
-        <a href="https://github.com/animadio/animadio/blob/master/package.json">
-          <img src="https://img.shields.io/github/package-json/v/animadio/animadio.svg?label=Version" alt="GitHub Version">
-        </a>
-        <a href="https://david-dm.org/animadio/animadio?type=dev">
-          <img src="https://img.shields.io/david/dev/animadio/animadio.svg?label=Dev+Dependencies" alt="David Dev Dependencies">
-        </a>
-        <a href="https://travis-ci.com/animadio/animadio">
-          <img src="https://travis-ci.com/animadio/animadio.svg?branch=master" alt="Travis Build">
-        </a>
-      </figure>
-      <figure>
-        <a href="https://github.com/animadio/animadio/commits/master">
-          <img src="https://img.shields.io/github/last-commit/animadio/animadio.svg?label=Last+Commit" alt="GitHub Last Commit">
-        </a>
-        <a href="https://www.codacy.com/app/Animadio/animadio?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=animadio/animadio&amp;utm_campaign=Badge_Grade">
-          <img src="https://api.codacy.com/project/badge/Grade/b996875347654cc69510b0b1a5616936" alt="Codacy Code Quality">
-        </a>
-        <a href="https://codeclimate.com/github/animadio/animadio">
-          <img src="https://img.shields.io/codeclimate/maintainability-percentage/animadio/animadio.svg?label=Maintainability" alt="CodeClimate Maintainability">
-        </a>
-      </figure>
+    <!-- Slider Visual Controls -->
+    <ul class="slider-controls">
+      <li>
+        <label for="slide-repeat" title="Repeat On/Off">
+          <i class="fas fa-plus-circle fa-lg" aria-hidden="true"></i>
+        </label>
+      </li>
+      <li>
+        <label for="slide-play" title="Play/Stop">
+          <i class="fas fa-play-circle fa-lg" aria-hidden="true"></i>
+        </label>
+      </li>
+      <li>
+        <label for="slide-direction" title="Direction Right/Left">
+          <i class="fas fa-chevron-circle-right fa-lg" aria-hidden="true"></i>
+        </label>
+      </li>
+    </ul>
+
+    <!-- Slider Pictures -->
+    <figure class="slide">
+      <img class="slide1" src="https://animadio.org/img/slider/variables.png" alt="Animadio Variables Blockquote">
+      <img class="slide2" src="https://animadio.org/img/slider/logo.png" alt="Animadio Colored Logo">
+      <img class="slide3" src="https://animadio.org/img/slider/concat.png" alt="Animadio Concatenation Blockquote">
+      <img class="slide4" src="https://animadio.org/img/slider/animadio.png" alt="Animadio Colored Name">
+      <img class="slide5" src="https://animadio.org/img/slider/states.png" alt="Animadio States Blockquote">
     </figure>
 
-    <blockquote>
-      <p>FRAMEWORK IN CONSTRUCTION !</p>
-      <p>NO STABLE & COMPLETE FOR THE MOMENT !!</p>
-    </blockquote>
-  </article>
+    <!-- Slider Visual Controls -->
+    <ul class="slider-controls">
+      <li>
+        <label for="slide1" title="1st Picture">
+          <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
+        </label>
+      </li>
+      <li>
+        <label for="slide2" title="2nd Picture">
+          <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
+        </label>
+      </li>
+      <li>
+        <label for="slide3" title="3rd Picture">
+          <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
+        </label>
+      </li>
+      <li>
+        <label for="slide4" title="4th Picture">
+          <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
+        </label>
+      </li>
+      <li>
+        <label for="slide5" title="5th Picture">
+          <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
+        </label>
+      </li>
+    </ul>
+  </header>
 
   <article class="block-tn-target2">
     <h2>How to prepare for takeoff ?</h2>
