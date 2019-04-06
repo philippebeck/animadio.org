@@ -16,3 +16,12 @@ h6 {
 pre {
   --pre-font-family: 'Share Tech Mono', monospace;
 }
+
+.slider {
+  --slide1: url(https://animadio.org/img/slider/variables.png);
+  --slide2: url(https://animadio.org/img/slider/logo.png);
+  --slide3: url(https://animadio.org/img/slider/concat.png);
+  --slide4: url(https://animadio.org/img/slider/animadio.png);
+  --slide5: url(https://animadio.org/img/slider/states.png);
+  --play-check-slide-anima: 20s linear;
+}
