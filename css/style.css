@@ -18,10 +18,10 @@ pre {
 }
 
 .slider {
-  --slide1: url(https://animadio.org/img/slider/logo.png);
-  --slide2: url(https://animadio.org/img/slider/variables.png);
-  --slide3: url(https://animadio.org/img/slider/concat.png);
-  --slide4: url(https://animadio.org/img/slider/states.png);
-  --slide5: url(https://animadio.org/img/slider/animadio.png);
+  --keyframes-content1: url(https://animadio.org/img/slider/logo.png);
+  --keyframes-content2: url(https://animadio.org/img/slider/variables.png);
+  --keyframes-content3: url(https://animadio.org/img/slider/concat.png);
+  --keyframes-content4: url(https://animadio.org/img/slider/states.png);
+  --keyframes-content5: url(https://animadio.org/img/slider/animadio.png);
   --play-check-slide-anima: 20s linear;
 }
