@@ -13,6 +13,7 @@ h6 {
   --title-font-family: 'Cinzel', serif;
 }
 
+code,
 pre {
   --pre-font-family: 'Share Tech Mono', monospace;
 }
