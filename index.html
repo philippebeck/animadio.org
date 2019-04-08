@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- ***** CONFIG ***** -->
+<!-- **************************** -->
+<!-- ********** CONFIG ********** -->
+<!-- **************************** -->
 <head>
   <!-- Primary Meta -->
   <meta charset="utf-8">
@@ -43,25 +45,31 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
+<!-- ***************************** -->
+<!-- ********** CONTENT ********** -->
+<!-- ***************************** -->
 <body>
 
-<!-- Main Hidden Controls -->
+  <!-- Main Hidden Controls -->
 <input id="home" class="block-xs-color-yellow-radio1" type="radio" name="main" checked>
 <input id="start" class="block-xs-color-yellow-radio2" type="radio" name="main">
 <input id="layouts" class="block-xs-color-yellow-radio3" type="radio" name="main">
 <input id="support" class="block-xs-color-yellow-radio4" type="radio" name="main">
 
-<!-- Navbar -->
+  <!-- ****************** -->
+  <!-- ***** NAVBAR ***** -->
 <nav class="navbar color-yellow-relay">
 
-  <!-- Hidden Controls -->
+    <!-- Hidden Controls -->
   <input id="nav-close" class="nav-close" type="radio" name="navbar" checked>
   <input id="nav-open" class="nav-open" type="radio" name="navbar">
 
+    <!-- Nav Brand -->
   <label class="nav-brand" for="home" title="Want to go back home ?">
     <img src="img/logo-nav.png" alt="Animadio Logo">
   </label>
 
+    <!-- Nav Main -->
   <ul class="nav-main">
     <li>
       <label class="color-yellow-target2" for="start" title="Ready to takeoff ?">
@@ -89,6 +97,7 @@
     </li>
   </ul>
 
+    <!-- Nav Info -->
   <ul class="nav-info">
     <li>
       <a class="color-github-onto" href="https://github.com/animadio" rel="noreferrer noopener" target="_blank" title="Open-Source code is waiting to be read !">
@@ -112,6 +121,7 @@
     </li>
   </ul>
 
+    <!-- Nav Controls -->
   <label for="nav-close" class="nav-toggle" title="Fermer le Menu de Navigation">
     <i class="fas fa-angle-double-up fa-lg" aria-hidden="true"></i>
   </label>
@@ -124,11 +134,14 @@
   <h1 class="text-center-xs color-green-shatex-blur-md-base mar-bot-none-pad-top-lg-base">Animadio</h1>
 </header>
 
+  <!-- Main Content -->
 <main class="block-xs-relay hide-xs-global container-80xs text-center-xs">
 
+    <!-- ************************ -->
+    <!-- ***** HEADER BLOCK ***** -->
   <header class="block-xs-target1 slider">
 
-    <!-- Slider Hidden Controls -->
+      <!-- Slider Hidden Controls -->
     <input id="slide-play" class="play-check" type="checkbox" checked>
     <input id="slide-repeat" class="repeat-check" type="checkbox" checked>
     <input id="slide-direction" class="direction-check" type="checkbox">
@@ -138,7 +151,7 @@
     <input id="slide4" class="slider-radio4" type="radio" name="slider">
     <input id="slide5" class="slider-radio5" type="radio" name="slider">
 
-    <!-- Slider Visual Controls -->
+      <!-- Slider Auto Visual Controls -->
     <ul class="slider-controls">
       <li>
         <label for="slide-repeat" title="Repeat On/Off">
@@ -157,7 +170,7 @@
       </li>
     </ul>
 
-    <!-- Slider Pictures -->
+      <!-- Slider Pictures -->
     <figure class="slide">
       <img class="slide1" src="https://animadio.org/img/slider/logo.png" alt="Animadio Colored Logo">
       <img class="slide2" src="https://animadio.org/img/slider/variables.png" alt="A CSS Framework that you Can Customize Completely with Simple CSS Variables !">
@@ -166,7 +179,7 @@
       <img class="slide5" src="https://animadio.org/img/slider/animadio.png" alt="Animadio Colored Name">
     </figure>
 
-    <!-- Slider Visual Controls -->
+      <!-- Slider Manual Visual Controls -->
     <ul class="slider-controls">
       <li>
         <label for="slide1" title="1st Picture">
@@ -196,9 +209,13 @@
     </ul>
   </header>
 
+    <!-- *********************** -->
+    <!-- ***** START BLOCK ***** -->
   <article class="block-xs-target2">
+      <!-- Under Construction Message -->
     <h2>How to prepare for takeoff ?</h2>
 
+      <!-- Start Header -->
     <header>
       <p>Immediate takeoff with Animadio, the only free & open-source framework that offers real interactivity to the click & much more :</p>
       <ul>
@@ -285,7 +302,9 @@
     <section id="cdn">
       <h3>CDN</h3>
 
-      <!-- CDN Part -->
+        <!-- Installation Menu Hidden Controls -->
+        <!-- Installation Menu -->
+          <!-- CDN Part -->
       <p>During development, add one of those tags to your HTML :</p>
       <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.2.26/dist/animadio.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
       <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://unpkg.com/animadio@0.2.26/dist/animadio.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
@@ -301,7 +320,7 @@
         <li><span class="font-bold-italic color-blue-deco-double-base">animadio-states</span> who contains only <span class="color-blue-base">Global & States parts</span></li>
       </ul>
 
-      <!-- Hidden CDN Part -->
+              <!-- Menu CDN Hidden Controls -->
       <input id="cdn-main" class="block-xs-check" type="checkbox">
       <label for="cdn-main" class="button-bg-purple-base-onto">Grid, Elements & States CDN Links</label>
 
@@ -338,6 +357,7 @@
           <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.2.26/dist/min/animadio-states.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
           <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://unpkg.com/animadio@0.2.26/dist/min/animadio-states.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
         </li>
+                <!-- Animadio States -->
       </ul>
     </section>
 
@@ -406,6 +426,8 @@
     </section>
   </article>
 
+    <!-- ************************ -->
+    <!-- ***** LAYOUT BLOCK ***** -->
   <article class="block-xs-target3">
     <h2>Layouts</h2>
 
@@ -469,6 +491,7 @@
       </figure>
     </section>
 
+      <!-- Community Part -->
     <section>
       <h3>Community</h3>
       <p>Slack : <a href="https://join.slack.com/t/animadio/shared_invite/enQtNjAxMjg0OTUyODM5LWE5ZjNhNWYxMzVjZTdlMjhkNDhiNDVlYmQ1NjY3NTVhZGFmNDg2ODVhMmYyYmQwMDBkYmYyY2Q0NGQ5OGY3NWY">animadio.slack.com</a></p>
@@ -479,6 +502,7 @@
       </figure>
     </section>
 
+      <!-- Issues Part -->
     <section>
       <h3>Issues</h3>
       <p>Issues can be created here</p>
@@ -495,6 +519,7 @@
       </ul>
     </section>
 
+      <!-- Pull Requests Part -->
     <section>
       <h3>Pull Requests</h3>
       <p>And Pull Requests can be created there</p>
@@ -505,6 +530,7 @@
       </figure>
     </section>
 
+      <!-- Contribution Part -->
     <section>
       <h3>Contributing</h3>
       <p>Animadio needs you if you like it : sends pull requests on GitHub to improve it !!</p>
@@ -515,11 +541,13 @@
       </figure>
     </section>
 
+      <!-- Version Part -->
     <section>
       <h3>Versioning</h3>
       <p>Animadio is maintained under the <a href="https://semver.org">Semantic Versioning 2.0.0</a></p>
     </section>
 
+      <!-- Copyright Part -->
     <section>
       <h3>Copyright</h3>
       <p>Code released under the MIT License</p>
@@ -530,6 +558,7 @@
       </figure>
     </section>
 
+      <!-- Creator Part -->
     <section>
       <h3>Creator</h3>
       <p>Philippe Beck</p>
@@ -561,8 +590,12 @@
   </article>
 </main>
 
+  <!-- ****************** -->
+  <!-- ***** FOOTER ***** -->
 <footer class="foot">
+    <!-- Foot Main -->
   <ul class="foot-main">
+      <!-- Foot List Project -->
     <li>
       <h3>Project</h3>
       <ul class="foot-list">
@@ -586,6 +619,7 @@
         </li>
       </ul>
     </li>
+      <!-- Foot List Community -->
     <li>
       <h3>Community</h3>
       <ul class="foot-list">
@@ -606,6 +640,7 @@
         </li>
       </ul>
     </li>
+      <!-- Foot List Examples -->
     <li>
       <h3>Examples</h3>
       <ul class="foot-list">
@@ -636,6 +671,7 @@
       </ul>
     </li>
   </ul>
+    <!-- Foot Info -->
   <ul class="foot-info">
     <li>
       <a class="color-npm-base" href="https://www.npmjs.com/package/animadio" rel="noreferrer noopener" target="_blank" title="View Animadio @NPM">
