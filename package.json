@@ -22,7 +22,7 @@
   "homepage": "https://animadio.org",
   "repository": "github:animadio/animadio.org",
   "dependencies": {
-    "animadio": "^0.3.6"
+    "animadio": "^0.3.7"
   },
   "bugs": "https://github.com/animadio/animadio.org/issues",
   "author": {
