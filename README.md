@@ -90,7 +90,7 @@ Animadio.org needs you if you like it : sends pull requests on GitHub to improve
 
 Animadio.org is maintained under the [Semantic Versioning 2.0.0](https://semver.org)
 
-[![GitHub Version](https://img.shields.io/github/tag/animadio/animadio.org.svg?label=Version)](https://github.com/animadio/animadio.org/blob/master/composer.json)
+[![GitHub Version](https://img.shields.io/github/package-json/v/animadio/animadio.org.svg?label=Version)](https://github.com/animadio/animadio.org/blob/master/package.json)
 
 ---
 
