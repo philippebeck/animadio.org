@@ -62,16 +62,14 @@
   <nav class="navbar color-yellow-relay">
 
     <!-- Hidden Controls -->
-    <input id="nav-close" class="nav-close" type="radio" name="navbar" checked>
-    <input id="nav-open" class="nav-open" type="radio" name="navbar">
+    <input id="navbar-close" type="radio" name="navbar" checked>
+    <input id="navbar-open" type="radio" name="navbar">
 
-    <!-- Nav Brand -->
-    <label class="nav-brand anima-tranx-base" for="home" title="Want to go back home ?">
+    <label class="anima-tranx-base" for="home" title="Want to go back home ?">
       <img src="img/logo-nav.png" alt="Animadio Logo">
     </label>
 
-    <!-- Nav Main -->
-    <ul class="nav-main">
+    <ul>
       <li>
         <label class="color-yellow-target2" for="start" title="Ready to takeoff ?">
           <i class="fas fa-rocket fa-lg" aria-hidden="true"></i>
@@ -98,8 +96,7 @@
       </li>
     </ul>
 
-    <!-- Nav Info -->
-    <ul class="nav-info">
+    <ul>
       <li>
         <a class="color-github-onto" href="https://github.com/animadio" rel="noreferrer noopener" target="_blank" title="Open-Source is waiting to be read !">
           <i class="fab fa-github fa-lg" aria-hidden="true"></i>
@@ -123,20 +120,20 @@
     </ul>
 
     <!-- Nav Controls -->
-    <label for="nav-close" class="nav-toggle" title="Fermer le Menu de Navigation">
+    <label for="navbar-close" title="Fermer le Menu de Navigation">
       <i class="fas fa-angle-double-up fa-lg" aria-hidden="true"></i>
     </label>
-    <label for="nav-open" class="nav-toggle" title="Ouvrir le Menu de Navigation">
+    <label for="navbar-open" title="Ouvrir le Menu de Navigation">
       <i class="fas fa-angle-double-down fa-lg" aria-hidden="true"></i>
     </label>
   </nav>
 
   <!-- Main Title Header -->
   <header>
-    <h1 class="text-center-xs mar-bot-none-shatex-blur-md-base">Animadio</h1>
+    <h1 class="text-center mar-bot-none-shatex-blur-md-base">Animadio</h1>
 
     <!-- Version Badge -->
-    <figure class="text-center-xs">
+    <figure class="text-center">
       <a href="https://github.com/animadio/animadio/blob/master/package.json" rel="noreferrer noopener" target="_blank" title="Package on GitHub">
         <img src="https://img.shields.io/github/package-json/v/animadio/animadio.svg?label=Version" alt="GitHub Version">
       </a>
@@ -144,7 +141,7 @@
   </header>
 
   <!-- Main Content -->
-  <main class="block-xs-relay hide-xs-global container-70xs text-center-xs">
+  <main class="block-xs-relay hide-xs-global container-70xs text-center">
 
     <!-- ************************ -->
     <!-- ***** HEADER BLOCK ***** -->
@@ -154,38 +151,38 @@
       <header class="slider">
 
         <!-- Slider Hidden Controls -->
-        <input id="slide-play" class="play-check" type="checkbox" checked>
-        <input id="slide-repeat" class="repeat-check" type="checkbox" checked>
-        <input id="slide-direction" class="direction-check" type="checkbox">
-        <input id="slide1" class="slider-radio1" type="radio" name="slider" checked>
-        <input id="slide2" class="slider-radio2" type="radio" name="slider">
-        <input id="slide3" class="slider-radio3" type="radio" name="slider">
-        <input id="slide4" class="slider-radio4" type="radio" name="slider">
-        <input id="slide5" class="slider-radio5" type="radio" name="slider">
+        <input id="slider-check-play" type="checkbox" checked>
+        <input id="slider-check-repeat" type="checkbox" checked>
+        <input id="slider-check-direction" type="checkbox">
+        <input id="slider-radio1" type="radio" name="slider" checked>
+        <input id="slider-radio2" type="radio" name="slider">
+        <input id="slider-radio3" type="radio" name="slider">
+        <input id="slider-radio4" type="radio" name="slider">
+        <input id="slider-radio5" type="radio" name="slider">
 
         <!-- Slider Pictures -->
-        <figure class="slide">
-          <img class="slide1" src="https://animadio.org/img/slider/logo.png" alt="Animadio Colored Logo">
-          <img class="slide2" src="https://animadio.org/img/slider/variables.png" alt="A CSS Framework that you Can Customize Completely with Simple CSS Variables !">
-          <img class="slide3" src="https://animadio.org/img/slider/concat.png" alt="Build Concatenation Classes to Set up an Advanced & Complex Design Easily !">
-          <img class="slide4" src="https://animadio.org/img/slider/states.png" alt="Maximum Interactivity with States Management of Hover/Focus & Radio/Checkbox !">
-          <img class="slide5" src="https://animadio.org/img/slider/animadio.png" alt="Animadio Colored Name">
+        <figure>
+          <img src="https://animadio.org/img/slider/logo.png" alt="Animadio Colored Logo">
+          <img src="https://animadio.org/img/slider/variables.png" alt="A CSS Framework that you Can Customize Completely with Simple CSS Variables !">
+          <img src="https://animadio.org/img/slider/concat.png" alt="Build Concatenation Classes to Set up an Advanced & Complex Design Easily !">
+          <img src="https://animadio.org/img/slider/states.png" alt="Maximum Interactivity with States Management of Hover/Focus & Radio/Checkbox !">
+          <img src="https://animadio.org/img/slider/animadio.png" alt="Animadio Colored Name">
         </figure>
 
         <!-- Slider Auto Visual Controls -->
-        <ul class="slider-controls">
+        <ul>
           <li>
-            <label for="slide-repeat" title="Repeat On/Off">
+            <label for="slider-check-repeat" title="Repeat On/Off">
               <i class="fas fa-plus-circle fa-lg" aria-hidden="true"></i>
             </label>
           </li>
           <li>
-            <label for="slide-play" title="Play/Stop">
+            <label for="slider-check-play" title="Play/Stop">
               <i class="fas fa-play-circle fa-lg" aria-hidden="true"></i>
             </label>
           </li>
           <li>
-            <label for="slide-direction" title="Direction Right/Left">
+            <label for="slider-check-direction" title="Direction Right/Left">
               <i class="fas fa-chevron-circle-right fa-lg" aria-hidden="true"></i>
             </label>
           </li>
@@ -195,27 +192,27 @@
             </a>
           </li>
           <li>
-            <label for="slide1" title="1st Picture">
+            <label for="slider-radio1" title="1st Picture">
               <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
             </label>
           </li>
           <li>
-            <label for="slide2" title="2nd Picture">
+            <label for="slider-radio2" title="2nd Picture">
               <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
             </label>
           </li>
           <li>
-            <label for="slide3" title="3rd Picture">
+            <label for="slider-radio3" title="3rd Picture">
               <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
             </label>
           </li>
           <li>
-            <label for="slide4" title="4th Picture">
+            <label for="slider-radio4" title="4th Picture">
               <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
             </label>
           </li>
           <li>
-            <label for="slide5" title="5th Picture">
+            <label for="slider-radio5" title="5th Picture">
               <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
             </label>
           </li>
@@ -326,10 +323,10 @@
               <h4>CDN</h4>
 
               <p>During development, add this tag to your HTML :</p>
-              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.5.0/dist/animadio.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.5.9/dist/animadio.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
 
               <p>Then in production, add this one :</p>
-              <pre class="bg-black-base"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.5.0/dist/min/animadio.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+              <pre class="bg-black-base"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.5.9/dist/min/animadio.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
 
               <p>But if you only need a part of Animadio, you can use one of those 3 files :</p>
               <ul>
@@ -367,10 +364,10 @@
                   <h5 class="color-red-deco-double-base">Animadio-Grid</h5>
 
                   <p>Development :</p>
-                  <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.5.0/dist/animadio-grid.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+                  <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.5.9/dist/animadio-grid.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
 
                   <p>Production :</p>
-                  <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.5.0/dist/min/animadio-grid.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+                  <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.5.9/dist/min/animadio-grid.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
                 </li>
 
                 <!-- Animadio Elements -->
@@ -378,10 +375,10 @@
                   <h5 class="color-green-deco-double-base">Animadio-Elements</h5>
 
                   <p>Development :</p>
-                  <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.5.0/dist/animadio-elements.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+                  <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.5.9/dist/animadio-elements.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
 
                   <p>Production :</p>
-                  <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.5.0/dist/min/animadio-elements.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+                  <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.5.9/dist/min/animadio-elements.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
                 </li>
 
                 <!-- Animadio States -->
@@ -389,10 +386,10 @@
                   <h5 class="color-blue-deco-double-base">Animadio-States</h5>
 
                   <p>Development :</p>
-                  <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.5.0/dist/animadio-states.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+                  <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.5.9/dist/animadio-states.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
 
                   <p>Production :</p>
-                  <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.5.0/dist/min/animadio-states.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+                  <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.5.9/dist/min/animadio-states.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
                 </li>
               </ul>
             </section>
@@ -459,9 +456,6 @@
 
       <!-- Support Badges -->
       <figure>
-        <a href="https://david-dm.org/animadio/animadio?type=dev" rel="noreferrer noopener" target="_blank" title="Detailed status of the dependencies">
-          <img src="https://david-dm.org/animadio/animadio/dev-status.svg" alt="David Dev Dependencies">
-        </a>
         <a href="https://www.codacy.com/app/Animadio/animadio?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=animadio/animadio&amp;utm_campaign=Badge_Grade" rel="noreferrer noopener" target="_blank" title="Detailed status of the quality">
           <img src="https://api.codacy.com/project/badge/Grade/b996875347654cc69510b0b1a5616936" alt="Codacy Quality">
         </a>
@@ -580,17 +574,12 @@
     </article>
   </main>
 
-  <!-- ****************** -->
   <!-- ***** FOOTER ***** -->
   <footer class="foot">
-
-    <!-- Foot Main -->
-    <ul class="foot-main">
-
-      <!-- Foot List Project -->
+    <ul>
       <li>
         <h3>Project</h3>
-        <ul class="foot-list">
+        <ul>
           <li>
             <a href="https://github.com/animadio/animadio" rel="noreferrer noopener" target="_blank">GitHub</a>
           </li>
@@ -611,11 +600,9 @@
           </li>
         </ul>
       </li>
-
-      <!-- Foot List Community -->
       <li>
         <h3>Community</h3>
-        <ul class="foot-list">
+        <ul>
           <li>
             <a href="https://join.slack.com/t/animadio/shared_invite/enQtNjAxMjg0OTUyODM5LWE5ZjNhNWYxMzVjZTdlMjhkNDhiNDVlYmQ1NjY3NTVhZGFmNDg2ODVhMmYyYmQwMDBkYmYyY2Q0NGQ5OGY3NWY" rel="noreferrer noopener" target="_blank">Slack</a>
           </li>
@@ -633,11 +620,9 @@
           </li>
         </ul>
       </li>
-
-      <!-- Foot List Examples -->
       <li>
         <h3>Examples</h3>
-        <ul class="foot-list">
+        <ul>
           <li>
             <a href="https://codepen.io/animadio/pen/LamGvj" rel="noreferrer noopener" target="_blank">Btn</a>
           </li>
@@ -665,9 +650,7 @@
         </ul>
       </li>
     </ul>
-
-    <!-- Foot Info -->
-    <ul class="foot-info">
+    <ul>
       <li>
         <a class="color-npm-base" href="https://www.npmjs.com/package/animadio" rel="noreferrer noopener" target="_blank" title="View Animadio @NPM">
           <i class="fab fa-npm fa-3x" aria-hidden="true"></i>
