@@ -1,7 +1,7 @@
 /***** STYLE *****/
 
 body {
-  --global-font-family: 'Text Me One', sans-serif;
+  --body-font-family: 'Text Me One', sans-serif;
 }
 
 h1,
@@ -23,7 +23,7 @@ h2 {
 
 code,
 pre {
-  --pre-font-family: 'Share Tech Mono', monospace;
+  --code-font-family: 'Share Tech Mono', monospace;
 }
 
 .slider {
