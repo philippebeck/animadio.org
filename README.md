@@ -2,8 +2,8 @@
 # [Animadio Official WebSite](https://animadio.org)
 
 [![GitHub Version](https://img.shields.io/github/package-json/v/animadio/animadio.org.svg?label=Version)](https://github.com/animadio/animadio.org/blob/master/package.json)
-[![David Dev Dependencies](https://david-dm.org/animadio/animadio.org/status.svg)](https://david-dm.org/animadio/animadio.org)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/914993ec00464b57a30d6905f5a1b5db)](https://www.codacy.com/app/Animadio/animadio.org?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=animadio/animadio.org&amp;utm_campaign=Badge_Grade)
+[![Dependabot](https://badgen.net/dependabot/dependabot/dependabot-core/?icon=dependabot)](https://github.com/animadio/animadio.org/graphs/contributors)
 
 ## Overview
 
