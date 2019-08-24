@@ -22,6 +22,7 @@
   "homepage": "https://animadio.org",
   "repository": "github:animadio/animadio.org",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "5.x",
     "animadio": "0.x"
   },
   "bugs": "https://github.com/animadio/animadio.org/issues",
