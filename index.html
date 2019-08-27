@@ -37,17 +37,17 @@
 </head>
 
 <body>
-  <input id="home" class="block-xs-color-yellow-radio1" type="radio" name="main" checked>
-  <input id="start" class="block-xs-color-yellow-radio2" type="radio" name="main">
-  <input id="layouts" class="block-xs-color-yellow-radio3" type="radio" name="main">
-  <input id="support" class="block-xs-color-yellow-radio4" type="radio" name="main">
+  <input id="home" class="block-radio1 color-yellow-radio1" type="radio" name="main" checked>
+  <input id="start" class="block-radio2 color-yellow-radio2" type="radio" name="main">
+  <input id="layouts" class="block-radio3 color-yellow-radio3" type="radio" name="main">
+  <input id="support" class="block-radio4 color-yellow-radio4" type="radio" name="main">
 
   <nav class="navbar color-yellow-relay">
 
     <input id="navbar-close" type="radio" name="navbar" checked>
     <input id="navbar-open" type="radio" name="navbar">
 
-    <label class="anima-tranx-base" for="home" title="Want to go back home ?">
+    <label class="anima-tranx" for="home" title="Want to go back home ?">
       <img src="img/logo-nav.png" alt="Animadio Logo">
     </label>
 
@@ -71,7 +71,7 @@
         </label>
       </li>
       <li>
-        <a class="color-yellow-target5" href="https://doc.animadio.org" title="Need to find the good way ?">
+        <a href="https://doc.animadio.org" title="Need to find the good way ?">
           <i class="fas fa-satellite fa-lg" aria-hidden="true"></i>
           <span>Doc</span>
         </a>
@@ -110,7 +110,7 @@
   </nav>
 
   <header>
-    <h1 class="text-center mar-bot-none-shatex-blur-md-base">Animadio</h1>
+    <h1 class="text-center mar-bot-none shatex-blur-md">Animadio</h1>
 
     <figure class="text-center">
       <a href="https://github.com/animadio/animadio/blob/master/package.json" rel="noreferrer noopener" target="_blank" title="Package on GitHub">
@@ -119,9 +119,9 @@
     </figure>
   </header>
 
-  <main class="block-xs-relay hide-xs-global container-70xs text-center">
+  <main class="block-relay hide-global container-90sm-80md-70lg text-center">
 
-    <section class="block-xs-target1">
+    <section class="block-target1">
       <h2>CSS Framework</h2>
 
       <header class="slider">
@@ -192,14 +192,13 @@
       </header>
     </section>
 
-    <article class="block-xs-target2 anima-scal-global">
+    <article class="block-target2 anima-scal-global">
       <h2>How to prepare for takeoff ?</h2>
 
       <header>
         <p>Immediate takeoff with Animadio, the only <strong>free & open-source framework</strong> that offers real interactivity to the click & much more :</p>
         <ul>
           <li>Eight types of selectors working with hover, focus, active & <strong>checked states</strong></li>
-          <li>Hundreds of <strong>class combinations by concatenation</strong></li>
           <li><strong>Flexbox & Grid</strong> systems included with common options</li>
           <li>Click anywhere on the page to <strong>enable & disable any design effect</strong> anywhere else</li>
           <li>Management of <strong>keyframes animations</strong> & their options</li>
@@ -279,16 +278,16 @@
               <h4>CDN</h4>
 
               <p>During development, add this tag to your HTML :</p>
-              <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.7.8/dist/animadio.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+              <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@0.8.2/dist/animadio.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
 
               <p>Then in production, add this one :</p>
-              <pre class="bg-black-base"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.7.8/dist/min/animadio.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+              <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@0.8.2/dist/min/animadio.min.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
 
               <p>But if you only need a part of Animadio, you can use one of those 3 files :</p>
               <ul>
-                <li><span class="font-bold-italic color-red-deco-double-base">animadio-grid</span> for <span class="color-red-base">Global & Grid parts</span></li>
-                <li><span class="font-bold-italic color-green-deco-double-base">animadio-elements</span> for <span class="color-green-base">Global & Elements parts</span></li>
-                <li><span class="font-bold-italic color-blue-deco-double-base">animadio-states</span> for <span class="color-blue-base">Global & States parts</span></li>
+                <li><span class="font-bold color-red deco-under">animadio-grid</span> for <span class="color-red">Global & Grid parts</span></li>
+                <li><span class="font-bold color-green deco-under">animadio-elements</span> for <span class="color-green">Global & Elements parts</span></li>
+                <li><span class="font-bold color-blue deco-under">animadio-states</span> for <span class="color-blue">Global & States parts</span></li>
               </ul>
 
               <input id="menu-cdn-radio1" class="menu-radio1" type="radio" name="menu-cdn">
@@ -312,33 +311,33 @@
 
               <ul class="menu-relay">
                 <li class="menu-target1">
-                  <h5 class="color-red-deco-double-base">Animadio-Grid</h5>
+                  <h5 class="color-red-deco-double">Animadio-Grid</h5>
 
                   <p>Development :</p>
-                  <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.7.8/dist/animadio-grid.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@0.8.2/dist/animadio-grid.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
 
                   <p>Production :</p>
-                  <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.7.8/dist/min/animadio-grid.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@0.8.2/dist/min/animadio-grid.min.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
                 </li>
 
                 <li class="menu-target2">
-                  <h5 class="color-green-deco-double-base">Animadio-Elements</h5>
+                  <h5 class="color-green-deco-double">Animadio-Elements</h5>
 
                   <p>Development :</p>
-                  <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.7.8/dist/animadio-elements.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@0.8.2/dist/animadio-elements.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
 
                   <p>Production :</p>
-                  <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.7.8/dist/min/animadio-elements.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@0.8.2/dist/min/animadio-elements.min.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
                 </li>
 
                 <li class="menu-target3">
-                  <h5 class="color-blue-deco-double-base">Animadio-States</h5>
+                  <h5 class="color-blue-deco-double">Animadio-States</h5>
 
                   <p>Development :</p>
-                  <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.7.8/dist/animadio-states.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@0.8.2/dist/animadio-states.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
 
                   <p>Production :</p>
-                  <pre class="bg-black-base" title="main"><span class="color-silver-base">&lt;</span><span class="color-red-base">link</span><span class="color-salmon-base font-italic"> href=</span><span class="color-jade-base">"https://cdn.jsdelivr.net/npm/animadio@0.7.8/dist/min/animadio-states.min.css"</span><span class="color-salmon-base font-italic"> rel=</span><span class="color-jade-base">"stylesheet"</span><span class="color-silver-base">&gt;</span></pre>
+                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@0.8.2/dist/min/animadio-states.min.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
                 </li>
               </ul>
             </section>
@@ -352,11 +351,11 @@
               <ul>
                 <li>
                   <h5>NPM</h5>
-                  <pre class="bg-black-base"><span class="color-jade-base">$ npm i animadio</span></pre>
+                  <pre>$ npm i animadio</pre>
                 </li>
                 <li>
                   <h5>Yarn</h5>
-                  <pre class="bg-black-base"><span class="color-jade-base">$ yarn add animadio</span></pre>
+                  <pre>$ yarn add animadio</pre>
                 </li>
               </ul>
             </section>
@@ -370,11 +369,11 @@
               <ul>
                 <li>
                   <h5>Release</h5>
-                  <a class="btn-github-base" href="https://github.com/animadio/animadio/releases" rel="noreferrer noopener" target="_blank">Get the Latest Release !</a>
+                  <a class="btn-github" href="https://github.com/animadio/animadio/releases" rel="noreferrer noopener" target="_blank">Get the Latest Release !</a>
                 </li>
                 <li>
                   <h5>Repository</h5>
-                  <pre class="bg-black-base"><span class="color-jade-base">$ git clone https://github.com/animadio/animadio.git</span></pre>
+                  <pre>$ git clone https://github.com/animadio/animadio.git</pre>
                 </li>
               </ul>
             </section>
@@ -383,23 +382,23 @@
       </article>
     </article>
 
-    <article class="block-xs-target3">
+    <article class="block-target3">
       <h2>Layout</h2>
 
-      <figure class="bord-double-anima-rota3d-base">
-        <img src="img/coming-soon.jpg" alt="Waiting message">
+      <figure class="anima-rota3d">
+        <img src="img/coming-soon.png" alt="Waiting message">
       </figure>
     </article>
 
-    <article class="block-xs-target4">
+    <article class="block-target4">
 
-      <header class="bord-dot-bord-green-base">
-        <p class="color-purple-base font-bold">Animadio has continuous support &amp; community networks will give all news !</p>
+      <header class="bord-dot bord-green">
+        <p class="color-purple font-bold">Animadio has continuous support &amp; community networks will give all news !</p>
       </header>
 
       <h2>Support</h2>
 
-      <figure class="anima-trany-base">
+      <figure class="anima-trany">
         <a href="https://www.codacy.com/app/Animadio/animadio?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=animadio/animadio&amp;utm_campaign=Badge_Grade" rel="noreferrer noopener" target="_blank" title="Detailed status of the quality">
           <img src="https://api.codacy.com/project/badge/Grade/b996875347654cc69510b0b1a5616936" alt="Codacy Quality">
         </a>
@@ -410,7 +409,7 @@
 
       <section>
         <h3>Open-Source</h3>
-        <ul class="row anima-tran-base">
+        <ul class="row anima-tran">
           <li>
             <a class="btn-github" href="https://github.com/animadio/animadio" rel="noreferrer noopener" target="_blank" title="Fork the Repo !">
               <i class="fab fa-github-alt fa-lg" aria-hidden="true"></i>
@@ -428,7 +427,7 @@
 
       <section>
         <h3>Community</h3>
-        <ul class="row anima-tranx-base">
+        <ul class="row anima-tranx">
           <li>
             <a class="btn-purple" href="https://join.slack.com/t/animadio/shared_invite/enQtNjAxMjg0OTUyODM5LWE5ZjNhNWYxMzVjZTdlMjhkNDhiNDVlYmQ1NjY3NTVhZGFmNDg2ODVhMmYyYmQwMDBkYmYyY2Q0NGQ5OGY3NWY" rel="noreferrer noopener" target="_blank" title="Speak with the Team !">
               <i class="fab fa-slack-hash fa-lg" aria-hidden="true"></i>
@@ -587,17 +586,17 @@
     </ul>
     <ul>
       <li>
-        <a class="color-npm-base" href="https://www.npmjs.com/package/animadio" rel="noreferrer noopener" target="_blank" title="View Animadio @NPM">
+        <a class="color-npm" href="https://www.npmjs.com/package/animadio" rel="noreferrer noopener" target="_blank" title="View Animadio @NPM">
           <i class="fab fa-npm fa-3x" aria-hidden="true"></i>
         </a>
       </li>
       <li>
-        <a class="color-github-base" href="https://github.com/animadio/animadio" rel="noreferrer noopener" target="_blank" title="View Animadio @GitHub">
+        <a class="color-github" href="https://github.com/animadio/animadio" rel="noreferrer noopener" target="_blank" title="View Animadio @GitHub">
           <i class="fab fa-github fa-3x" aria-hidden="true"></i>
         </a>
       </li>
       <li>
-        <a class="color-jsd-base" href="https://www.jsdelivr.com/package/npm/animadio" rel="noreferrer noopener" target="_blank" title="View Animadio @JSDelivr">
+        <a class="color-jsd" href="https://www.jsdelivr.com/package/npm/animadio" rel="noreferrer noopener" target="_blank" title="View Animadio @JSDelivr">
           <i class="fab fa-js-square fa-3x" aria-hidden="true"></i>
         </a>
       </li>
