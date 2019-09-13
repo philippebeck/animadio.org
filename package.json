@@ -1,6 +1,6 @@
 {
   "name": "animadio.org",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "description": "Animadio Official WebSite - Grid & Flexbox Layouts - Reusable & Customizable Elements - Perform Complex Animations - Controls by Radio Buttons - No JavaScript needed or used",
   "keywords": [
     "css",
@@ -22,20 +22,13 @@
   "homepage": "https://animadio.org",
   "repository": "github:animadio/animadio.org",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "5.x",
-    "animadio": "^1.1.1"
+    "@fortawesome/fontawesome-free": "^5.10.2",
+    "animadio": "^1.1.3"
   },
   "bugs": "https://github.com/animadio/animadio.org/issues",
   "author": {
     "name": "Philippe Beck",
     "email": "philippe@philippebeck.net",
     "url": "https://philippebeck.net"
-  },
-  "contributors": [
-    {
-      "name": "Lisa Lecieux",
-      "email": "lisa@sangodraws.com",
-      "url": "https://sangodraws.com"
-    }
-  ]
+  }
 }
