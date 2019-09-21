@@ -1,6 +1,6 @@
 {
   "name": "animadio.org",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "description": "Animadio Official WebSite - Grid & Flexbox Layouts - Reusable & Customizable Elements - Perform Complex Animations - Controls by Radio Buttons - No JavaScript needed or used",
   "keywords": [
     "css",
@@ -22,8 +22,8 @@
   "homepage": "https://animadio.org",
   "repository": "github:animadio/animadio.org",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.10.2",
-    "animadio": "^1.1.3"
+    "@fortawesome/fontawesome-free": "^5.11.1",
+    "animadio": "^1.1.4"
   },
   "bugs": "https://github.com/animadio/animadio.org/issues",
   "author": {
