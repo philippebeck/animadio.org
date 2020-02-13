@@ -3,7 +3,6 @@
 
 [![GitHub Version](https://img.shields.io/github/package-json/v/animadio/animadio.org.svg?label=Version)](https://github.com/animadio/animadio.org/blob/master/package.json)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/914993ec00464b57a30d6905f5a1b5db)](https://www.codacy.com/app/Animadio/animadio.org?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=animadio/animadio.org&amp;utm_campaign=Badge_Grade)
-[![Dependabot](https://badgen.net/dependabot/dependabot/dependabot-core/?icon=dependabot)](https://github.com/animadio/animadio.org/graphs/contributors)
 
 ## Overview
 
@@ -51,7 +50,7 @@ Animadio.org is wrote with HTML5
 
 Animadio.org has continuous support !
 
-[![Project Maintained](https://img.shields.io/maintenance/yes/2019.svg?label=Maintained)](https://github.com/animadio/animadio.org)
+[![Project Maintained](https://img.shields.io/maintenance/yes/2020.svg?label=Maintained)](https://github.com/animadio/animadio.org)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/animadio/animadio.org.svg?label=Last+Commit)](https://github.com/animadio/animadio.org/commits/master)
 
 ---
