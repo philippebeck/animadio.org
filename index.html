@@ -31,8 +31,8 @@
 
   <link href="https://fonts.googleapis.com/css?family=Text+Me+One%7cCinzel:400,700,900%7cShare+Tech+Mono" rel="stylesheet">
   <link href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <!--<link href="node_modules/animadio/dist/min/animadio.min.css" rel="stylesheet">-->
-  <link href="../animadio/src/css/animadio.css" rel="stylesheet">
+  <link href="node_modules/animadio/dist/min/animadio.min.css" rel="stylesheet">
+  <!--<link href="../animadio/src/css/animadio.css" rel="stylesheet">-->
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -124,6 +124,67 @@
       <select id="animation">
         <option selected disabled>-- Select an animation to show !</option>
 
+        <option disabled> ***** Grow ***** </option>
+        <option value="anima-grow">Grow</option>
+        <option value="anima-growX">GrowX</option>
+        <option value="anima-growY">GrowY</option>
+
+        <option disabled> ***** Flip ***** </option>
+        <option value="anima-flipX">FlipX</option>
+        <option value="anima-flipY">FlipY</option>
+
+        <option disabled> ***** Bounce ***** </option>
+        <option value="anima-bounce">Bounce</option>
+        <option value="anima-bounceL">BounceL</option>
+
+        <option disabled> ***** Shrink ***** </option>
+        <option value="anima-shrink">Shrink</option>
+        <option value="anima-shrinkL">ShrinkL</option>
+        <option value="anima-shrinkX">ShrinkX</option>
+        <option value="anima-shrinkY">ShrinkY</option>
+
+        <option disabled> ***** Open ***** </option>
+        <option value="anima-openX">OpenX</option>
+        <option value="anima-openY">OpenY</option>
+        <option value="anima-openXL">OpenXL</option>
+        <option value="anima-openYL">OpenYL</option>
+
+        <option disabled> ***** Flipper ***** </option>
+        <option value="anima-flipperX">FlipperX</option>
+        <option value="anima-flipperY">FlilpperY</option>
+        <option value="anima-flipperXL">FlipperXL</option>
+        <option value="anima-flipperYL">FlipperYL</option>
+
+        <option disabled> ***** Fall ***** </option>
+        <option value="anima-fallX">FallX</option>
+        <option value="anima-fallY">FallY</option>
+        <option value="anima-fallXL">FallXL</option>
+        <option value="anima-fallYL">FallYL</option>
+
+        <option disabled> ***** Twist ***** </option>
+        <option value="anima-twistT">TwistT</option>
+        <option value="anima-twistR">TwistR</option>
+        <option value="anima-twistB">TwistB</option>
+        <option value="anima-twistL">TwistL</option>
+
+        <option disabled> ***** Torsion ***** </option>
+        <option value="anima-torsionT">TorsionT</option>
+        <option value="anima-torsionR">TorsionR</option>
+        <option value="anima-torsionB">TorsionB</option>
+        <option value="anima-torsionL">TorsionL</option>
+
+        <option disabled> ***** Twister ***** </option>
+        <option value="anima-twisterT">TwisterT</option>
+        <option value="anima-twisterR">TwisterR</option>
+        <option value="anima-twisterB">TwisterB</option>
+        <option value="anima-twisterL">TwisterL</option>
+
+        <option disabled> ***** Cyclone ***** </option>
+        <option value="anima-cycloneT">CycloneT</option>
+        <option value="anima-cycloneR">CycloneR</option>
+        <option value="anima-cycloneB">CycloneB</option>
+        <option value="anima-cycloneL">CycloneL</option>
+
         <option disabled> ***** Quarter ***** </option>
         <option value="anima-quarter">Quarter</option>
         <option value="anima-quarterX">QuarterX</option>
@@ -150,67 +211,6 @@
         <option value="anima-fullXZ">FullXZ</option>
         <option value="anima-fullYZ">FullYZ</option>
         <option value="anima-full3D">Full3D</option>
-
-        <option disabled> ***** Grow ***** </option>
-        <option value="anima-grow">Grow</option>
-        <option value="anima-growX">GrowX</option>
-        <option value="anima-growY">GrowY</option>
-
-        <option disabled> ***** Flip ***** </option>
-        <option value="anima-flipX">FlipX</option>
-        <option value="anima-flipY">FlipY</option>
-
-        <option disabled> ***** Bounce ***** </option>
-        <option value="anima-bounceS">BounceS</option>
-        <option value="anima-bounceL">BounceL</option>
-
-        <option disabled> ***** Shrink ***** </option>
-        <option value="anima-shrinkS">ShrinkS</option>
-        <option value="anima-shrinkL">ShrinkL</option>
-        <option value="anima-shrinkX">ShrinkX</option>
-        <option value="anima-shrinkY">ShrinkY</option>
-
-        <option disabled> ***** Open ***** </option>
-        <option value="anima-openXS">OpenXS</option>
-        <option value="anima-openXL">OpenXL</option>
-        <option value="anima-openYS">OpenYS</option>
-        <option value="anima-openYL">OpenYL</option>
-
-        <option disabled> ***** Flipper ***** </option>
-        <option value="anima-flipperXS">FlipperXS</option>
-        <option value="anima-flipperXL">FlipperXL</option>
-        <option value="anima-flipperYS">FlilpperYS</option>
-        <option value="anima-flipperYL">FlipperYL</option>
-
-        <option disabled> ***** Fall ***** </option>
-        <option value="anima-fallXS">FallXS</option>
-        <option value="anima-fallXL">FallXL</option>
-        <option value="anima-fallYS">FallYS</option>
-        <option value="anima-fallYL">FallYL</option>
-
-        <option disabled> ***** Twist ***** </option>
-        <option value="anima-twistT">TwistT</option>
-        <option value="anima-twistR">TwistR</option>
-        <option value="anima-twistB">TwistB</option>
-        <option value="anima-twistL">TwistL</option>
-
-        <option disabled> ***** Torsion ***** </option>
-        <option value="anima-torsionT">TorsionT</option>
-        <option value="anima-torsionR">TorsionR</option>
-        <option value="anima-torsionB">TorsionB</option>
-        <option value="anima-torsionL">TorsionL</option>
-
-        <option disabled> ***** Twister ***** </option>
-        <option value="anima-twisterT">TwisterT</option>
-        <option value="anima-twisterR">TwisterR</option>
-        <option value="anima-twisterB">TwisterB</option>
-        <option value="anima-twisterL">TwisterL</option>
-
-        <option disabled> ***** Cyclone ***** </option>
-        <option value="anima-cycloneT">CycloneT</option>
-        <option value="anima-cycloneR">CycloneR</option>
-        <option value="anima-cycloneB">CycloneB</option>
-        <option value="anima-cycloneL">CycloneL</option>
 
         <option disabled> ***** Slip ***** </option>
         <option value="anima-slipT">SlipT</option>
