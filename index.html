@@ -31,8 +31,8 @@
 
   <link href="https://fonts.googleapis.com/css?family=Text+Me+One%7cCinzel:400,700,900%7cShare+Tech+Mono" rel="stylesheet">
   <link href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="node_modules/animadio/dist/min/animadio.min.css" rel="stylesheet">
-  <!--<link href="../animadio/src/css/animadio.css" rel="stylesheet">-->
+  <!--<link href="node_modules/animadio/dist/min/animadio.min.css" rel="stylesheet">-->
+  <link href="../animadio/src/css/animadio.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -119,8 +119,37 @@
     <section class="block-target1">
       <h2>CSS Framework</h2>
 
+      <p>You can test here some animations of the Animadio v2 which will be released soon !</p>
+
       <select id="animation">
         <option selected disabled>-- Select an animation to show !</option>
+
+        <option disabled> ***** Quarter ***** </option>
+        <option value="anima-quarter">Quarter</option>
+        <option value="anima-quarterX">QuarterX</option>
+        <option value="anima-quarterY">QuarterY</option>
+        <option value="anima-quarterXY">QuarterXY</option>
+        <option value="anima-quarterXZ">QuarterXZ</option>
+        <option value="anima-quarterYZ">QuarterYZ</option>
+        <option value="anima-quarter3D">Quarter3D</option>
+
+        <option disabled> ***** Half ***** </option>
+        <option value="anima-half">Half</option>
+        <option value="anima-halfX">HalfX</option>
+        <option value="anima-halfY">HalfY</option>
+        <option value="anima-halfXY">HalfXY</option>
+        <option value="anima-halfXZ">HalfXZ</option>
+        <option value="anima-halfYZ">HalfYZ</option>
+        <option value="anima-half3D">Half3D</option>
+
+        <option disabled> ***** Full ***** </option>
+        <option value="anima-full">Full</option>
+        <option value="anima-fullX">FullX</option>
+        <option value="anima-fullY">FullY</option>
+        <option value="anima-fullXY">FullXY</option>
+        <option value="anima-fullXZ">FullXZ</option>
+        <option value="anima-fullYZ">FullYZ</option>
+        <option value="anima-full3D">Full3D</option>
 
         <option disabled> ***** Grow ***** </option>
         <option value="anima-grow">Grow</option>
@@ -133,38 +162,30 @@
 
         <option disabled> ***** Bounce ***** </option>
         <option value="anima-bounceS">BounceS</option>
-        <option value="anima-bounceM">BounceM</option>
         <option value="anima-bounceL">BounceL</option>
 
         <option disabled> ***** Shrink ***** </option>
         <option value="anima-shrinkS">ShrinkS</option>
-        <option value="anima-shrinkM">ShrinkM</option>
         <option value="anima-shrinkL">ShrinkL</option>
         <option value="anima-shrinkX">ShrinkX</option>
         <option value="anima-shrinkY">ShrinkY</option>
 
         <option disabled> ***** Open ***** </option>
         <option value="anima-openXS">OpenXS</option>
-        <option value="anima-openXM">OpenXM</option>
         <option value="anima-openXL">OpenXL</option>
         <option value="anima-openYS">OpenYS</option>
-        <option value="anima-openYM">OpenYM</option>
         <option value="anima-openYL">OpenYL</option>
 
         <option disabled> ***** Flipper ***** </option>
         <option value="anima-flipperXS">FlipperXS</option>
-        <option value="anima-flipperXM">FlipperXM</option>
         <option value="anima-flipperXL">FlipperXL</option>
         <option value="anima-flipperYS">FlilpperYS</option>
-        <option value="anima-flipperYM">FlipperYM</option>
         <option value="anima-flipperYL">FlipperYL</option>
 
         <option disabled> ***** Fall ***** </option>
         <option value="anima-fallXS">FallXS</option>
-        <option value="anima-fallXM">FallXM</option>
         <option value="anima-fallXL">FallXL</option>
         <option value="anima-fallYS">FallYS</option>
-        <option value="anima-fallYM">FallYM</option>
         <option value="anima-fallYL">FallYL</option>
 
         <option disabled> ***** Twist ***** </option>
@@ -197,9 +218,9 @@
         <option value="anima-slipB">SlipB</option>
         <option value="anima-slipL">SlipL</option>
         <option value="anima-slipTR">SlipTR</option>
-        <option value="anima-slipTL">SlipTL</option>
         <option value="anima-slipBR">SlipBR</option>
-        <option value="anima-slideBL">SlideBL</option>
+        <option value="anima-slipBL">SlipBL</option>
+        <option value="anima-slipTL">SlipTL</option>
 
         <option disabled> ***** Slide ***** </option>
         <option value="anima-slideT">SlideT</option>
@@ -207,36 +228,9 @@
         <option value="anima-slideB">SlideB</option>
         <option value="anima-slideL">SlideL</option>
         <option value="anima-slideTR">SlideTR</option>
-        <option value="anima-slideTL">SlideTL</option>
         <option value="anima-slideBR">SlideBR</option>
-        <option value="anima-slipBL">SlipBL</option>
-
-        <option disabled> ***** Quarter ***** </option>
-        <option value="anima-quarter">Quarter</option>
-        <option value="anima-quarterX">QuarterX</option>
-        <option value="anima-quarterY">QuarterY</option>
-        <option value="anima-quarter3d">Quarter3d</option>
-        <option value="anima-quarterX3d">QuarterX3d</option>
-        <option value="anima-quarterY3d">QuarterY3d</option>
-        <option value="anima-quarterZ3d">QuarterZ3d</option>
-
-        <option disabled> ***** Half ***** </option>
-        <option value="anima-half">Half</option>
-        <option value="anima-halfX">HalfX</option>
-        <option value="anima-halfY">HalfY</option>
-        <option value="anima-half3d">Half3d</option>
-        <option value="anima-halfX3d">HalfX3d</option>
-        <option value="anima-halfY3d">HalfY3d</option>
-        <option value="anima-halfZ3d">HalfZ3d</option>
-
-        <option disabled> ***** Full ***** </option>
-        <option value="anima-full">Full</option>
-        <option value="anima-fullX">FullX</option>
-        <option value="anima-fullY">FullY</option>
-        <option value="anima-full3d">Full3d</option>
-        <option value="anima-fullX3d">FullX3d</option>
-        <option value="anima-fullY3d">FullY3d</option>
-        <option value="anima-fullZ3d">FullZ3d</option>
+        <option value="anima-slideBL">SlideBL</option>
+        <option value="anima-slideTL">SlideTL</option>
       </select>
 
       <input class="button-check" id="animate-check" type="checkbox">
