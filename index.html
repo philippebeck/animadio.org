@@ -32,7 +32,7 @@
   <link href="https://fonts.googleapis.com/css?family=Text+Me+One%7cCinzel:400,700,900%7cShare+Tech+Mono" rel="stylesheet">
   <link href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="node_modules/animadio/dist/min/animadio.min.css" rel="stylesheet">
-  <!--<link href="../animadio/dist/animadio.css" rel="stylesheet">-->
+  <!--<link href="../animadio/src/css/animadio.css" rel="stylesheet">-->
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -47,7 +47,7 @@
     <input id="navbar-close" type="radio" name="navbar" checked>
     <input id="navbar-open" type="radio" name="navbar">
 
-    <label class="anima-tranx" for="home" accesskey="h" title="Want to go back home ?">
+    <label class="anima-slideR" for="home" accesskey="h" title="Want to go back home ?">
       <img src="img/logo-nav.png" alt="Animadio Logo">
     </label>
 
@@ -119,73 +119,92 @@
     <section class="block-target1">
       <h2>CSS Framework</h2>
 
-      <header class="slider">
-        <input id="slider-check-play" type="checkbox">
-        <input id="slider-check-repeat" type="checkbox" checked>
-        <input id="slider-check-direction" type="checkbox">
-        <input id="slider-radio1" type="radio" name="slider" checked>
-        <input id="slider-radio2" type="radio" name="slider">
-        <input id="slider-radio3" type="radio" name="slider">
-        <input id="slider-radio4" type="radio" name="slider">
-        <input id="slider-radio5" type="radio" name="slider">
+      <select id="animation">
+        <option selected disabled>-- Select an effect !</option>
 
-        <figure>
-          <img src="https://animadio.org/img/slider/logo.png" alt="Animadio Colored Logo">
-          <img src="https://animadio.org/img/slider/variables.png" alt="A CSS Framework that you Can Customize Completely with Simple CSS Variables !">
-          <img src="https://animadio.org/img/slider/concat.png" alt="Build Concatenation Classes to Set up an Advanced & Complex Design Easily !">
-          <img src="https://animadio.org/img/slider/states.png" alt="Maximum Interactivity with States Management of Hover/Focus & Radio/Checkbox !">
-          <img src="https://animadio.org/img/slider/animadio.png" alt="Animadio Colored Name">
-        </figure>
+        <option disabled> **** Scale **** </option>
+        <option value="anima-bounce">Bounce</option>
+        <option value="anima-flipperX">FlipperX</option>
+        <option value="anima-flipperY">FlipperY</option>
+        <option value="anima-openX">OpenX</option>
+        <option value="anima-openY">OpenY</option>
+        <option value="anima-flipX">FlipX</option>
+        <option value="anima-flipY">FlipY</option>
+        <option value="anima-fallX">FallX</option>
+        <option value="anima-fallY">FallY</option>
+        <option value="anima-grow">Grow</option>
+        <option value="anima-growX">GrowX</option>
+        <option value="anima-growY">GrowY</option>
+        <option value="anima-shrink">Shrink</option>
+        <option value="anima-shrinkX">ShrinkX</option>
+        <option value="anima-shrinkY">ShrinkY</option>
 
-        <ul>
-          <li>
-            <label for="slider-check-repeat" accesskey="r" title="Repeat On/Off">
-              <i class="fas fa-plus-circle fa-lg" aria-hidden="true"></i>
-            </label>
-          </li>
-          <li>
-            <label for="slider-check-play" accesskey="p" title="Play/Stop">
-              <i class="fas fa-play-circle fa-lg" aria-hidden="true"></i>
-            </label>
-          </li>
-          <li>
-            <a href="https://doc.animadio.org" title="How to create it ?">
-              <i class="fas fa-font fa-lg" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li>
-            <label for="slider-radio1" accesskey="1" title="1st Picture">
-              <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
-            </label>
-          </li>
-          <li>
-            <label for="slider-radio2" accesskey="2" title="2nd Picture">
-              <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
-            </label>
-          </li>
-          <li>
-            <label for="slider-radio3" accesskey="3" title="3rd Picture">
-              <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
-            </label>
-          </li>
-          <li>
-            <label for="slider-radio4" accesskey="4" title="4th Picture">
-              <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
-            </label>
-          </li>
-          <li>
-            <label for="slider-radio5" accesskey="5" title="5th Picture">
-              <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
-            </label>
-          </li>
-        </ul>
-      </header>
+        <option disabled> **** Skew **** </option>
+        <option value="anima-twistT">TwistT</option>
+        <option value="anima-twistR">TwistR</option>
+        <option value="anima-twistB">TwistB</option>
+        <option value="anima-twistL">TwistL</option>
+        <option value="anima-torsionT">TorsionT</option>
+        <option value="anima-torsionR">TorsionR</option>
+        <option value="anima-torsionB">TorsionB</option>
+        <option value="anima-torsionL">TorsionL</option>
+        <option value="anima-twisterT">TwisterT</option>
+        <option value="anima-twisterR">TwisterR</option>
+        <option value="anima-twisterB">TwisterB</option>
+        <option value="anima-twisterL">TwisterL</option>
+        <option value="anima-cycloneT">CycloneT</option>
+        <option value="anima-cycloneR">CycloneR</option>
+        <option value="anima-cycloneB">CycloneB</option>
+        <option value="anima-cycloneL">CycloneL</option>
+
+        <option disabled> **** Rotate **** </option>
+        <option value="anima-half">Half</option>
+        <option value="anima-halfX">HalfX</option>
+        <option value="anima-halfY">HalfY</option>
+        <option value="anima-halfXY">HalfXY</option>
+        <option value="anima-halfXZ">HalfXZ</option>
+        <option value="anima-halfYZ">HalfYZ</option>
+        <option value="anima-half3D">Half3D</option>
+        <option value="anima-full">Full</option>
+        <option value="anima-fullX">FullX</option>
+        <option value="anima-fullY">FullY</option>
+        <option value="anima-fullXY">FullXY</option>
+        <option value="anima-fullXZ">FullXZ</option>
+        <option value="anima-fullYZ">FullYZ</option>
+        <option value="anima-full3D">Full3D</option>
+
+        <option disabled> **** Translate **** </option>
+        <option value="anima-slipT">SlipT</option>
+        <option value="anima-slipR">SlipR</option>
+        <option value="anima-slipB">SlipB</option>
+        <option value="anima-slipL">SlipL</option>
+        <option value="anima-slipTR">SlipTR</option>
+        <option value="anima-slipBR">SlipBR</option>
+        <option value="anima-slipBL">SlipBL</option>
+        <option value="anima-slipTL">SlipTL</option>
+        <option value="anima-slideT">SlideT</option>
+        <option value="anima-slideR">SlideR</option>
+        <option value="anima-slideB">SlideB</option>
+        <option value="anima-slideL">SlideL</option>
+        <option value="anima-slideTR">SlideTR</option>
+        <option value="anima-slideBR">SlideBR</option>
+        <option value="anima-slideBL">SlideBL</option>
+        <option value="anima-slideTL">SlideTL</option>
+      </select>
+
+      <input class="button-check" id="animate-check" type="checkbox">
+      <label class="button-purple" for="animate-check">Animate !</label>
+
+      <figure id="animadio" class="anima-loop">
+        <img id="logo" src="img/logo.png" alt="Animadio Logo">
+        <img src="img/animadio.png" alt="Animadio Name">
+      </figure>
     </section>
 
-    <article class="block-target2 anima-scal-global">
+    <article class="block-target2">
       <h2>How to prepare for takeoff ?</h2>
 
-      <header>
+      <header class="anima-slipB">
         <p>Immediate takeoff with Animadio, the only <strong>free & open-source framework</strong> that offers real interactivity to the click & much more :</p>
         <ul>
           <li>Eight types of selectors working with hover, focus, active & <strong>checked states</strong></li>
@@ -197,19 +216,19 @@
         </ul>
       </header>
 
-      <section id="css-only">
+      <section id="css-only" class="anima-slipBR">
         <h3>CSS Only</h3>
         <p>Animadio is a <strong>CSS framework</strong> whose library is composed only of CSS source code: jQuery, or even Javascript, are not included or needed in production...</p>
         <p>Grunt is the only JavaScript app used in the framework developement side for recursive tasks (concat, source map, webkit &amp; min) to build the library files (but it can be used to concat CSS elements of your choice by forking the repository)</p>
         <p>You can simply use the library &amp; if you want or if you need : <strong>you can overload the CSS variables</strong>.</p>
       </section>
 
-      <section id="browsers">
+      <section id="browsers" class="anima-slipBL">
         <h3>Browsers</h3>
         <p>Animadio uses PostCSS with autoprefixer to provide a <strong>maximum of compatibility</strong> for all main browsers, including mainly <strong>Firefox, Chrome &amp; Opera</strong>, secondarily Edge, Safari &amp; Explorer (except for some effects, especially all Skew animations)</p>
       </section>
 
-      <section id="content">
+      <section id="content" class="anima-slipR">
         <h3>Content</h3>
 
         <p>The library distribution is available here :</p>
@@ -221,6 +240,12 @@
         <p>But if you only need a part of it :</p>
 
         <ul class="row">
+          <li>
+            <a class="btn-black" href="https://github.com/animadio/animadio/tree/master/dist/animadio-box.css" rel="noreferrer noopener" target="_blank" title="Box on GitHub">
+              <i class="fas fa-box fa-lg" aria-hidden="true"></i>
+              animadio-box.css
+            </a>
+          </li>
           <li>
             <a class="btn-red" href="https://github.com/animadio/animadio/tree/master/dist/animadio-grid.css" rel="noreferrer noopener" target="_blank" title="Grid on GitHub">
               <i class="fas fa-th fa-lg" aria-hidden="true"></i>
@@ -239,10 +264,16 @@
               animadio-states.css
             </a>
           </li>
+          <li>
+            <a class="btn-gray" href="https://github.com/animadio/animadio/tree/master/dist/animadio-helpers.css" rel="noreferrer noopener" target="_blank" title="Helpers on GitHub">
+              <i class="fas fa-life-ring fa-lg" aria-hidden="true"></i>
+              animadio-helpers.css
+            </a>
+          </li>
         </ul>
       </section>
 
-      <article>
+      <article class="anima-slipL">
         <h3>Installation</h3>
 
         <figure>
@@ -280,66 +311,98 @@
               <h4>CDN</h4>
 
               <p>During development, add this tag to your HTML :</p>
-              <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@1.1.5/dist/animadio.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+              <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.0.0/dist/animadio.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
 
               <p>Then in production, add this one :</p>
-              <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@1.1.5/dist/min/animadio.min.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+              <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.0.0/dist/min/animadio.min.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
 
               <p>But if you only need a part of Animadio, you can use one of those 3 files :</p>
               <ul>
+                <li><span class="font-bold color-black deco-under">animadio-box</span> for <span class="color-black">Global & Box parts</span></li>
                 <li><span class="font-bold color-red deco-under">animadio-grid</span> for <span class="color-red">Global & Grid parts</span></li>
                 <li><span class="font-bold color-green deco-under">animadio-elements</span> for <span class="color-green">Global & Elements parts</span></li>
                 <li><span class="font-bold color-blue deco-under">animadio-states</span> for <span class="color-blue">Global & States parts</span></li>
+                <li><span class="font-bold color-gray deco-under">animadio-helpers</span> for <span class="color-gray">Global & Helpers parts</span></li>
               </ul>
 
               <input id="menu-cdn-radio1" class="menu-radio1" type="radio" name="menu-cdn">
               <input id="menu-cdn-radio2" class="menu-radio2" type="radio" name="menu-cdn">
               <input id="menu-cdn-radio3" class="menu-radio3" type="radio" name="menu-cdn">
+              <input id="menu-cdn-radio4" class="menu-radio4" type="radio" name="menu-cdn">
+              <input id="menu-cdn-radio5" class="menu-radio5" type="radio" name="menu-cdn">
 
               <nav class="menu">
                 <label for="menu-cdn-radio1">
-                  Grid
+                  Box
                   <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
                 </label>
                 <label for="menu-cdn-radio2">
-                  Elements
+                  Grid
                   <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
                 </label>
                 <label for="menu-cdn-radio3">
+                  Elements
+                  <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
+                </label>
+                <label for="menu-cdn-radio4">
                   States
+                  <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
+                </label>
+                <label for="menu-cdn-radio5">
+                  Helpers
                   <i class="fas fa-caret-down fa-2x" aria-hidden="true"></i>
                 </label>
               </nav>
 
               <ul class="menu-relay">
                 <li class="menu-target1">
-                  <h5 class="color-red-deco-double">Animadio-Grid</h5>
+                  <h5 class="color-red-deco-double">Animadio-Box</h5>
 
                   <p>Development :</p>
-                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@1.1.5/dist/animadio-grid.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.0.0/dist/animadio-box.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
 
                   <p>Production :</p>
-                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@1.1.5/dist/min/animadio-grid.min.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.0.0/dist/min/animadio-box.min.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
                 </li>
 
                 <li class="menu-target2">
-                  <h5 class="color-green-deco-double">Animadio-Elements</h5>
+                  <h5 class="color-red-deco-double">Animadio-Grid</h5>
 
                   <p>Development :</p>
-                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@1.1.5/dist/animadio-elements.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.0.0/dist/animadio-grid.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
 
                   <p>Production :</p>
-                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@1.1.5/dist/min/animadio-elements.min.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.0.0/dist/min/animadio-grid.min.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
                 </li>
 
                 <li class="menu-target3">
+                  <h5 class="color-green-deco-double">Animadio-Elements</h5>
+
+                  <p>Development :</p>
+                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.0.0/dist/animadio-elements.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+
+                  <p>Production :</p>
+                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.0.0/dist/min/animadio-elements.min.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+                </li>
+
+                <li class="menu-target4">
                   <h5 class="color-blue-deco-double">Animadio-States</h5>
 
                   <p>Development :</p>
-                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@1.1.5/dist/animadio-states.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.0.0/dist/animadio-states.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
 
                   <p>Production :</p>
-                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@1.1.5/dist/min/animadio-states.min.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.0.0/dist/min/animadio-states.min.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+                </li>
+
+                <li class="menu-target5">
+                  <h5 class="color-blue-deco-double">Animadio-Helpers</h5>
+
+                  <p>Development :</p>
+                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.0.0/dist/animadio-helpers.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+
+                  <p>Production :</p>
+                  <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-salmon font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.0.0/dist/min/animadio-helpers.min.css"<span class="color-salmon font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
                 </li>
               </ul>
             </section>
@@ -388,9 +451,9 @@
     </article>
 
     <article class="block-target3">
-      <h2>Template</h2>
+      <h2 class="anima-shrinkL">Template</h2>
 
-      <section class="card-blue anima-rota3d">
+      <section class="card-blue anima-grow">
         <h3>Porfolio</h3>
 
         <figure>
@@ -417,24 +480,21 @@
 
     <article class="block-target4">
 
-      <header class="bord-dot bord-green">
-        <p class="color-purple font-bold">Animadio has continuous support &amp; community networks will give all news !</p>
+      <header class="anima-slideB">
+        <h2>Support</h2>
+        <figure>
+          <a href="https://www.codacy.com/app/Animadio/animadio?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=animadio/animadio&amp;utm_campaign=Badge_Grade" rel="noreferrer noopener" target="_blank" title="Detailed status of the quality">
+            <img src="https://api.codacy.com/project/badge/Grade/b996875347654cc69510b0b1a5616936" alt="Codacy Quality">
+          </a>
+          <a href="https://codeclimate.com/github/animadio/animadio/maintainability">
+            <img src="https://api.codeclimate.com/v1/badges/ad3b450099d132b4d98d/maintainability" alt="Code Climate Maintainability">
+          </a>
+        </figure>
       </header>
 
-      <h2>Support</h2>
-
-      <figure class="anima-trany">
-        <a href="https://www.codacy.com/app/Animadio/animadio?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=animadio/animadio&amp;utm_campaign=Badge_Grade" rel="noreferrer noopener" target="_blank" title="Detailed status of the quality">
-          <img src="https://api.codacy.com/project/badge/Grade/b996875347654cc69510b0b1a5616936" alt="Codacy Quality">
-        </a>
-        <a href="https://codeclimate.com/github/animadio/animadio/maintainability">
-          <img src="https://api.codeclimate.com/v1/badges/ad3b450099d132b4d98d/maintainability" alt="Code Climate Maintainability">
-        </a>
-      </figure>
-
-      <section>
+      <section class="anima-slideBR">
         <h3>Open-Source</h3>
-        <ul class="row anima-tran">
+        <ul class="row">
           <li>
             <a class="btn-github" href="https://github.com/animadio/animadio" rel="noreferrer noopener" target="_blank" title="Fork the Repo !">
               <i class="fab fa-github-alt fa-lg" aria-hidden="true"></i>
@@ -450,9 +510,9 @@
         </ul>
       </section>
 
-      <section>
+      <section class="anima-slideBL">
         <h3>Community</h3>
-        <ul class="row anima-tranx">
+        <ul class="row">
           <li>
             <a class="btn-tw" href="https://twitter.com/animadio" rel="noreferrer noopener" target="_blank" title="Read some News...">
               <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
@@ -462,49 +522,31 @@
         </ul>
       </section>
 
-      <section>
+      <section class="anima-slideR">
         <h3>Issues</h3>
         <p>Issues can be created here :</p>
         <a class="btn-red" href="https://github.com/animadio/animadio/issues" rel="noreferrer noopener" target="_blank" title="Create an Issue">Issues</a>
-        <p>But for Parse Error issues, from a CSS linter or a W3C validator <i class="fas fa-arrow-down fa-lg" aria-hidden="true"></i> check the user agent of browsers & look here before doing anything :</p>
-        <ul class="row anima-rota-toall">
-          <li>
-            <a class="btn-orange" href="https://github.com/w3c/css-validator/issues/225" rel="noreferrer noopener" target="_blank" title="CSS Validator Issue about CSS Variables Missing Support">W3C CSS Validator</a>
-          </li>
-          <li>
-            <a class="btn-orange" href="https://github.com/validator/validator/issues/644" rel="noreferrer noopener" target="_blank" title="HTML Validator Issue about CSS Variables Missing Support">W3C Nu HTML Validator</a>
-          </li>
-          <li>
-            <a class="btn-orange" href="https://github.com/CSSLint/csslint/issues/720" rel="noreferrer noopener" target="_blank" title="CSS Lint Issue about CSS Variables Missing Support">CSS Lint</a>
-          </li>
-        </ul>
       </section>
 
-      <section>
+      <section class="anima-slideL">
         <h3>Pull Requests</h3>
         <p>And Pull Requests can be created there :</p>
         <a class="btn-green" href="https://github.com/animadio/animadio/pulls" rel="noreferrer noopener" target="_blank" title="Propose a Pull Request">Pull Requests</a>
       </section>
 
-      <section>
-        <h3>Contributing</h3>
-        <p>Animadio needs you if you like it : sends pull requests on GitHub to improve it !!</p>
-        <a class="btn-green" href="https://github.com/orgs/animadio/people" rel="noreferrer noopener" target="_blank" title="See the Team">Contributors</a>
-      </section>
-
-      <section>
+      <section class="anima-slideTR">
         <h3>Versioning</h3>
         <p>Animadio is maintained under the<a class="btn" href="https://semver.org" rel="noreferrer noopener" target="_blank" title="Read the Spec">Semantic Versioning 2.0.0</a></p>
       </section>
 
-      <section>
+      <section class="anima-slideTL">
         <h3>Copyright</h3>
         <p>Code released under the<a class="btn" href="https://github.com/animadio/animadio/blob/master/LICENSE" rel="noreferrer noopener" target="_blank" title="Read the License">MIT License</a></p>
       </section>
 
-      <section>
+      <section class="anima-slideT">
         <h3>Creator</h3>
-        <ul class="row anima-rota3d-toall">
+        <ul class="row anima-full3d-toall">
           <li>
             <a class="btn-green" href="https://philippebeck.net" rel="noreferrer noopener" target="_blank" title="Creator WebSite">
               <i class="fas fa-globe fa-lg" aria-hidden="true"></i>
@@ -621,5 +663,6 @@
       </li>
     </ul>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
