@@ -1,7 +1,7 @@
 /***** STYLE *****/
 
 body {
-  --body-font-family: 'Text Me One', sans-serif;
+  --sans-serif-font-family: 'Text Me One', sans-serif;
 }
 
 h1,
@@ -10,7 +10,7 @@ h3,
 h4,
 h5,
 h6 {
-  --title-font-family: 'Cinzel', serif;
+  --serif-font-family: 'Cinzel', serif;
 }
 
 h1 {
@@ -23,7 +23,11 @@ h2 {
 
 code,
 pre {
-  --code-font-family: 'Share Tech Mono', monospace;
+  --monspace-font-family: 'Share Tech Mono', monospace;
+}
+
+li {
+
 }
 
 .slider {
