@@ -1,6 +1,14 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function() {
+  var animadio = new Animadio(
+      ["name", "function", "count", "direction"],
+      2000,
+      "count"
+  );
+});
+
+/*document.addEventListener("DOMContentLoaded", function() {
   const name            = document.getElementById("name");
   const timingFunction  = document.getElementById("function");
   const iterationCount  = document.getElementById("count");
@@ -93,4 +101,4 @@ document.addEventListener("DOMContentLoaded", function() {
     check.setAttribute("disabled", true);
     addClass();
   })
-});
+});*/
