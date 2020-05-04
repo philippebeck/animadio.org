@@ -5,23 +5,23 @@ document.addEventListener("DOMContentLoaded", function() {
   const timingFunction  = document.getElementById("function");
   const iterationCount  = document.getElementById("count");
   const direction       = document.getElementById("direction");
-  const animate         = document.getElementById('animate-check');
-  const animadio        = document.getElementById('animadio');
-  const logo            = document.getElementById('logo');
+  const check           = document.getElementById('check');
+  const hub             = document.getElementById('hub');
+  const goal            = document.getElementById('goal');
 
-  var nameValue = name.onclick = function() {
+  name.oninput = function() {
     return name.value;
   }
 
-  var functionValue = timingFunction.onclick = function() {
+  timingFunction.oninput = function() {
     return timingFunction.value;
   }
 
-  var countValue = iterationCount.onclick = function() {
+  iterationCount.oninput = function() {
     return iterationCount.value;
   }
 
-  var directionValue = direction.onclick = function() {
+  direction.oninput = function() {
     return direction.value;
   }
 
@@ -30,69 +30,57 @@ document.addEventListener("DOMContentLoaded", function() {
     let duration = 2000;
 
     function removeClass() {
-      animate.checked = false;
+      check.checked = false;
 
-      animate.classList.remove(nameValue() + "-check");
-      animadio.classList.remove(nameValue() + "-hub");
-      logo.classList.remove(nameValue() + "-goal");
+      check.classList.remove(name.value + "-check");
+      hub.classList.remove(name.value + "-hub");
+      goal.classList.remove(name.value + "-goal");
 
-      if (functionValue()) {
-        animate.classList.remove(functionValue() + "-check");
-        animadio.classList.remove(functionValue() + "-hub");
-        logo.classList.remove(functionValue() + "-goal");
-      }
+      check.classList.remove(timingFunction.value + "-check");
+      hub.classList.remove(timingFunction.value + "-hub");
+      goal.classList.remove(timingFunction.value + "-goal");
 
-      if (countValue()) {
-        animate.classList.remove(countValue() + "-check");
-        animadio.classList.remove(countValue() + "-hub");
-        logo.classList.remove(countValue() + "-goal");
-      }
+      check.classList.remove(iterationCount.value + "-check");
+      hub.classList.remove(iterationCount.value + "-hub");
+      goal.classList.remove(iterationCount.value + "-goal");
 
-      if (directionValue()) {
-        animate.classList.remove(directionValue() + "-check");
-        animadio.classList.remove(directionValue() + "-hub");
-        logo.classList.remove(directionValue() + "-goal");
-      }
+      check.classList.remove(direction.value + "-check");
+      hub.classList.remove(direction.value + "-hub");
+      goal.classList.remove(direction.value + "-goal");
 
-      animate.removeAttribute("disabled");
+      check.removeAttribute("disabled");
     }
 
-    animate.classList.add(nameValue() + "-check");
-    animadio.classList.add(nameValue() + "-hub");
-    logo.classList.add(nameValue() + "-goal");
+    check.classList.add(name.value + "-check");
+    hub.classList.add(name.value + "-hub");
+    goal.classList.add(name.value + "-goal");
 
-    if (functionValue()) {
-      animate.classList.add(functionValue() + "-check");
-      animadio.classList.add(functionValue() + "-hub");
-      logo.classList.add(functionValue() + "-goal");
+    check.classList.add(timingFunction.value + "-check");
+    hub.classList.add(timingFunction.value + "-hub");
+    goal.classList.add(timingFunction.value + "-goal");
+
+    check.classList.add(iterationCount.value + "-check");
+    hub.classList.add(iterationCount.value + "-hub");
+    goal.classList.add(iterationCount.value + "-goal");
+
+    count = iterationCount.value.slice(6);
+
+    switch (count) {
+      case "few":
+        count = 2;
+        break;
+      case "many":
+        count = 5;
+        break;
+      case "loop":
+        count = 30;
+        alert("Loop is limited to 1mn for this demo !")
+        break;
     }
 
-    if (countValue()) {
-      animate.classList.add(countValue() + "-check");
-      animadio.classList.add(countValue() + "-hub");
-      logo.classList.add(countValue() + "-goal");
-
-      count = countValue().slice(6);
-
-      switch (count) {
-        case "few":
-          count = 2;
-          break;
-        case "many":
-          count = 5;
-          break;
-        case "loop":
-          count = 30;
-          alert("Loop is limited to 1mn for this demo !")
-          break;
-      }
-    }
-
-    if (directionValue()) {
-      animate.classList.add(directionValue() + "-check");
-      animadio.classList.add(directionValue() + "-hub");
-      logo.classList.add(directionValue() + "-goal");
-    }
+    check.classList.add(direction.value + "-check");
+    hub.classList.add(direction.value + "-hub");
+    goal.classList.add(direction.value + "-goal");
 
     if (count) {
       duration = duration * count;
@@ -101,8 +89,8 @@ document.addEventListener("DOMContentLoaded", function() {
     window.setTimeout(removeClass, duration);
   }
 
-  animate.addEventListener("click", function () {
-    animate.setAttribute("disabled", true);
+  check.addEventListener("click", function () {
+    check.setAttribute("disabled", true);
     addClass();
   })
 });
