@@ -39,8 +39,9 @@
 <body>
   <input id="home" class="block-radio1 color-yellow-radio1" type="radio" name="main" checked>
   <input id="begin" class="block-radio2 color-yellow-radio2" type="radio" name="main">
-  <input id="template" class="block-radio3 color-yellow-radio3" type="radio" name="main">
-  <input id="support" class="block-radio4 color-yellow-radio4" type="radio" name="main">
+  <input id="demo" class="block-radio3 color-yellow-radio3" type="radio" name="main">
+  <input id="template" class="block-radio4 color-yellow-radio4" type="radio" name="main">
+  <input id="support" class="block-radio5 color-yellow-radio5" type="radio" name="main">
 
   <nav class="navbar color-yellow-relay">
 
@@ -59,13 +60,19 @@
         </label>
       </li>
       <li>
-        <label class="color-yellow-target3" for="template" accesskey="t" title="An awesome trip is waiting for you !">
+        <label class="color-yellow-target3" for="demo" accesskey="d" title="Want to taste it ??">
+          <i class="fas fa-robot fa-lg" aria-hidden="true"></i>
+          <span>Demo</span>
+        </label>
+      </li>
+      <li>
+        <label class="color-yellow-target4" for="template" accesskey="t" title="An awesome trip is waiting for you !">
           <i class="fas fa-space-shuttle fa-lg" aria-hidden="true"></i>
           <span>Template</span>
         </label>
       </li>
       <li>
-        <label class="color-yellow-target4" for="support" accesskey="s" title="Did you take along your spacesuit ?">
+        <label class="color-yellow-target5" for="support" accesskey="s" title="Did you take along your spacesuit ?">
           <i class="fas fa-user-astronaut fa-lg" aria-hidden="true"></i>
           <span>Support</span>
         </label>
@@ -119,131 +126,136 @@
     <section class="block-target1">
       <h2>CSS Framework</h2>
 
-      <p>Select an Animation to watch the effect...</p>
-      <ul class="container-90tn-80sm-70md-60sm-50wd font-monospace">
-        <li class="flex placo-between">
-          <label for="name">Animation -------></label>
-          <select id="name">
-            <optgroup label="Scale">
-              <option value="anima-bounce">Bounce</option>
-              <option value="anima-flipperX">FlipperX</option>
-              <option value="anima-flipperY">FlipperY</option>
-              <option value="anima-openX">OpenX</option>
-              <option value="anima-openY">OpenY</option>
-              <option value="anima-flipX">FlipX</option>
-              <option value="anima-flipY">FlipY</option>
-              <option value="anima-fallX">FallX</option>
-              <option value="anima-fallY">FallY</option>
-              <option selected value="anima-grow">Grow</option>
-              <option value="anima-growX">GrowX</option>
-              <option value="anima-growY">GrowY</option>
-              <option value="anima-shrink">Shrink</option>
-              <option value="anima-shrinkX">ShrinkX</option>
-              <option value="anima-shrinkY">ShrinkY</option>
-            </optgroup>
+      <header id="slider" class="slider">
 
-            <optgroup label="Skew">
-              <option value="anima-twistT">TwistT</option>
-              <option value="anima-twistR">TwistR</option>
-              <option value="anima-twistB">TwistB</option>
-              <option value="anima-twistL">TwistL</option>
-              <option value="anima-torsionT">TorsionT</option>
-              <option value="anima-torsionR">TorsionR</option>
-              <option value="anima-torsionB">TorsionB</option>
-              <option value="anima-torsionL">TorsionL</option>
-              <option value="anima-twisterT">TwisterT</option>
-              <option value="anima-twisterR">TwisterR</option>
-              <option value="anima-twisterB">TwisterB</option>
-              <option value="anima-twisterL">TwisterL</option>
-              <option value="anima-cycloneT">CycloneT</option>
-              <option value="anima-cycloneR">CycloneR</option>
-              <option value="anima-cycloneB">CycloneB</option>
-              <option value="anima-cycloneL">CycloneL</option>
-            </optgroup>
+        <!-- Slider Hidden Triggers -->
+        <input id="slider-radio1" class="slider-radio1" type="radio" name="slider" checked>
+        <input id="slider-radio2" class="slider-radio2" type="radio" name="slider">
+        <input id="slider-radio3" class="slider-radio3" type="radio" name="slider">
+        <input id="slider-radio4" class="slider-radio4" type="radio" name="slider">
+        <input id="slider-radio5" class="slider-radio5" type="radio" name="slider">
+        <input id="slider-radio6" class="slider-radio6" type="radio" name="slider">
+        <input id="slider-radio7" class="slider-radio7" type="radio" name="slider">
+        <input id="slider-radio8" class="slider-radio8" type="radio" name="slider">
+        <input id="slider-radio9" class="slider-radio9" type="radio" name="slider">
 
-            <optgroup label="Rotate">
-              <option value="anima-half">Half</option>
-              <option value="anima-halfX">HalfX</option>
-              <option value="anima-halfY">HalfY</option>
-              <option value="anima-halfXY">HalfXY</option>
-              <option value="anima-halfXZ">HalfXZ</option>
-              <option value="anima-halfYZ">HalfYZ</option>
-              <option value="anima-half3D">Half3D</option>
-              <option value="anima-full">Full</option>
-              <option value="anima-fullX">FullX</option>
-              <option value="anima-fullY">FullY</option>
-              <option value="anima-fullXY">FullXY</option>
-              <option value="anima-fullXZ">FullXZ</option>
-              <option value="anima-fullYZ">FullYZ</option>
-              <option value="anima-full3D">Full3D</option>
-            </optgroup>
+        <!-- Slider Pictures -->
+        <figure id="slider-relay" class="slider-relay">
+          <figure class="slider-target1">
+            <img src="img/animadio.png" alt="Animadio">
+            <figcaption>Welcome to Animadio !</figcaption>
+          </figure>
+          <figure class="slider-target2">
+            <img src="img/pens/cp-navbar.png" alt="Navbar Example @CodePen">
+            <figcaption>Responsive Navbar</figcaption>
+          </figure>
+          <figure class="slider-target3">
+            <img src="img/pens/cp-card.png" alt="Card Example @CodePen">
+            <figcaption>Design Card</figcaption>
+          </figure>
+          <figure class="slider-target4">
+            <img src="img/pens/cp-btn.png" alt="Btn Example @CodePen">
+            <figcaption>Many Buttons</figcaption>
+          </figure>
+          <figure class="slider-target5">
+            <img src="img/pens/cp-menu.png" alt="Menu Example @CodePen">
+            <figcaption>Effective Menu</figcaption>
+          </figure>
+          <figure class="slider-target6">
+            <img src="img/pens/cp-gallery.png" alt="Gallery Example @CodePen">
+            <figcaption>Awesome Gallery</figcaption>
+          </figure>
+          <figure class="slider-target7">
+            <img src="img/pens/cp-form.png" alt="Form Example @CodePen">
+            <figcaption>Accessible Form</figcaption>
+          </figure>
+          <figure class="slider-target8">
+            <img src="img/pens/cp-table.png" alt="Table Example @CodePen">
+            <figcaption>Clear Table</figcaption>
+          </figure>
+          <figure class="slider-target9">
+            <img src="img/pens/cp-foot.png" alt="Foot Example @CodePen">
+            <figcaption>Structured Foot</figcaption>
+          </figure>
+        </figure>
 
-            <optgroup label="Translate">
-              <option value="anima-slipT">SlipT</option>
-              <option value="anima-slipR">SlipR</option>
-              <option value="anima-slipB">SlipB</option>
-              <option value="anima-slipL">SlipL</option>
-              <option value="anima-slipTR">SlipTR</option>
-              <option value="anima-slipBR">SlipBR</option>
-              <option value="anima-slipBL">SlipBL</option>
-              <option value="anima-slipTL">SlipTL</option>
-              <option value="anima-slideT">SlideT</option>
-              <option value="anima-slideR">SlideR</option>
-              <option value="anima-slideB">SlideB</option>
-              <option value="anima-slideL">SlideL</option>
-              <option value="anima-slideTR">SlideTR</option>
-              <option value="anima-slideBR">SlideBR</option>
-              <option value="anima-slideBL">SlideBL</option>
-              <option value="anima-slideTL">SlideTL</option>
-            </optgroup>
-          </select>
-        </li>
-      </ul>
-
-      <p>And you can select some of the options if you want !</p>
-      <ul class="container-90tn-80sm-70md-60sm-50wd font-monospace">
-        <li class="flex placo-between">
-          <label for="function">Timing Function -></label>
-          <select id="function">
-            <option selected value="">-</option>
-            <option value="anima-linear">Linear</option>
-            <option value="anima-in">In</option>
-            <option value="anima-out">Out</option>
-            <option value="anima-inout">Inout</option>
-            <option value="anima-bezier">Bezier</option>
-            <option value="anima-start">Start</option>
-            <option value="anima-end">End</option>
-            <option value="anima-chrono">Chrono</option>
-            <option value="anima-timer">Timer</option>
-          </select>
-        </li>
-        <li class="flex placo-between">
-          <label for="count">Iteration Count -></label>
-          <select id="count">
-            <option selected value="">-</option>
-            <option value="anima-few">Few</option>
-            <option value="anima-many">Many</option>
-            <option value="anima-loop">Infinite</option>
-          </select>
-        </li>
-        <li class="flex placo-between">
-          <label for="direction">Direction -------></label>
-          <select id="direction">
-            <option selected value="">-</option>
-            <option value="anima-alt">Alternate</option>
-            <option value="anima-rev">Reverse</option>
-            <option value="anima-altrev">Alternate-Reverse</option>
-          </select>
-        </li>
-      </ul>
-
-      <input id="anima-check" class="button-check" type="checkbox">
-      <label for="anima-check"  class="button-purple">Animate !</label>
-
-      <figure id="anima-hub">
-        <img id="anima-goal" src="img/logo.png" alt="Animadio Logo">
-        <img src="img/animadio.png" alt="Animadio Name">
-      </figure>
+        <!-- Slider Visual Controls -->
+        <ul class="slider-controls">
+          <li>
+            <ul>
+              <li>
+                <button id="slider-previous" title="Previous (&larr;)">
+                  <i class="fas fa-step-backward fa-lg" aria-hidden="true"></i>
+                </button>
+              </li>
+              <li>
+                <button id="slider-auto" title="Pause (&minus;)">
+                  <i class="fas fa-pause fa-lg" aria-hidden="true"></i>
+                </button>
+              </li>
+              <li>
+                <button id="slider-random" title="Random (&darr;)">
+                  <i class="fas fa-random fa-lg" aria-hidden="true"></i>
+                </button>
+              </li>
+              <li>
+                <button id="slider-next" title="Next (&rarr;)">
+                  <i class="fas fa-step-forward fa-lg" aria-hidden="true"></i>
+                </button>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>
+                <label for="slider-radio1" accesskey="1" title="1st Picture">
+                  <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
+                </label>
+              </li>
+              <li>
+                <label for="slider-radio2" accesskey="2" title="2nd Picture">
+                  <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
+                </label>
+              </li>
+              <li>
+                <label for="slider-radio3" accesskey="3" title="3rd Picture">
+                  <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
+                </label>
+              </li>
+              <li>
+                <label for="slider-radio4" accesskey="4" title="4th Picture">
+                  <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
+                </label>
+              </li>
+              <li>
+                <label for="slider-radio5" accesskey="5" title="5th Picture">
+                  <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
+                </label>
+              </li>
+              <li>
+                <label for="slider-radio6" accesskey="6" title="6th Picture">
+                  <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
+                </label>
+              </li>
+              <li>
+                <label for="slider-radio7" accesskey="7" title="7th Picture">
+                  <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
+                </label>
+              </li>
+              <li>
+                <label for="slider-radio8" accesskey="8" title="8th Picture">
+                  <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
+                </label>
+              </li>
+              <li>
+                <label for="slider-radio9" accesskey="9" title="9th Picture">
+                  <i class="fas fa-dot-circle fa-lg" aria-hidden="true"></i>
+                </label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </header>
     </section>
 
     <article class="block-target2">
@@ -496,6 +508,135 @@
     </article>
 
     <article class="block-target3">
+      <h2>Animation Demo</h2>
+
+      <p>Select an Animation to watch the effect...</p>
+      <ul class="container-90tn-80sm-70md-60sm-50wd font-monospace">
+        <li class="flex placo-between">
+          <label for="name">Animation -------></label>
+          <select id="name">
+            <optgroup label="Scale">
+              <option value="anima-bounce">Bounce</option>
+              <option value="anima-flipperX">FlipperX</option>
+              <option value="anima-flipperY">FlipperY</option>
+              <option value="anima-openX">OpenX</option>
+              <option value="anima-openY">OpenY</option>
+              <option value="anima-flipX">FlipX</option>
+              <option value="anima-flipY">FlipY</option>
+              <option value="anima-fallX">FallX</option>
+              <option value="anima-fallY">FallY</option>
+              <option selected value="anima-grow">Grow</option>
+              <option value="anima-growX">GrowX</option>
+              <option value="anima-growY">GrowY</option>
+              <option value="anima-shrink">Shrink</option>
+              <option value="anima-shrinkX">ShrinkX</option>
+              <option value="anima-shrinkY">ShrinkY</option>
+            </optgroup>
+
+            <optgroup label="Skew">
+              <option value="anima-twistT">TwistT</option>
+              <option value="anima-twistR">TwistR</option>
+              <option value="anima-twistB">TwistB</option>
+              <option value="anima-twistL">TwistL</option>
+              <option value="anima-torsionT">TorsionT</option>
+              <option value="anima-torsionR">TorsionR</option>
+              <option value="anima-torsionB">TorsionB</option>
+              <option value="anima-torsionL">TorsionL</option>
+              <option value="anima-twisterT">TwisterT</option>
+              <option value="anima-twisterR">TwisterR</option>
+              <option value="anima-twisterB">TwisterB</option>
+              <option value="anima-twisterL">TwisterL</option>
+              <option value="anima-cycloneT">CycloneT</option>
+              <option value="anima-cycloneR">CycloneR</option>
+              <option value="anima-cycloneB">CycloneB</option>
+              <option value="anima-cycloneL">CycloneL</option>
+            </optgroup>
+
+            <optgroup label="Rotate">
+              <option value="anima-half">Half</option>
+              <option value="anima-halfX">HalfX</option>
+              <option value="anima-halfY">HalfY</option>
+              <option value="anima-halfXY">HalfXY</option>
+              <option value="anima-halfXZ">HalfXZ</option>
+              <option value="anima-halfYZ">HalfYZ</option>
+              <option value="anima-half3D">Half3D</option>
+              <option value="anima-full">Full</option>
+              <option value="anima-fullX">FullX</option>
+              <option value="anima-fullY">FullY</option>
+              <option value="anima-fullXY">FullXY</option>
+              <option value="anima-fullXZ">FullXZ</option>
+              <option value="anima-fullYZ">FullYZ</option>
+              <option value="anima-full3D">Full3D</option>
+            </optgroup>
+
+            <optgroup label="Translate">
+              <option value="anima-slipT">SlipT</option>
+              <option value="anima-slipR">SlipR</option>
+              <option value="anima-slipB">SlipB</option>
+              <option value="anima-slipL">SlipL</option>
+              <option value="anima-slipTR">SlipTR</option>
+              <option value="anima-slipBR">SlipBR</option>
+              <option value="anima-slipBL">SlipBL</option>
+              <option value="anima-slipTL">SlipTL</option>
+              <option value="anima-slideT">SlideT</option>
+              <option value="anima-slideR">SlideR</option>
+              <option value="anima-slideB">SlideB</option>
+              <option value="anima-slideL">SlideL</option>
+              <option value="anima-slideTR">SlideTR</option>
+              <option value="anima-slideBR">SlideBR</option>
+              <option value="anima-slideBL">SlideBL</option>
+              <option value="anima-slideTL">SlideTL</option>
+            </optgroup>
+          </select>
+        </li>
+      </ul>
+
+      <p>And you can select some of the options if you want !</p>
+      <ul class="container-90tn-80sm-70md-60sm-50wd font-monospace">
+        <li class="flex placo-between">
+          <label for="function">Timing Function -></label>
+          <select id="function">
+            <option selected value="">-</option>
+            <option value="anima-linear">Linear</option>
+            <option value="anima-in">In</option>
+            <option value="anima-out">Out</option>
+            <option value="anima-inout">Inout</option>
+            <option value="anima-bezier">Bezier</option>
+            <option value="anima-start">Start</option>
+            <option value="anima-end">End</option>
+            <option value="anima-chrono">Chrono</option>
+            <option value="anima-timer">Timer</option>
+          </select>
+        </li>
+        <li class="flex placo-between">
+          <label for="count">Iteration Count -></label>
+          <select id="count">
+            <option selected value="">-</option>
+            <option value="anima-few">Few</option>
+            <option value="anima-many">Many</option>
+            <option value="anima-loop">Infinite</option>
+          </select>
+        </li>
+        <li class="flex placo-between">
+          <label for="direction">Direction -------></label>
+          <select id="direction">
+            <option selected value="">-</option>
+            <option value="anima-alt">Alternate</option>
+            <option value="anima-rev">Reverse</option>
+            <option value="anima-altrev">Alternate-Reverse</option>
+          </select>
+        </li>
+      </ul>
+
+      <input id="anima-check" class="button-check" type="checkbox">
+      <label for="anima-check"  class="button-purple">Animate !</label>
+
+      <figure id="anima-hub">
+        <img id="anima-goal" src="img/logo.png" alt="Animadio Logo">
+      </figure>
+    </article>
+
+    <article class="block-target4">
       <h2 class="anima-shrinkL">Template</h2>
 
       <section class="card-blue anima-grow">
@@ -523,7 +664,7 @@
 
     </article>
 
-    <article class="block-target4">
+    <article class="block-target5">
 
       <header class="anima-slideB">
         <h2>Support</h2>
