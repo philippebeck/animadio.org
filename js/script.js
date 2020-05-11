@@ -7,5 +7,5 @@ document.addEventListener("DOMContentLoaded", function() {
       [2000, {few: 2, many: 5, loop: 30}]
   );
 
-  Animadio.slider();
+  Animadio.slider(3000);
 });
