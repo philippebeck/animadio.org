@@ -23,7 +23,7 @@
   "repository": "github:animadio/animadio.org",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
-    "animadio": "^2.4.0",
+    "animadio": "^2.4.3",
     "animadio.js": "^0.1.18"
   },
   "bugs": "https://github.com/animadio/animadio.org/issues",
