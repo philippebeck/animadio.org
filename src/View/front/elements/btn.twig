@@ -1,0 +1,76 @@
+<article class="menu-target1">
+    <h4>Btn | Button</h4>
+
+    <section class="card-green">
+        <h5>Btn Infos</h5>
+        <p>You can use Btn classes for links & Button classes for effects !</p>
+        <a class="btn" href="https://codepen.io/animadio/pen/LamGvj" title="View HTML Example @CodePen" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-html5 fa-lg color-white color-blue-into" aria-hidden="true"></i>
+        </a>
+        <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/elements/variables/_btn.var.scss" title="View SCSS Variables Source @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-sass fa-lg color-white color-magenta-into" aria-hidden="true"></i>
+        </a>
+        <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/elements/classes/_btn.scss" title="View SCSS Classes Source @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-sass fa-lg color-white color-magenta-into" aria-hidden="true"></i>
+        </a>
+    </section>
+
+    <section>
+        <h5>Btn Examples</h5>
+
+        <ul>
+            {% for btn in btnClasses %}
+                <li>
+                    <ul>
+                        <li>
+                            <h6 class="deco-under mar-bot-sm">{{ btn.class|replace({'-': " "}) }} & {{ btn.class|replace({'btn': "button", '-': " "}) }}</h6>
+                        </li>
+                        <li>
+                            <a class="{{ btn.class }}" href="#">
+                                <i class="fas fa-stop-circle fa-2x" aria-hidden="true"></i>
+                                {{ btn.class }}
+                            </a>
+                        </li>
+                        <li>
+                            <code>
+                                <span class="color-silver">&lt;</span><span class="color-red">a</span><span class="color-coral font-italic"> class=</span>"{{ btn.class }}"<span class="color-coral font-italic"> href=</span>"#"<span class="color-silver">&gt;</span><span class="color-white">{{ btn.class|replace({'-': " "})|title }}</span><span class="color-silver">&lt;/</span><span class="color-red">a</span><span class="color-silver">&gt;</span></code>
+                        <li class="mar-top-md">
+                            <a class="{{ btn.class|replace({'btn': "button"}) }}" href="#">
+                                <i class="far fa-stop-circle fa-2x" aria-hidden="true"></i>
+                                {{ btn.class|replace({'btn': "button"}) }}
+                            </a>
+                        </li>
+                        <li>
+                            <code>
+                                <span class="color-silver">&lt;</span><span class="color-red">a</span><span class="color-coral font-italic"> class=</span>"{{ btn.class }}"<span class="color-coral font-italic"> href=</span>"#"<span class="color-silver">&gt;</span><span class="color-white">{{ btn.class|replace({'-': " "})|title }}</span><span class="color-silver">&lt;/</span><span class="color-red">a</span><span class="color-silver">&gt;</span></code>
+                        </li>
+                    </ul>
+                </li>
+            {%  endfor %}
+        </ul>
+    </section>
+
+    <table class="table">
+        <caption>Btn Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Primary Value</th>
+            <th>Secondary Value</th>
+            <th>Third Value</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for btn in btnClasses %}
+            <tr>
+                <th>{{ btn.class }}</th>
+                <td>{{ btn.primary_value }}</td>
+                <td>{{ btn.secondary_value }}</td>
+                <td>{{ btn.third_value }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</article>

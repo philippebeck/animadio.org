@@ -1,12 +1,11 @@
 {
   "name": "animadio.org",
-  "version": "1.3.3",
-  "description": "Animadio Official WebSite - Grid & Flexbox Layouts - Reusable & Customizable Elements - Perform Complex Animations - Controls by Radio Buttons - No JavaScript needed or used",
+  "description": "Animadio Website & Documentation - Grid & Flexbox Layouts - Reusable & Customizable Elements - Perform Complex Animations - Controls by Radio Buttons",
   "keywords": [
     "css",
     "website",
+    "documentation",
     "concatenation",
-    "combinable classes",
     "flexbox",
     "grid",
     "click control",
@@ -14,16 +13,15 @@
     "animation",
     "variables",
     "customizability",
-    "reusability",
-    "pure css"
+    "reusability"
   ],
   "license": "MIT",
-  "main": "index.html",
+  "main": "index.php",
   "homepage": "https://animadio.org",
   "repository": "github:animadio/animadio.org",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0",
-    "animadio": "^2.4.4",
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "animadio": "^2.4.5",
     "animadio.js": "^0.1.18"
   },
   "bugs": "https://github.com/animadio/animadio.org/issues",

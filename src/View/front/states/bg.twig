@@ -1,0 +1,40 @@
+<article class="menu-target4">
+    <h4>BG</h4>
+
+    <section class="card-blue">
+        <h5>Bg</h5>
+        <p>Bg classes are made to provide background colors, add a states keywords to use it as a special effect !</p>
+        <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/states/variables/_bg.var.scss" title="View SCSS Variables Source @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-sass fa-lg color-white color-magenta-into" aria-hidden="true"></i>
+        </a>
+        <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/states/classes/_bg.scss" title="View SCSS Classes Source @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-sass fa-lg color-white color-magenta-into" aria-hidden="true"></i>
+        </a>
+    </section>
+
+    <table class="table">
+        <caption>Bg Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Value</th>
+            <th>Property</th>
+            <th>Media</th>
+            <th>Concat</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for bg in bgClasses %}
+            <tr>
+                <th>{{ bg.class }}</th>
+                <td>{{ bg.valor }}</td>
+                <td>{{ bg.property }}</td>
+                <td>{{ bg.media|replace({'1': "All", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
+                <td>{{ bg.concat|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</article>

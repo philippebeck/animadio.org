@@ -1,0 +1,40 @@
+<article class="menu-target2">
+    <h4>Trans</h4>
+
+    <section class="card-orange">
+        <h5>Trans</h5>
+        <p>Trans classes are made to provide text transform, add global to use for children !</p>
+        <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/helpers/variables/_trans.var.scss" title="View SCSS Variables Source @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-sass fa-lg color-white color-magenta-into" aria-hidden="true"></i>
+        </a>
+        <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/helpers/classes/_trans.scss" title="View SCSS Classes Source @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-sass fa-lg color-white color-magenta-into" aria-hidden="true"></i>
+        </a>
+    </section>
+
+    <table class="table">
+        <caption>Trans Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Value</th>
+            <th>Property</th>
+            <th>Media</th>
+            <th>Concat</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for trans in transClasses %}
+            <tr>
+                <th>{{ trans.class }}</th>
+                <td>{{ trans.valor }}</td>
+                <td>{{ trans.property }}</td>
+                <td>{{ trans.media|replace({'1': "All", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
+                <td>{{ trans.concat|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</article>

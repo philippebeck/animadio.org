@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{% block title %}Animadio - {{ block('subtitle') }}{% endblock %}</title>
+
+    <link rel="canonical" href="{% block canonical %}https://animadio.org{% endblock %}">
+    <link rel="icon" href="https://animadio.org/public/img/favicon.ico" type="image/x-icon">
+
+    <meta name="description"
+          content="{% block description %}Animadio, CSS Framework : Frontend Programming Tool to Design Websites - {{ block('subtitle') }} : {{ block('summary') }}{% endblock %}">
+    <meta name="author"      content="Philippe Beck">
+    <meta name="copyright"   content="MIT">
+
+    <meta property="og:type"        content="website">
+    <meta property="og:title"       content="{{ block('title') }}">
+    <meta property="og:url"         content="{{ block('canonical') }}">
+    <meta property="og:description" content="{{ block('description') }}">
+    <meta property="og:image"       content="{% block image %}https://animadio.org/img/logo.png{% endblock %}">
+
+    <meta name="twitter:card"        content="summary">
+    <meta name="twitter:title"       content="{{ block('title') }}">
+    <meta name="twitter:site"        content="{{ block('canonical') }}">
+    <meta name="twitter:description" content="{{ block('description') }}">
+    <meta name="twitter:image"       content="{{ block('image') }}">
+    <meta name="twitter:creator"     content="@philippepjbeck">
+
+    <link href="https://fonts.googleapis.com/css?family=Text+Me+One%7cCinzel:400,700,900%7cShare+Tech+Mono" rel="stylesheet">
+    <link href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <!--<link href="node_modules/animadio/dist/min/animadio.min.css" rel="stylesheet">-->
+    <link href="../../animadio/dist/animadio.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+{{ include('layout/navbar.twig') }}
+
+<header>
+    <h1 class="align-center color-purple shatex-blur-md">{{ block('subtitle') }}</h1>
+</header>
+
+<main class="container-90md-80lg-70wd align-center">
+
+    {% block main %}{% endblock %}
+
+</main>
+
+{{ include('layout/footer.twig') }}
+
+<script src="node_modules/animadio.js/dist/animadio.js"></script>
+{% block script %}{% endblock %}
+</body>
+</html>

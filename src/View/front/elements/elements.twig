@@ -1,0 +1,85 @@
+{% extends 'layout/layout.twig' %}
+
+{% block subtitle %}Elements{% endblock %}
+
+{% block description %}Animadio Documentation about Animadio Elements : btn, card, foot, form, gallery, menu, navbar, slider & table{% endblock %}
+
+{% block main %}
+
+    <article>
+        <h2>Elements</h2>
+
+        <section class="card-purple">
+            <figure>
+                <i class="fas fa-sitemap fa-7x" aria-hidden="true"></i>
+            </figure>
+            <h3>Elements Usage</h3>
+            <p>To use Elements feature, you have to write only one class for each element, but you need to follow the HTML5 semantic rules in order to get the good effects.</p>
+            <a class="btn" href="https://cdn.jsdelivr.net/npm/animadio@2.4.4/dist/animadio-elements.css" title="Access to Animadio Elements CDN" rel="noreferrer noopener" target="_blank">
+                <i class="fas fa-server fa-lg color-white color-blue-into" aria-hidden="true"></i>
+            </a>
+            <a class="btn" href="https://github.com/animadio/animadio/blob/master/dist/animadio-elements.css" title="View CSS Library @GitHub" rel="noreferrer noopener" target="_blank">
+                <i class="fab fa-css3 fa-lg color-white color-blue-into" aria-hidden="true"></i>
+            </a>
+        </section>
+
+        <input id="menu-radio1" class="menu-radio1" type="radio" name="menu" checked>
+        <input id="menu-radio2" class="menu-radio2" type="radio" name="menu">
+        <input id="menu-radio3" class="menu-radio3" type="radio" name="menu">
+        <input id="menu-radio4" class="menu-radio4" type="radio" name="menu">
+        <input id="menu-radio5" class="menu-radio5" type="radio" name="menu">
+        <input id="menu-radio6" class="menu-radio6" type="radio" name="menu">
+        <input id="menu-radio7" class="menu-radio7" type="radio" name="menu">
+        <input id="menu-radio8" class="menu-radio8" type="radio" name="menu">
+        <input id="menu-radio9" class="menu-radio9" type="radio" name="menu">
+
+        <nav class="menu">
+            <label for="menu-radio1" title="Show Btn Classes">
+                Btn
+                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
+            </label>
+            <label for="menu-radio2" title="Show Card Classes">
+                Card
+                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
+            </label>
+            <label for="menu-radio3" title="Show Foot Classes">
+                Foot
+                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
+            </label>
+            <label for="menu-radio4" title="Show Form Classes">
+                Form
+                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
+            </label>
+            <label for="menu-radio5" title="Show Gallery Classes">
+                Gallery
+                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
+            </label>
+            <label for="menu-radio6" title="Show Menu Classes">
+                Menu
+                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
+            </label>
+            <label for="menu-radio7" title="Show Navbar Classes">
+                Navbar
+                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
+            </label>
+            <label for="menu-radio9" title="Show Table Classes">
+                Table
+                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
+            </label>
+        </nav>
+
+        <section class="menu-relay">
+            <h3>Elements Parts</h3>
+
+            {{ include("front/elements/btn.twig") }}
+            {{ include("front/elements/card.twig") }}
+            {{ include("front/elements/foot.twig") }}
+            {{ include("front/elements/form.twig") }}
+            {{ include("front/elements/gallery.twig") }}
+            {{ include("front/elements/menu.twig") }}
+            {{ include("front/elements/navbar.twig") }}
+            {{ include("front/elements/table.twig") }}
+
+        </section>
+    </article>
+{% endblock %}

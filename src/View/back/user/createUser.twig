@@ -1,0 +1,48 @@
+{% extends 'layout/layout.twig' %}
+
+{% block title %}Create a New User{% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block main %}
+    <main class="align-center">
+        <form class="form" method="post" action={{ url('user!create') }} enctype="multipart/form-data">
+            <input name="MAX_FILE_SIZE" type="hidden" value="5000000">
+            <fieldset>
+                <legend>
+                    <i class="far fa-user fa-2x"></i>
+                </legend>
+                <ul>
+                    <li>
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" maxlength="50" required placeholder="Type your Name">
+                    </li>
+                    <li>
+                        <label for="file">Photo (max 5Mo)</label>
+                        <input name="file" type="file" accept=".jpg, .jpeg, .png, .svg, .gif" required>
+                    </li>
+                    <li>
+                        <label for="email">Email :</label>
+                        <input id="email" name="email" type="email" maxlength="100" minlength="5" required placeholder="Type your Email">
+                    </li>
+                    <hr>
+                    <li>
+                        <label for="pass">Password :</label>
+                        <input id="pass" name="pass" type="password" placeholder="Type your Password" maxlength="100" minlength="8">
+                    </li>
+                    <li>
+                        <label for="conf-pass">Confirm Password :</label>
+                        <input id="conf-pass" name="conf-pass" type="password" placeholder="Confirm your Password" maxlength="100" minlength="8">
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <input type="reset" value="Reset">
+                        <input type="submit" value="Create">
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+        <a class="btn-black btn-lg" href="{{ url('admin') }}">Quit</a>
+    </main>
+{% endblock %}

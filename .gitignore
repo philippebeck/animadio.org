@@ -1,6 +1,7 @@
 .idea/
-img/data/
-img/numbers/
-img/pens/
-node_modules/
-coming-soon.png
+config/dev-params.php
+config/prod-params.php
+config/user.sql
+public/img/numbers/
+public/node_modules/
+vendor/

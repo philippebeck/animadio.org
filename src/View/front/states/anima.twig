@@ -1,0 +1,169 @@
+<article class="menu-target1">
+    <h4>Anima</h4>
+
+    <section class="card-blue">
+        <h5>Anima Infos</h5>
+        <p>Anima classes are designed to provide animations with common options such as duration, delay, iteration, or direction, add a states keywords to use it as a special effect</p>
+        <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/states/variables/_anima.var.scss" title="View SCSS Variables Source @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-sass fa-lg color-white color-magenta-into" aria-hidden="true"></i>
+        </a>
+        <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/states/classes/_anima.scss" title="View SCSS Classes Source @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-sass fa-lg color-white color-magenta-into" aria-hidden="true"></i>
+        </a>
+    </section>
+
+    <section>
+        <h5>Anima Demo</h5>
+
+        <p>Select an Animation to watch the effect...</p>
+        <ul class="container-90tn-80sm-70md-60sm-50wd font-monospace">
+            <li class="flex placo-between">
+                <label for="name">Animation -------></label>
+                <select id="name">
+                    <optgroup label="Scale">
+                        <option value="anima-bounce">Bounce</option>
+                        <option value="anima-flipperX">FlipperX</option>
+                        <option value="anima-flipperY">FlipperY</option>
+                        <option value="anima-openX">OpenX</option>
+                        <option value="anima-openY">OpenY</option>
+                        <option value="anima-flipX">FlipX</option>
+                        <option value="anima-flipY">FlipY</option>
+                        <option value="anima-fallX">FallX</option>
+                        <option value="anima-fallY">FallY</option>
+                        <option selected value="anima-grow">Grow</option>
+                        <option value="anima-growX">GrowX</option>
+                        <option value="anima-growY">GrowY</option>
+                        <option value="anima-shrink">Shrink</option>
+                        <option value="anima-shrinkX">ShrinkX</option>
+                        <option value="anima-shrinkY">ShrinkY</option>
+                    </optgroup>
+
+                    <optgroup label="Skew">
+                        <option value="anima-twistT">TwistT</option>
+                        <option value="anima-twistR">TwistR</option>
+                        <option value="anima-twistB">TwistB</option>
+                        <option value="anima-twistL">TwistL</option>
+                        <option value="anima-torsionT">TorsionT</option>
+                        <option value="anima-torsionR">TorsionR</option>
+                        <option value="anima-torsionB">TorsionB</option>
+                        <option value="anima-torsionL">TorsionL</option>
+                        <option value="anima-twisterT">TwisterT</option>
+                        <option value="anima-twisterR">TwisterR</option>
+                        <option value="anima-twisterB">TwisterB</option>
+                        <option value="anima-twisterL">TwisterL</option>
+                        <option value="anima-cycloneT">CycloneT</option>
+                        <option value="anima-cycloneR">CycloneR</option>
+                        <option value="anima-cycloneB">CycloneB</option>
+                        <option value="anima-cycloneL">CycloneL</option>
+                    </optgroup>
+
+                    <optgroup label="Rotate">
+                        <option value="anima-half">Half</option>
+                        <option value="anima-halfX">HalfX</option>
+                        <option value="anima-halfY">HalfY</option>
+                        <option value="anima-halfXY">HalfXY</option>
+                        <option value="anima-halfXZ">HalfXZ</option>
+                        <option value="anima-halfYZ">HalfYZ</option>
+                        <option value="anima-half3D">Half3D</option>
+                        <option value="anima-full">Full</option>
+                        <option value="anima-fullX">FullX</option>
+                        <option value="anima-fullY">FullY</option>
+                        <option value="anima-fullXY">FullXY</option>
+                        <option value="anima-fullXZ">FullXZ</option>
+                        <option value="anima-fullYZ">FullYZ</option>
+                        <option value="anima-full3D">Full3D</option>
+                    </optgroup>
+
+                    <optgroup label="Translate">
+                        <option value="anima-slipT">SlipT</option>
+                        <option value="anima-slipR">SlipR</option>
+                        <option value="anima-slipB">SlipB</option>
+                        <option value="anima-slipL">SlipL</option>
+                        <option value="anima-slipTR">SlipTR</option>
+                        <option value="anima-slipBR">SlipBR</option>
+                        <option value="anima-slipBL">SlipBL</option>
+                        <option value="anima-slipTL">SlipTL</option>
+                        <option value="anima-slideT">SlideT</option>
+                        <option value="anima-slideR">SlideR</option>
+                        <option value="anima-slideB">SlideB</option>
+                        <option value="anima-slideL">SlideL</option>
+                        <option value="anima-slideTR">SlideTR</option>
+                        <option value="anima-slideBR">SlideBR</option>
+                        <option value="anima-slideBL">SlideBL</option>
+                        <option value="anima-slideTL">SlideTL</option>
+                    </optgroup>
+                </select>
+            </li>
+        </ul>
+
+        <p>And you can select some of the options if you want !</p>
+        <ul class="container-90tn-80sm-70md-60sm-50wd font-monospace">
+            <li class="flex placo-between">
+                <label for="function">Timing Function -></label>
+                <select id="function">
+                    <option selected value="">-</option>
+                    <option value="anima-linear">Linear</option>
+                    <option value="anima-in">In</option>
+                    <option value="anima-out">Out</option>
+                    <option value="anima-inout">Inout</option>
+                    <option value="anima-bezier">Bezier</option>
+                    <option value="anima-start">Start</option>
+                    <option value="anima-end">End</option>
+                    <option value="anima-chrono">Chrono</option>
+                    <option value="anima-timer">Timer</option>
+                </select>
+            </li>
+            <li class="flex placo-between">
+                <label for="count">Iteration Count -></label>
+                <select id="count">
+                    <option selected value="">-</option>
+                    <option value="anima-few">Few</option>
+                    <option value="anima-many">Many</option>
+                    <option value="anima-loop">Infinite</option>
+                </select>
+            </li>
+            <li class="flex placo-between">
+                <label for="direction">Direction -------></label>
+                <select id="direction">
+                    <option selected value="">-</option>
+                    <option value="anima-alt">Alternate</option>
+                    <option value="anima-rev">Reverse</option>
+                    <option value="anima-altrev">Alternate-Reverse</option>
+                </select>
+            </li>
+        </ul>
+
+        <input id="anima-check" class="button-check" type="checkbox">
+        <label for="anima-check"  class="button-purple">Animate !</label>
+
+        <figure id="anima-hub">
+            <img id="anima-goal" src="img/logo.png" alt="Animadio Logo">
+        </figure>
+    </section>
+
+    <table id="anima-datas" class="table">
+        <caption>Anima Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Value</th>
+            <th>Property</th>
+            <th>Media</th>
+            <th>Concat</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for anima in animaClasses %}
+            <tr>
+                <th>{{ anima.class }}</th>
+                <td>{{ anima.valor }}</td>
+                <td>{{ anima.property }}</td>
+                <td>{{ anima.media|replace({'1': "All", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
+                <td>{{ anima.concat|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</article>

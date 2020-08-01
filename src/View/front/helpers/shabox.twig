@@ -1,0 +1,40 @@
+<article class="menu-target6">
+    <h4>Shabox</h4>
+
+    <section class="card-orange">
+        <h5>Shabox</h5>
+        <p>Shabox classes are made to provide box shadows, add global to use for children !</p>
+        <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/helpers/variables/_shabox.var.scss" title="View SCSS Variables Source @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-sass fa-lg color-white color-magenta-into" aria-hidden="true"></i>
+        </a>
+        <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/helpers/classes/_shabox.scss" title="View SCSS Classes Source @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-sass fa-lg color-white color-magenta-into" aria-hidden="true"></i>
+        </a>
+    </section>
+
+    <table class="table">
+        <caption>Shabox Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Value</th>
+            <th>Property</th>
+            <th>Media</th>
+            <th>Concat</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for shabox in shaboxClasses %}
+            <tr>
+                <th>{{ shabox.class }}</th>
+                <td>{{ shabox.valor }}</td>
+                <td>{{ shabox.property }}</td>
+                <td>{{ shabox.media|replace({'1': "All", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
+                <td>{{ shabox.concat|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</article>
