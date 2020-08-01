@@ -1,0 +1,40 @@
+<article class="menu-target7">
+    <h4>Cursor</h4>
+
+    <section class="card-orange">
+        <h5>Cursor</h5>
+        <p>Cursor classes are made to provide text cursor, add global to use for children !</p>
+        <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/helpers/variables/_cursor.var.scss" title="View SCSS Variables Source @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-sass fa-lg color-white color-magenta-into" aria-hidden="true"></i>
+        </a>
+        <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/helpers/classes/_cursor.scss" title="View SCSS Classes Source @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-sass fa-lg color-white color-magenta-into" aria-hidden="true"></i>
+        </a>
+    </section>
+
+    <table class="table">
+        <caption>Cursor Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Value</th>
+            <th>Property</th>
+            <th>Media</th>
+            <th>Concat</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for cursor in cursorClasses %}
+            <tr>
+                <th>{{ cursor.class }}</th>
+                <td>{{ cursor.valor }}</td>
+                <td>{{ cursor.property }}</td>
+                <td>{{ cursor.media|replace({'1': "All", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
+                <td>{{ cursor.concat|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</article>
