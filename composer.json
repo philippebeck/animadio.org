@@ -1,0 +1,53 @@
+{
+  "name": "animadio/animadio.org",
+  "version": "2.0.0",
+  "description": "Animadio Website & Documentation - Grid & Flexbox Layouts - Reusable & Customizable Elements - Perform Complex Animations - Controls by Radio Buttons",
+  "type": "project",
+  "keywords": [
+    "css",
+    "website",
+    "documentation",
+    "concatenation",
+    "flexbox",
+    "grid",
+    "click control",
+    "keyframes",
+    "animation",
+    "variables",
+    "customizability",
+    "reusability"
+  ],
+  "homepage": "https://animadio.org",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Philippe Beck",
+      "email": "philippe@philippebeck.net",
+      "homepage": "https://philippebeck.net",
+      "role": "Lead Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "require": {
+    "php": "7.3",
+    "philippebeck/pam": "^4.5.0"
+  },
+  "require-dev": {
+    "tracy/tracy": "^2.7.5"
+  },
+  "config": {
+    "platform": {
+      "php": "7.3"
+    }
+  },
+  "support": {
+    "email": "css@animadio.org",
+    "issues": "https://github.com/animadio/animadio.org/issues",
+    "wiki": "https://github.com/animadio/animadio.org/wiki",
+    "source": "https://github.com/animadio/animadio.org"
+  }
+}
