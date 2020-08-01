@@ -1,0 +1,84 @@
+<article class="menu-target2">
+    <h4>Flex</h4>
+
+    <section class="card-red">
+        <h5>Flex Infos</h5>
+        <p>You can concat each media keywords with the Flex classes...</p>
+        <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/grid/variables/_flex.var.scss" title="View SCSS Variables Source @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-sass fa-lg color-white color-magenta-into" aria-hidden="true"></i>
+        </a>
+        <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/grid/classes/_flex.scss" title="View SCSS Classes Source @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-sass fa-lg color-white color-magenta-into" aria-hidden="true"></i>
+        </a>
+    </section>
+
+    <section>
+        <h5>Flex Examples</h5>
+
+        <ul>
+            <li>
+                <h6>Column class</h6>
+
+                <pre>
+<span class="color-silver">&lt;</span><span class="color-red">section</span><span class="color-coral font-italic"> class=</span>"column"<span class="color-silver">&gt;</span>
+    <span class="color-silver">&lt;!-- To get a flex column --></span>
+<span class="color-silver">&lt;/</span><span class="color-red">section</span><span class="color-silver">&gt;</span></pre>
+            </li>
+            <li>
+                <h6>Row class</h6>
+
+                <pre>
+<span class="color-silver">&lt;</span><span class="color-red">section</span><span class="color-coral font-italic"> class=</span>"row-reverse"<span class="color-silver">&gt;</span>
+    <span class="color-silver">&lt;!-- To get a flex reverse row --></span>
+<span class="color-silver">&lt;/</span><span class="color-red">section</span><span class="color-silver">&gt;</span></pre>
+            </li>
+            <li>
+                <h6>2 concat flex classes</h6>
+
+                <pre>
+<span class="color-silver">&lt;</span><span class="color-red">section</span><span class="color-coral font-italic"> class=</span>"flex-2sm-4md"<span class="color-silver">&gt;</span>
+    <span class="color-silver">&lt;!-- To get 1 flex column before 576px,
+    then 2 after 576px,
+    finally 4 after 768px,
+    all of that with gutters --></span>
+<span class="color-silver">&lt;/</span><span class="color-red">section</span><span class="color-silver">&gt;</span></pre>
+            </li>
+            <li>
+                <h6>3 concat flex classes</h6>
+
+                <pre>
+<span class="color-silver">&lt;</span><span class="color-red">section</span><span class="color-coral font-italic"> class=</span>"flex-4sm-8md-12lg"<span class="color-silver">&gt;</span>
+    <span class="color-silver">&lt;!-- To get 1 flex column before 576px,
+    then 4 after 576px,
+    then 8 after 768px,
+    finally 12 after 992px,
+    all of that with gutters --></span>
+<span class="color-silver">&lt;/</span><span class="color-red">section</span><span class="color-silver">&gt;</span></pre>
+            </li>
+        </ul>
+    </section>
+
+    {#<table class="table">
+        <caption>Flex</caption>
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Property</th>
+            <th>Value</th>
+            <th>Screen</th>
+            <th>Concat</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for flex in allFlexClasses %}
+            <tr>
+                <th>{{ flex.class }}</th>
+                <td>{{ flex.property }}</td>
+                <td>{{ flex.valor }}</td>
+                <td>{{ flex.screen }}</td>
+                <td>{{ flex.concat|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>#}
+</article>
