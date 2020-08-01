@@ -1,0 +1,40 @@
+<article class="menu-target3">
+    <h4>Position</h4>
+
+    <section class="card-blue">
+        <h5>Position</h5>
+        <p>Position classes are made to provide different positions with different screen sizes, add a states keywords to use it as a special effect !</p>
+        <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/states/variables/_position.var.scss" title="View SCSS Variables Source @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-sass fa-lg color-white color-magenta-into" aria-hidden="true"></i>
+        </a>
+        <a class="btn" href="https://github.com/animadio/animadio/blob/master/src/states/classes/_position.scss" title="View SCSS Classes Source @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-sass fa-lg color-white color-magenta-into" aria-hidden="true"></i>
+        </a>
+    </section>
+
+    <table class="table">
+        <caption>Position Datas</caption>
+
+        <thead>
+        <tr>
+            <th>Class</th>
+            <th>Value</th>
+            <th>Property</th>
+            <th>Media</th>
+            <th>Concat</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for position in positionClasses %}
+            <tr>
+                <th>{{ position.class }}</th>
+                <td>{{ position.valor }}</td>
+                <td>{{ position.property }}</td>
+                <td>{{ position.media|replace({'1': "All", '2': "sm", '3': "md", '4': "lg", '5': "wd"}) }}</td>
+                <td>{{ position.concat|replace({'1': "yes", '0': "no"}) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</article>
