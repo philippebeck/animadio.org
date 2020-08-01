@@ -1,0 +1,207 @@
+{% extends 'layout/layout.twig' %}
+
+{% block subtitle %}Getting Start{% endblock %}
+
+{% block summary %}{% endblock %}
+
+{% block main %}
+    <main>
+        <header class="anima-slipB">
+            <p>Immediate takeoff with Animadio, the only <strong>free & open-source framework</strong> that offers real interactivity to the click & much more :</p>
+            <ul>
+                <li>Eight types of selectors working with hover, focus & <strong>checked states</strong></li>
+                <li><strong>Flexbox & Grid</strong> systems included with common options</li>
+                <li>Click anywhere on the page to <strong>enable & disable any design effect</strong> anywhere else</li>
+                <li>Management of <strong>keyframes animations</strong> & their options</li>
+                <li>Complete & simple customization with directly modifiable <strong>CSS variables</strong></li>
+            </ul>
+        </header>
+
+        <section id="css-only" class="anima-slipBR">
+            <h3>CSS Variables</h3>
+            <p>Animadio is a <strong>CSS framework</strong> whose library used a lot of CSS Variables...</p>
+            <p>You can simply use the library or if you want/need : <strong>you can overload the CSS variables</strong>.</p>
+        </section>
+
+        <section id="browsers" class="anima-slipBL">
+            <h3>Browsers</h3>
+            <p>Animadio uses PostCSS with autoprefixer to provide a <strong>maximum of compatibility</strong> for all main browsers, including mainly <strong>Firefox, Chrome &amp; Opera</strong>, secondarily Edge, Safari &amp; Explorer (except for some effects, especially all Skew animations)</p>
+        </section>
+
+        <section id="content" class="anima-slipR">
+            <h3>Content</h3>
+
+            <p>The library distribution is available here :</p>
+            <a class="btn-purple" href="https://github.com/animadio/animadio/tree/master/dist/animadio.css" rel="noreferrer noopener" target="_blank" title="Animadio on GitHub">
+                <i class="fas fa-infinity fa-4x" aria-hidden="true"></i>
+                animadio.css
+            </a>
+
+            <p>But if you only need a part of it :</p>
+
+            <ul class="row">
+                <li>
+                    <a class="button-red" href="https://github.com/animadio/animadio/tree/master/dist/animadio-grid.css" rel="noreferrer noopener" target="_blank" title="Grid on GitHub">
+                        <i class="fas fa-th fa-2x" aria-hidden="true"></i>
+                        animadio-grid.css
+                    </a>
+                </li>
+                <li>
+                    <a class="button-green" href="https://github.com/animadio/animadio/tree/master/dist/animadio-elements.css" rel="noreferrer noopener" target="_blank" title="Elements on GitHub">
+                        <i class="fas fa-sitemap fa-2x" aria-hidden="true"></i>
+                        animadio-elements.css
+                    </a>
+                </li>
+                <li>
+                    <a class="button-blue" href="https://github.com/animadio/animadio/tree/master/dist/animadio-states.css" rel="noreferrer noopener" target="_blank" title="States on GitHub">
+                        <i class="fas fa-cogs fa-2x" aria-hidden="true"></i>
+                        animadio-states.css
+                    </a>
+                </li>
+                <li>
+                    <a class="button-orange" href="https://github.com/animadio/animadio/tree/master/dist/animadio-helpers.css" rel="noreferrer noopener" target="_blank" title="Helpers on GitHub">
+                        <i class="fas fa-life-ring fa-2x" aria-hidden="true"></i>
+                        animadio-helpers.css
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <article class="anima-slipL">
+            <h3>Installation</h3>
+
+            <figure>
+                <a href="https://www.jsdelivr.com/package/npm/animadio" rel="noreferrer noopener" target="_blank" title="CDN package">
+                    <img src="https://img.shields.io/jsdelivr/npm/hy/animadio.svg?label=jsDelivr+Downloads" alt="jsDelivr Yearly Downloads">
+                </a>
+                <a href="https://www.npmjs.com/package/animadio" rel="noreferrer noopener" target="_blank" title="NPM package">
+                    <img src="https://img.shields.io/npm/dy/animadio.svg?label=NPM+Downloads" alt="NPM Yearly Downloads">
+                </a>
+            </figure>
+
+            <input id="menu-install-radio1" class="menu-radio1" type="radio" name="menu-install" checked>
+            <input id="menu-install-radio2" class="menu-radio2" type="radio" name="menu-install">
+            <input id="menu-install-radio3" class="menu-radio3" type="radio" name="menu-install">
+
+            <nav class="menu">
+                <label for="menu-install-radio1">
+                    CDN
+                    <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
+                </label>
+                <label for="menu-install-radio2">
+                    Package Manager
+                    <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
+                </label>
+                <label for="menu-install-radio3">
+                    Download
+                    <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
+                </label>
+            </nav>
+
+            <ul class="menu-relay">
+
+                <li class="menu-target1">
+                    <section>
+                        <h4>CDN</h4>
+
+                        <p>During development, add this tag to your HTML :</p>
+                        <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-coral font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.4.4/dist/animadio.css"<span class="color-coral font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+                        <pre><span class="color-silver">&lt;</span><span class="color-red">script</span><span class="color-coral font-italic"> src=</span>"https://cdn.jsdelivr.net/npm/animadio.js@0.1.18/dist/animadio.js"<span class="color-silver">&gt;</span><span class="color-silver">&lt;</span><span class="color-red">script</span><span class="color-silver">&gt;</span></pre>
+
+                        <p>Then in production, add this one :</p>
+                        <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-coral font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.4.4/dist/min/animadio.min.css"<span class="color-coral font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+
+                        <p>But if you only need a part of Animadio, you can use one of those files :</p>
+                        <ul>
+                            <li><span class="font-bold color-red deco-under">animadio-grid</span> for <span class="color-red">Global & Grid parts</span></li>
+                            <li><span class="font-bold color-green deco-under">animadio-elements</span> for <span class="color-green">Global & Elements parts</span></li>
+                            <li><span class="font-bold color-blue deco-under">animadio-states</span> for <span class="color-blue">Global & States parts</span></li>
+                            <li><span class="font-bold color-orange deco-under">animadio-helpers</span> for <span class="color-gray">Global & Helpers parts</span></li>
+                        </ul>
+
+                        <ul>
+                            <li class="color-red">
+                                <h5 class="color-red-deco-double">Animadio-Grid</h5>
+
+                                <p>Development :</p>
+                                <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-coral font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.4.4/dist/animadio-grid.css"<span class="color-coral font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+
+                                <p>Production :</p>
+                                <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-coral font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.4.4/dist/min/animadio-grid.min.css"<span class="color-coral font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+                            </li>
+
+                            <li class="color-green">
+                                <h5 class="color-green-deco-double">Animadio-Elements</h5>
+
+                                <p>Development :</p>
+                                <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-coral font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.4.4/dist/animadio-elements.css"<span class="color-coral font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+
+                                <p>Production :</p>
+                                <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-coral font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.4.4/dist/min/animadio-elements.min.css"<span class="color-coral font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+                            </li>
+
+                            <li class="color-blue">
+                                <h5 class="color-blue-deco-double">Animadio-States</h5>
+
+                                <p>Development :</p>
+                                <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-coral font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.4.4/dist/animadio-states.css"<span class="color-coral font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+
+                                <p>Production :</p>
+                                <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-coral font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.4.4/dist/min/animadio-states.min.css"<span class="color-coral font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+                            </li>
+
+                            <li class="color-orange">
+                                <h5 class="color-blue-deco-double">Animadio-Helpers</h5>
+
+                                <p>Development :</p>
+                                <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-coral font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.4.4/dist/animadio-helpers.css"<span class="color-coral font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+
+                                <p>Production :</p>
+                                <pre><span class="color-silver">&lt;</span><span class="color-red">link</span><span class="color-coral font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@2.4.4/dist/min/animadio-helpers.min.css"<span class="color-coral font-italic"> rel=</span>"stylesheet"<span class="color-silver">&gt;</span></pre>
+                            </li>
+                        </ul>
+                    </section>
+                </li>
+
+                <li class="menu-target2">
+                    <section>
+                        <h4>Package Manager</h4>
+                        <p>Animadio is available through NPM & Yarn !</p>
+
+                        <ul>
+                            <li>
+                                <h5>NPM</h5>
+                                <pre>$ npm i animadio</pre>
+                            </li>
+                            <li>
+                                <h5>Yarn</h5>
+                                <pre>$ yarn add animadio</pre>
+                            </li>
+                        </ul>
+                    </section>
+                </li>
+
+                <li class="menu-target3">
+                    <section>
+                        <h4>Download</h4>
+                        <p>If you prefer to download the files, you can choose between release or repository.</p>
+
+                        <ul>
+                            <li>
+                                <h5>Release</h5>
+                                <a class="btn-github" href="https://github.com/animadio/animadio/releases" rel="noreferrer noopener" target="_blank">
+                                    <i class="fab fa-github-alt fa-4x" aria-hidden="true"></i>
+                                    <strong>Get the Latest Release !</strong>
+                                </a>
+                            </li>
+                            <li>
+                                <h5>Repository</h5>
+                                <pre>$ git clone https://github.com/animadio/animadio.git</pre>
+                            </li>
+                        </ul>
+                    </section>
+                </li>
+            </ul>
+        </article>
+    </main>
+{% endblock %}
