@@ -1,0 +1,70 @@
+{% extends 'layout/layout.twig' %}
+
+{% block subtitle %}Welcome{% endblock %}
+
+{% block summary %}Animadio CSS Framework Official Documentation - Grid & Flexbox Layouts - CSS Variables Usage - Reusable & Customizable Elements - Perform Complex Animations - Controls by Radio Buttons - No JavaScript needed{% endblock %}
+
+{% block main %}
+    <main>
+        <header class="anima-slipB">
+            <p>Immediate takeoff with Animadio, the only <strong>free & open-source framework</strong> that offers real interactivity to the click & much more :</p>
+            <ul>
+                <li>Eight types of selectors working with hover, focus & <strong>checked states</strong></li>
+                <li><strong>Flexbox & Grid</strong> systems included with common options</li>
+                <li>Click anywhere on the page to <strong>enable & disable any design effect</strong> anywhere else</li>
+                <li>Management of <strong>keyframes animations</strong> & their options</li>
+                <li>Complete & simple customization with directly modifiable <strong>CSS variables</strong></li>
+            </ul>
+        </header>
+
+        <section id="css-only" class="anima-slipBR">
+            <h3>CSS Variables</h3>
+            <p>Animadio is a <strong>CSS framework</strong> whose library used a lot of CSS Variables...</p>
+            <p>You can simply use the library or if you want/need : <strong>you can overload the CSS variables</strong>.</p>
+        </section>
+
+        <section id="browsers" class="anima-slipBL">
+            <h3>Browsers</h3>
+            <p>Animadio uses PostCSS with autoprefixer to provide a <strong>maximum of compatibility</strong> for all main browsers, including mainly <strong>Firefox, Chrome &amp; Opera</strong>, secondarily Edge, Safari &amp; Explorer (except for some effects, especially all Skew animations)</p>
+        </section>
+
+        <section id="content" class="anima-slipR">
+            <h3>Content</h3>
+
+            <p>The library distribution is available here :</p>
+            <a class="btn-purple" href="https://github.com/animadio/animadio/tree/master/dist/animadio.css" rel="noreferrer noopener" target="_blank" title="Animadio on GitHub">
+                <i class="fas fa-infinity fa-4x" aria-hidden="true"></i>
+                animadio.css
+            </a>
+
+            <p>But if you only need a part of it :</p>
+
+            <ul class="row">
+                <li>
+                    <a class="button-red" href="https://github.com/animadio/animadio/tree/master/dist/animadio-grid.css" rel="noreferrer noopener" target="_blank" title="Grid on GitHub">
+                        <i class="fas fa-th fa-2x" aria-hidden="true"></i>
+                        animadio-grid.css
+                    </a>
+                </li>
+                <li>
+                    <a class="button-green" href="https://github.com/animadio/animadio/tree/master/dist/animadio-elements.css" rel="noreferrer noopener" target="_blank" title="Elements on GitHub">
+                        <i class="fas fa-sitemap fa-2x" aria-hidden="true"></i>
+                        animadio-elements.css
+                    </a>
+                </li>
+                <li>
+                    <a class="button-blue" href="https://github.com/animadio/animadio/tree/master/dist/animadio-states.css" rel="noreferrer noopener" target="_blank" title="States on GitHub">
+                        <i class="fas fa-cogs fa-2x" aria-hidden="true"></i>
+                        animadio-states.css
+                    </a>
+                </li>
+                <li>
+                    <a class="button-orange" href="https://github.com/animadio/animadio/tree/master/dist/animadio-helpers.css" rel="noreferrer noopener" target="_blank" title="Helpers on GitHub">
+                        <i class="fas fa-life-ring fa-2x" aria-hidden="true"></i>
+                        animadio-helpers.css
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+{% endblock %}
