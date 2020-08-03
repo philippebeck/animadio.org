@@ -5,8 +5,7 @@
 {% block description %}Animadio Documentation about Animadio Helpers : font, align, decoration, shatex, shabox & cursor{% endblock %}
 
 {% block main %}
-
-    <article>
+    <article  class="menu-target5">
         <h2>Helpers</h2>
 
         <section class="card-purple">
@@ -51,46 +50,46 @@
             </tbody>
         </table>
 
-        <input id="menu-radio1" class="menu-radio1" type="radio" name="menu" checked>
-        <input id="menu-radio2" class="menu-radio2" type="radio" name="menu">
-        <input id="menu-radio3" class="menu-radio3" type="radio" name="menu">
-        <input id="menu-radio4" class="menu-radio4" type="radio" name="menu">
-        <input id="menu-radio5" class="menu-radio5" type="radio" name="menu">
-        <input id="menu-radio6" class="menu-radio6" type="radio" name="menu">
-        <input id="menu-radio7" class="menu-radio7" type="radio" name="menu">
+        <input id="sidebar-radio1" class="sidebar-radio1" type="radio" name="sidebar" checked>
+        <input id="sidebar-radio2" class="sidebar-radio2" type="radio" name="sidebar">
+        <input id="sidebar-radio3" class="sidebar-radio3" type="radio" name="sidebar">
+        <input id="sidebar-radio4" class="sidebar-radio4" type="radio" name="sidebar">
+        <input id="sidebar-radio5" class="sidebar-radio5" type="radio" name="sidebar">
+        <input id="sidebar-radio6" class="sidebar-radio6" type="radio" name="sidebar">
+        <input id="sidebar-radio7" class="sidebar-radio7" type="radio" name="sidebar">
 
-        <nav class="menu">
-            <label for="menu-radio1" title="Show Font Classes">
+        <nav class="sidebar">
+            <label for="sidebar-radio1" title="Show Font Classes">
                 Font
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio2" title="Show Trans Classes">
+            <label for="sidebar-radio2" title="Show Trans Classes">
                 Trans
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio3" title="Show Align Classes">
+            <label for="sidebar-radio3" title="Show Align Classes">
                 Align
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio4" title="Show Deco Classes">
+            <label for="sidebar-radio4" title="Show Deco Classes">
                 Deco
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio5" title="Show Shatex Classes">
+            <label for="sidebar-radio5" title="Show Shatex Classes">
                 Shatex
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio6" title="Show Shabox Classes">
+            <label for="sidebar-radio6" title="Show Shabox Classes">
                 Shabox
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio7" title="Show Cursor Classes">
+            <label for="sidebar-radio7" title="Show Cursor Classes">
                 Cursor
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
         </nav>
 
-        <section class="menu-relay">
+        <section class="sidebar-relay">
             <h3>Helpers Parts</h3>
 
             {{ include("front/helpers/font.twig") }}

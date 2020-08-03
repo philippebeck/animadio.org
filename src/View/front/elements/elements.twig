@@ -5,8 +5,7 @@
 {% block description %}Animadio Documentation about Animadio Elements : btn, card, foot, form, gallery, menu, navbar, slider & table{% endblock %}
 
 {% block main %}
-
-    <article>
+    <article class="menu-target3">
         <h2>Elements</h2>
 
         <section class="card-purple">
@@ -23,61 +22,63 @@
             </a>
         </section>
 
-        <input id="menu-radio1" class="menu-radio1" type="radio" name="menu" checked>
-        <input id="menu-radio2" class="menu-radio2" type="radio" name="menu">
-        <input id="menu-radio3" class="menu-radio3" type="radio" name="menu">
-        <input id="menu-radio4" class="menu-radio4" type="radio" name="menu">
-        <input id="menu-radio5" class="menu-radio5" type="radio" name="menu">
-        <input id="menu-radio6" class="menu-radio6" type="radio" name="menu">
-        <input id="menu-radio7" class="menu-radio7" type="radio" name="menu">
-        <input id="menu-radio8" class="menu-radio8" type="radio" name="menu">
-        <input id="menu-radio9" class="menu-radio9" type="radio" name="menu">
+        <input id="sidebar-radio1" class="sidebar-radio1" type="radio" name="sidebar" checked>
+        <input id="sidebar-radio2" class="sidebar-radio2" type="radio" name="sidebar">
+        <input id="sidebar-radio3" class="sidebar-radio3" type="radio" name="sidebar">
+        <input id="sidebar-radio4" class="sidebar-radio4" type="radio" name="sidebar">
+        <input id="sidebar-radio5" class="sidebar-radio5" type="radio" name="sidebar">
+        <input id="sidebar-radio6" class="sidebar-radio6" type="radio" name="sidebar">
+        <input id="sidebar-radio7" class="sidebar-radio7" type="radio" name="sidebar">
+        <input id="sidebar-radio8" class="sidebar-radio8" type="radio" name="sidebar">
+        <input id="sidebar-radio9" class="sidebar-radio9" type="radio" name="sidebar">
 
-        <nav class="menu">
-            <label for="menu-radio1" title="Show Btn Classes">
+        <nav class="sidebar">
+            <label for="sidebar-radio1" title="Show Btn Classes">
                 Btn
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio2" title="Show Card Classes">
+            <label for="sidebar-radio2" title="Show Card Classes">
                 Card
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio3" title="Show Foot Classes">
+            <label for="sidebar-radio3" title="Show Foot Classes">
                 Foot
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio4" title="Show Form Classes">
+            <label for="sidebar-radio4" title="Show Form Classes">
                 Form
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio5" title="Show Gallery Classes">
+            <label for="sidebar-radio5" title="Show Gallery Classes">
                 Gallery
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio6" title="Show Menu Classes">
+            <label for="sidebar-radio6" title="Show Menu Classes">
                 Menu
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio7" title="Show Navbar Classes">
+            <label for="sidebar-radio7" title="Show Navbar Classes">
                 Navbar
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio9" title="Show Table Classes">
+            <label for="sidebar-radio9" title="Show Table Classes">
                 Table
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
         </nav>
 
-        <section class="menu-relay">
+        <section class="sidebar-relay">
             <h3>Elements Parts</h3>
 
             {{ include("front/elements/btn.twig") }}
+            {{ include("front/elements/canvas.twig") }}
             {{ include("front/elements/card.twig") }}
             {{ include("front/elements/foot.twig") }}
             {{ include("front/elements/form.twig") }}
             {{ include("front/elements/gallery.twig") }}
             {{ include("front/elements/menu.twig") }}
             {{ include("front/elements/navbar.twig") }}
+            {{ include("front/elements/slider.twig") }}
             {{ include("front/elements/table.twig") }}
 
         </section>

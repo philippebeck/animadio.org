@@ -5,8 +5,7 @@
 {% block description %}Animadio Documentation about Animadio Global : variables, keyframes, init, box & helpers{% endblock %}
 
 {% block main %}
-
-    <article>
+    <article class="menu-target1">
         <h2>Global</h2>
 
         <section class="card-purple">
@@ -29,26 +28,26 @@
             </a>
         </section>
 
-        <input id="menu-radio1" class="menu-radio1" type="radio" name="menu" checked>
-        <input id="menu-radio2" class="menu-radio2" type="radio" name="menu">
-        <input id="menu-radio3" class="menu-radio3" type="radio" name="menu">
+        <input id="sidebar-radio1" class="sidebar-radio1" type="radio" name="sidebar" checked>
+        <input id="sidebar-radio2" class="sidebar-radio2" type="radio" name="sidebar">
+        <input id="sidebar-radio3" class="sidebar-radio3" type="radio" name="sidebar">
 
-        <nav class="menu">
-            <label for="menu-radio1" title="Show Variables Part">
+        <nav class="sidebar">
+            <label for="sidebar-radio1" title="Show Variables Part">
                 Variables
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio2" title="Show Keyframes Rules">
+            <label for="sidebar-radio2" title="Show Keyframes Rules">
                 Keyframes
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio3" title="Show Init Tags">
+            <label for="sidebar-radio3" title="Show Init Tags">
                 Init
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
         </nav>
 
-        <section class="menu-relay">
+        <section class="sidebar-relay">
             <h3>Global Parts</h3>
 
             {{ include("front/global/variables.twig") }}

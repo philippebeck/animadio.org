@@ -5,8 +5,7 @@
 {% block description %}Animadio Documentation about Animadio Grid : Grid, Fluid, Flex & Place{% endblock %}
 
 {% block main %}
-
-    <article>
+    <article class="menu-target2">
         <h2>Grid</h2>
 
         <section class="card-purple">
@@ -23,26 +22,26 @@
             </a>
         </section>
 
-        <input id="menu-radio1" class="menu-radio1" type="radio" name="menu" checked>
-        <input id="menu-radio2" class="menu-radio2" type="radio" name="menu">
-        <input id="menu-radio3" class="menu-radio3" type="radio" name="menu">
+        <input id="sidebar-radio1" class="sidebar-radio1" type="radio" name="sidebar" checked>
+        <input id="sidebar-radio2" class="sidebar-radio2" type="radio" name="sidebar">
+        <input id="sidebar-radio3" class="sidebar-radio3" type="radio" name="sidebar">
 
-        <nav class="menu">
-            <label for="menu-radio1" title="Show Grid & Fluid Classes">
+        <nav class="sidebar">
+            <label for="sidebar-radio1" title="Show Grid & Fluid Classes">
                 Grid
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio2" title="Show Flex Classes">
+            <label for="sidebar-radio2" title="Show Flex Classes">
                 Flex
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio3" title="Show Place Classes">
+            <label for="sidebar-radio3" title="Show Place Classes">
                 Place
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
         </nav>
 
-        <section class="menu-relay">
+        <section class="sidebar-relay">
             <h3>Grid Parts</h3>
 
             {{ include("front/grid/fluid.twig") }}

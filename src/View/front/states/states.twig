@@ -7,8 +7,7 @@
 {% block script %}<script src="js/states.js"></script>{% endblock %}
 
 {% block main %}
-
-    <article>
+    <article class="menu-target4">
         <h2>States</h2>
 
         <section class="card-purple">
@@ -113,41 +112,46 @@
             </tbody>
         </table>
 
-        <input id="menu-radio1" class="menu-radio1" type="radio" name="menu" checked>
-        <input id="menu-radio2" class="menu-radio2" type="radio" name="menu">
-        <input id="menu-radio3" class="menu-radio3" type="radio" name="menu">
-        <input id="menu-radio4" class="menu-radio4" type="radio" name="menu">
-        <input id="menu-radio5" class="menu-radio5" type="radio" name="menu">
+        <input id="sidebar-radio1" class="sidebar-radio1" type="radio" name="sidebar" checked>
+        <input id="sidebar-radio2" class="sidebar-radio2" type="radio" name="sidebar">
+        <input id="sidebar-radio3" class="sidebar-radio3" type="radio" name="sidebar">
+        <input id="sidebar-radio4" class="sidebar-radio4" type="radio" name="sidebar">
+        <input id="sidebar-radio5" class="sidebar-radio5" type="radio" name="sidebar">
 
-        <nav class="menu">
-            <label for="menu-radio1" title="Show Anima Classes">
+        <nav class="sidebar">
+            <label for="sidebar-radio1" title="Show Anima Classes">
                 Anima
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio2" title="Show Display Classes">
+            <label for="sidebar-radio2" title="Show Display Classes">
                 Display
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio3" title="Show Position Classes">
+            <label for="sidebar-radio3" title="Show Position Classes">
                 Position
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio4" title="Show Bg Classes">
+            <label for="sidebar-radio4" title="Show Bg Classes">
                 Bg
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
-            <label for="menu-radio5" title="Show Color Classes">
+            <label for="sidebar-radio5" title="Show Color Classes">
                 Color
                 <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
             </label>
         </nav>
 
-        <section class="menu-relay">
+        <section class="sidebar-relay">
             <h3>States Parts</h3>
 
             {{ include("front/states/anima.twig") }}
             {{ include("front/states/display.twig") }}
             {{ include("front/states/position.twig") }}
+            {{ include("front/states/margin.twig") }}
+            {{ include("front/states/border.twig") }}
+            {{ include("front/states/padding.twig") }}
+            {{ include("front/states/width.twig") }}
+            {{ include("front/states/height.twig") }}
             {{ include("front/states/bg.twig") }}
             {{ include("front/states/color.twig") }}
 
