@@ -1,86 +1,57 @@
-{% extends 'layout/layout.twig' %}
+<article class="menu-target3">
+    <h2>Elements</h2>
 
-{% block subtitle %}Elements{% endblock %}
+    <section class="card-purple">
+        <figure>
+            <i class="fas fa-sitemap fa-7x" aria-hidden="true"></i>
+        </figure>
+        <h3>Elements Usage</h3>
+        <p>To use Elements feature, you have to write only one class for each element, but you need to follow the HTML5 semantic rules in order to get the good effects.</p>
+        <a class="btn" href="https://cdn.jsdelivr.net/npm/animadio@2.4.4/dist/animadio-elements.css" title="Access to Animadio Elements CDN" rel="noreferrer noopener" target="_blank">
+            <i class="fas fa-server fa-lg color-white color-blue-into" aria-hidden="true"></i>
+        </a>
+        <a class="btn" href="https://github.com/animadio/animadio/blob/master/dist/animadio-elements.css" title="View CSS Library @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-css3 fa-lg color-white color-blue-into" aria-hidden="true"></i>
+        </a>
+    </section>
 
-{% block description %}Animadio Documentation about Animadio Elements : btn, card, foot, form, gallery, menu, navbar, slider & table{% endblock %}
+    <input id="sidebar-elements-radio1" class="sidebar-radio1" type="radio" name="elements" checked>
+    <input id="sidebar-elements-radio2" class="sidebar-radio2" type="radio" name="elements">
+    <input id="sidebar-elements-radio3" class="sidebar-radio3" type="radio" name="elements">
+    <input id="sidebar-elements-radio4" class="sidebar-radio4" type="radio" name="elements">
+    <input id="sidebar-elements-radio5" class="sidebar-radio5" type="radio" name="elements">
+    <input id="sidebar-elements-radio6" class="sidebar-radio6" type="radio" name="elements">
+    <input id="sidebar-elements-radio7" class="sidebar-radio7" type="radio" name="elements">
+    <input id="sidebar-elements-radio8" class="sidebar-radio8" type="radio" name="elements">
+    <input id="sidebar-elements-radio9" class="sidebar-radio9" type="radio" name="elements">
+    <input id="sidebar-elements-radio0" class="sidebar-radio0" type="radio" name="elements">
 
-{% block main %}
-    <article class="menu-target3">
-        <h2>Elements</h2>
+    <nav class="sidebar">
+        <label class="button-green" for="sidebar-elements-radio1" title="Show Btn Classes">Btn</label>
+        <label class="button-green" for="sidebar-elements-radio2" title="Show Canvas Classes">Canvas</label>
+        <label class="button-green" for="sidebar-elements-radio3" title="Show Card Classes">Card</label>
+        <label class="button-green" for="sidebar-elements-radio4" title="Show Foot Classes">Foot</label>
+        <label class="button-green" for="sidebar-elements-radio5" title="Show Form Classes">Form</label>
+        <label class="button-green" for="sidebar-elements-radio6" title="Show Gallery Classes">Gallery</label>
+        <label class="button-green" for="sidebar-elements-radio7" title="Show Menu Classes">Menu</label>
+        <label class="button-green" for="sidebar-elements-radio8" title="Show Navbar Classes">Navbar</label>
+        <label class="button-green" for="sidebar-elements-radio9" title="Show Slider Classes">Slider</label>
+        <label class="button-green" for="sidebar-elements-radio0" title="Show Table Classes">Table</label>
+    </nav>
 
-        <section class="card-purple">
-            <figure>
-                <i class="fas fa-sitemap fa-7x" aria-hidden="true"></i>
-            </figure>
-            <h3>Elements Usage</h3>
-            <p>To use Elements feature, you have to write only one class for each element, but you need to follow the HTML5 semantic rules in order to get the good effects.</p>
-            <a class="btn" href="https://cdn.jsdelivr.net/npm/animadio@2.4.4/dist/animadio-elements.css" title="Access to Animadio Elements CDN" rel="noreferrer noopener" target="_blank">
-                <i class="fas fa-server fa-lg color-white color-blue-into" aria-hidden="true"></i>
-            </a>
-            <a class="btn" href="https://github.com/animadio/animadio/blob/master/dist/animadio-elements.css" title="View CSS Library @GitHub" rel="noreferrer noopener" target="_blank">
-                <i class="fab fa-css3 fa-lg color-white color-blue-into" aria-hidden="true"></i>
-            </a>
-        </section>
+    <section class="sidebar-relay">
+        <h3>Elements Parts</h3>
 
-        <input id="sidebar-radio1" class="sidebar-radio1" type="radio" name="sidebar" checked>
-        <input id="sidebar-radio2" class="sidebar-radio2" type="radio" name="sidebar">
-        <input id="sidebar-radio3" class="sidebar-radio3" type="radio" name="sidebar">
-        <input id="sidebar-radio4" class="sidebar-radio4" type="radio" name="sidebar">
-        <input id="sidebar-radio5" class="sidebar-radio5" type="radio" name="sidebar">
-        <input id="sidebar-radio6" class="sidebar-radio6" type="radio" name="sidebar">
-        <input id="sidebar-radio7" class="sidebar-radio7" type="radio" name="sidebar">
-        <input id="sidebar-radio8" class="sidebar-radio8" type="radio" name="sidebar">
-        <input id="sidebar-radio9" class="sidebar-radio9" type="radio" name="sidebar">
+        {{ include("front/elements/btn.twig") }}
+        {{ include("front/elements/canvas.twig") }}
+        {{ include("front/elements/card.twig") }}
+        {{ include("front/elements/foot.twig") }}
+        {{ include("front/elements/form.twig") }}
+        {{ include("front/elements/gallery.twig") }}
+        {{ include("front/elements/menu.twig") }}
+        {{ include("front/elements/navbar.twig") }}
+        {{ include("front/elements/slider.twig") }}
+        {{ include("front/elements/table.twig") }}
 
-        <nav class="sidebar">
-            <label for="sidebar-radio1" title="Show Btn Classes">
-                Btn
-                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
-            </label>
-            <label for="sidebar-radio2" title="Show Card Classes">
-                Card
-                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
-            </label>
-            <label for="sidebar-radio3" title="Show Foot Classes">
-                Foot
-                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
-            </label>
-            <label for="sidebar-radio4" title="Show Form Classes">
-                Form
-                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
-            </label>
-            <label for="sidebar-radio5" title="Show Gallery Classes">
-                Gallery
-                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
-            </label>
-            <label for="sidebar-radio6" title="Show Menu Classes">
-                Menu
-                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
-            </label>
-            <label for="sidebar-radio7" title="Show Navbar Classes">
-                Navbar
-                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
-            </label>
-            <label for="sidebar-radio9" title="Show Table Classes">
-                Table
-                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
-            </label>
-        </nav>
-
-        <section class="sidebar-relay">
-            <h3>Elements Parts</h3>
-
-            {{ include("front/elements/btn.twig") }}
-            {{ include("front/elements/canvas.twig") }}
-            {{ include("front/elements/card.twig") }}
-            {{ include("front/elements/foot.twig") }}
-            {{ include("front/elements/form.twig") }}
-            {{ include("front/elements/gallery.twig") }}
-            {{ include("front/elements/menu.twig") }}
-            {{ include("front/elements/navbar.twig") }}
-            {{ include("front/elements/slider.twig") }}
-            {{ include("front/elements/table.twig") }}
-
-        </section>
-    </article>
-{% endblock %}
+    </section>
+</article>
