@@ -1,0 +1,170 @@
+{% extends 'layout/layout.twig' %}
+
+{% block subtitle %}Administration{% endblock %}
+
+{% block summary %}{% endblock %}
+
+{% block main %}
+    <input id="menu-radio1" class="menu-radio1" type="radio" name="menu" checked>
+    <input id="menu-radio2" class="menu-radio2" type="radio" name="menu">
+    <input id="menu-radio3" class="menu-radio3" type="radio" name="menu">
+    <input id="menu-radio4" class="menu-radio4" type="radio" name="menu">
+    <input id="menu-radio5" class="menu-radio5" type="radio" name="menu">
+    <input id="menu-radio6" class="menu-radio6" type="radio" name="menu">
+
+    <nav class="menu">
+        <label class="button-purple" for="menu-radio1" title="Show the Keyframes">
+            <i class="fas fa-infinity color-purple-into"></i>
+            <span class="color-purple-into">Keyframes</span>
+        </label>
+        <label class="button-red" for="menu-radio2" title="Show the Grid">
+            <i class="fas fa-th color-red-into"></i>
+            <span class="color-red-into">Grid</span>
+        </label>
+        <label class="button-green" for="menu-radio3" title="Show the Elements">
+            <i class="fas fa-sitemap color-green-into"></i>
+            <span class="color-green-into">Elements</span>
+        </label>
+        <label class="button-blue" for="menu-radio4" title="Show the States">
+            <i class="fas fa-cogs color-blue-into"></i>
+            <span class="color-blue-into">Method</span>
+        </label>
+        <label class="button-orange" for="menu-radio5" title="Show the Helpers">
+            <i class="fas fa-life-ring color-orange-into"></i>
+            <span class="color-orange-into">Helpers</span>
+        </label>
+        <label class="button-brown" for="menu-radio6" title="Show the Users">
+            <i class="fas fa-user color-brown-into"></i>
+            <span class="color-brown-into">Users</span>
+        </label>
+    </nav>
+
+    <main class="menu-relay">
+        <section class="menu-target1">
+            <h2><i class="fas fa-infinity"></i>Keyframes</h2>
+
+            <a class="btn-green btn-lg" href="{{ url('class!create') }}">New Keyframes</a>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Keyframes</th>
+                    <th>Effect</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for keyframe in keyframes %}
+                    <tr>
+                        <td>
+                            {{ keyframe.name }}
+                        </td>
+                        <td>
+                            {{ keyframe.effect }}
+                        </td>
+                        <td>
+                            <a class="btn-blue" href="{{ url('global!update', {'id': keyframe.id}) }}">
+                                <i class="fas fa-pen-square fa-fw fa-lg"></i>
+                            </a>
+                            <a class="btn-red" href="{{ url('global!delete', {'id': keyframe.id}) }}">
+                                <i class="fas fa-times-circle fa-fw fa-lg"></i>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th>Keyframes</th>
+                    <th>Effect</th>
+                    <th>Actions</th>
+                </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section class="menu-target2">
+            <h2><i class="fas fa-th"></i>Grid</h2>
+
+            <a class="btn-green btn-lg" href="{{ url('grid!create') }}">New Grid</a>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Grid</th>
+                    <th>Value</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for fluid in grid %}
+                    <tr>
+                        <td>
+                            {{ fluid.class }}
+                        </td>
+                        <td>
+                            {{ fluid.valor }}
+                        </td>
+                        <td>
+                            <a class="btn-blue" href="{{ url('grid!update', {'id': fluid.id}) }}">
+                                <i class="fas fa-pen-square fa-fw fa-lg"></i>
+                            </a>
+                            <a class="btn-red" href="{{ url('grid!delete', {'id': fluid.id}) }}">
+                                <i class="fas fa-times-circle fa-fw fa-lg"></i>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th>Grid</th>
+                    <th>Value</th>
+                    <th>Actions</th>
+                </tr>
+                </tfoot>
+            </table>
+        </section>
+
+
+        <section class="menu-target6">
+            <h2><i class="far fa-user"></i>User</h2>
+
+            <a class="btn-green btn-lg" href="{{ url('user!create') }}">New User</a>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td>
+                            <figure>
+                                <img class="bord-purple" src="img/user/{{ user.image }}" alt="Screenshot of {{ user.name }}">
+                                <figcaption>{{ user.name }}</figcaption>
+                            </figure>
+                        </td>
+                        <td>{{ user.email }}</td>
+                        <td>
+                            <a class="btn-orange" href="{{ url('user!logout') }}">
+                                <i class="fas fa-sign-out-alt fa-fw fa-lg"></i>
+                            </a>
+                            <a class="btn-blue" href="{{ url('user!update', {'id': user.id}) }}">
+                                <i class="fas fa-pen-square fa-fw fa-lg"></i>
+                            </a>
+                            <a class="btn-red" href="{{ url('user!delete', {'id': user.id}) }}">
+                                <i class="fas fa-times-circle fa-fw fa-lg"></i>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    </main>
+{% endblock %}
