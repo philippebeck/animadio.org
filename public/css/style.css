@@ -1,19 +1,16 @@
-/***** STYLE *****/
-
 :root {
   --sans-serif-font-family: 'Text Me One', sans-serif;
   --serif-font-family: 'Cinzel', serif;
   --monospace-font-family: 'Share Tech Mono', monospace;
 }
 
-h2 {
-  color: var(--green);
+body {
+  text-align: center;
+  background-color: lavender;
 }
 
-h3 {
-  color: var(--navy);
-}
-
+h2,
+h3,
 h4 {
-  color: var(--blue);
+  color: var(--navy);
 }

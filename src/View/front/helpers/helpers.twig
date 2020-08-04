@@ -1,106 +1,75 @@
-{% extends 'layout/layout.twig' %}
+<article  class="menu-target5">
+    <h2>Helpers</h2>
 
-{% block subtitle %}Helpers{% endblock %}
+    <section class="card-purple">
+        <figure>
+            <i class="fas fa-life-ring fa-7x" aria-hidden="true"></i>
+        </figure>
+        <h3>Helpers Usage</h3>
+        <p>To use Helpers feature, you need to add the Helpers keyword(s) after the Helpers class(es) with a hyphens "-" between them in order to get the desired effect.</p>
+        <a class="btn" href="https://cdn.jsdelivr.net/npm/animadio@2.4.4/dist/animadio-helpers.css" title="Access to Animadio Helpers CDN" rel="noreferrer noopener" target="_blank">
+            <i class="fas fa-server fa-lg color-white color-blue-into" aria-hidden="true"></i>
+        </a>
+        <a class="btn" href="https://github.com/animadio/animadio/blob/master/dist/animadio-helpers.css" title="View CSS Library @GitHub" rel="noreferrer noopener" target="_blank">
+            <i class="fab fa-css3 fa-lg color-white color-blue-into" aria-hidden="true"></i>
+        </a>
+    </section>
 
-{% block description %}Animadio Documentation about Animadio Helpers : font, align, decoration, shatex, shabox & cursor{% endblock %}
+    <table class="table">
+        <caption>Helpers Datas</caption>
 
-{% block main %}
+        <thead>
+        <tr>
+            <th>Keywords</th>
+            <th>Trigger</th>
+            <th>Relay</th>
+            <th>Target</th>
+        </tr>
+        </thead>
 
-    <article>
-        <h2>Helpers</h2>
+        <tbody>
+        <tr>
+            <td>&empty;</td>
+            <td>Class</td>
+            <td>&empty;</td>
+            <td>Class</td>
+        </tr>
+        <tr>
+            <td>global</td>
+            <td>Global class</td>
+            <td>&empty;</td>
+            <td>Children of Global class</td>
+        </tr>
+        </tbody>
+    </table>
 
-        <section class="card-purple">
-            <figure>
-                <i class="fas fa-life-ring fa-7x" aria-hidden="true"></i>
-            </figure>
-            <h3>Helpers Usage</h3>
-            <p>To use Helpers feature, you need to add the Helpers keyword(s) after the Helpers class(es) with a hyphens "-" between them in order to get the desired effect.</p>
-            <a class="btn" href="https://cdn.jsdelivr.net/npm/animadio@2.4.4/dist/animadio-helpers.css" title="Access to Animadio Helpers CDN" rel="noreferrer noopener" target="_blank">
-                <i class="fas fa-server fa-lg color-white color-blue-into" aria-hidden="true"></i>
-            </a>
-            <a class="btn" href="https://github.com/animadio/animadio/blob/master/dist/animadio-helpers.css" title="View CSS Library @GitHub" rel="noreferrer noopener" target="_blank">
-                <i class="fab fa-css3 fa-lg color-white color-blue-into" aria-hidden="true"></i>
-            </a>
-        </section>
+    <input id="sidebar-helpers-radio1" class="sidebar-radio1" type="radio" name="helpers" checked>
+    <input id="sidebar-helpers-radio2" class="sidebar-radio2" type="radio" name="helpers">
+    <input id="sidebar-helpers-radio3" class="sidebar-radio3" type="radio" name="helpers">
+    <input id="sidebar-helpers-radio4" class="sidebar-radio4" type="radio" name="helpers">
+    <input id="sidebar-helpers-radio5" class="sidebar-radio5" type="radio" name="helpers">
+    <input id="sidebar-helpers-radio6" class="sidebar-radio6" type="radio" name="helpers">
+    <input id="sidebar-helpers-radio7" class="sidebar-radio7" type="radio" name="helpers">
 
-        <table class="table">
-            <caption>Helpers Datas</caption>
+    <nav class="sidebar">
+        <label class="button-orange" for="sidebar-helpers-radio1" title="Show Align Classes">Align</label>
+        <label class="button-orange" for="sidebar-helpers-radio2" title="Show Cursor Classes">Cursor</label>
+        <label class="button-orange" for="sidebar-helpers-radio3" title="Show Deco Classes">Deco</label>
+        <label class="button-orange" for="sidebar-helpers-radio4" title="Show Font Classes">Font</label>
+        <label class="button-orange" for="sidebar-helpers-radio5" title="Show Shabox Classes">Shabox</label>
+        <label class="button-orange" for="sidebar-helpers-radio6" title="Show Shatex Classes">Shatex</label>
+        <label class="button-orange" for="sidebar-helpers-radio7" title="Show Trans Classes">Trans</label>
+    </nav>
 
-            <thead>
-            <tr>
-                <th>Keywords</th>
-                <th>Trigger</th>
-                <th>Relay</th>
-                <th>Target</th>
-            </tr>
-            </thead>
+    <section class="sidebar-relay">
+        <h3>Helpers Parts</h3>
 
-            <tbody>
-            <tr>
-                <td>&empty;</td>
-                <td>Class</td>
-                <td>&empty;</td>
-                <td>Class</td>
-            </tr>
-            <tr>
-                <td>global</td>
-                <td>Global class</td>
-                <td>&empty;</td>
-                <td>Children of Global class</td>
-            </tr>
-            </tbody>
-        </table>
-
-        <input id="menu-radio1" class="menu-radio1" type="radio" name="menu" checked>
-        <input id="menu-radio2" class="menu-radio2" type="radio" name="menu">
-        <input id="menu-radio3" class="menu-radio3" type="radio" name="menu">
-        <input id="menu-radio4" class="menu-radio4" type="radio" name="menu">
-        <input id="menu-radio5" class="menu-radio5" type="radio" name="menu">
-        <input id="menu-radio6" class="menu-radio6" type="radio" name="menu">
-        <input id="menu-radio7" class="menu-radio7" type="radio" name="menu">
-
-        <nav class="menu">
-            <label for="menu-radio1" title="Show Font Classes">
-                Font
-                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
-            </label>
-            <label for="menu-radio2" title="Show Trans Classes">
-                Trans
-                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
-            </label>
-            <label for="menu-radio3" title="Show Align Classes">
-                Align
-                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
-            </label>
-            <label for="menu-radio4" title="Show Deco Classes">
-                Deco
-                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
-            </label>
-            <label for="menu-radio5" title="Show Shatex Classes">
-                Shatex
-                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
-            </label>
-            <label for="menu-radio6" title="Show Shabox Classes">
-                Shabox
-                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
-            </label>
-            <label for="menu-radio7" title="Show Cursor Classes">
-                Cursor
-                <i class="fas fa-caret-up fa-2x" aria-hidden="true"></i>
-            </label>
-        </nav>
-
-        <section class="menu-relay">
-            <h3>Helpers Parts</h3>
-
-            {{ include("front/helpers/font.twig") }}
-            {{ include("front/helpers/trans.twig") }}
-            {{ include("front/helpers/align.twig") }}
-            {{ include("front/helpers/deco.twig") }}
-            {{ include("front/helpers/shatex.twig") }}
-            {{ include("front/helpers/shabox.twig") }}
-            {{ include("front/helpers/cursor.twig") }}
-
-        </section>
-    </article>
-{% endblock %}
+        {{ include("front/helpers/align.twig") }}
+        {{ include("front/helpers/cursor.twig") }}
+        {{ include("front/helpers/deco.twig") }}
+        {{ include("front/helpers/font.twig") }}
+        {{ include("front/helpers/shabox.twig") }}
+        {{ include("front/helpers/shatex.twig") }}
+        {{ include("front/helpers/trans.twig") }}
+    </section>
+</article>

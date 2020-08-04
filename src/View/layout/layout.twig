@@ -32,27 +32,25 @@
     <link href="https://fonts.googleapis.com/css?family=Text+Me+One%7cCinzel:400,700,900%7cShare+Tech+Mono" rel="stylesheet">
     <link href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
     <!--<link href="node_modules/animadio/dist/min/animadio.min.css" rel="stylesheet">-->
-    <link href="../../animadio/dist/animadio.css" rel="stylesheet">
+    <link href="../../animadio/src/css/animadio.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="align-center">
 
-{{ include('layout/navbar.twig') }}
+    {{ include('layout/navbar.twig') }}
 
-<header>
-    <h1 class="align-center color-purple shatex-blur-md">{{ block('subtitle') }}</h1>
-</header>
+    <header>
+        <h1 class="color-purple shatex-blur-md">{{ block('subtitle') }}</h1>
+    </header>
 
-<main class="container-90md-80lg-70wd align-center">
 
     {% block main %}{% endblock %}
 
-</main>
 
-{{ include('layout/footer.twig') }}
+    {{ include('layout/footer.twig') }}
 
-<script src="node_modules/animadio.js/dist/animadio.js"></script>
-{% block script %}{% endblock %}
+    <script src="node_modules/animadio.js/dist/animadio.js"></script>
+    {% block script %}{% endblock %}
 </body>
 </html>
