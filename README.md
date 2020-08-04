@@ -1,8 +1,8 @@
 [![Animadio Logo](https://animadio.org/img/logo.png)](https://animadio.org)
 # [Animadio Official WebSite](https://animadio.org)
 
-[![GitHub Version](https://img.shields.io/github/package-json/v/animadio/animadio.org.svg?label=Version)](https://github.com/animadio/animadio.org/blob/master/package.json)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/914993ec00464b57a30d6905f5a1b5db)](https://www.codacy.com/app/Animadio/animadio.org?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=animadio/animadio.org&amp;utm_campaign=Badge_Grade)
+[![Maintainability](https://api.codeclimate.com/v1/badges/5b50d3da75163a2374ef/maintainability)](https://codeclimate.com/github/animadio/doc.animadio.org/maintainability)
 
 ## Overview
 
@@ -12,13 +12,11 @@ This is the Official Website about the CSS Framework Animadio !
 
 -   [Download](#download)  
 -   [Content](#content)  
--   [Language](#language)  
 -   [Support](#support)  
 -   [Open-Source](#open-source)  
 -   [Issues](#issues)  
 -   [Pull Requests](#pull-requests)  
 -   [Contributing](#contributing)  
--   [Versioning](#versioning)  
 -   [Creator](#creator)  
 -   [Copyright](#copyright)  
 
@@ -35,14 +33,6 @@ This is the Official Website about the CSS Framework Animadio !
 ## Content
 
 [![CSS Code Size](https://img.shields.io/github/languages/code-size/animadio/animadio.org.svg?label=Code+Size)](https://github.com/animadio/animadio.org/tree/master)
-
----
-
-## Language
-
-Animadio.org is wrote with HTML5
-
-[![GitHub Top Language](https://img.shields.io/github/languages/top/animadio/animadio.org.svg?label=HTML5)](https://github.com/animadio/animadio.org)
 
 ---
 
@@ -82,14 +72,6 @@ And Pull Requests can be created there
 Animadio.org needs you if you like it : sends pull requests on GitHub to improve it !!
 
 [![GitHub Contributors](https://img.shields.io/github/contributors/animadio/animadio.org.svg?label=Contributors)](https://github.com/animadio/animadio.org/graphs/contributors)
-
----
-
-## Versioning
-
-Animadio.org is maintained under the [Semantic Versioning 2.0.0](https://semver.org)
-
-[![GitHub Version](https://img.shields.io/github/package-json/v/animadio/animadio.org.svg?label=Version)](https://github.com/animadio/animadio.org/blob/master/package.json)
 
 ---
 
