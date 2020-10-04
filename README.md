@@ -1,8 +1,8 @@
 [![Animadio Logo](https://animadio.org/img/logo.png)](https://animadio.org)
 # [Animadio Official WebSite](https://animadio.org)
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/914993ec00464b57a30d6905f5a1b5db)](https://www.codacy.com/app/Animadio/animadio.org?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=animadio/animadio.org&amp;utm_campaign=Badge_Grade)
-[![Maintainability](https://api.codeclimate.com/v1/badges/5b50d3da75163a2374ef/maintainability)](https://codeclimate.com/github/animadio/doc.animadio.org/maintainability)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b25bfb88eee547c394a7a27a4e858dfe)](https://www.codacy.com/gh/animadio/animadio.org/dashboard)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b9e237bab67a0578ad9b/maintainability)](https://codeclimate.com/github/animadio/animadio.org/maintainability)
 
 ## Overview
 
@@ -32,7 +32,7 @@ This is the Official Website about the CSS Framework Animadio !
 
 ## Content
 
-[![CSS Code Size](https://img.shields.io/github/languages/code-size/animadio/animadio.org.svg?label=Code+Size)](https://github.com/animadio/animadio.org/tree/master)
+[![Code Size](https://img.shields.io/github/languages/code-size/animadio/animadio.org.svg?label=Code+Size)](https://github.com/animadio/animadio.org/tree/master)
 
 ---
 
