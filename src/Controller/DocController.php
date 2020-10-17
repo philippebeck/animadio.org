@@ -22,13 +22,13 @@ class DocController extends MainController
      */
     public function defaultMethod()
     {
-        $keyframes          = ModelFactory::getModel("Keyframes")->listData();
+        /*$keyframes          = ModelFactory::getModel("Keyframes")->listData();
         $gridClasses        = $this->getArray()->getArrayElements(ModelFactory::getModel("Grid")->listGridClasses(), "class");
         $elementsClasses    = $this->getArray()->getArrayElements(ModelFactory::getModel("Elements")->listData(), "class");
         $statesClasses      = $this->getArray()->getArrayElements(ModelFactory::getModel("States")->listStatesClasses(), "class");
-        $helpersClasses     = $this->getArray()->getArrayElements(ModelFactory::getModel("Helpers")->listHelpersClasses(), "class");
+        $helpersClasses     = $this->getArray()->getArrayElements(ModelFactory::getModel("Helpers")->listHelpersClasses(), "class");*/
 
-        return $this->render("front/doc.twig", [
+        return $this->render("front/doc.twig"/*, [
             "keyframes"         => $keyframes,
             "gridClasses"       => $gridClasses["grid"],
             "flexClasses"       => $gridClasses["flex"],
@@ -47,6 +47,6 @@ class DocController extends MainController
             "shatexClasses"     => $helpersClasses["shatex"],
             "shaboxClasses"     => $helpersClasses["shabox"],
             "cursorClasses"     => $helpersClasses["cursor"]
-        ]);
+        ]*/);
     }
 }

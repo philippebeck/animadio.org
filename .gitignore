@@ -2,6 +2,6 @@
 config/dev-params.php
 config/prod-params.php
 config/user.sql
-public/img/numbers/
+public/img/
 public/node_modules/
 vendor/

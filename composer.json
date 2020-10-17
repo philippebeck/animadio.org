@@ -1,6 +1,6 @@
 {
   "name": "animadio/animadio.org",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Animadio Website & Documentation - Grid & Flexbox Layouts - Reusable & Customizable Elements - Perform Complex Animations - Controls by Radio Buttons",
   "type": "project",
   "keywords": [
@@ -34,7 +34,7 @@
   },
   "require": {
     "php": "7.3",
-    "philippebeck/pam": "^4.5.0"
+    "devsagency/pam": "^4.6.0"
   },
   "require-dev": {
     "tracy/tracy": "^2.7.5"
