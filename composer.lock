@@ -4,8 +4,91 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "da1889a75f50b4eb6ab40eee3979537c",
+    "content-hash": "4b061da69988b02f66b8f1fa9293d76a",
     "packages": [
+        {
+            "name": "devsagency/pam",
+            "version": "4.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/devsagency/pam.git",
+                "reference": "a6da671d8e317a164f5929ce57e7b0a15a0297d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/devsagency/pam/zipball/a6da671d8e317a164f5929ce57e7b0a15a0297d9",
+                "reference": "a6da671d8e317a164f5929ce57e7b0a15a0297d9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-exif": "*",
+                "ext-gd": "*",
+                "ext-json": "*",
+                "ext-pdo": "*",
+                "google/recaptcha": "^1.2.4",
+                "php": "^7.3",
+                "swiftmailer/swiftmailer": "^6.2.3",
+                "twig/twig": "^3.0.3"
+            },
+            "require-dev": {
+                "tracy/tracy": "^2.7.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Pam\\": "core/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Philippe Beck",
+                    "email": "philippe@philippebeck.net",
+                    "homepage": "https://philippebeck.net",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "Php Adaptive Microframework",
+            "keywords": [
+                "array",
+                "crud",
+                "filters",
+                "framework",
+                "image",
+                "mail",
+                "mvc",
+                "php",
+                "prepared queries",
+                "profiler",
+                "security",
+                "string",
+                "superglobals",
+                "twig"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/philippebeck",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/philippebeck",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/philippebeck",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://www.patreon.com/philippebeck",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2020-10-03T13:38:48+00:00"
+        },
         {
             "name": "doctrine/lexer",
             "version": "1.2.1",
@@ -231,90 +314,6 @@
                 "random"
             ],
             "time": "2018-07-02T15:55:56+00:00"
-        },
-        {
-            "name": "philippebeck/pam",
-            "version": "4.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/devsagency/pam.git",
-                "reference": "a6da671d8e317a164f5929ce57e7b0a15a0297d9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/devsagency/pam/zipball/a6da671d8e317a164f5929ce57e7b0a15a0297d9",
-                "reference": "a6da671d8e317a164f5929ce57e7b0a15a0297d9",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-exif": "*",
-                "ext-gd": "*",
-                "ext-json": "*",
-                "ext-pdo": "*",
-                "google/recaptcha": "^1.2.4",
-                "php": "^7.3",
-                "swiftmailer/swiftmailer": "^6.2.3",
-                "twig/twig": "^3.0.3"
-            },
-            "require-dev": {
-                "tracy/tracy": "^2.7.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Pam\\": "core/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Philippe Beck",
-                    "email": "philippe@philippebeck.net",
-                    "homepage": "https://philippebeck.net",
-                    "role": "Lead Developer"
-                }
-            ],
-            "description": "Php Adaptive Microframework",
-            "keywords": [
-                "array",
-                "crud",
-                "filters",
-                "framework",
-                "image",
-                "mail",
-                "mvc",
-                "php",
-                "prepared queries",
-                "profiler",
-                "security",
-                "string",
-                "superglobals",
-                "twig"
-            ],
-            "funding": [
-                {
-                    "url": "https://www.paypal.me/philippebeck",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/philippebeck",
-                    "type": "github"
-                },
-                {
-                    "url": "https://opencollective.com/philippebeck",
-                    "type": "open_collective"
-                },
-                {
-                    "url": "https://www.patreon.com/philippebeck",
-                    "type": "patreon"
-                }
-            ],
-            "abandoned": "devsagency/pam",
-            "time": "2020-10-03T13:38:48+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -999,17 +998,101 @@
     ],
     "packages-dev": [
         {
-            "name": "tracy/tracy",
-            "version": "v2.7.5",
+            "name": "philippebeck/pam",
+            "version": "4.6.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/nette/tracy.git",
-                "reference": "95b1c6e35d61df8ef91a4633ba3cf835d2d47e5e"
+                "url": "https://github.com/devsagency/pam.git",
+                "reference": "a6da671d8e317a164f5929ce57e7b0a15a0297d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tracy/zipball/95b1c6e35d61df8ef91a4633ba3cf835d2d47e5e",
-                "reference": "95b1c6e35d61df8ef91a4633ba3cf835d2d47e5e",
+                "url": "https://api.github.com/repos/devsagency/pam/zipball/a6da671d8e317a164f5929ce57e7b0a15a0297d9",
+                "reference": "a6da671d8e317a164f5929ce57e7b0a15a0297d9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-exif": "*",
+                "ext-gd": "*",
+                "ext-json": "*",
+                "ext-pdo": "*",
+                "google/recaptcha": "^1.2.4",
+                "php": "^7.3",
+                "swiftmailer/swiftmailer": "^6.2.3",
+                "twig/twig": "^3.0.3"
+            },
+            "require-dev": {
+                "tracy/tracy": "^2.7.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Pam\\": "core/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Philippe Beck",
+                    "email": "philippe@philippebeck.net",
+                    "homepage": "https://philippebeck.net",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "Php Adaptive Microframework",
+            "keywords": [
+                "array",
+                "crud",
+                "filters",
+                "framework",
+                "image",
+                "mail",
+                "mvc",
+                "php",
+                "prepared queries",
+                "profiler",
+                "security",
+                "string",
+                "superglobals",
+                "twig"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/philippebeck",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/philippebeck",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/philippebeck",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://www.patreon.com/philippebeck",
+                    "type": "patreon"
+                }
+            ],
+            "abandoned": "devsagency/pam",
+            "time": "2020-10-03T13:38:48+00:00"
+        },
+        {
+            "name": "tracy/tracy",
+            "version": "v2.7.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/tracy.git",
+                "reference": "7e7e73d52c7e9ff0fd29dbd5b1cfdc03f3947942"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/7e7e73d52c7e9ff0fd29dbd5b1cfdc03f3947942",
+                "reference": "7e7e73d52c7e9ff0fd29dbd5b1cfdc03f3947942",
                 "shasum": ""
             },
             "require": {
@@ -1069,7 +1152,7 @@
                 "nette",
                 "profiler"
             ],
-            "time": "2020-05-17T09:50:45+00:00"
+            "time": "2020-11-02T17:06:27+00:00"
         }
     ],
     "aliases": [],
