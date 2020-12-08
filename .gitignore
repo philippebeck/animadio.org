@@ -1,4 +1,4 @@
-.idea/
+.vscode/
 config/dev-params.php
 config/prod-params.php
 config/user.sql
