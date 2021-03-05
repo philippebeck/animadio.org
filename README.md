@@ -40,7 +40,6 @@ This is the Official Website about the CSS Framework Animadio !
 
 Animadio.org has continuous support !
 
-[![Project Maintained](https://img.shields.io/maintenance/yes/2020.svg?label=Maintained)](https://github.com/animadio/animadio.org)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/animadio/animadio.org.svg?label=Last+Commit)](https://github.com/animadio/animadio.org/commits/master)
 
 ---
@@ -81,7 +80,7 @@ Philippe Beck
 
 [![WebSite Status](https://img.shields.io/website-up-down-green-red/https/philippebeck.net.svg?label=https://philippebeck.net)](https://philippebeck.net)
 [![GitHub Followers](https://img.shields.io/github/followers/philippebeck.svg?label=GitHub+:+philippebeck+|+Followers)](https://github.com/philippebeck)
-[![Twitter Follow](https://badgen.net/twitter/follow/philippepjbeck)](https://twitter.com/philippepjbeck)
+[![Twitter Follow](https://badgen.net/twitter/follow/ph_beck)](https://twitter.com/ph_beck)
 
 ---
 
