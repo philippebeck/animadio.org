@@ -30,7 +30,7 @@ class UserController extends MainController
         }
 
         $this->getSession()->createSession($user);
-        $this->getSession()->createAlert("Successful authentication, welcome " . $user["name"] . " !", "purple");
+        $this->getSession()->createAlert("Successful authentication, welcome " . $user["name"] . " !", "violet");
 
         $this->redirect("admin");
     }
