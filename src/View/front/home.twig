@@ -4,6 +4,8 @@
 
 {% block summary %}Animadio CSS Framework Website & Documentation - Grid & Flexbox Layouts - CSS Variables Usage - Reusable & Customizable Elements - Perform Complex Animations - Controls by Radio Buttons{% endblock %}
 
+{% block script %}<script src="js/script.js"></script>{% endblock %}
+
 {% block main %}
     <a href="https://www.npmjs.com/package/animadio" title="Go to Package !">
         <img src="https://img.shields.io/npm/v/animadio.svg?label=NPM" alt="NPM Badge of Animadio">
@@ -22,53 +24,126 @@
         </header>
 
         <section id="css-only" class="anima-slipBL">
-            <h3>CSS Variables</h3>
+            <h2>CSS Variables</h2>
             <p>Animadio is a <strong>CSS framework</strong> whose library used a lot of CSS Variables...</p>
             <p>You can simply use the library or if you want/need : <strong>you can overload the CSS variables</strong>.</p>
         </section>
 
         <section id="browsers" class="anima-slipTR">
-            <h3>Browsers</h3>
+            <h2>Browsers</h2>
             <p>Animadio uses PostCSS with autoprefixer to provide a <strong>maximum of compatibility</strong> for all main browsers, including mainly <strong>Firefox, Chrome &amp; Opera</strong>, secondarily Edge, Safari &amp; Explorer (except for some effects, especially all Skew animations)</p>
         </section>
 
         <section id="content" class="anima-slipTL">
-            <h3>Content</h3>
+            <h2>Content</h2>
 
             <p>The library distribution is available here :</p>
-            <a class="btn-purple" href="https://github.com/animadio/animadio/tree/master/dist/animadio.css" rel="noreferrer noopener" target="_blank" title="Animadio on GitHub">
+            <a class="btn-violet" href="https://github.com/animadio/animadio/tree/master/dist/animadio.css" rel="noreferrer noopener" target="_blank" title="Animadio on GitHub">
                 <i class="fas fa-infinity fa-3x"></i>
                 animadio.css
             </a>
+        </section>
 
-            <p>But if you only need a part of it :</p>
+        <section>
+            <h2 class="animaOnto-bounce">Anima Demo</h2>
 
-            <ul class="row">
-                <li>
-                    <a class="button-red" href="https://github.com/animadio/animadio/tree/master/dist/animadio-grid.css" rel="noreferrer noopener" target="_blank" title="Grid on GitHub">
-                        <i class="fas fa-th fa-2x"></i>
-                        animadio-grid.css
-                    </a>
-                </li>
-                <li>
-                    <a class="button-green" href="https://github.com/animadio/animadio/tree/master/dist/animadio-elements.css" rel="noreferrer noopener" target="_blank" title="Elements on GitHub">
-                        <i class="fas fa-sitemap fa-2x"></i>
-                        animadio-elements.css
-                    </a>
-                </li>
-                <li>
-                    <a class="button-blue" href="https://github.com/animadio/animadio/tree/master/dist/animadio-states.css" rel="noreferrer noopener" target="_blank" title="States on GitHub">
-                        <i class="fas fa-cogs fa-2x"></i>
-                        animadio-states.css
-                    </a>
-                </li>
-                <li>
-                    <a class="button-orange" href="https://github.com/animadio/animadio/tree/master/dist/animadio-helpers.css" rel="noreferrer noopener" target="_blank" title="Helpers on GitHub">
-                        <i class="fas fa-life-ring fa-2x"></i>
-                        animadio-helpers.css
-                    </a>
+            <p>Select an Animation to watch the effect...</p>
+            <ul class="container-90tn-80sm-70md-60sm-50wd font-monospace">
+                <li class="flex placo-between">
+                    <label for="name">Animation -------></label>
+                    <select id="name">
+                        <optgroup label="Scale">
+                            <option value="anima-bounce" selected>Bounce</option>
+                            <option value="anima-grow">Grow</option>
+                            <option value="anima-shrink">Shrink</option>
+                            <option value="anima-flipperX">FlipperX</option>
+                            <option value="anima-flipperY">FlipperY</option>
+                            <option value="anima-openX">OpenX</option>
+                            <option value="anima-openY">OpenY</option>
+                            <option value="anima-flipX">FlipX</option>
+                            <option value="anima-flipY">FlipY</option>
+                            <option value="anima-fallX">FallX</option>
+                            <option value="anima-fallY">FallY</option>
+                        </optgroup>
+
+                        <optgroup label="Skew">
+                            <option value="anima-twistT">TwistT</option>
+                            <option value="anima-twistR">TwistR</option>
+                            <option value="anima-twistB">TwistB</option>
+                            <option value="anima-twistL">TwistL</option>
+                            <option value="anima-torsionT">TorsionT</option>
+                            <option value="anima-torsionR">TorsionR</option>
+                            <option value="anima-torsionB">TorsionB</option>
+                            <option value="anima-torsionL">TorsionL</option>
+                        </optgroup>
+
+                        <optgroup label="Rotate">
+                            <option value="anima-turn">Turn</option>
+                            <option value="anima-turnX">TurnX</option>
+                            <option value="anima-turnY">TurnY</option>
+                            <option value="anima-turnXY">TurnXY</option>
+                            <option value="anima-turnXZ">TurnXZ</option>
+                            <option value="anima-turnYZ">TurnYZ</option>
+                            <option value="anima-turn3D">Turn3D</option>
+                        </optgroup>
+
+                        <optgroup label="Translate">
+                            <option value="anima-slipT">SlipT</option>
+                            <option value="anima-slipR">SlipR</option>
+                            <option value="anima-slipB">SlipB</option>
+                            <option value="anima-slipL">SlipL</option>
+                            <option value="anima-slideT">SlideT</option>
+                            <option value="anima-slideR">SlideR</option>
+                            <option value="anima-slideB">SlideB</option>
+                            <option value="anima-slideL">SlideL</option>
+                        </optgroup>
+                    </select>
                 </li>
             </ul>
+
+            <p>And you can select some of the options if you want !</p>
+            <ul class="container-90tn-80sm-70md-60sm-50wd font-monospace">
+                <li class="flex placo-between">
+                    <label for="function">Timing Function -></label>
+                    <select id="function">
+                        <option selected value="">-</option>
+                        <option value="anima-linear">Linear</option>
+                        <option value="anima-in">In</option>
+                        <option value="anima-out">Out</option>
+                        <option value="anima-inout">Inout</option>
+                        <option value="anima-bezier">Bezier</option>
+                        <option value="anima-start">Start</option>
+                        <option value="anima-end">End</option>
+                        <option value="anima-chrono">Chrono</option>
+                        <option value="anima-timer">Timer</option>
+                    </select>
+                </li>
+                <li class="flex placo-between">
+                    <label for="count">Iteration Count -></label>
+                    <select id="count">
+                        <option selected value="">-</option>
+                        <option value="anima-few">Few</option>
+                        <option value="anima-many">Many</option>
+                        <option value="anima-loop">Infinite</option>
+                    </select>
+                </li>
+                <li class="flex placo-between">
+                    <label for="direction">Direction -------></label>
+                    <select id="direction">
+                        <option selected value="">-</option>
+                        <option value="anima-alt">Alternate</option>
+                        <option value="anima-rev">Reverse</option>
+                        <option value="anima-altrev">Alternate-Reverse</option>
+                    </select>
+                </li>
+            </ul>
+
+            <input id="anima-check" class="button-check" type="checkbox">
+            <label for="anima-check"  class="button-violet">Animate !</label>
+
+            <figure id="anima-hub">
+                <img id="anima-goal" src="img/logo.png" alt="Animadio Logo">
+            </figure>
         </section>
     </main>
 {% endblock %}
