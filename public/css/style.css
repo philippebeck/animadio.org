@@ -4,17 +4,15 @@
   --monospace-font-family: 'Share Tech Mono', monospace;
 }
 
-.foot-visual {
-  --foot-visual-padding: 0;
-}
-
 body {
   text-align: center;
-  background-color: lavender;
+  --body-background-color: lavender;
 }
 
-h2,
-h3,
-h4 {
-  color: var(--navy);
+h1 {
+  color: var(--violet);
+}
+
+h2 {
+  color: var(--blue);
 }
