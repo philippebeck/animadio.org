@@ -20,7 +20,7 @@
   "homepage": "https://animadio.org",
   "repository": "github:animadio/animadio.org",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.2",
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "animadio": "^3.0.0",
     "animadio.js": "^0.1.20"
   },
