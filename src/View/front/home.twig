@@ -1,149 +1,246 @@
 {% extends 'layout/layout.twig' %}
 
-{% block subtitle %}Welcome{% endblock %}
+{% block title %}Animadio{% endblock %}
 
-{% block summary %}Animadio CSS Framework Website & Documentation - Grid & Flexbox Layouts - CSS Variables Usage - Reusable & Customizable Elements - Perform Complex Animations - Controls by Radio Buttons{% endblock %}
+{% block description %}
+Animadio CSS Framework Website & Documentation - 
+Grid & Flexbox Layouts - 
+CSS Variables Usage - 
+Reusable & Customizable Elements - 
+Perform Complex Animations - 
+Controls by Radio Buttons
+{% endblock %}
 
-{% block script %}<script src="js/script.js"></script>{% endblock %}
+{% block script %}
+<script src="js/script.js"></script>
+{% endblock %}
 
 {% block main %}
-    <a href="https://www.npmjs.com/package/animadio" title="Go to Package !">
-        <img src="https://img.shields.io/npm/v/animadio.svg?label=NPM" alt="NPM Badge of Animadio">
-    </a>
+<main>
+    <header class="head">
+        Welcome to the Official Website of the <strong>CSS Framework Animadio</strong>! 
+    </header>
 
-    <main class="container-90sm-80md-70lg">
-        <header class="anima-flipperX-this">
-            <p>Immediate takeoff with Animadio, the only <strong>free & open-source framework</strong> that offers real interactivity to the click & much more :</p>
-            <ul>
-                <li>Eight types of selectors working with hover, focus & <strong>checked states</strong></li>
-                <li><strong>Flexbox & Grid</strong> systems included with common options</li>
-                <li>Click anywhere on the page to <strong>enable & disable any design effect</strong> anywhere else</li>
-                <li>Management of <strong>keyframes animations</strong> & their options</li>
-                <li>Complete & simple customization with directly modifiable <strong>CSS variables</strong></li>
-            </ul>
-        </header>
+    <figure id="anima-hub">
+        <img id="anima-goal" 
+            src="img/logo.png" 
+            alt="Animadio Logo">
+    </figure>
 
-        <section id="css-only" class="anima-openX-this">
-            <h2>CSS Variables</h2>
-            <p>Animadio is a <strong>CSS framework</strong> whose library used a lot of CSS Variables...</p>
-            <p>You can simply use the library or if you want/need : <strong>you can overload the CSS variables</strong>.</p>
-        </section>
+    <input id="anima-check" 
+        class="button-check" 
+        type="checkbox">
+    <label for="anima-check"  
+        class="button-violet">
+        Animate
+    </label>
 
-        <section id="browsers" class="anima-flipX-this">
-            <h2>Browsers</h2>
-            <p>Animadio uses PostCSS with autoprefixer to provide a <strong>maximum of compatibility</strong> for all main browsers, including mainly <strong>Firefox, Chrome &amp; Opera</strong>, secondarily Edge, Safari &amp; Explorer (except for some effects, especially all Skew animations)</p>
-        </section>
+    <form class="form">
+        <legend>
+            Test Animadio Animations here 
+        </legend>
 
-        <section id="content" class="anima-fallX-this">
-            <h2>Content</h2>
+        <ul>
+            <li>
+                <label for="name">
+                    Animation
+                </label>
+                <select id="name">
+                    <optgroup label="Scale">
+                        <option value="anima-bounce-this" 
+                            selected>
+                            Bounce
+                        </option>
+                        <option value="anima-grow-this">
+                            Grow
+                        </option>
+                        <option value="anima-shrink-this">
+                            Shrink
+                        </option>
+                        <option value="anima-flipperX-this">
+                            FlipperX
+                        </option>
+                        <option value="anima-flipperY-this">
+                            FlipperY
+                        </option>
+                        <option value="anima-openX-this">
+                            OpenX
+                        </option>
+                        <option value="anima-openY-this">
+                            OpenY
+                        </option>
+                        <option value="anima-flipX-this">
+                            FlipX
+                        </option>
+                        <option value="anima-flipY-this">
+                            FlipY
+                        </option>
+                        <option value="anima-fallX-this">
+                            FallX
+                        </option>
+                        <option value="anima-fallY-this">
+                            FallY
+                        </option>
+                    </optgroup>
 
-            <p>The library distribution is available here :</p>
-            <a class="btn-violet" href="https://github.com/animadio/animadio/tree/master/dist/animadio.css" rel="noreferrer noopener" target="_blank" title="Animadio on GitHub">
-                <i class="fas fa-infinity fa-3x"></i>
-                animadio.css
-            </a>
-        </section>
+                    <optgroup label="Skew">
+                        <option value="anima-twistT-this">
+                            TwistT
+                        </option>
+                        <option value="anima-twistR-this">
+                            TwistR
+                        </option>
+                        <option value="anima-twistB-this">
+                            TwistB
+                        </option>
+                        <option value="anima-twistL-this">
+                            TwistL
+                        </option>
+                        <option value="anima-torsionT-this">
+                            TorsionT
+                        </option>
+                        <option value="anima-torsionR-this">
+                            TorsionR
+                        </option>
+                        <option value="anima-torsionB-this">
+                            TorsionB
+                        </option>
+                        <option value="anima-torsionL-this">
+                            TorsionL
+                        </option>
+                    </optgroup>
 
-        <section>
-            <h2>Anima Demo</h2>
+                    <optgroup label="Rotate">
+                        <option value="anima-turn-this">
+                            Turn
+                        </option>
+                        <option value="anima-turnX-this">
+                            TurnX
+                        </option>
+                        <option value="anima-turnY-this">
+                            TurnY
+                        </option>
+                        <option value="anima-turnXY-this">
+                            TurnXY
+                        </option>
+                        <option value="anima-turnXZ-this">
+                            TurnXZ
+                        </option>
+                        <option value="anima-turnYZ-this">
+                            TurnYZ
+                        </option>
+                        <option value="anima-turn3D-this">
+                            Turn3D
+                        </option>
+                    </optgroup>
 
-            <p>Select an Animation to watch the effect...</p>
-            <ul class="container-90tn-80sm-70md-60sm-50wd font-monospace">
-                <li class="flex placo-between">
-                    <label for="name">Animation -------></label>
-                    <select id="name">
-                        <optgroup label="Scale">
-                            <option value="anima-bounce" selected>Bounce</option>
-                            <option value="anima-grow">Grow</option>
-                            <option value="anima-shrink">Shrink</option>
-                            <option value="anima-flipperX">FlipperX</option>
-                            <option value="anima-flipperY">FlipperY</option>
-                            <option value="anima-openX">OpenX</option>
-                            <option value="anima-openY">OpenY</option>
-                            <option value="anima-flipX">FlipX</option>
-                            <option value="anima-flipY">FlipY</option>
-                            <option value="anima-fallX">FallX</option>
-                            <option value="anima-fallY">FallY</option>
-                        </optgroup>
-
-                        <optgroup label="Skew">
-                            <option value="anima-twistT">TwistT</option>
-                            <option value="anima-twistR">TwistR</option>
-                            <option value="anima-twistB">TwistB</option>
-                            <option value="anima-twistL">TwistL</option>
-                            <option value="anima-torsionT">TorsionT</option>
-                            <option value="anima-torsionR">TorsionR</option>
-                            <option value="anima-torsionB">TorsionB</option>
-                            <option value="anima-torsionL">TorsionL</option>
-                        </optgroup>
-
-                        <optgroup label="Rotate">
-                            <option value="anima-turn">Turn</option>
-                            <option value="anima-turnX">TurnX</option>
-                            <option value="anima-turnY">TurnY</option>
-                            <option value="anima-turnXY">TurnXY</option>
-                            <option value="anima-turnXZ">TurnXZ</option>
-                            <option value="anima-turnYZ">TurnYZ</option>
-                            <option value="anima-turn3D">Turn3D</option>
-                        </optgroup>
-
-                        <optgroup label="Translate">
-                            <option value="anima-slipT">SlipT</option>
-                            <option value="anima-slipR">SlipR</option>
-                            <option value="anima-slipB">SlipB</option>
-                            <option value="anima-slipL">SlipL</option>
-                            <option value="anima-slideT">SlideT</option>
-                            <option value="anima-slideR">SlideR</option>
-                            <option value="anima-slideB">SlideB</option>
-                            <option value="anima-slideL">SlideL</option>
-                        </optgroup>
-                    </select>
-                </li>
-            </ul>
-
-            <p>And you can select some of the options if you want !</p>
-            <ul class="container-90tn-80sm-70md-60sm-50wd font-monospace">
-                <li class="flex placo-between">
-                    <label for="function">Timing Function -></label>
-                    <select id="function">
-                        <option selected value="">-</option>
-                        <option value="anima-linear">Linear</option>
-                        <option value="anima-in">In</option>
-                        <option value="anima-out">Out</option>
-                        <option value="anima-inout">Inout</option>
-                        <option value="anima-bezier">Bezier</option>
-                        <option value="anima-start">Start</option>
-                        <option value="anima-end">End</option>
-                        <option value="anima-chrono">Chrono</option>
-                        <option value="anima-timer">Timer</option>
-                    </select>
-                </li>
-                <li class="flex placo-between">
-                    <label for="count">Iteration Count -></label>
-                    <select id="count">
-                        <option selected value="">-</option>
-                        <option value="anima-few">Few</option>
-                        <option value="anima-many">Many</option>
-                        <option value="anima-loop">Infinite</option>
-                    </select>
-                </li>
-                <li class="flex placo-between">
-                    <label for="direction">Direction -------></label>
-                    <select id="direction">
-                        <option selected value="">-</option>
-                        <option value="anima-alt">Alternate</option>
-                        <option value="anima-rev">Reverse</option>
-                        <option value="anima-altrev">Alternate-Reverse</option>
-                    </select>
-                </li>
-            </ul>
-
-            <input id="anima-check" class="button-check" type="checkbox">
-            <label for="anima-check"  class="button-violet">Animate !</label>
-
-            <figure id="anima-hub">
-                <img id="anima-goal" src="img/logo.png" alt="Animadio Logo">
-            </figure>
-        </section>
-    </main>
+                    <optgroup label="Translate">
+                        <option value="anima-slideT-this">
+                            SlideT
+                        </option>
+                        <option value="anima-slideR-this">
+                            SlideR
+                        </option>
+                        <option value="anima-slideB-this">
+                            SlideB
+                        </option>
+                        <option value="anima-slideL-this">
+                            SlideL
+                        </option>
+                        <option value="anima-slideTR-this">
+                            SlideTR
+                        </option>
+                        <option value="anima-slideBR-this">
+                            SlideBR
+                        </option>
+                        <option value="anima-slideBT-this">
+                            SlideBL
+                        </option>
+                        <option value="anima-slideTL-this">
+                            SlideTL
+                        </option>
+                    </optgroup>
+                </select>
+            </li>
+            <li>
+                <label for="function">
+                    Timing Function
+                </label>
+                <select id="function">
+                    <option value="" 
+                        selected>
+                        -
+                    </option>
+                    <option value="anima-linear-this">
+                        Linear
+                    </option>
+                    <option value="anima-in-this">
+                        In
+                    </option>
+                    <option value="anima-out-this">
+                        Out
+                    </option>
+                    <option value="anima-inout-this">
+                        Inout
+                    </option>
+                    <option value="anima-bezier-this">
+                        Bezier
+                    </option>
+                    <option value="anima-start-this">
+                        Start
+                    </option>
+                    <option value="anima-end-this">
+                        End
+                    </option>
+                    <option value="anima-chrono-this">
+                        Chrono
+                    </option>
+                    <option value="anima-timer-this">
+                        Timer
+                    </option>
+                </select>
+            </li>
+            <li>
+                <label for="count">
+                    Iteration Count
+                </label>
+                <select id="count">
+                    <option value=""
+                        selected>
+                        -
+                    </option>
+                    <option value="anima-few-this">
+                        Few
+                    </option>
+                    <option value="anima-many-this">
+                        Many
+                    </option>
+                    <option value="anima-loop-this">
+                        Infinite
+                    </option>
+                </select>
+            </li>
+            <li>
+                <label for="direction">
+                    Direction
+                </label>
+                <select id="direction">
+                    <option value=""
+                        selected>
+                        -
+                    </option>
+                    <option value="anima-alt-this">
+                        Alternate
+                    </option>
+                    <option value="anima-rev-this">
+                        Reverse
+                    </option>
+                    <option value="anima-altrev-this">
+                        Alternate-Reverse
+                    </option>
+                </select>
+            </li>
+        </ul>
+    </form>
+</main>
 {% endblock %}
