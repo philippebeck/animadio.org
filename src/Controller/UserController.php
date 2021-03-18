@@ -19,22 +19,6 @@ class UserController extends MainController
      */
     private $user = [];
 
-    private function checkLogin()
-    {
-        $user = ModelFactory::getModel("User")->readData($this->user["email"], "email");
-
-        if (!password_verify($this->user["pass"], $user["pass"])) {
-            $this->getSession()->createAlert("Failed authentication !", "black");
-
-            $this->redirect("user");
-        }
-
-        $this->getSession()->createSession($user);
-        $this->getSession()->createAlert("Successful authentication, welcome " . $user["name"] . " !", "violet");
-
-        $this->redirect("admin");
-    }
-
     /**
      * @return string
      * @throws LoaderError
@@ -43,43 +27,7 @@ class UserController extends MainController
      */
     public function defaultMethod()
     {
-        if (!empty($this->getPost()->getPostArray())) {
-            $this->user = $this->getPost()->getPostArray();
-
-            if (isset($this->user["g-recaptcha-response"]) && !empty($this->user["g-recaptcha-response"])) {
-
-                if ($this->getSecurity()->checkRecaptcha($this->user["g-recaptcha-response"])) {
-                    $this->checkLogin();
-                }
-            }
-
-            $this->getSession()->createAlert("Check the reCAPTCHA !", "red");
-
-            $this->redirect("user");
-        }
-
-        return $this->render("front/login.twig");
-    }
-
-    public function logoutMethod()
-    {
-        $this->getSession()->destroySession();
-
-        $this->redirect("home");
-    }
-
-    private function setUserData()
-    {
-        $this->user["name"]     = $this->getPost()->getPostVar("name");
-        $this->user["email"]    = $this->getPost()->getPostVar("email");
-    }
-
-    private function setUserImage()
-    {
-        $this->user["image"] = $this->getString()->cleanString($this->user["name"]) . $this->getFiles()->setFileExtension();
-
-        $this->getFiles()->uploadFile("img/user/", $this->getString()->cleanString($this->user["name"]));
-        $this->getImage()->makeThumbnail("img/user/" . $this->user["image"], 150);
+        $this->redirect("auth");
     }
 
     /**
@@ -113,6 +61,21 @@ class UserController extends MainController
         }
 
         return $this->render("back/user/createUser.twig");
+    }
+
+
+    private function setUserData()
+    {
+        $this->user["name"]     = (string) trim($this->getPost()->getPostVar("name"));
+        $this->user["email"]    = (string) trim($this->getPost()->getPostVar("email"));
+    }
+
+    private function setUserImage()
+    {
+        $this->user["image"] = $this->getString()->cleanString($this->user["name"]) . $this->getFiles()->setFileExtension();
+
+        $this->getFiles()->uploadFile("img/user/", $this->getString()->cleanString($this->user["name"]));
+        $this->getImage()->makeThumbnail("img/user/" . $this->user["image"], 150);
     }
 
     private function setUpdatePassword()
