@@ -3,54 +3,74 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" 
+        content="IE=edge">
 
-    <title>{% block title %}Animadio - {{ block('subtitle') }}{% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
 
-    <link rel="canonical" href="{% block canonical %}https://animadio.org{% endblock %}">
-    <link rel="icon" href="https://animadio.org/public/img/favicon.ico" type="image/x-icon">
+    <link rel="canonical" 
+        href="{% block canonical %}https://animadio.org{% endblock %}">
+    <link rel="icon" 
+        href="https://animadio.org/public/img/favicon.ico" 
+        type="image/x-icon">
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"> 
 
     <meta name="description"
-          content="{% block description %}Animadio, CSS Framework : Frontend Programming Tool to Design Websites - {{ block('subtitle') }} : {{ block('summary') }}{% endblock %}">
-    <meta name="author"      content="Philippe Beck">
-    <meta name="copyright"   content="MIT">
+        content="{% block description %}{% endblock %}">
+    <meta name="author"      
+        content="Philippe Beck">
 
-    <meta property="og:type"        content="website">
-    <meta property="og:title"       content="{{ block('title') }}">
-    <meta property="og:url"         content="{{ block('canonical') }}">
-    <meta property="og:description" content="{{ block('description') }}">
-    <meta property="og:image"       content="{% block image %}https://animadio.org/img/logo.png{% endblock %}">
+    <meta property="og:type"        
+        content="website">
+    <meta property="og:title"       
+        content="{{ block('title') }}">
+    <meta property="og:url"         
+        content="{{ block('canonical') }}">
+    <meta property="og:description" 
+        content="{{ block('description') }}">
+    <meta property="og:image"       
+        content="{% block image %}https://animadio.org/img/logo.png{% endblock %}">
 
-    <meta name="twitter:card"        content="summary">
-    <meta name="twitter:title"       content="{{ block('title') }}">
-    <meta name="twitter:site"        content="{{ block('canonical') }}">
-    <meta name="twitter:description" content="{{ block('description') }}">
-    <meta name="twitter:image"       content="{{ block('image') }}">
-    <meta name="twitter:creator"     content="@philippepjbeck">
+    <meta name="twitter:card"        
+        content="summary">
+    <meta name="twitter:title"       
+        content="{{ block('title') }}">
+    <meta name="twitter:site"        
+        content="{{ block('canonical') }}">
+    <meta name="twitter:description" 
+        content="{{ block('description') }}">
+    <meta name="twitter:image"       
+        content="{{ block('image') }}">
+    <meta name="twitter:creator"     
+        content="@philippepjbeck">
 
-    <link href="https://fonts.googleapis.com/css?family=Text+Me+One%7cCinzel:400,700,900%7cShare+Tech+Mono" rel="stylesheet">
-    <link href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <!--<link href="node_modules/animadio/dist/min/animadio.min.css" rel="stylesheet">-->
-    <link href="../../animadio/dist/animadio.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" 
+        href="https://fonts.googleapis.com/css2?family=Gabriela&family=Share+Tech+Mono&family=Text+Me+One&display=swap">
+    <link rel="stylesheet" 
+        href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" 
+        href="node_modules/animadio/dist/animadio.min.css">
+    <link rel="stylesheet" 
+        href="css/style.css">
 </head>
 
-<body class="align-center">
-
+<body>
     {{ include('layout/navbar.twig') }}
 
     <header>
-        <h1 class="color-violet shatex-blur-md">{{ block('subtitle') }}</h1>
+        <h1 class="color-violet shatex-blur-md">
+            {{ block('title') }}
+        </h1>
     </header>
-
 
     {% block main %}{% endblock %}
 
-
     {{ include('layout/footer.twig') }}
 
-    <script src="../../animadio/dist/animadio.js"></script>
+    <script src="node_modules/animadio/dist/animadio.min.js"></script>
     {% block script %}{% endblock %}
 </body>
 </html>

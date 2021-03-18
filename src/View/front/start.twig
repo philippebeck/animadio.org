@@ -1,171 +1,195 @@
 {% extends 'layout/layout.twig' %}
 
-{% block subtitle %}Getting Start{% endblock %}
+{% block title %}Getting Start{% endblock %}
 
-{% block summary %}CDN, Package Manager & Download{% endblock %}
+{% block description %}CDN, Package Manager & Download{% endblock %}
 
 {% block main %}
-    <input id="menu-radio1" class="menu-radio1" type="radio" name="menu">
-    <input id="menu-radio2" class="menu-radio2" type="radio" name="menu" checked>
-    <input id="menu-radio3" class="menu-radio3" type="radio" name="menu">
+<input id="menu-radio1" 
+    class="menu-radio1" 
+    type="radio" 
+    name="menu"
+    checked>
+<input id="menu-radio2" 
+    class="menu-radio2" 
+    type="radio" 
+    name="menu">
+<input id="menu-radio3" 
+    class="menu-radio3" 
+    type="radio" 
+    name="menu">
 
-    <nav class="menu">
-        <label class="button-red" for="menu-radio1">
-            <i class="fas fa-network-wired color-red-into"></i>
-            <span class="color-red-into">CDN</span>
-        </label>
-        <label class="button-green" for="menu-radio2">
-            <i class="fas fa-cubes color-green-into"></i>
-            <span class="color-green-into">Package</span>
-        </label>
-        <label class="button-blue" for="menu-radio3">
-            <i class="fas fa-download color-blue-into"></i>
-            <span class="color-blue-into">Download</span>
-        </label>
-    </nav>
+<nav class="menu">
+    <label class="button-red" 
+        for="menu-radio1">
+        <i class="fas fa-cubes onto-color-red"></i>
+        <span class="onto-color-red">
+            Package
+        </span>
+    </label>
+    <label class="button-green" 
+        for="menu-radio2">
+        <i class="fas fa-network-wired onto-color-green"></i>
+        <span class="onto-color-green">
+            CDN
+        </span>
+    </label>
+    <label class="button-blue" 
+        for="menu-radio3">
+        <i class="fas fa-download onto-color-blue"></i>
+        <span class="onto-color-blue">
+            Download
+        </span>
+    </label>
+</nav>
 
-    <a href="https://www.npmjs.com/package/animadio" title="Go to Package !">
-        <img src="https://img.shields.io/npm/v/animadio.svg?label=NPM" 
-            alt="NPM Badge of Animadio">
-    </a>
+<main class="menu-relay">
+    <article class="menu-target1">
+        <h2 class="anima-slideB-this">
+            <i class="fas fa-cubes fa-lg color-blue"></i> 
+            Package Manager
+        </h2>
 
-    <main class="menu-relay">
-        <article class="menu-target1">
-            <header class="anima-slipB">
-                <h2>
-                    <i class="fas fa-network-wired fa-lg color-blue"></i> CDN
-                </h2>
+        <header class="head">
+            Animadio is available through NPM & Yarn ! (recommended)
+        </header>
 
-                <p>Animadio is available through CDN !</p>
-            </header>
+        <i class="fas fa-chevron-down fa-2x mar-top-md"></i>
 
-            <i class="fas fa-chevron-down fa-2x mar-top-md"></i>
+        <section class="anima-slideR-this">
+            <h3 class="color-red">
+                <i class="fab fa-npm fa-lg"></i> NPM
+            </h3>
+
+            <p>To get Animadio with NPM, type in the terminal :</p>
+            <code>$ npm i animadio</code>
+        </section>
+
+        <i class="fas fa-sort fa-2x mar-top-lg"></i>
+
+        <section class="anima-slideL-this">
+            <h3 class="color-blue">
+                <i class="fab fa-yarn fa-lg"></i> Yarn
+            </h3>
+
+            <p>To get Animadio with Yarn, type in the terminal :</p>
+            <code>$ yarn add animadio</code>
+        </section>
+    </article>
+    <article class="menu-target2">
+        <h2 class="anima-slideB-this">
+            <i class="fas fa-network-wired fa-lg color-blue"></i> 
+            CDN
+        </h2>
+
+        <header class="head">
+            Animadio is available through CDN !
+        </header>
+
+        <i class="fas fa-chevron-down fa-2x mar-top-md"></i>
+
+        <section>
+            <h3>Development</h3>
 
             <p>During development, add this tag inside your HTML head tag :</p>
-            <code>
-                <span class="color-silver">&lt;</span>
-                <span class="color-red">link</span>
-                <span class="color-coral font-italic"> href=</span>
-                "https://cdn.jsdelivr.net/npm/animadio@4.0.0/dist/animadio.css"
-                <span class="color-coral font-italic"> rel=</span>"stylesheet"
-                <span class="color-silver">&gt;</span>
-            </code>
+            <code><span 
+                class="color-grey">&lt;</span><span 
+                class="color-red">link</span><span 
+                class="color-orange font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@4.0.4/dist/animadio.css"<span 
+                class="color-orange font-italic"> rel=</span>"stylesheet"<span 
+                class="color-grey">&gt;</span></code>
 
             <p>And add this tag at the end of your HTML body tag :</p>
-            <code>
-                <span class="color-silver">&lt;</span>
-                <span class="color-red">script</span>
-                <span class="color-coral font-italic"> src=</span>
-                "https://cdn.jsdelivr.net/npm/animadio@4.0.0/dist/animadio.js"
-                <span class="color-silver">&gt&lt;</span>
-                <span class="color-red">script</span>
-                <span class="color-silver">&gt;</span>
-            </code>
+            <code><span 
+                class="color-grey">&lt;</span><span 
+                class="color-red">script</span><span 
+                class="color-orange font-italic"> src=</span>"https://cdn.jsdelivr.net/npm/animadio@4.0.4/dist/animadio.js"<span 
+                class="color-grey">&gt&lt;</span><span 
+                class="color-red">script</span><span 
+                class="color-grey">&gt;</span></code>
+        </section>
+
+        <section>
+            <h3>Production</h3>
 
             <p>Then in production, replace the CSS one by this one :</p>
-            <code>
-                <span class="color-silver">&lt;</span>
-                <span class="color-red">link</span>
-                <span class="color-coral font-italic"> href=</span>
-                "https://cdn.jsdelivr.net/npm/animadio@4.0.0/dist/min/animadio.min.css"
-                <span class="color-coral font-italic"> rel=</span>"stylesheet"
-                <span class="color-silver">&gt;</span>
-            </code>
+            <code><span 
+                class="color-grey">&lt;</span><span 
+                class="color-red">link</span><span 
+                class="color-orange font-italic"> href=</span>"https://cdn.jsdelivr.net/npm/animadio@4.0.4/dist/animadio.min.css"<span 
+                class="color-orange font-italic"> rel=</span>"stylesheet"<span 
+                class="color-grey">&gt;</span></code>
 
             <p>And replace the JS one at the end of your HTML body tag by this one :</p>
-            <code>
-                <span class="color-silver">&lt;</span>
-                <span class="color-red">script</span>
-                <span class="color-coral font-italic"> src=</span>
-                "https://cdn.jsdelivr.net/npm/animadio@4.0.0/dist/min/animadio.min.js"
-                <span class="color-silver">&gt&lt;</span>
-                <span class="color-red">script</span>
-                <span class="color-silver">&gt;</span>
-            </code>
-        </article>
+            <code><span 
+                class="color-grey">&lt;</span><span 
+                class="color-red">script</span><span 
+                class="color-orange font-italic"> src=</span>"https://cdn.jsdelivr.net/npm/animadio@4.0.4/dist/animadio.min.js"<span 
+                class="color-grey">&gt&lt;</span><span 
+                class="color-red">script</span><span 
+                class="color-grey">&gt;</span></code>
+        </section>
+    </article>
 
-        <article class="menu-target2">
-            <header class="anima-slipB">
-                <h2>
-                    <i class="fas fa-cubes fa-lg color-blue"></i> Package Manager
-                </h2>
+    <article class="menu-target3">
+        <h2 class="anima-slideB-this">
+            <i class="fas fa-download fa-lg color-blue"></i> 
+            Download
+        </h2>
 
-                <p>Animadio is available through NPM & Yarn ! (recommended)</p>
-                <p>You just have to type one of those instructions in your terminal</p>
-            </header>
+        <header class="head">
+            You can download the files from Git Clone, 
+            GitHub Release or GitHub Archive
+        </header>
 
-            <i class="fas fa-chevron-down fa-2x mar-top-md"></i>
+        <i class="fas fa-chevron-down fa-2x mar-top-md"></i>
 
-            <section class="anima-slipR">
-                <h3 class="color-red">
-                    <i class="fab fa-npm fa-lg"></i> NPM
-                </h3>
+        <section class="anima-slideR-this">
+            <h3 class="color-red">
+                <i class="fab fa-git-alt fa-lg"></i> 
+                Git Clone
+            </h3>
 
-                <p>To get Animadio with NPM, type in the terminal :</p>
-                <code>$ npm i animadio</code>
-            </section>
+            <p>To clone the project with Git, run the terminal to type :</p>
 
-            <i class="fas fa-sort fa-2x mar-top-lg"></i>
+            <code>$ git clone https://github.com/animadio/animadio.git</code>
+        </section>
 
-            <section class="anima-slipL">
-                <h3 class="color-blue">
-                    <i class="fab fa-yarn fa-lg"></i> Yarn
-                </h3>
+        <i class="fas fa-sort fa-2x mar-top-lg"></i>
 
-                <p>To get Animadio with Yarn, type in the terminal :</p>
-                <code>$ yarn add animadio</code>
-            </section>
-        </article>
+        <section class="anima-slideL-this">
+            <h3 class="color-gh">
+                <i class="fab fa-github fa-lg"></i> 
+                GitHub Release
+            </h3>
 
-        <article class="menu-target3">
-            <header class="anima-slipB">
-                <h2>
-                    <i class="fas fa-download fa-lg color-blue"></i> Download
-                </h2>
+            <p>To download the last release, go to the GitHub release page of Pam :</p>
 
-                <p>If you prefer to download the files, you can choose between Git Clone, GitHub Release or GitHub Archive</p>
-            </header>
+            <a class="button-gh" 
+                href="https://github.com/animadio/animadio/releases" 
+                title="Clic to Go to the Animadio Release Page">
+                <i class="fab fa-github-square fa-2x"></i> 
+                Release Page
+            </a>
+        </section>
 
-            <i class="fas fa-chevron-down fa-2x mar-top-md"></i>
+        <i class="fas fa-sort fa-2x mar-top-lg"></i>
 
-            <section class="anima-slipR">
-                <h3 class="color-red">
-                    <i class="fab fa-git-alt fa-lg"></i> Git Clone
-                </h3>
+        <section class="anima-slideR-this">
+            <h3 class="color-gh">
+                <i class="fab fa-github-alt fa-lg"></i> 
+                GitHub Archive
+            </h3>
 
-                <p>To clone the project with Git, run the terminal to type :</p>
-                <code>$ git clone https://github.com/animadio/animadio.git</code>
-            </section>
+            <p>You can either download the Animadio master of GitHub Archive here :</p>
 
-            <i class="fas fa-sort fa-2x mar-top-lg"></i>
-
-            <section class="anima-slipL">
-                <h3 class="color-gh">
-                    <i class="fab fa-github fa-lg"></i> GitHub Release
-                </h3>
-
-                <p>To download the last release, go to the GitHub release page of Pam :</p>
-                <a class="button-gh" 
-                    href="https://github.com/animadio/animadio/releases" 
-                    title="Clic to Go to the Animadio Release Page">
-                    <i class="fab fa-github-square fa-2x"></i> Release Page
-                </a>
-            </section>
-
-            <i class="fas fa-sort fa-2x mar-top-lg"></i>
-
-            <section class="anima-slipR">
-                <h3 class="color-gh">
-                    <i class="fab fa-github-alt fa-lg"></i> GitHub Archive
-                </h3>
-
-                <p>You can either download the Animadio master of GitHub Archive here :</p>
-                <a class="button-gh" 
-                    href="https://github.com/animadio/animadio/archive/master.zip" 
-                    title="Clic to Download Animadio">
-                    <i class="fas fa-file-archive fa-2x"></i> Master Zip
-                </a>
-            </section>
-        </article>
-    </main>
+            <a class="button-gh" 
+                href="https://github.com/animadio/animadio/archive/master.zip" 
+                title="Clic to Download Animadio">
+                <i class="fas fa-file-archive fa-2x"></i> 
+                Master Zip
+            </a>
+        </section>
+    </article>
+</main>
 {% endblock %}

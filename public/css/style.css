@@ -1,18 +1,20 @@
 :root {
-  --sans-serif-font-family: 'Text Me One', sans-serif;
-  --serif-font-family: 'Cinzel', serif;
-  --monospace-font-family: 'Share Tech Mono', monospace;
+  --sans-serif: 'Text Me One', sans-serif;
+  --serif: 'Gabriela', serif;
+  --monospace: 'Share Tech Mono', monospace;
+  --green: rgb(52, 133, 86);
+  --violet: rgb(58, 58, 173);
 }
 
 body {
-  text-align: center;
-  --body-background-color: lavender;
+  --body-background-color: var(--grey-light);
 }
 
-h1 {
-  color: var(--violet);
+.navbar {
+  --navbar-background-color: var(--green);
 }
 
-h2 {
-  color: var(--blue);
+.head {
+  --head-border: medium solid var(--fb);
+  --head-color: var(--in);
 }
