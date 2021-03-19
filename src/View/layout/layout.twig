@@ -18,6 +18,19 @@
     <link rel="preconnect"
         href="https://fonts.gstatic.com"> 
 
+    <link rel="preload" 
+        href="https://fonts.googleapis.com/css2?family=Gabriela&family=Share+Tech+Mono&family=Text+Me+One&display=swap" 
+        as="style">
+    <link rel="preload" 
+        href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" 
+        as="style">
+    <link rel="preload" 
+        href="node_modules/animadio/dist/animadio.min.css" 
+        as="style">
+    <link rel="preload" 
+        href="css/style.css" 
+        as="style">
+
     <meta name="description"
         content="{% block description %}{% endblock %}">
     <meta name="author"      
@@ -45,15 +58,19 @@
     <meta name="twitter:image"       
         content="{{ block('image') }}">
     <meta name="twitter:creator"     
-        content="@philippepjbeck">
+        content="@ph_beck">
 
-    <link rel="stylesheet" 
+    <link rel="stylesheet"
+        media="all" 
         href="https://fonts.googleapis.com/css2?family=Gabriela&family=Share+Tech+Mono&family=Text+Me+One&display=swap">
     <link rel="stylesheet" 
+        media="all" 
         href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" 
+        media="all" 
         href="node_modules/animadio/dist/animadio.min.css">
     <link rel="stylesheet" 
+        media="all" 
         href="css/style.css">
 </head>
 
@@ -70,7 +87,6 @@
 
     {{ include('layout/footer.twig') }}
 
-    <script src="node_modules/animadio/dist/animadio.min.js"></script>
     {% block script %}{% endblock %}
 </body>
 </html>

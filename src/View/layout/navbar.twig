@@ -11,7 +11,7 @@
 
     <a class="anima-slideR-this" 
         href="./" 
-        title="Accueil">
+        title="Home">
         <img src="img/logo-nav.png" 
         alt="Logo Animadio"
         width="40px"
@@ -27,13 +27,20 @@
             </a>
         </li>
         <li>
-            <a href="{{ url('template') }}" 
-                title="Templates for Animadio">
-                <i class="fas fa-box-open fa-lg fa-fw"></i>
-                <span>Templates</span>
+            <a href="{{ url('usage') }}" 
+                title="Common Usage">
+                <i class="fas fa-code fa-lg fa-fw"></i>
+                <span>Usage</span>
             </a>
         </li>
-                <li>
+        <li>
+            <a href="{{ url('element') }}" 
+                title="Elements of Animadio">
+                <i class="fas fa-sitemap fa-lg fa-fw"></i>
+                <span>Elements</span>
+            </a>
+        </li>
+        <li>
             <a href="{{ url('theme') }}" 
                 title="Themes for Animadio">
                 <i class="fas fa-palette fa-lg fa-fw"></i>
@@ -41,8 +48,15 @@
             </a>
         </li>
         <li>
+            <a href="{{ url('template') }}" 
+                title="Templates for Animadio">
+                <i class="fas fa-box-open fa-lg fa-fw"></i>
+                <span>Templates</span>
+            </a>
+        </li>
+        <li>
             <a href="{{ url('doc') }}" 
-                title="Documentation">
+                title="Classes & Variables Documentation">
                 <i class="fas fa-book fa-lg fa-fw"></i>
                 <span>Doc</span>
             </a>
