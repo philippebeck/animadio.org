@@ -8,9 +8,6 @@
     <input id="menu-radio1" class="menu-radio1" type="radio" name="menu" checked>
     <input id="menu-radio2" class="menu-radio2" type="radio" name="menu">
     <input id="menu-radio3" class="menu-radio3" type="radio" name="menu">
-    <input id="menu-radio4" class="menu-radio4" type="radio" name="menu">
-    <input id="menu-radio5" class="menu-radio5" type="radio" name="menu">
-    <input id="menu-radio6" class="menu-radio6" type="radio" name="menu">
 
     <nav class="menu">
         <label class="button-violet" for="menu-radio1" title="Show the Keyframes">
@@ -21,19 +18,7 @@
             <i class="fas fa-th color-red-onto"></i>
             <span class="color-red-onto">Grid</span>
         </label>
-        <label class="button-green" for="menu-radio3" title="Show the Elements">
-            <i class="fas fa-sitemap color-green-onto"></i>
-            <span class="color-green-onto">Elements</span>
-        </label>
-        <label class="button-blue" for="menu-radio4" title="Show the States">
-            <i class="fas fa-cogs color-blue-onto"></i>
-            <span class="color-blue-onto">Method</span>
-        </label>
-        <label class="button-orange" for="menu-radio5" title="Show the Helpers">
-            <i class="fas fa-life-ring color-orange-onto"></i>
-            <span class="color-orange-onto">Helpers</span>
-        </label>
-        <label class="button-brown" for="menu-radio6" title="Show the Users">
+        <label class="button-brown" for="menu-radio3" title="Show the Users">
             <i class="fas fa-user color-brown-onto"></i>
             <span class="color-brown-onto">Users</span>
         </label>
@@ -43,7 +28,7 @@
         <section class="menu-target1">
             <h2><i class="fas fa-infinity"></i>Keyframes</h2>
 
-            <a class="btn-green btn-lg" href="{{ url('class!create') }}">New Keyframes</a>
+            <a class="btn-green btn-lg" href="{{ url('variable!create') }}">New Variable</a>
 
             <table class="table">
                 <thead>
@@ -54,24 +39,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                {% for keyframe in keyframes %}
-                    <tr>
-                        <td>
-                            {{ keyframe.name }}
-                        </td>
-                        <td>
-                            {{ keyframe.effect }}
-                        </td>
-                        <td>
-                            <a class="btn-blue" href="{{ url('global!update', {'id': keyframe.id}) }}">
-                                <i class="fas fa-pen-square fa-fw fa-lg"></i>
-                            </a>
-                            <a class="btn-red" href="{{ url('global!delete', {'id': keyframe.id}) }}">
-                                <i class="fas fa-times-circle fa-fw fa-lg"></i>
-                            </a>
-                        </td>
-                    </tr>
-                {% endfor %}
+
                 </tbody>
                 <tfoot>
                 <tr>
@@ -86,7 +54,7 @@
         <section class="menu-target2">
             <h2><i class="fas fa-th"></i>Grid</h2>
 
-            <a class="btn-green btn-lg" href="{{ url('grid!create') }}">New Grid</a>
+            <a class="btn-green btn-lg" href="{{ url('class!create') }}">New Class</a>
 
             <table class="table">
                 <thead>
@@ -97,24 +65,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                {% for fluid in grid %}
-                    <tr>
-                        <td>
-                            {{ fluid.class }}
-                        </td>
-                        <td>
-                            {{ fluid.valor }}
-                        </td>
-                        <td>
-                            <a class="btn-blue" href="{{ url('grid!update', {'id': fluid.id}) }}">
-                                <i class="fas fa-pen-square fa-fw fa-lg"></i>
-                            </a>
-                            <a class="btn-red" href="{{ url('grid!delete', {'id': fluid.id}) }}">
-                                <i class="fas fa-times-circle fa-fw fa-lg"></i>
-                            </a>
-                        </td>
-                    </tr>
-                {% endfor %}
+
                 </tbody>
                 <tfoot>
                 <tr>
@@ -127,7 +78,7 @@
         </section>
 
 
-        <section class="menu-target6">
+        <section class="menu-target3">
             <h2><i class="far fa-user"></i>User</h2>
 
             <a class="btn-green btn-lg" href="{{ url('user!create') }}">New User</a>
