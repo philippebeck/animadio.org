@@ -41,6 +41,7 @@ class AuthController extends MainController
         if (isset($this->user["g-recaptcha-response"]) && !empty($this->user["g-recaptcha-response"])) {
 
             if ($this->getSecurity()->checkRecaptcha($this->user["g-recaptcha-response"])) {
+                
                 $this->checkLogin();
             }
         }
