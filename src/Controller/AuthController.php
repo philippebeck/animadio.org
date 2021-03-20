@@ -29,6 +29,7 @@ class AuthController extends MainController
     {
         if (!empty($this->getPost()->getPostArray())) {
             $this->user = $this->getPost()->getPostArray();
+
             $this->checkSecurity();
         }
 
