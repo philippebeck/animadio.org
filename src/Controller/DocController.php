@@ -22,31 +22,11 @@ class DocController extends MainController
      */
     public function defaultMethod()
     {
-        /*$keyframes          = ModelFactory::getModel("Keyframes")->listData();
-        $gridClasses        = $this->getArray()->getArrayElements(ModelFactory::getModel("Grid")->listGridClasses(), "class");
-        $elementsClasses    = $this->getArray()->getArrayElements(ModelFactory::getModel("Elements")->listData(), "class");
-        $statesClasses      = $this->getArray()->getArrayElements(ModelFactory::getModel("States")->listStatesClasses(), "class");
-        $helpersClasses     = $this->getArray()->getArrayElements(ModelFactory::getModel("Helpers")->listHelpersClasses(), "class");*/
+        $variables = ModelFactory::getModel("Variable")->listVariablesWithCategory();
+        $variables = $this->getArray()->getArrayElements($variables);
 
-        return $this->render("front/doc.twig"/*, [
-            "keyframes"         => $keyframes,
-            "gridClasses"       => $gridClasses["grid"],
-            "flexClasses"       => $gridClasses["flex"],
-            "placeClasses"      => $gridClasses["place"],
-            "btnClasses"        => $elementsClasses["btn"],
-            "cardClasses"       => $elementsClasses["card"],
-            "animaClasses"      => $statesClasses["anima"],
-            "displayClasses"    => $statesClasses["display"],
-            "positionClasses"   => $statesClasses["position"],
-            "bgClasses"         => $statesClasses["bg"],
-            "colorClasses"      => $statesClasses["color"],
-            "fontClasses"       => $helpersClasses["font"],
-            "transClasses"      => $helpersClasses["trans"],
-            "alignClasses"      => $helpersClasses["align"],
-            "decoClasses"       => $helpersClasses["deco"],
-            "shatexClasses"     => $helpersClasses["shatex"],
-            "shaboxClasses"     => $helpersClasses["shabox"],
-            "cursorClasses"     => $helpersClasses["cursor"]
-        ]*/);
+        return $this->render("front/doc.twig", [
+            "variables" => $variables
+        ]);
     }
 }

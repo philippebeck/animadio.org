@@ -5,7 +5,37 @@
 {% block description %}{% endblock %}
 
 {% block main %}
-<main>
-    <img src="img/under-construction.jpg" alt="Under Construction Picture">
+<input id="menu-radio1" 
+    class="menu-radio1" 
+    type="radio" 
+    name="menu"
+    checked>
+<input id="menu-radio2" 
+    class="menu-radio2" 
+    type="radio" 
+    name="menu">
+
+<nav class="menu">
+    <label class="button-red" 
+        for="menu-radio1">
+        <i class="fab fa-html5 onto-color-red"></i>
+        <span class="onto-color-red">
+            HTML
+        </span>
+    </label>
+    <label class="button-blue" 
+        for="menu-radio2">
+        <i class="fab fa-css3-alt onto-color-blue"></i>
+        <span class="onto-color-blue">
+            CSS
+        </span>
+    </label>
+</nav>
+
+<main class="menu-relay">
+    
+    {{ include("front/usage/html.twig") }}
+    {{ include("front/usage/css.twig") }}
+    
 </main>
 {% endblock %}

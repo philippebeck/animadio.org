@@ -1,0 +1,23 @@
+<section class="menu-target1">
+    <h2>Available Variables</h2>
+
+    {% for category, variableCategory in variables %}
+
+    <section>
+        <h3 class="color-violet">
+            {{ category }}
+        </h3>
+            
+        <ul>
+            {% for variable in variableCategory %} 
+
+            <li>
+                --{{ variable.variable }}
+            </li>
+
+            {% endfor %}
+        </ul>
+    </section>
+
+    {% endfor %}
+</section>

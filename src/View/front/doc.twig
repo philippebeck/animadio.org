@@ -5,7 +5,37 @@
 {% block description %}Global, Grid, Elements, States & Helpers{% endblock %}
 
 {% block main %}
-<main>
-    <img src="img/under-construction.jpg" alt="Under Construction Picture">
+<input id="menu-radio1" 
+    class="menu-radio1" 
+    type="radio" 
+    name="menu"
+    checked>
+<input id="menu-radio2" 
+    class="menu-radio2" 
+    type="radio" 
+    name="menu">
+
+<nav class="menu">
+    <label class="button-red" 
+        for="menu-radio1">
+        <i class="fas fa-glass-whiskey onto-color-red"></i>
+        <span class="onto-color-red">
+            Variables
+        </span>
+    </label>
+    <label class="button-blue" 
+        for="menu-radio2">
+        <i class="fas fa-magic onto-color-blue"></i>
+        <span class="onto-color-blue">
+            Classes
+        </span>
+    </label>
+</nav>
+
+<main class="menu-relay">
+    
+    {{ include("front/doc/variable.twig") }}
+    {{ include("front/doc/classe.twig") }}
+    
 </main>
 {% endblock %}
