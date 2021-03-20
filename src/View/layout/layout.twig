@@ -78,6 +78,15 @@
     {{ include('layout/navbar.twig') }}
 
     <header>
+        {% if (hasAlert()) %}
+
+        <p id="alert" 
+            class="bg-{{ getAlertType() }} color-white">
+            {{ getAlertMessage() }}
+        </p>
+
+        {% endif %}
+
         <h1 class="color-violet shatex-blur-md">
             {{ block('title') }}
         </h1>
