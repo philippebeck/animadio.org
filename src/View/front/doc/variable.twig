@@ -3,21 +3,22 @@
 
     {% for category, variableCategory in variables %}
 
-    <section>
-        <h3 class="color-violet">
-            {{ category }}
-        </h3>
-            
-        <ul>
-            {% for variable in variableCategory %} 
+    <table class="table">
+        <tr>
+            <th class="color-violet bg-green-light trans-up">
+                {{ category }}
+            </th>
+        </tr>
 
-            <li>
+        {% for variable in variableCategory %} 
+        <tr>
+            <td>
                 --{{ variable.variable }}
-            </li>
+            </td>
+        </tr>
+        {% endfor %}
 
-            {% endfor %}
-        </ul>
-    </section>
+    </table>
 
     {% endfor %}
 </section>
