@@ -29,6 +29,7 @@ class AuthController extends MainController
     {
         if (!empty($this->getPost()->getPostArray())) {
             $this->user = $this->getPost()->getPostArray();
+
             $this->checkSecurity();
         }
 
@@ -40,6 +41,7 @@ class AuthController extends MainController
         if (isset($this->user["g-recaptcha-response"]) && !empty($this->user["g-recaptcha-response"])) {
 
             if ($this->getSecurity()->checkRecaptcha($this->user["g-recaptcha-response"])) {
+                
                 $this->checkLogin();
             }
         }
