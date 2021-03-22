@@ -13,13 +13,13 @@ class Input {
 
     this.mainElement  = elements[0];
     this.elements     = elements[1];
-    this.elementCount = elements[1].length;
+    this.elementCount = this.elements.length;
 
     this.mainClass  = null;
     this.classes    = [];
 
     this.duration       = duration[0];
-    this.durationBase   = duration[0];
+    this.durationBase   = this.duration;
     this.countValues    = duration[1];
     this.durationValues = duration[2];
 

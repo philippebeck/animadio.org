@@ -1,8 +1,102 @@
 <article class="menu-target2">
-    <h2 class="anima-slideB-this">
-        CSS 
-        <i class="fab fa-css3-alt fa-lg color-blue"></i>
+    <h2 class="anima-grow">
+        <i class="fab fa-css3-alt fa-lg color-violet"></i> 
+        CSS Variables
+        <i class="fas fa-glass-whiskey fa-lg color-violet"></i>
     </h2>
 
+    <header class="head">
+        Animadio use CSS Variables for overloading possibility, 
+        the only thing to do is to overload the Variable you want 
+        in your style.css file !
+    </header>
 
+    <section>
+        <h3>How to overload a CSS Variable ?</h3>
+
+    <ul>
+        <li>
+            <p>
+                You need first to choose a 
+                <b class="color-violet">Selector</b> :
+            </p>
+            <code>:root</code>
+        </li>
+        <li>
+            <p>
+                Then, the 
+                <b class="color-violet">CSS Variable</b> 
+                to overload :
+            </p>
+            <code>--green</code>
+        </li>
+        <li>
+            <p>
+                Finally, the 
+                <b class="color-violet">Value</b> 
+                you want to put in the Variable :
+            </p>
+            <code>rgb(52, 133, 86)</code>
+        </li>
+        <li>
+            <p>
+                You will have this result for this example :
+            </p>
+            <code>:root { --green: rgb(52, 133, 86) }</code>
+        </li>
+    </ul>
+    </section>
+
+    <section>
+        <h3>More Variables Infos...</h3>
+
+        <ul>
+            <li>
+                <p>
+                    You can read the  
+                    <b class="color-violet">MDN Web Docs</b> 
+                    about CSS variables :
+                </p>
+                <a class="button-violet" 
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*"
+                    title="Go to the MDN page about CSS Variables">
+                    CSS Variables
+                </a>
+                <a class="button-violet" 
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/var()"
+                    title="Go to the MDN page about var()">
+                    var()
+                </a>
+                <a class="button-violet" 
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
+                    title="Go to the MDN page about Variables Usage">
+                    Variables Usage
+                </a>
+            </li>
+            <li>
+                <p>
+                    You can watch an example of a 
+                    <b class="color-violet">style.css</b> 
+                    file :
+                </p>
+                <a class="button-violet" 
+                    href="https://github.com/animadio/animadio.org/blob/master/public/css/style.css"
+                    title="Go to the Source Code of Animadio.org Style">
+                    Overloading Example
+                </a>
+            </li>
+            <li>
+                <p>
+                    You can find the 
+                    <b class="color-violet">Available CSS Variables</b> 
+                    in the Animadio Documentation :
+                </p>
+                <a class="button-violet" 
+                    href="{{ url('doc') }}"
+                    title="Go to the Documentation">
+                    Documentation
+                </a>
+            </li>
+        </ul>
+    </section>
 </article>
