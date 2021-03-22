@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /src/View/back/
+
+Sitemap: https://animadio.org/sitemap.xml
