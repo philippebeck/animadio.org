@@ -3,15 +3,21 @@
   --serif: 'Gabriela', serif;
   --monospace: 'Share Tech Mono', monospace;
   --green: rgb(52, 133, 86);
+  --green-dark: rgba(52, 133, 86, 0.7);
   --violet: rgb(58, 58, 173);
+  --violet-dark: rgba(58, 58, 173, 0.7);
 }
 
 body {
   --body-background-color: var(--grey-light);
 }
 
+a {
+  --link-color: var(--violet);
+}
+
 .navbar {
-  --navbar-background-color: var(--green);
+  --navbar-background-color: var(--green-dark);
 }
 
 .head {
