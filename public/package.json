@@ -20,8 +20,8 @@
   "homepage": "https://animadio.org",
   "repository": "github:animadio/animadio.org",
   "dependencies": {
-    "animadio": "^4.0.5",
-    "@fortawesome/fontawesome-free": "^5.15.3"
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "animadio": "^4.0.7"
   },
   "bugs": "https://github.com/animadio/animadio.org/issues",
   "author": {
