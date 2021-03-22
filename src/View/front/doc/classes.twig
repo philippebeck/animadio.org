@@ -1,0 +1,184 @@
+<section class="menu-target5">
+    <h2>Classes</h2>
+
+    <header class="head">
+        More than 500 CSS Classes of Animadio can be used !
+        <br>
+        And you can find here all of the classes...
+    </header>
+
+    <section>
+        <h3>Class Categories</h3>
+
+        <p>Coming Soon !</p>
+
+        <ul class="container-90tn-80lg-70wd row">
+
+            {% for category in classes|keys %}
+
+            <li>
+                <a class="button-green"
+                    href="#{{ category }}" 
+                    title="Go to {{ category }} Classes !">
+                {{ category }}
+                </a>
+            </li>
+
+            {% endfor %}
+
+        </ul>
+    </section>
+
+    <section>
+        <h3>Keywords</h3>
+
+        <table class="table">
+            <caption>Helpers Keywords</caption>
+
+            <thead>
+                <tr class="global-bg-violet-light global-trans-up">
+                    <th>Keywords</th>
+                    <th>Trigger</th>
+                    <th>Relay</th>
+                    <th>Target</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>&empty;</td>
+                    <td>Class</td>
+                    <td rowspan="3">&empty;</td>
+                    <td>Class</td>
+                </tr>
+                <tr>
+                    <td>global</td>
+                    <td>Global class</td>
+                    <td>Children of Global class</td>
+                </tr>
+                <tr>
+                    <td>onto</td>
+                    <td>Hover|Focus the Onto class</td>
+                    <td>Onto class</td>
+                </tr>
+                <tr>
+                    <td>check + hub + goal</td>
+                    <td>Check class Checked</td>
+                    <td>Hub class</td>
+                    <td>Goal class</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table">
+            <caption>Anima Keywords</caption>
+
+            <thead>
+                <tr class="global-bg-violet-light global-trans-up">
+                    <th>Keywords</th>
+                    <th>Trigger</th>
+                    <th>Relay</th>
+                    <th>Target</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>this</td>
+                    <td>Class</td>
+                    <td rowspan="6">&empty;</td>
+                    <td>Class</td>
+                </tr>
+                <tr>
+                    <td>global</td>
+                    <td>Global class</td>
+                    <td>Children of Global class</td>
+                </tr>
+                <tr>
+                    <td>onto</td>
+                    <td>Hover|Focus the Onto class</td>
+                    <td>Onto class</td>
+                </tr>
+                <tr>
+                    <td>into</td>
+                    <td>Hover|Focus the parent of Into class</td>
+                    <td>Into class</td>
+                </tr>
+                <tr>
+                    <td>toall</td>
+                    <td>Hover|Focus the Toall class</td>
+                    <td>Children of Toall class</td>
+                </tr>
+                <tr>
+                    <td>toone</td>
+                    <td>Hover|Focus a child of Toone class</td>
+                    <td>Child of Toone class</td>
+                </tr>
+                <tr>
+                    <td>check + hub + goal</td>
+                    <td>Check class Checked</td>
+                    <td>Hub class</td>
+                    <td>Goal class</td>
+                </tr>
+                <tr>
+                    <td>radio1 + relay + target1</td>
+                    <td>Radio1 class Checked</td>
+                    <td rowspan="5">Relay class</td>
+                    <td>Target1 class</td>
+                </tr>
+                <tr>
+                    <td>radio2 + relay + target2</td>
+                    <td>Radio2 class Checked</td>
+                    <td>Target2 class</td>
+                </tr>
+                <tr>
+                    <td>radio3 + relay + target3</td>
+                    <td>Radio3 class Checked</td>
+                    <td>Target3 class</td>
+                </tr>
+                <tr>
+                    <td>radio4 + relay + target4</td>
+                    <td>Radio4 class Checked</td>
+                    <td>Target4 class</td>
+                </tr>
+                <tr>
+                    <td>radio5 + relay + target5</td>
+                    <td>Radio5 class Checked</td>
+                    <td>Target5 class</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>Available Classes</h3>
+
+        <p>Coming Soon !</p>
+
+        {% for category, variableCategory in classes %}
+
+        <table class="table">
+            <tr>
+                <th id="{{ category }}"
+                    class="color-violet bg-violet-light trans-up">
+                    <a href="https://github.com/animadio/animadio/tree/master/src/classes/_{{ category|lower }}.var.scss"
+                        title="Go to the {{ category }} file in the GitHub Repository">
+                        {{ category }}
+                    </a>
+                </th>
+            </tr>
+
+            {% for class in classCategory %} 
+            <tr>
+                <td>
+                    --{{ class.class }}
+                </td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+        {% endfor %}
+
+    </section>
+</section>
