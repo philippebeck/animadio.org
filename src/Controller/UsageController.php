@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Pam\Controller\MainController;
+use Pam\Model\Factory\ModelFactory;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
@@ -21,6 +22,11 @@ class UsageController extends MainController
      */
     public function defaultMethod()
     {
-        return $this->render("front/usage.twig");
+        $variables = ModelFactory::getModel("Variable")->listVariablesWithCategory();
+        $variables = $this->getArray()->getArrayElements($variables);
+
+        return $this->render("front/usage.twig", [
+            "variables" => $variables
+        ]);
     }
 }
