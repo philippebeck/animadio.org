@@ -1,12 +1,45 @@
 <section class="menu-target1">
-    <h2>Available Variables</h2>
+    <h2>Variables</h2>
+
+    <header class="head">
+        More than 500 CSS Variables of Animadio can be overload !
+        <br>
+        And you can find here all of variables...
+    </header>
+
+    <section>
+        <h3>Variable Categories</h3>
+
+        <ul class="container-90tn-80lg-70wd row">
+
+            {% for category in variables|keys %}
+
+            <li>
+                <a class="button-violet"
+                    href="#{{ category }}" 
+                    title="Go to {{ category }} Variables !">
+                {{ category }}
+                </a>
+            </li>
+
+            {% endfor %}
+
+        </ul>
+    </section>
+
+    <section>
+        <h3>Available Variables</h3>
 
     {% for category, variableCategory in variables %}
 
     <table class="table">
         <tr>
-            <th class="color-violet bg-green-light trans-up">
-                {{ category }}
+            <th id="{{ category }}"
+                class="color-violet bg-green-light trans-up">
+                <a href="https://github.com/animadio/animadio/tree/master/src/variables/_{{ category|lower }}.var.scss"
+                    title="Go to the {{ category }} file in the GitHub Repository">
+                    {{ category }}
+                </a>
             </th>
         </tr>
 
@@ -21,4 +54,6 @@
     </table>
 
     {% endfor %}
+
+    </section>
 </section>
