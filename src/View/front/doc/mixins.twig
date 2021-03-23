@@ -1,5 +1,33 @@
 <section class="menu-target1">
     <h2>Mixins</h2>
 
-    <p>Coming Soon !</p>
+    <header class="head">
+        Mixins are used to create the library,
+        but it's possible to use them to create a personalized library ! 
+    </header>
+
+    <table class="table">
+        <thead>
+            <tr class="bg-violet-light trans-up">
+                <th>
+                    Mixin
+                </th>
+                <th>
+                    Result Generate
+                </th>
+            </tr>
+        </thead>
+
+        {% for mixin in mixins %} 
+        <tr>
+            <td>
+                {{ mixin.mixin }}
+            </td>
+            <td>
+                {{ mixin.result }}
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
 </section>
