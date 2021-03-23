@@ -33,13 +33,70 @@ CREATE TABLE `Variable` (
     CONSTRAINT `variable_category` FOREIGN KEY (`category_id`) REFERENCES `Category`(`id`)
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
-
 CREATE TABLE `Class` (
     `id`            SMALLINT    UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
     `category_id`  TINYINT     UNSIGNED    NOT NULL,
     `class`        VARCHAR(20) NOT NULL    UNIQUE,
     CONSTRAINT `class_category` FOREIGN KEY (`category_id`) REFERENCES `Category`(`id`)
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+INSERT INTO `Mixin`
+(`mixin`, `result`) VALUES
+('keyframes',       '@keyframes rules'),
+('container',       'container classes'),
+('grid-template',   'grid classes'),
+('grid-gap',        'grid-gap classes'),
+('place-content',   'place-content classes'),
+('place-items',     'place-items classes'),
+('place-self',      'place-self classes'),
+('btn-color',       'btn & button classes'),
+('gallery',         'gallery class'),
+('helpers',         'helpers classes'),
+('anima',           'anima classes');
+
+INSERT INTO `Family`
+(`family`) VALUES
+('translate'),
+('rotate'),
+('scale'),
+('skew');
+
+INSERT INTO `Keyframe`
+(`family_id`, `keyframe`) VALUES
+(1, 'slideT'),
+(1, 'slideTR'),
+(1, 'slideR'),
+(1, 'slideBR'),
+(1, 'slideB'),
+(1, 'slideBL'),
+(1, 'slideL'),
+(1, 'slideTL'),
+(2, 'turn'),
+(2, 'turnX'),
+(2, 'turnY'),
+(2, 'turnXY'),
+(2, 'turnXZ'),
+(2, 'turnYZ'),
+(2, 'turn3D'),
+(3, 'bounce'),
+(3, 'grow'),
+(3, 'shrink'),
+(3, 'openX'),
+(3, 'openY'),
+(3, 'flipX'),
+(3, 'flipY'),
+(3, 'flipperX'),
+(3, 'flipperY'),
+(3, 'fallX'),
+(3, 'fallY'),
+(4, 'twistT'),
+(4, 'twistR'),
+(4, 'twistB'),
+(4, 'twistL'),
+(4, 'torsionT'),
+(4, 'torsionR'),
+(4, 'torsionB'),
+(4, 'torsionL');
 
 INSERT INTO `Category`
 (`category`) VALUES
