@@ -33,24 +33,28 @@
     {% for category, variableCategory in variables %}
 
     <table class="table">
-        <tr>
-            <th id="{{ category }}"
-                class="bg-violet-light trans-up">
-                <a href="https://github.com/animadio/animadio/tree/master/src/variables/_{{ category|lower }}.var.scss"
-                    title="Go to the {{ category }} file in the GitHub Repository">
-                    {{ category }}
-                </a>
-            </th>
-        </tr>
+        <thead>
+            <tr>
+                <th id="{{ category }}"
+                    class="bg-violet-light trans-up">
+                    <a href="https://github.com/animadio/animadio/tree/master/src/variables/_{{ category|lower }}.var.scss"
+                        title="Go to the {{ category }} file in the GitHub Repository">
+                        {{ category }}
+                    </a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
 
-        {% for variable in variableCategory %} 
-        <tr>
-            <td>
-                --{{ variable.variable }}
-            </td>
-        </tr>
-        {% endfor %}
+            {% for variable in variableCategory %} 
+            <tr>
+                <td>
+                    --{{ variable.variable }}
+                </td>
+            </tr>
+            {% endfor %}
 
+        </tbody>
     </table>
 
     {% endfor %}
