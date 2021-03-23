@@ -26,11 +26,15 @@ class AdminController extends MainController
             $this->redirect("home");
         }
 
+        $mixins     = ModelFactory::getModel("Mixin")->listData();
+        $keyframes  = ModelFactory::getModel("Keyframe")->listData();
         $variables  = ModelFactory::getModel("Variable")->listData();
         $classes    = ModelFactory::getModel("Class")->listData();
         $users      = ModelFactory::getModel("User")->listData();
 
         return $this->render("back/admin.twig", [
+            "mixins"    => $mixins,
+            "keyframes" => $keyframes,
             "variables" => $variables,
             "classes"   => $classes,
             "users"     => $users
