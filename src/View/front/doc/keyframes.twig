@@ -6,4 +6,29 @@
         to build complex animations, 
         it's necessary to use animation options...
     </header>
+
+    {% for family, keyframeFamily in keyframes %}
+
+    <table class="table">
+        <tr>
+            <th id="{{ family }}"
+                class="bg-violet-light trans-up">
+                <a href="https://developer.mozilla.org/fr/docs/Web/CSS/transform-function/{{ family|lower }}()"
+                    title="Go to the {{ family }} transform function in the MDN Web Docs">
+                    {{ family }}
+                </a>
+            </th>
+        </tr>
+
+        {% for keyframe in keyframeFamily %} 
+        <tr>
+            <td>
+                {{ keyframe.keyframe }}
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    {% endfor %}
 </section>
