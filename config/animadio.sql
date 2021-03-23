@@ -19,7 +19,7 @@ CREATE TABLE `Keyframe` (
     `family_id`     TINYINT     UNSIGNED    NOT NULL,
     `keyframe`      VARCHAR(40) NOT NULL    UNIQUE,
     CONSTRAINT `keyframe_family` FOREIGN KEY (`family_id`) REFERENCES `Family`(`id`)
-    ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
+) ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
 CREATE TABLE `Category` (
     `id`        TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
@@ -35,8 +35,8 @@ CREATE TABLE `Variable` (
 
 CREATE TABLE `Class` (
     `id`            SMALLINT    UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
-    `category_id`  TINYINT     UNSIGNED    NOT NULL,
-    `class`        VARCHAR(20) NOT NULL    UNIQUE,
+    `category_id`  TINYINT      UNSIGNED    NOT NULL,
+    `class`        VARCHAR(20)  NOT NULL    UNIQUE,
     CONSTRAINT `class_category` FOREIGN KEY (`category_id`) REFERENCES `Category`(`id`)
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
