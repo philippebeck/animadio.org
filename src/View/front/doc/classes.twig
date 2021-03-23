@@ -8,28 +8,6 @@
     </header>
 
     <section>
-        <h3>Class Categories</h3>
-
-        <p>Coming Soon !</p>
-
-        <ul class="container-90tn-80lg-70wd row">
-
-            {% for category in classes|keys %}
-
-            <li>
-                <a class="button-green"
-                    href="#{{ category }}" 
-                    title="Go to {{ category }} Classes !">
-                {{ category }}
-                </a>
-            </li>
-
-            {% endfor %}
-
-        </ul>
-    </section>
-
-    <section>
         <h3>Keywords</h3>
 
         <table class="table">
@@ -148,6 +126,28 @@
                 </tr>
             </tbody>
         </table>
+    </section>
+
+    <section>
+        <h3>Class Categories</h3>
+
+        <p>Coming Soon !</p>
+
+        <ul class="container-90tn-80lg-70wd row">
+
+            {% for category in classes|keys %}
+
+            <li>
+                <a class="button-green"
+                    href="#{{ category }}" 
+                    title="Go to {{ category }} Classes !">
+                {{ category }}
+                </a>
+            </li>
+
+            {% endfor %}
+
+        </ul>
     </section>
 
     <section>
