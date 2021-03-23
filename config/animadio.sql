@@ -3,6 +3,24 @@ CREATE DATABASE `animadio` CHARACTER SET utf8;
 
 USE `animadio`;
 
+CREATE TABLE `Mixin` (
+    `id`        TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
+    `mixin`     VARCHAR(20) NOT NULL    UNIQUE,
+    `result`    VARCHAR(30) NOT NULL    UNIQUE
+) ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE `Family` (
+    `id`        TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
+    `family`    VARCHAR(10) NOT NULL    UNIQUE
+) ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE `Keyframe` (
+    `id`            TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
+    `family_id`     TINYINT     UNSIGNED    NOT NULL,
+    `keyframe`      VARCHAR(40) NOT NULL    UNIQUE,
+    CONSTRAINT `keyframe_family` FOREIGN KEY (`family_id`) REFERENCES `Family`(`id`)
+    ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
 CREATE TABLE `Category` (
     `id`        TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
     `category`  VARCHAR(10) NOT NULL    UNIQUE
