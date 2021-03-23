@@ -5,117 +5,117 @@
 {% block description %}{% endblock %}
 
 {% block main %}
-    <input id="menu-radio1" class="menu-radio1" type="radio" name="menu" checked>
-    <input id="menu-radio2" class="menu-radio2" type="radio" name="menu">
-    <input id="menu-radio3" class="menu-radio3" type="radio" name="menu">
+<input id="menu-radio1" 
+    class="menu-radio1" 
+    type="radio" 
+    name="menu" 
+    checked>
+<input id="menu-radio2" 
+    class="menu-radio2" 
+    type="radio" 
+    name="menu">
+<input id="menu-radio3" 
+    class="menu-radio3" 
+    type="radio" 
+    name="menu">
+<input id="menu-radio4" 
+    class="menu-radio4" 
+    type="radio" 
+    name="menu">
+<input id="menu-radio5" 
+    class="menu-radio5" 
+    type="radio" 
+    name="menu">
+<input id="menu-radio6" 
+    class="menu-radio6" 
+    type="radio" 
+    name="menu">
+<input id="menu-radio7" 
+    class="menu-radio7" 
+    type="radio"
+    name="menu">
+<input id="menu-radio8" 
+    class="menu-radio8" 
+    type="radio" 
+    name="menu">
 
-    <nav class="menu">
-        <label class="button-violet" for="menu-radio1" title="Show the Keyframes">
-            <i class="fas fa-infinity color-violet-onto"></i>
-            <span class="color-violet-onto">Keyframes</span>
-        </label>
-        <label class="button-red" for="menu-radio2" title="Show the Grid">
-            <i class="fas fa-th color-red-onto"></i>
-            <span class="color-red-onto">Grid</span>
-        </label>
-        <label class="button-brown" for="menu-radio3" title="Show the Users">
-            <i class="fas fa-user color-brown-onto"></i>
-            <span class="color-brown-onto">Users</span>
-        </label>
-    </nav>
+<nav class="menu">
+    <label class="button-violet" 
+        for="menu-radio1" 
+        title="Show the Mixins">
+        <i class="fas fa-industry onto-color-violet"></i>
+        <span class="onto-color-violet">
+            Mixins
+        </span>
+    </label>
+    <label class="button-blue" 
+        for="menu-radio2" 
+        title="Show the Variables">
+        <i class="fas fa-glass-whiskey onto-color-blue"></i>
+        <span class="onto-color-blue">
+            Variables
+        </span>
+    </label>
+    <label class="button-cyan" 
+        for="menu-radio3" 
+        title="Show the Keyframes">
+        <i class="fas fa-images onto-color-cyan"></i>
+        <span class="onto-color-cyan">
+            Keyframes
+        </span>
+    </label>
+    <label class="button-green" 
+        for="menu-radio4" 
+        title="Show the Classes">
+        <i class="fas fa-magic onto-color-green"></i>
+        <span class="onto-color-green">
+            Classes
+        </span>
+    </label>
+    <label class="button-brown" 
+        for="menu-radio5" 
+        title="Show the Elements">
+        <i class="fas fa-sitemap onto-color-brown"></i>
+        <span class="onto-color-brown">
+            Elements
+        </span>
+    </label>
+    <label class="button-orange" 
+        for="menu-radio6" 
+        title="Show the Themes">
+        <i class="fas fa-palette onto-color-orange"></i>
+        <span class="onto-color-orange">
+            Themes
+        </span>
+    </label>
+    <label class="button-violet" 
+        for="menu-radio7" 
+        title="Show the Templates">
+        <i class="fas fa-box-open onto-color-violet"></i>
+        <span class="onto-color-violet">
+            Templates
+        </span>
+    </label>
+    <label class="button-green" 
+        for="menu-radio8" 
+        title="Show the Users">
+        <i class="fas fa-users onto-color-green"></i>
+        <span class="onto-color-green">
+            Users
+        </span>
+    </label>
+</nav>
 
-    <main class="menu-relay">
-        <section class="menu-target1">
-            <h2><i class="fas fa-infinity"></i>Keyframes</h2>
-
-            <a class="btn-green btn-lg" href="{{ url('variable!create') }}">New Variable</a>
-
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Keyframes</th>
-                    <th>Effect</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-
-                </tbody>
-                <tfoot>
-                <tr>
-                    <th>Keyframes</th>
-                    <th>Effect</th>
-                    <th>Actions</th>
-                </tr>
-                </tfoot>
-            </table>
-        </section>
-
-        <section class="menu-target2">
-            <h2><i class="fas fa-th"></i>Grid</h2>
-
-            <a class="btn-green btn-lg" href="{{ url('class!create') }}">New Class</a>
-
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Grid</th>
-                    <th>Value</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-
-                </tbody>
-                <tfoot>
-                <tr>
-                    <th>Grid</th>
-                    <th>Value</th>
-                    <th>Actions</th>
-                </tr>
-                </tfoot>
-            </table>
-        </section>
-
-
-        <section class="menu-target3">
-            <h2><i class="far fa-user"></i>User</h2>
-
-            <a class="btn-green btn-lg" href="{{ url('user!create') }}">New User</a>
-
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>User</th>
-                    <th>Email</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for user in users %}
-                    <tr>
-                        <td>
-                            <figure>
-                                <img class="bord-violet" src="img/user/{{ user.image }}" alt="Screenshot of {{ user.name }}">
-                                <figcaption>{{ user.name }}</figcaption>
-                            </figure>
-                        </td>
-                        <td>{{ user.email }}</td>
-                        <td>
-                            <a class="btn-orange" href="{{ url('user!logout') }}">
-                                <i class="fas fa-sign-out-alt fa-fw fa-lg"></i>
-                            </a>
-                            <a class="btn-blue" href="{{ url('user!update', {'id': user.id}) }}">
-                                <i class="fas fa-pen-square fa-fw fa-lg"></i>
-                            </a>
-                            <a class="btn-red" href="{{ url('user!delete', {'id': user.id}) }}">
-                                <i class="fas fa-times-circle fa-fw fa-lg"></i>
-                            </a>
-                        </td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
-        </section>
-    </main>
+<main class="menu-relay">
+    
+    {{ include("back/admin/mixins.twig") }}
+    {{ include("back/admin/variables.twig") }}
+    {{ include("back/admin/keyframes.twig") }}
+    {{ include("back/admin/classes.twig") }}
+    {{ include("back/admin/elements.twig") }}
+    {{ include("back/admin/themes.twig") }}
+    {{ include("back/admin/templates.twig") }}
+    {{ include("back/admin/users.twig") }}
+    
+</main>
 {% endblock %}
