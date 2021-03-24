@@ -7,23 +7,27 @@
         it's necessary to use animation options...
     </header>
 
-    {% for family, keyframeFamily in keyframes %}
+    {% for category, keyframeCat in keyframes %}
 
     <table class="table">
         <tr>
-            <th id="{{ family }}"
-                class="bg-violet-light trans-up">
+            <th id="{{ category }}"
+                class="bg-violet-light trans-up"
+                colspan="2">
                 <a href="https://developer.mozilla.org/fr/docs/Web/CSS/transform-function/{{ family|lower }}()"
-                    title="Go to the {{ family }} transform function in the MDN Web Docs">
-                    {{ family }}
+                    title="Go to the {{ category }} transform function in the MDN Web Docs">
+                    {{ category }}
                 </a>
             </th>
         </tr>
 
-        {% for keyframe in keyframeFamily %} 
+        {% for keyframe in keyframeCat %} 
         <tr>
             <td>
-                {{ keyframe.keyframe }}
+                {{ keyframe.name }}
+            </td>
+            <td>
+                {{ keyframe.effect }}
             </td>
         </tr>
         {% endfor %}

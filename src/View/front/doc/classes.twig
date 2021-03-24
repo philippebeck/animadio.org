@@ -153,25 +153,29 @@
     <section>
         <h3>Available Classes</h3>
 
-        <p>Coming Soon !</p>
-
-        {% for category, variableCategory in classes %}
+        {% for category, classCat in classes %}
 
         <table class="table">
             <tr>
                 <th id="{{ category }}"
-                    class="color-violet bg-violet-light trans-up">
-                    <a href="https://github.com/animadio/animadio/tree/master/src/classes/_{{ category|lower }}.var.scss"
+                    class="color-violet bg-violet-light trans-up"
+                    colspan="2">
+                    <a href="https://github.com/animadio/animadio/tree/master/src/classes/_{{ category }}.scss"
                         title="Go to the {{ category }} file in the GitHub Repository">
                         {{ category }}
                     </a>
                 </th>
             </tr>
 
-            {% for class in classCategory %} 
+            {% for class in classCat %} 
             <tr>
                 <td>
-                    --{{ class.class }}
+                    <strong>
+                        .{{ class.name }}
+                    </strong>
+                </td>
+                <td>
+                    {{ class.media }}
                 </td>
             </tr>
             {% endfor %}
