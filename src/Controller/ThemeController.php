@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Pam\Controller\MainController;
+use Pam\Model\Factory\ModelFactory;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
@@ -21,6 +22,10 @@ class ThemeController extends MainController
      */
     public function defaultMethod()
     {
-        return $this->render("front/theme.twig");
+        $themes = ModelFactory::getModel("Theme")->listData();
+
+        return $this->render("front/theme.twig", [
+            "themes" => $themes
+        ]);
     }
 }
