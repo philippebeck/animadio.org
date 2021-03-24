@@ -34,9 +34,10 @@ CREATE TABLE `Variable` (
     CONSTRAINT `variable_category` FOREIGN KEY (`category_id`) REFERENCES `VariableCat`(`id`)
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
-CREATE TABLE `ClassMedia` (
+CREATE TABLE `Breakpoint` (
     `id`        TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
-    `media`     VARCHAR(20) NOT NULL    UNIQUE
+    `media`     CHAR(2)     NOT NULL    UNIQUE,
+    `width`     VARCHAR(20) NOT NULL    UNIQUE
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
 CREATE TABLE `ClassCat` (
@@ -50,7 +51,7 @@ CREATE TABLE `Class` (
     `media_id`      TINYINT      UNSIGNED    NOT NULL,
     `name`          VARCHAR(20)  NOT NULL    UNIQUE,
     CONSTRAINT `class_category` FOREIGN KEY (`category_id`) REFERENCES `ClassCat`(`id`),
-    CONSTRAINT `class_media` FOREIGN KEY (`media_id`) REFERENCES `ClassMedia`(`id`)
+    CONSTRAINT `class_media` FOREIGN KEY (`media_id`) REFERENCES `Breakpoint`(`id`)
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
 CREATE TABLE `Element` (
@@ -73,6 +74,15 @@ CREATE TABLE `Template` (
     `link`          VARCHAR(10) NOT NULL    UNIQUE,
     `definition`    VARCHAR(50) NOT NULL    UNIQUE
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+INSERT INTO `Breakpoint`
+(`media`, `width`) VALUES
+('tn',  'all widths'),
+('sm',  'min width: 576px'),
+('md',  'min width: 768px'),
+('lg',  'min width: 992px'),
+('xl',  'min width: 1200px'),
+('wd',  'min width: 1600px');
 
 INSERT INTO `Mixin`
 (`name`, `result`) VALUES
@@ -756,14 +766,6 @@ INSERT INTO `Variable`
 (23,    'canvas-controls-label-padding'),
 (23,    'canvas-controls-label-color');
 
-INSERT INTO `ClassMedia`
-(`media`) VALUES
-('all widths'),
-('min width: 576px'),
-('min width: 768px'),
-('min width: 992px'),
-('min width: 1200px');
-
 INSERT INTO `ClassCat`
 (`category`) VALUES
 ('init'),
@@ -810,6 +812,11 @@ INSERT INTO `Class`
 (1,     4,  'container-70lg'),
 (1,     4,  'container-80lg'),
 (1,     4,  'container-90lg'),
+(1,     4,  'container-50xl'),
+(1,     4,  'container-60xl'),
+(1,     4,  'container-70xl'),
+(1,     4,  'container-80xl'),
+(1,     4,  'container-90xl'),
 (1,     5,  'container-50wd'),
 (1,     5,  'container-60wd'),
 (1,     5,  'container-70wd'),
