@@ -38,14 +38,18 @@
     class="menu-radio8" 
     type="radio" 
     name="menu">
+<input id="menu-radio9" 
+    class="menu-radio9" 
+    type="radio" 
+    name="menu">
 
 <nav class="menu">
     <label class="button-violet" 
         for="menu-radio1" 
-        title="Show the Mixins">
-        <i class="fas fa-industry onto-color-violet"></i>
+        title="Show the Classes">
+        <i class="fas fa-magic onto-color-violet"></i>
         <span class="onto-color-violet">
-            Mixins
+            Class
         </span>
     </label>
     <label class="button-blue" 
@@ -53,7 +57,7 @@
         title="Show the Variables">
         <i class="fas fa-glass-whiskey onto-color-blue"></i>
         <span class="onto-color-blue">
-            Variables
+            Variable
         </span>
     </label>
     <label class="button-cyan" 
@@ -61,61 +65,69 @@
         title="Show the Keyframes">
         <i class="fas fa-images onto-color-cyan"></i>
         <span class="onto-color-cyan">
-            Keyframes
+            Keyframe
         </span>
     </label>
     <label class="button-green" 
-        for="menu-radio4" 
-        title="Show the Classes">
-        <i class="fas fa-magic onto-color-green"></i>
+        for="menu-radio4">
+        <i class="far fa-map onto-color-green"></i>
         <span class="onto-color-green">
-            Classes
+            Breakpoint
         </span>
     </label>
     <label class="button-brown" 
         for="menu-radio5" 
-        title="Show the Elements">
-        <i class="fas fa-sitemap onto-color-brown"></i>
+        title="Show the Mixins">
+        <i class="fas fa-industry onto-color-brown"></i>
         <span class="onto-color-brown">
-            Elements
+            Mixin
+        </span>
+    </label>
+    <label class="button-yellow" 
+        for="menu-radio6" 
+        title="Show the Elements">
+        <i class="fas fa-sitemap onto-color-yellow"></i>
+        <span class="onto-color-yellow">
+            Element
         </span>
     </label>
     <label class="button-orange" 
-        for="menu-radio6" 
+        for="menu-radio7" 
         title="Show the Themes">
         <i class="fas fa-palette onto-color-orange"></i>
         <span class="onto-color-orange">
-            Themes
+            Theme
         </span>
     </label>
-    <label class="button-violet" 
-        for="menu-radio7" 
-        title="Show the Templates">
-        <i class="fas fa-box-open onto-color-violet"></i>
-        <span class="onto-color-violet">
-            Templates
-        </span>
-    </label>
-    <label class="button-green" 
+    <label class="button-red" 
         for="menu-radio8" 
+        title="Show the Templates">
+        <i class="fas fa-box-open onto-color-red"></i>
+        <span class="onto-color-red">
+            Template
+        </span>
+    </label>
+    <label class="button-pink" 
+        for="menu-radio9" 
         title="Show the Users">
-        <i class="fas fa-users onto-color-green"></i>
-        <span class="onto-color-green">
-            Users
+        <i class="fas fa-user onto-color-pink"></i>
+        <span class="onto-color-pink">
+            User
         </span>
     </label>
 </nav>
 
 <main class="menu-relay">
     
-    {{ include("back/admin/mixins.twig") }}
-    {{ include("back/admin/variables.twig") }}
-    {{ include("back/admin/keyframes.twig") }}
-    {{ include("back/admin/classes.twig") }}
-    {{ include("back/admin/elements.twig") }}
-    {{ include("back/admin/themes.twig") }}
-    {{ include("back/admin/templates.twig") }}
-    {{ include("back/admin/users.twig") }}
+    {{ include("back/admin/listClasses.twig") }}
+    {{ include("back/admin/listVariables.twig") }}
+    {{ include("back/admin/listKeyframes.twig") }}
+    {{ include("back/admin/listBreakpoints.twig") }}
+    {{ include("back/admin/listMixins.twig") }}
+    {{ include("back/admin/listElements.twig") }}
+    {{ include("back/admin/listThemes.twig") }}
+    {{ include("back/admin/listTemplates.twig") }}
+    {{ include("back/admin/listUsers.twig") }}
     
 </main>
 {% endblock %}
