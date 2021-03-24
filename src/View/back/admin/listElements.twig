@@ -1,43 +1,43 @@
-<section class="menu-target7">
+<section class="menu-target6">
     <h2>
-        <i class="fas fa-box-open"></i> 
-        Templates
+        <i class="fas fa-sitemap"></i> 
+        Elements
     </h2>
 
     <a class="btn-green btn-lg" 
-        href="{{ url('template!create') }}">
-        New Template
+        href="{{ url('element!create') }}">
+        New Element
     </a>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Template</th>
+                <th>Element</th>
                 <th>Definition</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
 
-        {% for template in templates %}
+        {% for element in elements %}
             <tr>
                 <td>
                     <a class="button-violet"
-                        href="https://codepen.io/animadio/pen/{{ template.link }}"
-                        title="Go to the {{ template.name }} Pen">
-                        {{ template.name }}
+                        href="https://codepen.io/animadio/pen/{{ element.link }}"
+                        title="Go to the {{ element.name }} Pen">
+                        {{ element.name }}
                     </a>
                 </td>
                 <td>
-                    {{ template.definition }}
+                    {{ element.definition }}
                 </td>
                 <td>
                     <a class="btn-blue" 
-                        href="{{ url('template!update', {'id': template.id}) }}">
+                        href="{{ url('element!update', {'id': element.id}) }}">
                         <i class="fas fa-pen-square fa-fw fa-lg"></i>
                     </a>
                     <a class="btn-red" 
-                        href="{{ url('template!delete', {'id': template.id}) }}">
+                        href="{{ url('element!delete', {'id': element.id}) }}">
                         <i class="fas fa-times-circle fa-fw fa-lg"></i>
                     </a>
                 </td>

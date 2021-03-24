@@ -1,43 +1,43 @@
-<section class="menu-target5">
+<section class="menu-target7">
     <h2>
-        <i class="fas fa-sitemap"></i> 
-        Elements
+        <i class="fas fa-palette"></i> 
+        Themes
     </h2>
 
     <a class="btn-green btn-lg" 
-        href="{{ url('element!create') }}">
-        New Element
+        href="{{ url('theme!create') }}">
+        New Theme
     </a>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Element</th>
+                <th>Theme</th>
                 <th>Definition</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
 
-        {% for element in elements %}
+        {% for theme in themes %}
             <tr>
                 <td>
                     <a class="button-violet"
-                        href="https://codepen.io/animadio/pen/{{ element.link }}"
-                        title="Go to the {{ element.name }} Pen">
-                        {{ element.name }}
+                        href="https://codepen.io/animadio/pen/{{ theme.link }}"
+                        title="Go to the {{ theme.name }} Pen">
+                        {{ theme.name }}
                     </a>
                 </td>
                 <td>
-                    {{ element.definition }}
+                    {{ theme.definition }}
                 </td>
                 <td>
                     <a class="btn-blue" 
-                        href="{{ url('element!update', {'id': element.id}) }}">
+                        href="{{ url('theme!update', {'id': theme.id}) }}">
                         <i class="fas fa-pen-square fa-fw fa-lg"></i>
                     </a>
                     <a class="btn-red" 
-                        href="{{ url('element!delete', {'id': element.id}) }}">
+                        href="{{ url('theme!delete', {'id': theme.id}) }}">
                         <i class="fas fa-times-circle fa-fw fa-lg"></i>
                     </a>
                 </td>

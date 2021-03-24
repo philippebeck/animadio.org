@@ -1,39 +1,41 @@
 <section class="menu-target1">
     <h2>
-        <i class="fas fa-industry"></i> 
-        Mixins
+        <i class="fas fa-magic"></i> 
+        Classes
     </h2>
 
     <a class="btn-green btn-lg" 
-        href="{{ url('mixin!create') }}">
-        New Mixin
+        href="{{ url('class!create') }}">
+        New Class
     </a>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Mixin</th>
-                <th>Result</th>
+                <th>Class</th>
+                <th>Width (Category)</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
 
-        {% for mixin in mixins %}
+        {% for class in classes %}
             <tr>
                 <td>
-                    {{ mixin.name }}
+                    {{ class.name }}
                 </td>
                 <td>
-                    {{ mixin.result }}
+                    {{ class.width }}
+                    <br>
+                    ({{ class.category }})
                 </td>
                 <td>
                     <a class="btn-blue" 
-                        href="{{ url('mixin!update', {'id': mixin.id}) }}">
+                        href="{{ url('class!update', {'id': class.id}) }}">
                         <i class="fas fa-pen-square fa-fw fa-lg"></i>
                     </a>
                     <a class="btn-red" 
-                        href="{{ url('mixin!delete', {'id': mixin.id}) }}">
+                        href="{{ url('class!delete', {'id': class.id}) }}">
                         <i class="fas fa-times-circle fa-fw fa-lg"></i>
                     </a>
                 </td>
