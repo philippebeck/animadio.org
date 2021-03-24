@@ -26,22 +26,24 @@ class AdminController extends MainController
             $this->redirect("home");
         }
 
-        $mixins     = ModelFactory::getModel("Mixin")->listData();
-        $keyframes  = ModelFactory::getModel("Keyframe")->listKeyframesWithCategory();
-        $variables  = ModelFactory::getModel("Variable")->listVariablesWithCategory();
-        $classes    = ModelFactory::getModel("Class")->listClassesWithCategory();
-        $elements   = ModelFactory::getModel("Element")->listData();
-        $themes     = ModelFactory::getModel("Theme")->listData();
-        $users      = ModelFactory::getModel("User")->listData();
+        $classes        = ModelFactory::getModel("Class")->listClassesWithCategory();
+        $variables      = ModelFactory::getModel("Variable")->listVariablesWithCategory();
+        $keyframes      = ModelFactory::getModel("Keyframe")->listKeyframesWithCategory();
+        $breakpoints    = ModelFactory::getModel("Breakpoint")->listData();
+        $mixins         = ModelFactory::getModel("Mixin")->listData();
+        $elements       = ModelFactory::getModel("Element")->listData();
+        $themes         = ModelFactory::getModel("Theme")->listData();
+        $users          = ModelFactory::getModel("User")->listData();
 
         return $this->render("back/admin.twig", [
-            "mixins"    => $mixins,
-            "keyframes" => $keyframes,
-            "variables" => $variables,
-            "classes"   => $classes,
-            "elements"  => $elements,
-            "themes"    => $themes,
-            "users"     => $users
+            "classes"       => $classes,
+            "variables"     => $variables,
+            "keyframes"     => $keyframes,
+            "breakpoints"   => $breakpoints,
+            "mixins"        => $mixins,
+            "elements"      => $elements,
+            "themes"        => $themes,
+            "users"         => $users
         ]);
     }
 }

@@ -22,22 +22,25 @@ class DocController extends MainController
      */
     public function defaultMethod()
     {
-        $mixins = ModelFactory::getModel("Mixin")->listData();
-
-        $keyframes  = ModelFactory::getModel("Keyframe")->listKeyframesWithCategory();
-        $keyframes  = $this->getArray()->getArrayElements($keyframes);
+        $classes    = ModelFactory::getModel("Class")->listClassesWithCategory();
+        $classes    = $this->getArray()->getArrayElements($classes);
 
         $variables  = ModelFactory::getModel("Variable")->listVariablesWithCategory();
         $variables  = $this->getArray()->getArrayElements($variables);
 
-        $classes    = ModelFactory::getModel("Class")->listClassesWithCategory();
-        $classes    = $this->getArray()->getArrayElements($classes);
+        $keyframes  = ModelFactory::getModel("Keyframe")->listKeyframesWithCategory();
+        $keyframes  = $this->getArray()->getArrayElements($keyframes);
+
+        $breakpoints    = ModelFactory::getModel("Breakpoint")->listData();
+        $mixins         = ModelFactory::getModel("Mixin")->listData();
+
 
         return $this->render("front/doc.twig", [
-            "mixins"    => $mixins,
-            "keyframes" => $keyframes,
-            "variables" => $variables,
-            "classes"   => $classes
+            "classes"       => $classes,
+            "variables"     => $variables,
+            "keyframes"     => $keyframes,
+            "breakpoints"   => $breakpoints,
+            "mixins"        => $mixins
         ]);
     }
 }
