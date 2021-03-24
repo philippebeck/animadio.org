@@ -1,0 +1,50 @@
+<section class="menu-target9">
+    <h2>
+        <i class="fas fa-users"></i> 
+        Users
+    </h2>
+
+    <a class="btn-green btn-lg" 
+        href="{{ url('user!create') }}">
+        New User
+    </a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        {% for user in users %}
+            <tr>
+                <td>
+                    <figure>
+                        <img class="bord-violet" 
+                            src="img/user/{{ user.image }}" 
+                            alt="Screenshot of {{ user.name }}">
+                        <figcaption>
+                            {{ user.name }}
+                        </figcaption>
+                    </figure>
+                </td>
+                <td>{{ user.email }}</td>
+                <td>
+                    <a class="btn-blue" 
+                        href="{{ url('user!update', {'id': user.id}) }}">
+                        <i class="fas fa-pen-square fa-fw fa-lg"></i>
+                    </a>
+                    <a class="btn-red" 
+                        href="{{ url('user!delete', {'id': user.id}) }}">
+                        <i class="fas fa-times-circle fa-fw fa-lg"></i>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</section>

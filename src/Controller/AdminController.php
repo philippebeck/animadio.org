@@ -26,14 +26,24 @@ class AdminController extends MainController
             $this->redirect("home");
         }
 
-        $variables  = ModelFactory::getModel("Variable")->listData();
-        $classes    = ModelFactory::getModel("Class")->listData();
-        $users      = ModelFactory::getModel("User")->listData();
+        $classes        = ModelFactory::getModel("Class")->listClassesWithCategory();
+        $variables      = ModelFactory::getModel("Variable")->listVariablesWithCategory();
+        $keyframes      = ModelFactory::getModel("Keyframe")->listKeyframesWithCategory();
+        $breakpoints    = ModelFactory::getModel("Breakpoint")->listData();
+        $mixins         = ModelFactory::getModel("Mixin")->listData();
+        $elements       = ModelFactory::getModel("Element")->listData();
+        $themes         = ModelFactory::getModel("Theme")->listData();
+        $users          = ModelFactory::getModel("User")->listData();
 
         return $this->render("back/admin.twig", [
-            "variables" => $variables,
-            "classes"   => $classes,
-            "users"     => $users
+            "classes"       => $classes,
+            "variables"     => $variables,
+            "keyframes"     => $keyframes,
+            "breakpoints"   => $breakpoints,
+            "mixins"        => $mixins,
+            "elements"      => $elements,
+            "themes"        => $themes,
+            "users"         => $users
         ]);
     }
 }

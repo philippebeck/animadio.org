@@ -1,30 +1,31 @@
-<section class="menu-target6">
-    <h2>Mixins</h2>
+<section class="menu-target4">
+    <h2>Breakpoints</h2>
 
     <header class="head">
-        Mixins are used to create the library,
-        but it's possible to use them to create a personalized library ! 
+        The breakpoints set the display for differents screen sizes...
+        <br>
+        You can find here what screen sizes exactly !
     </header>
 
     <table class="table">
         <thead>
             <tr class="bg-violet-light trans-up">
                 <th>
-                    Mixin
+                    Media
                 </th>
                 <th>
-                    Generated Result
+                    Screen
                 </th>
             </tr>
         </thead>
 
-        {% for mixin in mixins %} 
+        {% for breakpoint in breakpoints %} 
         <tr>
             <td>
-                {{ mixin.name }}
+                {{ breakpoint.media }}
             </td>
             <td>
-                {{ mixin.result }}
+                {{ breakpoint.width }}
             </td>
         </tr>
         {% endfor %}

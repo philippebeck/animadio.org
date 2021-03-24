@@ -1,0 +1,47 @@
+<section class="menu-target1">
+    <h2>
+        <i class="fas fa-magic"></i> 
+        Classes
+    </h2>
+
+    <a class="btn-green btn-lg" 
+        href="{{ url('class!create') }}">
+        New Class
+    </a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Class</th>
+                <th>Width (Category)</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        {% for class in classes %}
+            <tr>
+                <td>
+                    {{ class.name }}
+                </td>
+                <td>
+                    {{ class.width }}
+                    <br>
+                    ({{ class.category }})
+                </td>
+                <td>
+                    <a class="btn-blue" 
+                        href="{{ url('class!update', {'id': class.id}) }}">
+                        <i class="fas fa-pen-square fa-fw fa-lg"></i>
+                    </a>
+                    <a class="btn-red" 
+                        href="{{ url('class!delete', {'id': class.id}) }}">
+                        <i class="fas fa-times-circle fa-fw fa-lg"></i>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</section>

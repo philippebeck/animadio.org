@@ -26,6 +26,7 @@ a {
 }
 
 .table {
+  --table-width: auto;
   --table-row-even-hover-background-color: var(--green-dark);
   --table-row-odd-hover-background-color: var(--violet-dark);
 }

@@ -1,4 +1,4 @@
-<section class="menu-target5">
+<section class="menu-target1">
     <h2>Classes</h2>
 
     <header class="head">
@@ -6,28 +6,6 @@
         <br>
         And you can find here all of the classes...
     </header>
-
-    <section>
-        <h3>Class Categories</h3>
-
-        <p>Coming Soon !</p>
-
-        <ul class="container-90tn-80lg-70wd row">
-
-            {% for category in classes|keys %}
-
-            <li>
-                <a class="button-green"
-                    href="#{{ category }}" 
-                    title="Go to {{ category }} Classes !">
-                {{ category }}
-                </a>
-            </li>
-
-            {% endfor %}
-
-        </ul>
-    </section>
 
     <section>
         <h3>Keywords</h3>
@@ -151,31 +129,61 @@
     </section>
 
     <section>
-        <h3>Available Classes</h3>
+        <h3>Class Categories</h3>
 
         <p>Coming Soon !</p>
 
-        {% for category, variableCategory in classes %}
+        <ul class="container-90tn-80lg-70wd row">
 
-        <table class="table">
-            <tr>
-                <th id="{{ category }}"
-                    class="color-violet bg-violet-light trans-up">
-                    <a href="https://github.com/animadio/animadio/tree/master/src/classes/_{{ category|lower }}.var.scss"
-                        title="Go to the {{ category }} file in the GitHub Repository">
-                        {{ category }}
-                    </a>
-                </th>
-            </tr>
+            {% for category in classes|keys %}
 
-            {% for class in classCategory %} 
-            <tr>
-                <td>
-                    --{{ class.class }}
-                </td>
-            </tr>
+            <li>
+                <a class="button-green"
+                    href="#{{ category }}" 
+                    title="Go to {{ category }} Classes !">
+                {{ category }}
+                </a>
+            </li>
+
             {% endfor %}
 
+        </ul>
+    </section>
+
+    <section>
+        <h3>Available Classes</h3>
+
+        {% for category, classCat in classes %}
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th id="{{ category }}"
+                        class="color-violet bg-violet-light trans-up"
+                        colspan="2">
+                        <a href="https://github.com/animadio/animadio/tree/master/src/classes/_{{ category }}.scss"
+                            title="Go to the {{ category }} file in the GitHub Repository">
+                            {{ category }}
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for class in classCat %} 
+                <tr>
+                    <td>
+                        <strong>
+                            .{{ class.name }}
+                        </strong>
+                    </td>
+                    <td>
+                        {{ class.width }}
+                    </td>
+                </tr>
+                {% endfor %}
+                
+            </tbody>
         </table>
 
         {% endfor %}

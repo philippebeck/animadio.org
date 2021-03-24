@@ -20,100 +20,25 @@
 
         <figure class="gallery anima-slideT-global">
 
+        {% for theme in themes %}
+
             <figure>
-                <a href="https://codepen.io/animadio/pen/YzpmyMP" 
-                    title="See the Age Pen for CSS Code">
-                    <img src="img/themes/age.png" 
-                        alt="The Age theme">
+                <a href="https://codepen.io/animadio/pen/{{ theme.link }}" 
+                    title="See the {{ theme.name }} Pen for CSS Code">
+                    <img src="img/themes/{{ theme.name|lower }}.png" 
+                        alt="The {{ theme.name }} theme">
                 <figcaption>
-                    <a href="https://codepen.io/pen/?template=YzpmyMP" 
-                        title="See the Age Template for CSS Code">
-                        <h3>Age</h3>
-                        <p>A theme about our time</p>
+                    <a href="https://codepen.io/pen/?template={{ theme.link }}" 
+                        title="See the {{ theme.name }} Template for CSS Code">
+                        <h3>{{ theme.name }}</h3>
+                        <p>{{ theme.definition }}</p>
                         <i class="fas fa-image"></i>
                     </a>
                 </figcaption>
             </figure>
 
-            <figure>
-                <a href="https://codepen.io/animadio/pen/KKNOgZG" 
-                    title="See the Anima Pen for CSS Code">
-                    <img src="img/themes/anima.png" 
-                        alt="The Anima theme">
-                </a>
-                <figcaption>
-                    <a href="https://codepen.io/pen/?template=KKNOgZG" 
-                        title="See the Anima Template for CSS Code">
-                        <h3>Anima</h3>
-                        <p>The Animadio theme</p>
-                        <i class="fas fa-image"></i>
-                    </a>
-                </figcaption>
-            </figure>
+        {% endfor %}
 
-            <figure>
-                <a href="https://codepen.io/animadio/pen/yLVmYqp" 
-                    title="See the Astro Pen for CSS Code">
-                    <img src="img/themes/astro.png" 
-                        alt="The Astro theme">
-                </a>
-                <figcaption>
-                    <a href="https://codepen.io/pen/?template=yLVmYqp" 
-                        title="See the Astro Template for CSS Code">
-                        <h3>Astro</h3>
-                        <p>A dark theme like space</p>
-                        <i class="fas fa-image"></i>
-                    </a>
-                </figcaption>
-            </figure>
-
-            <figure>
-                <a href="https://codepen.io/animadio/pen/yLVmeYq" 
-                    title="See the Magic Pen for CSS Code">
-                    <img src="img/themes/magic.png" 
-                        alt="The Magic theme">
-                </a>
-                <figcaption>
-                    <a href="https://codepen.io/pen/?template=yLVmeYq" 
-                        title="See the Magic Template for CSS Code">
-                        <h3>Magic</h3>
-                        <p>A theme with magic effect</p>
-                        <i class="fas fa-image"></i>
-                    </a>
-                </figcaption>
-            </figure>
-
-            <figure>
-                <a href="https://codepen.io/animadio/pen/BaQXjyR" 
-                    title="See the Spirit Pen for CSS Code">
-                    <img src="img/themes/spirit.png" 
-                        alt="The Spirit theme">
-                </a>
-                <figcaption>
-                    <a href="https://codepen.io/pen/?template=BaQXjyR" 
-                        title="See the Spirit Template for CSS Code">
-                        <h3>Spirit</h3>
-                        <p>A visual theme for the mind</p>
-                        <i class="fas fa-image"></i>
-                    </a>
-                </figcaption>
-            </figure>
-
-            <figure>
-                <a href="https://codepen.io/animadio/pen/NWbQGZv" 
-                    title="See the Tool Pen for CSS Code">
-                    <img src="img/themes/tool.png" 
-                        alt="The Tool theme">
-                </a>
-                <figcaption>
-                   <a href="https://codepen.io/pen/?template=NWbQGZv" 
-                        title="See the Tool Template for CSS Code">
-                        <h3>Tool</h3>
-                        <p>A theme about mecanic</p>
-                        <i class="fas fa-image"></i>
-                   </a>
-                </figcaption>
-            </figure>
         </figure>
     </section>
 </main>

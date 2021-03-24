@@ -1,0 +1,49 @@
+<section class="menu-target7">
+    <h2>
+        <i class="fas fa-palette"></i> 
+        Themes
+    </h2>
+
+    <a class="btn-green btn-lg" 
+        href="{{ url('theme!create') }}">
+        New Theme
+    </a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Theme</th>
+                <th>Definition</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        {% for theme in themes %}
+            <tr>
+                <td>
+                    <a class="button-violet"
+                        href="https://codepen.io/animadio/pen/{{ theme.link }}"
+                        title="Go to the {{ theme.name }} Pen">
+                        {{ theme.name }}
+                    </a>
+                </td>
+                <td>
+                    {{ theme.definition }}
+                </td>
+                <td>
+                    <a class="btn-blue" 
+                        href="{{ url('theme!update', {'id': theme.id}) }}">
+                        <i class="fas fa-pen-square fa-fw fa-lg"></i>
+                    </a>
+                    <a class="btn-red" 
+                        href="{{ url('theme!delete', {'id': theme.id}) }}">
+                        <i class="fas fa-times-circle fa-fw fa-lg"></i>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</section>
