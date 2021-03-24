@@ -1,0 +1,45 @@
+<section class="menu-target4">
+    <h2>
+        <i class="fas fa-map"></i> 
+        Breakpoints
+    </h2>
+
+    <a class="btn-green btn-lg" 
+        href="{{ url('mixin!create') }}">
+        New Breakpoint
+    </a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Media</th>
+                <th>Width</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        {% for breakpoint in breakpoints %}
+            <tr>
+                <td>
+                    {{ breakpoint.media }}
+                </td>
+                <td>
+                    {{ breakpoint.width }}
+                </td>
+                <td>
+                    <a class="btn-blue" 
+                        href="{{ url('breakpoint!update', {'id': breakpoint.id}) }}">
+                        <i class="fas fa-pen-square fa-fw fa-lg"></i>
+                    </a>
+                    <a class="btn-red" 
+                        href="{{ url('breakpoint!delete', {'id': breakpoint.id}) }}">
+                        <i class="fas fa-times-circle fa-fw fa-lg"></i>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</section>

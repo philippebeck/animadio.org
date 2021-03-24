@@ -1,0 +1,34 @@
+<section class="menu-target4">
+    <h2>Breakpoints</h2>
+
+    <header class="head">
+        The breakpoints set the display for differents screen sizes...
+        <br>
+        You can find here what screen sizes exactly !
+    </header>
+
+    <table class="table">
+        <thead>
+            <tr class="bg-violet-light trans-up">
+                <th>
+                    Media
+                </th>
+                <th>
+                    Screen
+                </th>
+            </tr>
+        </thead>
+
+        {% for breakpoint in breakpoints %} 
+        <tr>
+            <td>
+                {{ breakpoint.media }}
+            </td>
+            <td>
+                {{ breakpoint.width }}
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</section>
