@@ -1,4 +1,4 @@
-<section class="menu-target5">
+<section class="menu-target1">
     <h2>Classes</h2>
 
     <header class="head">
@@ -156,30 +156,34 @@
         {% for category, classCat in classes %}
 
         <table class="table">
-            <tr>
-                <th id="{{ category }}"
-                    class="color-violet bg-violet-light trans-up"
-                    colspan="2">
-                    <a href="https://github.com/animadio/animadio/tree/master/src/classes/_{{ category }}.scss"
-                        title="Go to the {{ category }} file in the GitHub Repository">
-                        {{ category }}
-                    </a>
-                </th>
-            </tr>
+            <thead>
+                <tr>
+                    <th id="{{ category }}"
+                        class="color-violet bg-violet-light trans-up"
+                        colspan="2">
+                        <a href="https://github.com/animadio/animadio/tree/master/src/classes/_{{ category }}.scss"
+                            title="Go to the {{ category }} file in the GitHub Repository">
+                            {{ category }}
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
 
-            {% for class in classCat %} 
-            <tr>
-                <td>
-                    <strong>
-                        .{{ class.name }}
-                    </strong>
-                </td>
-                <td>
-                    {{ class.media }}
-                </td>
-            </tr>
-            {% endfor %}
-
+                {% for class in classCat %} 
+                <tr>
+                    <td>
+                        <strong>
+                            .{{ class.name }}
+                        </strong>
+                    </td>
+                    <td>
+                        {{ class.width }}
+                    </td>
+                </tr>
+                {% endfor %}
+                
+            </tbody>
         </table>
 
         {% endfor %}

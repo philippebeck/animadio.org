@@ -10,28 +10,32 @@
     {% for category, keyframeCat in keyframes %}
 
     <table class="table">
-        <tr>
-            <th id="{{ category }}"
-                class="bg-violet-light trans-up"
-                colspan="2">
-                <a href="https://developer.mozilla.org/fr/docs/Web/CSS/transform-function/{{ family|lower }}()"
-                    title="Go to the {{ category }} transform function in the MDN Web Docs">
-                    {{ category }}
-                </a>
-            </th>
-        </tr>
+        <thead>
+            <tr>
+                <th id="{{ category }}"
+                    class="bg-violet-light trans-up"
+                    colspan="2">
+                    <a href="https://developer.mozilla.org/fr/docs/Web/CSS/transform-function/{{ family|lower }}()"
+                        title="Go to the {{ category }} transform function in the MDN Web Docs">
+                        {{ category }}
+                    </a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
 
-        {% for keyframe in keyframeCat %} 
-        <tr>
-            <td>
-                {{ keyframe.name }}
-            </td>
-            <td>
-                {{ keyframe.effect }}
-            </td>
-        </tr>
-        {% endfor %}
+            {% for keyframe in keyframeCat %} 
+            <tr>
+                <td>
+                    {{ keyframe.name }}
+                </td>
+                <td>
+                    {{ keyframe.effect }}
+                </td>
+            </tr>
+            {% endfor %}
 
+        </tbody>
     </table>
 
     {% endfor %}
