@@ -5,23 +5,24 @@ USE `animadio`;
 
 CREATE TABLE `Mixin` (
     `id`        TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
-    `mixin`     VARCHAR(20) NOT NULL    UNIQUE,
+    `name`      VARCHAR(20) NOT NULL    UNIQUE,
     `result`    VARCHAR(30) NOT NULL    UNIQUE
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
-CREATE TABLE `Family` (
+CREATE TABLE `KeyframeCat` (
     `id`        TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
-    `family`    VARCHAR(10) NOT NULL    UNIQUE
+    `category`  VARCHAR(10) NOT NULL    UNIQUE
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
 CREATE TABLE `Keyframe` (
     `id`            TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
-    `family_id`     TINYINT     UNSIGNED    NOT NULL,
-    `keyframe`      VARCHAR(40) NOT NULL    UNIQUE,
-    CONSTRAINT `keyframe_family` FOREIGN KEY (`family_id`) REFERENCES `Family`(`id`)
+    `category_id`   TINYINT     UNSIGNED    NOT NULL,
+    `name`          VARCHAR(10) NOT NULL    UNIQUE,
+    `effect`        VARCHAR(40) NOT NULL    UNIQUE,
+    CONSTRAINT `keyframe_category` FOREIGN KEY (`category_id`) REFERENCES `KeyframeCat`(`id`)
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
-CREATE TABLE `Category` (
+CREATE TABLE `VariableCat` (
     `id`        TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
     `category`  VARCHAR(10) NOT NULL    UNIQUE
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
@@ -29,19 +30,52 @@ CREATE TABLE `Category` (
 CREATE TABLE `Variable` (
     `id`            SMALLINT    UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
     `category_id`   TINYINT     UNSIGNED    NOT NULL,
-    `variable`      VARCHAR(40) NOT NULL    UNIQUE,
-    CONSTRAINT `variable_category` FOREIGN KEY (`category_id`) REFERENCES `Category`(`id`)
+    `name`          VARCHAR(40) NOT NULL    UNIQUE,
+    CONSTRAINT `variable_category` FOREIGN KEY (`category_id`) REFERENCES `VariableCat`(`id`)
+) ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE `ClassMedia` (
+    `id`        TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
+    `media`     VARCHAR(20) NOT NULL    UNIQUE
+) ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE `ClassCat` (
+    `id`        TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
+    `category`  VARCHAR(10) NOT NULL    UNIQUE
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
 CREATE TABLE `Class` (
     `id`            SMALLINT    UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
-    `category_id`  TINYINT      UNSIGNED    NOT NULL,
-    `class`        VARCHAR(20)  NOT NULL    UNIQUE,
-    CONSTRAINT `class_category` FOREIGN KEY (`category_id`) REFERENCES `Category`(`id`)
+    `category_id`   TINYINT      UNSIGNED    NOT NULL,
+    `media_id`      TINYINT      UNSIGNED    NOT NULL,
+    `name`          VARCHAR(20)  NOT NULL    UNIQUE,
+    CONSTRAINT `class_category` FOREIGN KEY (`category_id`) REFERENCES `ClassCat`(`id`),
+    CONSTRAINT `class_media` FOREIGN KEY (`media_id`) REFERENCES `ClassMedia`(`id`)
+) ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE `Element` (
+    `id`            TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
+    `name`          VARCHAR(10) NOT NULL    UNIQUE,
+    `link`          VARCHAR(10) NOT NULL    UNIQUE,
+    `definition`    VARCHAR(50) NOT NULL    UNIQUE
+) ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE `Theme` (
+    `id`            TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
+    `name`          VARCHAR(10) NOT NULL    UNIQUE,
+    `link`          VARCHAR(10) NOT NULL    UNIQUE,
+    `definition`    VARCHAR(50) NOT NULL    UNIQUE
+) ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE `Template` (
+    `id`            TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
+    `name`          VARCHAR(10) NOT NULL    UNIQUE,
+    `link`          VARCHAR(10) NOT NULL    UNIQUE,
+    `definition`    VARCHAR(50) NOT NULL    UNIQUE
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
 INSERT INTO `Mixin`
-(`mixin`, `result`) VALUES
+(`name`, `result`) VALUES
 ('keyframes',       '@keyframes rules'),
 ('container',       'container classes'),
 ('grid-template',   'grid classes'),
@@ -52,80 +86,81 @@ INSERT INTO `Mixin`
 ('btn-color',       'btn & button classes'),
 ('gallery',         'gallery class'),
 ('helpers',         'helpers classes'),
+('helpers-concat',  'default helpers classes'),
 ('anima',           'anima classes');
 
-INSERT INTO `Family`
-(`family`) VALUES
+INSERT INTO `KeyframeCat`
+(`category`) VALUES
 ('translate'),
 ('rotate'),
 ('scale'),
 ('skew');
 
 INSERT INTO `Keyframe`
-(`family_id`, `keyframe`) VALUES
-(1, 'slideT'),
-(1, 'slideTR'),
-(1, 'slideR'),
-(1, 'slideBR'),
-(1, 'slideB'),
-(1, 'slideBL'),
-(1, 'slideL'),
-(1, 'slideTL'),
-(2, 'turn'),
-(2, 'turnX'),
-(2, 'turnY'),
-(2, 'turnXY'),
-(2, 'turnXZ'),
-(2, 'turnYZ'),
-(2, 'turn3D'),
-(3, 'bounce'),
-(3, 'grow'),
-(3, 'shrink'),
-(3, 'openX'),
-(3, 'openY'),
-(3, 'flipX'),
-(3, 'flipY'),
-(3, 'flipperX'),
-(3, 'flipperY'),
-(3, 'fallX'),
-(3, 'fallY'),
-(4, 'twistT'),
-(4, 'twistR'),
-(4, 'twistB'),
-(4, 'twistL'),
-(4, 'torsionT'),
-(4, 'torsionR'),
-(4, 'torsionB'),
-(4, 'torsionL');
+(`category_id`, `name`, `effect`) VALUES
+(1, 'slideT',   'slide to the top'),
+(1, 'slideTR',  'slide to the top right'),
+(1, 'slideR',   'slide to the right'),
+(1, 'slideBR',  'slide to the bottom right'),
+(1, 'slideB',   'slide to the bottom'),
+(1, 'slideBL',  'slide to the bottom left'),
+(1, 'slideL',   'slide to the left'),
+(1, 'slideTL',  'slide to the top left'),
+(2, 'turn',     'simple rotation'),
+(2, 'turnX',    'x-axis rotation'),
+(2, 'turnY',    'y-axis rotation'),
+(2, 'turnXY',   'rotation on the x & y axes'),
+(2, 'turnXZ',   'rotation on the x & z axes'),
+(2, 'turnYZ',   'rotation on the y & z axes'),
+(2, 'turn3D',   'rotation on 3 axes'),
+(3, 'bounce',   'rebound'),
+(3, 'grow',     'magnification'),
+(3, 'shrink',   'narrowing'),
+(3, 'openX',    'x-axis magnification'),
+(3, 'openY',    'y-axis magnification'),
+(3, 'flipX',    'flipping on the x-axis'),
+(3, 'flipY',    'flipping on the y-axis'),
+(3, 'flipperX', 'double flipping to the x-axis'),
+(3, 'flipperY', 'double flipping to the y-axis'),
+(3, 'fallX',    'narrowing & flipping on the x-axis'),
+(3, 'fallY',    'narrowing & flipping on the y-axis'),
+(4, 'twistT',   'half distorsion to the top'),
+(4, 'twistR',   'half distorsion to the right'),
+(4, 'twistB',   'half distorsion to the bottom'),
+(4, 'twistL',   'half distorsion to the left'),
+(4, 'torsionT', 'full distorsion to the top'),
+(4, 'torsionR', 'full distorsion to the right'),
+(4, 'torsionB', 'full distorsion to the bottom'),
+(4, 'torsionL', 'full distorsion to the left');
 
-INSERT INTO `Category`
+INSERT INTO `VariableCat`
 (`category`) VALUES
-('Init'),
-('Font'),
-('Color'),
-('Tranform'),
-('Tags'),
-('Display'),
-('Animation'),
-('Margin'),
-('Border'),
-('Size'),
-('Shadow'),
-('Btn'),
-('Card'),
-('Head'),
-('Foot'),
-('Navbar'),
-('Sidebar'),
-('Menu'),
-('Gallery'),
-('Form'),
-('Table'),
-('Slider'),
-('Canvas');
+('init'),
+('font'),
+('color'),
+('tranform'),
+('tags'),
+('display'),
+('animation'),
+('margin'),
+('border'),
+('size'),
+('shadow'),
+('btn'),
+('card'),
+('head'),
+('foot'),
+('navbar'),
+('sidebar'),
+('menu'),
+('gallery'),
+('form'),
+('table'),
+('slider'),
+('canvas');
 
 INSERT INTO `Variable`
-(`category_id`, `variable`) VALUES
+(`category_id`, `name`) VALUES
 (1,     'container-max-height'),
 (1,     'opacity-dark'),
 (1,     'opacity-light'),
@@ -720,3 +755,87 @@ INSERT INTO `Variable`
 (23,    'canvas-controls-list-margin'),
 (23,    'canvas-controls-label-padding'),
 (23,    'canvas-controls-label-color');
+
+INSERT INTO `ClassMedia`
+(`media`) VALUES
+('all widths'),
+('min width: 576px'),
+('min width: 768px'),
+('min width: 992px'),
+('min width: 1200px');
+
+INSERT INTO `ClassCat`
+(`category`) VALUES
+('init'),
+('display'),
+('position'),
+('btn'),
+('card'),
+('head'),
+('foot'),
+('navbar'),
+('sidebar'),
+('menu'),
+('gallery'),
+('form'),
+('table'),
+('slider'),
+('canvas'),
+('box'),
+('font'),
+('color'),
+('anima'),
+('cursor');
+
+INSERT INTO `Class`
+(`category_id`, `media_id`, `name`) VALUES
+(1,     1,  'container'),
+(1,     1,  'container-50tn'),
+(1,     1,  'container-60tn'),
+(1,     1,  'container-70tn'),
+(1,     1,  'container-80tn'),
+(1,     1,  'container-90tn'),
+(1,     2,  'container-50sm'),
+(1,     2,  'container-60sm'),
+(1,     2,  'container-70sm'),
+(1,     2,  'container-80sm'),
+(1,     2,  'container-90sm'),
+(1,     3,  'container-50md'),
+(1,     3,  'container-60md'),
+(1,     3,  'container-70md'),
+(1,     3,  'container-80md'),
+(1,     3,  'container-90md'),
+(1,     4,  'container-50lg'),
+(1,     4,  'container-60lg'),
+(1,     4,  'container-70lg'),
+(1,     4,  'container-80lg'),
+(1,     4,  'container-90lg'),
+(1,     5,  'container-50wd'),
+(1,     5,  'container-60wd'),
+(1,     5,  'container-70wd'),
+(1,     5,  'container-80wd'),
+(1,     5,  'container-90wd');
+
+INSERT INTO `Element`
+(`name`, `link`, `definition`) VALUES
+('Navbar',  'rRvxRe',   'The main Navigation Bar'),
+('Head',    'BaQgVJe',  'The content Header'),
+('Slider',  'QoryoX',   'A Slider for medias presentation'),
+('Card',    'KKPmGvE',  'Containers for informations & elements'),
+('Btn',     'LamGvj',   'Buttons for all actions'),
+('Sidebar', 'mdOZKpQ',  'Another Navigation Bar'),
+('Menu',    'rRvxbe',   'A Menu for navigation'),
+('Gallery', 'NJMxmm',   'A Gallery for Visual Medias'),
+('Form',    'EMLPzN',   'A Form for all user entries'),
+('Canvas',  'LYbKreQ',  'A Canvas for drawing or signing'),
+('Table',   'ZPoQNb',   'A Table to show many informations'),
+('Foot',    'YgLwbe',   'The Footer for more links');
+
+INSERT INTO `Theme`
+(`name`, `link`, `definition`) VALUES
+('Age',     'YzpmyMP',   'A theme about our time'),
+('Anima',   'KKNOgZG',   'The Animadio theme'),
+('Astro',   'yLVmYqp',   'A dark theme like space'),
+('Magic',   'yLVmeYq',   'A theme with magic effect'),
+('Spirit',  'BaQXjyR',   'A visual theme for the mind'),
+('Tool',    'NWbQGZv',   'A theme about mecanic');
