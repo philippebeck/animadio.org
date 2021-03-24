@@ -10,12 +10,12 @@ use Pam\Model\MainModel;
  */
 class KeyframeModel extends MainModel 
 {
-    public function listKeyframesWithFamily()
+    public function listKeyframesWithCategory()
     {
         $query = "SELECT * FROM Keyframe
-            INNER JOIN Family 
-            ON Keyframe.family_id = Family.id
-            ORDER BY Family.id";
+            INNER JOIN KeyframeCat 
+            ON Keyframe.category_id = KeyframeCat.id
+            ORDER BY Keyframe.id";
     
         return $this->database->getAllData($query);
     }
