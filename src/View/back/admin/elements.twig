@@ -1,0 +1,49 @@
+<section class="menu-target5">
+    <h2>
+        <i class="fas fa-sitemap"></i> 
+        Elements
+    </h2>
+
+    <a class="btn-green btn-lg" 
+        href="{{ url('element!create') }}">
+        New Element
+    </a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Element</th>
+                <th>Definition</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        {% for element in elements %}
+            <tr>
+                <td>
+                    <a class="button-violet"
+                        href="https://codepen.io/animadio/pen/{{ element.link }}"
+                        title="Go to the {{ element.name }} Pen">
+                        {{ element.name }}
+                    </a>
+                </td>
+                <td>
+                    {{ element.definition }}
+                </td>
+                <td>
+                    <a class="btn-blue" 
+                        href="{{ url('element!update', {'id': element.id}) }}">
+                        <i class="fas fa-pen-square fa-fw fa-lg"></i>
+                    </a>
+                    <a class="btn-red" 
+                        href="{{ url('element!delete', {'id': element.id}) }}">
+                        <i class="fas fa-times-circle fa-fw fa-lg"></i>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</section>

@@ -1,0 +1,45 @@
+<section class="menu-target2">
+    <h2>
+        <i class="fas fa-glass-whiskey"></i> 
+        Variables
+    </h2>
+
+    <a class="btn-green btn-lg" 
+        href="{{ url('variable!create') }}">
+        New Variable
+    </a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Variable</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        {% for variable in variables %}
+            <tr>
+                <td>
+                    {{ variable.name }}
+                </td>
+                <td>
+                    {{ variable.category }}
+                </td>
+                <td>
+                    <a class="btn-blue" 
+                        href="{{ url('variable!update', {'id': variable.id}) }}">
+                        <i class="fas fa-pen-square fa-fw fa-lg"></i>
+                    </a>
+                    <a class="btn-red" 
+                        href="{{ url('variable!delete', {'id': variable.id}) }}">
+                        <i class="fas fa-times-circle fa-fw fa-lg"></i>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</section>
