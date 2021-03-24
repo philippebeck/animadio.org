@@ -24,8 +24,8 @@ class DocController extends MainController
     {
         $mixins = ModelFactory::getModel("Mixin")->listData();
 
-        $keyframes  = ModelFactory::getModel("Keyframe")->listKeyframesWithFamily();
-        $keyframes  = $this->getArray()->getArrayElements($keyframes, "family");
+        $keyframes  = ModelFactory::getModel("Keyframe")->listKeyframesWithCategory();
+        $keyframes  = $this->getArray()->getArrayElements($keyframes);
 
         $variables  = ModelFactory::getModel("Variable")->listVariablesWithCategory();
         $variables  = $this->getArray()->getArrayElements($variables);

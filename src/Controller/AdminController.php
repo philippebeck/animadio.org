@@ -27,9 +27,11 @@ class AdminController extends MainController
         }
 
         $mixins     = ModelFactory::getModel("Mixin")->listData();
-        $keyframes  = ModelFactory::getModel("Keyframe")->listData();
-        $variables  = ModelFactory::getModel("Variable")->listData();
-        $classes    = ModelFactory::getModel("Class")->listData();
+        $keyframes  = ModelFactory::getModel("Keyframe")->listKeyframesWithCategory();
+        $variables  = ModelFactory::getModel("Variable")->listVariablesWithCategory();
+        $classes    = ModelFactory::getModel("Class")->listClassesWithCategory();
+        $elements   = ModelFactory::getModel("Element")->listData();
+        $themes     = ModelFactory::getModel("Theme")->listData();
         $users      = ModelFactory::getModel("User")->listData();
 
         return $this->render("back/admin.twig", [
@@ -37,6 +39,8 @@ class AdminController extends MainController
             "keyframes" => $keyframes,
             "variables" => $variables,
             "classes"   => $classes,
+            "elements"  => $elements,
+            "themes"    => $themes,
             "users"     => $users
         ]);
     }
