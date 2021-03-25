@@ -12,8 +12,8 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Class</th>
-                <th>Width (Category)</th>
+                <th>Class (Media)</th>
+                <th>State (Concat)</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -23,11 +23,13 @@
             <tr>
                 <td>
                     {{ class.name }}
+                    <br>
+                    ({{ class.media|replace({0: "no", 1: "all"}) }})
                 </td>
                 <td>
-                    {{ class.width }}
+                    {{ class.state_id|replace({1: "stateless", 2: "helpers", 3: "anima", 4: "specific"}) }}
                     <br>
-                    ({{ class.category }})
+                    ({{ class.concat|replace({0: "no", 1: "yes"}) }})
                 </td>
                 <td>
                     <a class="btn-blue" 

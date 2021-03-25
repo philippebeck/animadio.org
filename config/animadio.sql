@@ -3,6 +3,12 @@ CREATE DATABASE `animadio` CHARACTER SET utf8;
 
 USE `animadio`;
 
+CREATE TABLE `Breakpoint` (
+    `id`        TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
+    `media`     CHAR(2)     NOT NULL    UNIQUE,
+    `width`     VARCHAR(20) NOT NULL    UNIQUE
+) ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
 CREATE TABLE `Mixin` (
     `id`        TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
     `name`      VARCHAR(20) NOT NULL    UNIQUE,
@@ -34,24 +40,25 @@ CREATE TABLE `Variable` (
     CONSTRAINT `variable_category` FOREIGN KEY (`category_id`) REFERENCES `VariableCat`(`id`)
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
-CREATE TABLE `Breakpoint` (
-    `id`        TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
-    `media`     CHAR(2)     NOT NULL    UNIQUE,
-    `width`     VARCHAR(20) NOT NULL    UNIQUE
-) ENGINE=INNODB DEFAULT CHARSET=UTF8;
-
 CREATE TABLE `ClassCat` (
     `id`        TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
     `category`  VARCHAR(10) NOT NULL    UNIQUE
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
+CREATE TABLE `ClassState` (
+    `id`        TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
+    `state`     VARCHAR(10) NOT NULL    UNIQUE
+) ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
 CREATE TABLE `Class` (
     `id`            SMALLINT    UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
-    `category_id`   TINYINT      UNSIGNED    NOT NULL,
-    `media_id`      TINYINT      UNSIGNED    NOT NULL,
-    `name`          VARCHAR(20)  NOT NULL    UNIQUE,
+    `category_id`   TINYINT     UNSIGNED    NOT NULL,
+    `media`         TINYINT     UNSIGNED    NOT NULL,
+    `concat`        TINYINT     UNSIGNED    NOT NULL,
+    `state_id`      TINYINT     UNSIGNED    NOT NULL,
+    `name`          VARCHAR(20) NOT NULL    UNIQUE,
     CONSTRAINT `class_category` FOREIGN KEY (`category_id`) REFERENCES `ClassCat`(`id`),
-    CONSTRAINT `class_media` FOREIGN KEY (`media_id`) REFERENCES `Breakpoint`(`id`)
+    CONSTRAINT `class_state`    FOREIGN KEY (`state_id`)    REFERENCES `ClassState`(`id`)
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
 CREATE TABLE `Element` (
@@ -789,39 +796,158 @@ INSERT INTO `ClassCat`
 ('anima'),
 ('cursor');
 
+INSERT INTO `ClassState`
+(`state`) VALUES
+('stateless'),
+('helpers'),
+('anima'),
+('specific');
+
 INSERT INTO `Class`
-(`category_id`, `media_id`, `name`) VALUES
-(1,     1,  'container'),
-(1,     1,  'container-50tn'),
-(1,     1,  'container-60tn'),
-(1,     1,  'container-70tn'),
-(1,     1,  'container-80tn'),
-(1,     1,  'container-90tn'),
-(1,     2,  'container-50sm'),
-(1,     2,  'container-60sm'),
-(1,     2,  'container-70sm'),
-(1,     2,  'container-80sm'),
-(1,     2,  'container-90sm'),
-(1,     3,  'container-50md'),
-(1,     3,  'container-60md'),
-(1,     3,  'container-70md'),
-(1,     3,  'container-80md'),
-(1,     3,  'container-90md'),
-(1,     4,  'container-50lg'),
-(1,     4,  'container-60lg'),
-(1,     4,  'container-70lg'),
-(1,     4,  'container-80lg'),
-(1,     4,  'container-90lg'),
-(1,     4,  'container-50xl'),
-(1,     4,  'container-60xl'),
-(1,     4,  'container-70xl'),
-(1,     4,  'container-80xl'),
-(1,     4,  'container-90xl'),
-(1,     5,  'container-50wd'),
-(1,     5,  'container-60wd'),
-(1,     5,  'container-70wd'),
-(1,     5,  'container-80wd'),
-(1,     5,  'container-90wd');
+(`category_id`, `media`, `concat`, `state_id`, `name`) VALUES
+(1,     0,  1,  1,  'container'),
+(1,     1,  1,  1,  'container-50tn'),
+(1,     1,  1,  1,  'container-60tn'),
+(1,     1,  1,  1,  'container-70tn'),
+(1,     1,  1,  1,  'container-80tn'),
+(1,     1,  1,  1,  'container-90tn'),
+(2,     1,  0,  2,  'hide'),
+(2,     1,  0,  2,  'flex'),
+(2,     1,  0,  2,  'block'),
+(2,     1,  0,  2,  'inline'),
+(2,     1,  0,  2,  'inflex'),
+(2,     1,  0,  2,  'inblock'),
+(2,     0,  1,  1,  'grid'),
+(2,     1,  1,  1,  'grid-2tn'),
+(2,     1,  1,  1,  'grid-3tn'),
+(2,     1,  1,  1,  'grid-4tn'),
+(2,     1,  1,  1,  'grid-5tn'),
+(2,     1,  1,  1,  'grid-6tn'),
+(2,     1,  1,  1,  'grid-7tn'),
+(2,     1,  1,  1,  'grid-8tn'),
+(2,     1,  1,  1,  'grid-9tn'),
+(2,     1,  1,  1,  'grid-10tn'),
+(2,     1,  1,  1,  'grid-11tn'),
+(2,     1,  1,  1,  'grid-12tn'),
+(2,     1,  1,  1,  'gap-tn'),
+(2,     0,  0,  1,  'col'),
+(2,     0,  0,  1,  'col-inverse'),
+(2,     0,  0,  1,  'col-nowrap'),
+(2,     0,  0,  1,  'col-reverse'),
+(2,     0,  0,  1,  'row'),
+(2,     0,  0,  1,  'row-inverse'),
+(2,     0,  0,  1,  'row-nowrap'),
+(2,     0,  0,  1,  'row-reverse'),
+(2,     1,  0,  1,  'placo-start'),
+(2,     1,  0,  1,  'placo-end'),
+(2,     1,  0,  1,  'placo-around'),
+(2,     1,  0,  1,  'placo-between'),
+(2,     1,  0,  1,  'placo-evenly'),
+(2,     1,  0,  1,  'placo-center'),
+(2,     1,  0,  1,  'placo-stretch'),
+(2,     1,  0,  1,  'plait-base'),
+(2,     1,  0,  1,  'plait-start'),
+(2,     1,  0,  1,  'plait-end'),
+(2,     1,  0,  1,  'plait-normal'),
+(2,     1,  0,  1,  'plait-center'),
+(2,     1,  0,  1,  'plait-stretch'),
+(2,     1,  0,  1,  'plase-base'),
+(2,     1,  0,  1,  'plase-start'),
+(2,     1,  0,  1,  'plase-end'),
+(2,     1,  0,  1,  'plase-auto'),
+(2,     1,  0,  1,  'plase-normal'),
+(2,     1,  0,  1,  'plase-center'),
+(2,     1,  0,  1,  'plase-stretch'),
+(3,     1,  0,  2,  'absolute'),
+(3,     1,  0,  2,  'fixed'),
+(3,     1,  0,  2,  'relative'),
+(3,     1,  0,  2,  'sticky'),
+(4,     0,  1,  4,  'btn'),
+(4,     0,  1,  4,  'button'),
+(4,     0,  0,  4,  'btn-pink'),
+(4,     0,  0,  4,  'button-pink'),
+(4,     0,  0,  4,  'btn-red'),
+(4,     0,  0,  4,  'button-red'),
+(4,     0,  0,  4,  'btn-orange'),
+(4,     0,  0,  4,  'button-orange'),
+(4,     0,  0,  4,  'btn-yellow'),
+(4,     0,  0,  4,  'button-yellow'),
+(4,     0,  0,  4,  'btn-brown'),
+(4,     0,  0,  4,  'button-brown'),
+(4,     0,  0,  4,  'btn-green'),
+(4,     0,  0,  4,  'button-green'),
+(4,     0,  0,  4,  'btn-cyan'),
+(4,     0,  0,  4,  'button-cyan'),
+(4,     0,  0,  4,  'btn-blue'),
+(4,     0,  0,  4,  'button-blue'),
+(4,     0,  0,  4,  'btn-violet'),
+(4,     0,  0,  4,  'button-violet'),
+(4,     0,  0,  4,  'btn-black'),
+(4,     0,  0,  4,  'button-black'),
+(4,     0,  0,  4,  'btn-gray'),
+(4,     0,  0,  4,  'button-gray'),
+(4,     0,  0,  4,  'btn-grey'),
+(4,     0,  0,  4,  'button-grey'),
+(4,     0,  0,  4,  'btn-fb'),
+(4,     0,  0,  4,  'button-fb'),
+(4,     0,  0,  4,  'btn-gh'),
+(4,     0,  0,  4,  'button-gh'),
+(4,     0,  0,  4,  'btn-in'),
+(4,     0,  0,  4,  'button-in'),
+(4,     0,  0,  4,  'btn-pp'),
+(4,     0,  0,  4,  'button-pp'),
+(4,     0,  0,  4,  'btn-tw'),
+(4,     0,  0,  4,  'button-tw'),
+(4,     0,  0,  4,  'btn-tn'),
+(4,     0,  0,  4,  'button-tn'),
+(4,     0,  0,  4,  'btn-sm'),
+(4,     0,  0,  4,  'button-sm'),
+(4,     0,  0,  4,  'btn-md'),
+(4,     0,  0,  4,  'button-md'),
+(4,     0,  0,  4,  'btn-lg'),
+(4,     0,  0,  4,  'button-lg'),
+(4,     0,  0,  4,  'btn-xl'),
+(4,     0,  0,  4,  'button-xl'),
+(4,     0,  0,  4,  'btn-wd'),
+(4,     0,  0,  4,  'button-wd'),
+(4,     0,  0,  4,  'btn-square'),
+(4,     0,  0,  4,  'button-square'),
+(4,     0,  0,  4,  'btn-round'),
+(4,     0,  0,  4,  'button-round'),
+(4,     0,  0,  4,  'btn-circle'),
+(4,     0,  0,  4,  'button-circle'),
+(5,     0,  1,  4,  'card'),
+(5,     0,  0,  4,  'card-pink'),
+(5,     0,  0,  4,  'card-red'),
+(5,     0,  0,  4,  'card-orange'),
+(5,     0,  0,  4,  'card-yellow'),
+(5,     0,  0,  4,  'card-brown'),
+(5,     0,  0,  4,  'card-green'),
+(5,     0,  0,  4,  'card-cyan'),
+(5,     0,  0,  4,  'card-blue'),
+(5,     0,  0,  4,  'card-violet'),
+(6,     0,  0,  4,  'head'),
+(7,     1,  0,  4,  'foot'),
+(7,     1,  0,  4,  'foot-list'),
+(7,     0,  0,  4,  'foot-visual'),
+(8,     1,  0,  4,  'navbar'),
+(8,     1,  0,  4,  'navbar-open'),
+(8,     1,  0,  4,  'navbar-close'),
+(9,     1,  0,  4,  'sidebar'),
+(10,    1,  0,  4,  'menu'),
+(11,    1,  0,  4,  'gallery'),
+(12,    1,  0,  4,  'form'),
+(13,    1,  0,  4,  'table'),
+(14,    1,  0,  4,  'slider'),
+(14,    1,  0,  4,  'slider-previous'),
+(14,    1,  0,  4,  'slider-auto'),
+(14,    1,  0,  4,  'slider-random'),
+(14,    1,  0,  4,  'slider-next'),
+(14,    1,  0,  4,  'slider-progress'),
+(15,    1,  0,  4,  'canvas'),
+(15,    1,  0,  4,  'canvas-controls');
+
+
 
 INSERT INTO `Element`
 (`name`, `link`, `definition`) VALUES

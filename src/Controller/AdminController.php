@@ -26,9 +26,9 @@ class AdminController extends MainController
             $this->redirect("home");
         }
 
-        $classes        = ModelFactory::getModel("Class")->listClassesWithCategory();
-        $variables      = ModelFactory::getModel("Variable")->listVariablesWithCategory();
-        $keyframes      = ModelFactory::getModel("Keyframe")->listKeyframesWithCategory();
+        $classes        = ModelFactory::getModel("Class")->listData();
+        $variables      = ModelFactory::getModel("Variable")->listData();
+        $keyframes      = ModelFactory::getModel("Keyframe")->listData();
         $breakpoints    = ModelFactory::getModel("Breakpoint")->listData();
         $mixins         = ModelFactory::getModel("Mixin")->listData();
         $elements       = ModelFactory::getModel("Element")->listData();
