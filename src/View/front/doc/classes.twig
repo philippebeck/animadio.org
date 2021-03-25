@@ -160,11 +160,25 @@
                 <tr>
                     <th id="{{ category }}"
                         class="color-violet bg-violet-light trans-up"
-                        colspan="2">
+                        colspan="4">
                         <a href="https://github.com/animadio/animadio/tree/master/src/classes/_{{ category }}.scss"
                             title="Go to the {{ category }} file in the GitHub Repository">
                             {{ category }}
                         </a>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        .class
+                    </th>
+                    <th>
+                        @media
+                    </th>
+                    <th>
+                        -concat
+                    </th>
+                    <th>
+                        :states
                     </th>
                 </tr>
             </thead>
@@ -178,7 +192,13 @@
                         </strong>
                     </td>
                     <td>
-                        {{ class.width }}
+                        {{ class.media|replace({0: "no", 1: "all"})  }}
+                    </td>
+                    <td>
+                        {{ class.concat|replace({0: "no", 1: "yes"}) }}
+                    </td>
+                    <td>
+                        {{ class.state }}
                     </td>
                 </tr>
                 {% endfor %}
