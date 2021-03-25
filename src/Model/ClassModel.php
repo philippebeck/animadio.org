@@ -15,8 +15,8 @@ class ClassModel extends MainModel
         $query = "SELECT * FROM Class
             INNER JOIN ClassCat 
             ON Class.category_id = ClassCat.id
-            INNER JOIN Breakpoint 
-            ON Class.media_id = Breakpoint.id
+            INNER JOIN ClassState 
+            ON Class.state_id = ClassState.id
             ORDER BY Class.id";
     
         return $this->database->getAllData($query);
