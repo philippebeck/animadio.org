@@ -1,5 +1,19 @@
-<section class="menu-target2">
+<section id="variable-home"
+    class="menu-target2">
     <h2>Variables</h2>
+
+    <nav class="sidebar">
+        <a class="button-green" 
+            href="#variable-home" 
+            title="Variable Home">
+            <i class="fas fa-chevron-circle-up"></i>
+        </a>
+        <a class="button-green" 
+            href="#variable-list" 
+            title="Variable List">
+            <i class="fas fa-list"></i>
+        </a>
+    </nav>
 
     <header class="head">
         More than 500 CSS Variables of Animadio can be overload !
@@ -7,8 +21,8 @@
         And you can find here all of the variables...
     </header>
 
-    <section>
-        <h3>Variable Categories</h3>
+    <section id="variable-list">
+        <h3>Variable List</h3>
 
         <ul class="container-90tn-80lg-70wd row">
 
@@ -16,48 +30,42 @@
 
             <li>
                 <a class="button-violet"
-                    href="#{{ category }}" 
+                    href="#variable-{{ category }}" 
                     title="Go to {{ category }} Variables !">
                 {{ category }}
                 </a>
             </li>
 
             {% endfor %}
-
         </ul>
-    </section>
 
-    <section>
-        <h3>Available Variables</h3>
+        {% for category, variableCat in variables %}
 
-    {% for category, variableCat in variables %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th id="variable-{{ category }}"
+                        class="bg-violet-light trans-up">
+                        <a href="https://github.com/animadio/animadio/tree/master/src/variables/_{{ category }}.var.scss"
+                            title="Go to the {{ category }} file in the GitHub Repository">
+                            {{ category }}
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th id="{{ category }}"
-                    class="bg-violet-light trans-up">
-                    <a href="https://github.com/animadio/animadio/tree/master/src/variables/_{{ category }}.var.scss"
-                        title="Go to the {{ category }} file in the GitHub Repository">
-                        {{ category }}
-                    </a>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
+                {% for variable in variableCat %} 
+                <tr>
+                    <td>
+                        --{{ variable.name }}
+                    </td>
+                </tr>
+                {% endfor %}
 
-            {% for variable in variableCat %} 
-            <tr>
-                <td>
-                    --{{ variable.name }}
-                </td>
-            </tr>
-            {% endfor %}
+            </tbody>
+        </table>
 
-        </tbody>
-    </table>
-
-    {% endfor %}
-
+        {% endfor %}
     </section>
 </section>

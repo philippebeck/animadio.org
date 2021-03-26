@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Share+Tech+Mono&family=Text+Me+One&display=swap');
+
 :root {
   --sans-serif: 'Text Me One', sans-serif;
   --serif: 'Gabriela', serif;
@@ -26,7 +28,6 @@ a {
 }
 
 .table {
-  --table-width: auto;
   --table-row-even-hover-background-color: var(--green-dark);
   --table-row-odd-hover-background-color: var(--violet-dark);
 }
