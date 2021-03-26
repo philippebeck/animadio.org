@@ -164,10 +164,10 @@ INSERT INTO `ClassCat`
 
 INSERT INTO `ClassState`
 (`state`) VALUES
-('stateless'),
-('helpers'),
+('none'),
+('helper'),
 ('anima'),
-('specific');
+('unique');
 
 INSERT INTO `Keyframe`
 (`category_id`, `name`, `effect`) VALUES
