@@ -1,5 +1,34 @@
-<section class="menu-target1">
+<section id="class-home" 
+    class="menu-target1">
     <h2>Classes</h2>
+
+    <nav class="sidebar">
+        <a class="button-green" 
+            href="#class-home" 
+            title="Class Home">
+            <i class="fas fa-chevron-circle-up"></i>
+        </a>
+        <a class="button-green" 
+            href="#class-list" 
+            title="Class List">
+            <i class="fas fa-list"></i>
+        </a>
+        <a class="button-green" 
+            href="#class-media" 
+            title="Class Media">
+            <i class="fas fa-mobile-alt"></i>
+        </a>
+        <a class="button-green" 
+            href="#class-concat" 
+            title="Class Concat">
+            <i class="fas fa-link"></i>
+        </a>
+        <a class="button-green" 
+            href="#class-keywords" 
+            title="Class Keywords">
+            <i class="fas fa-key"></i>
+        </a>
+    </nav>
 
     <header class="head">
         More than 500 CSS Classes of Animadio can be used !
@@ -7,8 +36,8 @@
         And you can find here all of the classes...
     </header>
 
-    <section>
-        <h3>Class Categories</h3>
+    <section id="class-list">
+        <h3>List</h3>
 
         <ul class="container-90tn-80lg-70wd row">
 
@@ -16,7 +45,7 @@
 
             <li>
                 <a class="button-green"
-                    href="#{{ category }}" 
+                    href="#class-{{ category }}" 
                     title="Go to {{ category }} Classes !">
                 {{ category }}
                 </a>
@@ -25,17 +54,13 @@
             {% endfor %}
 
         </ul>
-    </section>
-
-    <section>
-        <h3>Available Classes</h3>
 
         {% for category, classCat in classes %}
 
         <table class="table">
             <thead>
                 <tr>
-                    <th id="{{ category }}"
+                    <th id="class-{{ category }}"
                         class="color-violet bg-violet-light trans-up"
                         colspan="4">
                         <a href="https://github.com/animadio/animadio/tree/master/src/classes/_{{ category }}.scss"
@@ -46,16 +71,16 @@
                 </tr>
                 <tr>
                     <th>
-                        .class
+                        Class
                     </th>
                     <th>
-                        @media
+                        <i class="fas fa-mobile-alt"></i>
                     </th>
                     <th>
-                        -concat
+                        <i class="fas fa-link"></i>
                     </th>
                     <th>
-                        :states
+                        State
                     </th>
                 </tr>
             </thead>
@@ -84,11 +109,22 @@
         </table>
 
         {% endfor %}
-
     </section>
 
-    <section>
-        <h3>States Keywords</h3>
+    <section id="class-media">
+        <h3>Media</h3>
+
+        <p>Coming soon !</p>
+    </section>
+
+    <section id="class-concat">
+        <h3>Concat</h3>
+
+        <p>Coming soon !</p>
+    </section>
+
+    <section id="class-keywords">
+        <h3>Keywords</h3>
 
         <table class="table">
             <caption>Helpers Keywords</caption>
