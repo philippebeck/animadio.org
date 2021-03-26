@@ -8,7 +8,87 @@
     </header>
 
     <section>
-        <h3>Keywords</h3>
+        <h3>Class Categories</h3>
+
+        <ul class="container-90tn-80lg-70wd row">
+
+            {% for category in classes|keys %}
+
+            <li>
+                <a class="button-green"
+                    href="#{{ category }}" 
+                    title="Go to {{ category }} Classes !">
+                {{ category }}
+                </a>
+            </li>
+
+            {% endfor %}
+
+        </ul>
+    </section>
+
+    <section>
+        <h3>Available Classes</h3>
+
+        {% for category, classCat in classes %}
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th id="{{ category }}"
+                        class="color-violet bg-violet-light trans-up"
+                        colspan="4">
+                        <a href="https://github.com/animadio/animadio/tree/master/src/classes/_{{ category }}.scss"
+                            title="Go to the {{ category }} file in the GitHub Repository">
+                            {{ category }}
+                        </a>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        .class
+                    </th>
+                    <th>
+                        @media
+                    </th>
+                    <th>
+                        -concat
+                    </th>
+                    <th>
+                        :states
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for class in classCat %} 
+                <tr>
+                    <td>
+                        <strong>
+                            .{{ class.name }}
+                        </strong>
+                    </td>
+                    <td>
+                        {{ class.media|replace({0: "no", 1: "all"})  }}
+                    </td>
+                    <td>
+                        {{ class.concat|replace({0: "no", 1: "yes"}) }}
+                    </td>
+                    <td>
+                        {{ class.state }}
+                    </td>
+                </tr>
+                {% endfor %}
+                
+            </tbody>
+        </table>
+
+        {% endfor %}
+
+    </section>
+
+    <section>
+        <h3>States Keywords</h3>
 
         <table class="table">
             <caption>Helpers Keywords</caption>
@@ -126,87 +206,5 @@
                 </tr>
             </tbody>
         </table>
-    </section>
-
-    <section>
-        <h3>Class Categories</h3>
-
-        <p>Coming Soon !</p>
-
-        <ul class="container-90tn-80lg-70wd row">
-
-            {% for category in classes|keys %}
-
-            <li>
-                <a class="button-green"
-                    href="#{{ category }}" 
-                    title="Go to {{ category }} Classes !">
-                {{ category }}
-                </a>
-            </li>
-
-            {% endfor %}
-
-        </ul>
-    </section>
-
-    <section>
-        <h3>Available Classes</h3>
-
-        {% for category, classCat in classes %}
-
-        <table class="table">
-            <thead>
-                <tr>
-                    <th id="{{ category }}"
-                        class="color-violet bg-violet-light trans-up"
-                        colspan="4">
-                        <a href="https://github.com/animadio/animadio/tree/master/src/classes/_{{ category }}.scss"
-                            title="Go to the {{ category }} file in the GitHub Repository">
-                            {{ category }}
-                        </a>
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        .class
-                    </th>
-                    <th>
-                        @media
-                    </th>
-                    <th>
-                        -concat
-                    </th>
-                    <th>
-                        :states
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-
-                {% for class in classCat %} 
-                <tr>
-                    <td>
-                        <strong>
-                            .{{ class.name }}
-                        </strong>
-                    </td>
-                    <td>
-                        {{ class.media|replace({0: "no", 1: "all"})  }}
-                    </td>
-                    <td>
-                        {{ class.concat|replace({0: "no", 1: "yes"}) }}
-                    </td>
-                    <td>
-                        {{ class.state }}
-                    </td>
-                </tr>
-                {% endfor %}
-                
-            </tbody>
-        </table>
-
-        {% endfor %}
-
     </section>
 </section>
