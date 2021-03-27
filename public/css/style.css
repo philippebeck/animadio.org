@@ -14,10 +14,6 @@ body {
   --body-background-color: var(--grey-light);
 }
 
-a {
-  --link-color: var(--violet);
-}
-
 .navbar {
   --navbar-background-color: var(--green-dark);
 }
@@ -27,7 +23,30 @@ a {
   --head-color: var(--in);
 }
 
+h1 {
+  --title-wd-color: var(--violet);
+}
+
+h2 {
+  --title-xl-color: var(--green);
+}
+
 .table {
   --table-row-even-hover-background-color: var(--green-dark);
   --table-row-odd-hover-background-color: var(--violet-dark);
+}
+
+.menu {
+  --menu-child-background-color: var(--violet-dark);
+  --menu-checked-child-color: var(--violet);
+  --menu-child-hover-color: var(--violet);
+}
+
+.sidebar {
+  --sidebar-child-color: var(--green);
+  --sidebar-child-hover-background-color: var(--green-dark);
+}
+
+a {
+  --link-color: var(--violet);
 }
