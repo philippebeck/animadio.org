@@ -1,32 +1,9 @@
-<section id="class-home" 
-    class="menu-target1">
+<article id="class-home" 
+    class="menu-target1 container-90tn-80sm-70md-60lg-50xl">
     <h2>
         <i class="fas fa-magic fa-lg"></i>
         Classes
     </h2>
-
-    <nav class="sidebar">
-        <a href="#class-home" 
-            title="Class Home">
-            <i class="fas fa-chevron-circle-up"></i>
-        </a>
-        <a href="#class-list" 
-            title="Class List">
-            <i class="fas fa-list"></i>
-        </a>
-        <a href="#class-media" 
-            title="Class Media">
-            <i class="fas fa-mobile-alt"></i>
-        </a>
-        <a href="#class-concat" 
-            title="Class Concat">
-            <i class="fas fa-link"></i>
-        </a>
-        <a href="#class-keywords" 
-            title="Class Keywords">
-            <i class="fas fa-key"></i>
-        </a>
-    </nav>
 
     <header class="head">
         Many Animadio Classes can be Concatenated, 
@@ -36,8 +13,38 @@
         finally you can find here all of the Class Names...
     </header>
 
+    <nav class="sidebar">
+        <a href="#class-home" 
+            title="Class Home">
+            <i class="fas fa-chevron-circle-up"></i>
+        </a>
+        <a href="#class-list" 
+            title="Class List">
+            <i class="fas fa-list fa-fw"></i>
+        </a>
+        <a href="#class-media" 
+            title="Classes with Media Queries">
+            <i class="fas fa-mobile-alt fa-fw"></i>
+        </a>
+        <a href="#class-concat" 
+            title="Concatenable Classes">
+            <i class="fas fa-link fa-fw"></i>
+        </a>
+        <a href="#class-keywords" 
+            title="Classes with Pseudo-classes">
+            <i class="fas fa-key fa-fw"></i>
+        </a>
+    </nav>
+
+    <i class="fas fa-chevron-down fa-2x mar-top-md"
+        aria-hidden="true">
+    </i>
+
     <section id="class-list">
-        <h3>Class List</h3>
+        <h3>
+        <i class="fas fa-list"></i> 
+            Class List
+        </h3>
 
         <ul class="container-90tn-80lg-70wd row">
 
@@ -55,192 +62,612 @@
 
         </ul>
 
+        <i class="fas fa-sort fa-2x mar-top-lg"
+            aria-hidden="true">
+        </i>
+
         {% for category, classCat in classes %}
 
-        <table class="table">
-            <thead>
-                <tr>
-                    <th id="class-{{ category }}"
-                        class="color-violet bg-violet-light trans-up"
-                        colspan="4">
-                        <a href="https://github.com/animadio/animadio/tree/master/src/classes/_{{ category }}.scss"
-                            title="Go to the {{ category }} file in the GitHub Repository">
-                            {{ category }}
-                        </a>
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        Class
-                    </th>
-                    <th>
-                        <i class="fas fa-mobile-alt"></i>
-                    </th>
-                    <th>
-                        <i class="fas fa-link"></i>
-                    </th>
-                    <th>
-                        State
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
+        <section id="class-{{ category }}">
+            <h4>
+                <a class="btn-violet btn-lg"
+                    href="https://github.com/animadio/animadio/tree/master/src/classes/_{{ category }}.scss"
+                    title="Go to the {{ category }} file in the GitHub Repository">
+                    {{ category|title }} 
+                </a>
+            </h4>
 
-                {% for class in classCat %} 
-                <tr>
-                    <td>
-                        <strong>
-                            .{{ class.name }}
-                        </strong>
-                    </td>
-                    <td>
-                        {{ class.media|replace({0: "no", 1: "all"})  }}
-                    </td>
-                    <td>
-                        {{ class.concat|replace({0: "no", 1: "yes"}) }}
-                    </td>
-                    <td>
-                        {{ class.state }}
-                    </td>
-                </tr>
-                {% endfor %}
-                
-            </tbody>
-        </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th title="Class Name">
+                            .class-name
+                        </th>
+                        <th title="Class Naming">
+                            Special Naming
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for class in classCat %} 
+                    <tr>
+                        <td>
+                            <strong>
+                                .{{ class.name }}
+                            </strong>
+                        </td>
+                        <td>
+
+                        {% if class.media == 1 %}
+                            <a href="#class-media"
+                                title="Class with Media Queries">
+                                <i class="fas fa-mobile-alt"></i>
+                            </a>
+                            +
+                        {% endif %}
+
+                        {% if class.concat == 1 %}
+                            <a href="#class-concat"
+                                title="Concatenable Class">
+                                <i class="fas fa-link"></i>
+                            </a>
+                            +
+                        {% endif %}
+                        
+                            <a href="#class-keywords"
+                                title="Class with Pseudo-classes">
+                                {{ class.state }}
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    
+                </tbody>
+            </table>
+        </section>
 
         {% endfor %}
     </section>
 
-    <section id="class-media">
-        <h3>Class Media</h3>
+    <i class="fas fa-minus fa-2x mar-top-lg"
+        aria-hidden="true">
+    </i>
 
-        <p>Coming soon !</p>
+    <section id="class-media">
+        <h3>
+            <i class="fas fa-mobile-alt"></i> 
+            Specific Naming for Media Queries
+        </h3>
+
+        <p>
+            <b class="color-violet">
+                3 Class Families
+            </b> 
+            in the 
+            <a class="button-violet"
+                href="#class-list"
+                title="Watch the Class List">
+                Class List
+            </a> 
+            <br>
+            have a 
+            <b class="color-violet">
+                Specific Naming
+            </b> 
+            for
+            <a class="button-violet"
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries"
+                title="Watch the Web Docs of MDN about Media Queries">
+                Media Queries
+            </a>
+        </p>
+
+        <ul class="row">
+            <li>
+                <a class="btn-violet"
+                    href="#class-init"
+                    title="Watch the Init Classes">
+                    Init
+                </a>
+            </li>
+            <li>
+                <a class="btn-violet"
+                    href="#class-display"
+                    title="Watch the Display Classes">
+                    Display
+                </a>
+            </li>
+            <li>
+                <a class="btn-violet"
+                    href="#class-position"
+                    title="Watch the Position Classes">
+                    Position
+                </a>
+            </li>
+        </ul>
+
+        <i class="fas fa-ellipsis-h"
+            aria-hidden="true">
+        </i>
+    
+        <p>
+            Those in these 3 Families with
+            <i class="fas fa-mobile-alt fa-lg color-violet"></i>
+            <br>
+            have Different Names for each 
+            <br>
+            <b class="color-violet">Media Query</b>, 
+            watch examples here :
+        </p>
+
+        <ul class="row placo-evenly">
+            <li>
+                <code>.container-50tn</code>
+            </li>
+            <li>
+                <code>.hide</code>
+            </li>
+            <li>
+                <code>.grid-2tn</code>
+            </li>
+            <li>
+                <code>.absolute</code>
+            </li>
+        </ul>
+
+        <i class="fas fa-ellipsis-h mar-top-md"
+            aria-hidden="true">
+        </i>
+    
+        <p>
+            You need to add or change the  
+            <b class="color-violet">Media Key</b> 
+            <br>
+            (clic the 
+            <b class="color-violet">
+                Breakpoints Tab
+                <i class="far fa-map"></i>
+            </b>
+            for Media Key List)
+        </p>
+
+        <ul class="row placo-evenly">
+            <li>
+                <code>.container-50md</code>
+            </li>
+            <li>
+                <code>.hide-md</code>
+            </li>
+            <li>
+                <code>.grid-2md</code>
+            </li>
+            <li>
+                <code>.absolute-md</code>
+            </li>
+        </ul>
     </section>
+
+    <i class="fas fa-minus fa-2x mar-top-lg"
+        aria-hidden="true">
+    </i>
 
     <section id="class-concat">
-        <h3>Class Concat</h3>
+        <h3>
+            <i class="fas fa-link"></i>
+            Concatenable Classes
+        </h3>
 
-        <p>Coming soon !</p>
+        <p>
+            <b class="color-violet">
+                3 Class Families
+            </b> 
+            in the 
+            <a class="button-violet"
+                href="#class-list"
+                title="Watch the Class List">
+                Class List
+            </a> 
+            <br>
+            can be 
+            <b class="color-violet">
+                Concatenated
+            </b> 
+        </p>
+
+        <ul class="row">
+            <li>
+                <a class="btn-violet"
+                    href="#class-init"
+                    title="Watch the Init Classes">
+                    Init
+                </a>
+            </li>
+            <li>
+                <a class="btn-violet"
+                    href="#class-display"
+                    title="Watch the Display Classes">
+                    Display
+                </a>
+            </li>
+            <li>
+                <a class="btn-violet"
+                    href="#class-anima"
+                    title="Watch the Anima Classes">
+                    Anima
+                </a>
+            </li>
+        </ul>
+
+        <i class="fas fa-ellipsis-h"
+            aria-hidden="true">
+        </i>
+    
+        <p>
+            Those in these 3 Families with
+            <i class="fas fa-link fa-lg color-violet"></i>
+            <br>
+            could Concatenate other Media or Options
+        </p>
+
+        <ul class="row placo-evenly">
+            <li>
+                <code>.container-90tn</code>
+            </li>
+            <li>
+                <code>.grid-2tn</code>
+            </li>
+            <li>
+                <code>.anima-grow-this</code>
+            </li>
+        </ul>
+
+        <i class="fas fa-ellipsis-h mar-top-md"
+            aria-hidden="true">
+        </i>
+    
+        <p>
+            You just have to add the necessary
+            <br>
+            <b class="color-violet">Options</b> 
+            like this
+        </p>
+
+        <ul class="row placo-evenly">
+            <li>
+                <code>.container-70xl-80md-90tn</code>
+            </li>
+            <li>
+                <code>.grid-2tn-3md-4xl</code>
+            </li>
+            <li>
+                <code>.anima-grow-loop-altrev-this</code>
+            </li>
+        </ul>
     </section>
+
+    <i class="fas fa-minus fa-2x mar-top-lg"
+        aria-hidden="true">
+    </i>
 
     <section id="class-keywords">
-        <h3>Class Keywords</h3>
+        <h3>
+            <i class="fas fa-key"></i>
+            Classes using Pseudo-classes
+        </h3>
 
-        <table class="table">
-            <caption>Helpers Keywords</caption>
+        <p>
+            Many Animadio Classes use 
+            <b class="color-violet">
+                Pseudo-classes
+            </b>
+        </p>
+        <p>
+            <b class="color-violet">
+                4 States Families
+            </b>
+            about that are available :
+        </p>
 
-            <thead>
-                <tr class="global-bg-violet-light global-trans-up">
-                    <th>Keywords</th>
-                    <th>Trigger</th>
-                    <th>Relay</th>
-                    <th>Target</th>
-                </tr>
-            </thead>
+        <ul>
+            <li>
+                <b class="color-violet">
+                    Stateless
+                </b> 
+                <br>
+                (<i>Classes without States</i>)
+            </li>
+            <li>
+                <b class="color-violet">
+                    Specific
+                </b> 
+                <br>
+                (<i>Classes with a Specific Naming</i>)
+            </li>
+            <li>
+                <b class="color-violet">
+                    Helpers
+                </b> 
+                <br>
+                (<i>Classes using the Helpers Keywords</i>)
+            </li>
+            <li>
+                <b class="color-violet">
+                    Anima
+                </b> 
+                <br>
+                (<i>Classes using the Anima Keywords</i>)
+            </li>
+        </ul>
 
-            <tbody>
-                <tr>
-                    <td>&empty;</td>
-                    <td>Class</td>
-                    <td rowspan="3">&empty;</td>
-                    <td>Class</td>
-                </tr>
-                <tr>
-                    <td>global</td>
-                    <td>Global class</td>
-                    <td>Children of Global class</td>
-                </tr>
-                <tr>
-                    <td>onto</td>
-                    <td>Hover|Focus the Onto class</td>
-                    <td>Onto class</td>
-                </tr>
-                <tr>
-                    <td>check + hub + goal</td>
-                    <td>Check class Checked</td>
-                    <td>Hub class</td>
-                    <td>Goal class</td>
-                </tr>
-            </tbody>
-        </table>
+        <i class="fas fa-sort fa-lg mar-top-lg"
+            aria-hidden="true">
+        </i>
 
-        <table class="table">
-            <caption>Anima Keywords</caption>
+        <section>
+            <h4>
+                Helpers Keywords
+            </h4>
 
-            <thead>
-                <tr class="global-bg-violet-light global-trans-up">
-                    <th>Keywords</th>
-                    <th>Trigger</th>
-                    <th>Relay</th>
-                    <th>Target</th>
-                </tr>
-            </thead>
+            <p>
+                Those in the 
+                <a class="button-violet"
+                    href="#class-list"
+                    title="Watch the Class List">
+                    Class List
+                </a> 
+                with
+                <b class="color-violet">
+                    helpers
+                </b>
+                <br>
+                can use the
+                <b class="color-violet">
+                    Helpers Keywords
+                </b>
+            </p>
 
-            <tbody>
-                <tr>
-                    <td>this</td>
-                    <td>Class</td>
-                    <td rowspan="6">&empty;</td>
-                    <td>Class</td>
-                </tr>
-                <tr>
-                    <td>global</td>
-                    <td>Global class</td>
-                    <td>Children of Global class</td>
-                </tr>
-                <tr>
-                    <td>onto</td>
-                    <td>Hover|Focus the Onto class</td>
-                    <td>Onto class</td>
-                </tr>
-                <tr>
-                    <td>into</td>
-                    <td>Hover|Focus the parent of Into class</td>
-                    <td>Into class</td>
-                </tr>
-                <tr>
-                    <td>toall</td>
-                    <td>Hover|Focus the Toall class</td>
-                    <td>Children of Toall class</td>
-                </tr>
-                <tr>
-                    <td>toone</td>
-                    <td>Hover|Focus a child of Toone class</td>
-                    <td>Child of Toone class</td>
-                </tr>
-                <tr>
-                    <td>check + hub + goal</td>
-                    <td>Check class Checked</td>
-                    <td>Hub class</td>
-                    <td>Goal class</td>
-                </tr>
-                <tr>
-                    <td>radio1 + relay + target1</td>
-                    <td>Radio1 class Checked</td>
-                    <td rowspan="5">Relay class</td>
-                    <td>Target1 class</td>
-                </tr>
-                <tr>
-                    <td>radio2 + relay + target2</td>
-                    <td>Radio2 class Checked</td>
-                    <td>Target2 class</td>
-                </tr>
-                <tr>
-                    <td>radio3 + relay + target3</td>
-                    <td>Radio3 class Checked</td>
-                    <td>Target3 class</td>
-                </tr>
-                <tr>
-                    <td>radio4 + relay + target4</td>
-                    <td>Radio4 class Checked</td>
-                    <td>Target4 class</td>
-                </tr>
-                <tr>
-                    <td>radio5 + relay + target5</td>
-                    <td>Radio5 class Checked</td>
-                    <td>Target5 class</td>
-                </tr>
-            </tbody>
-        </table>
+            <ul class="row placo-evenly">
+                <li>
+                    <code>.hide</code>
+                </li>
+                <li>
+                    <code>.absolute</code>
+                </li>
+                <li>
+                    <code>.bord</code>
+                </li>
+                <li>
+                    <code>.font-bold</code>
+                </li>
+            </ul>
+
+            <i class="fas fa-ellipsis-h mar-top-md"
+                aria-hidden="true">
+            </i>
+            
+            <p>
+                You need to add the
+                <b class="color-violet">
+                    Keyword
+                </b>
+                <br>
+                <b class="color-green deco-under">
+                    Before</b> 
+                the
+                <b class="color-violet">
+                    Helper Class
+                </b>
+            </p>
+
+            <ul class="row placo-evenly">
+                <li>
+                    <code>.global-hide</code>
+                </li>
+                <li>
+                    <code>.global-absolute</code>
+                </li>
+                <li>
+                    <code>.onto-bord</code>
+                </li>
+                <li>
+                    <code>.onto-font-bold</code>
+                </li>
+            </ul>
+
+            <i class="fas fa-ellipsis-h mar-md"
+                aria-hidden="true">
+            </i>
+
+            <table class="table">
+                <caption>Helpers Keywords</caption>
+
+                <thead>
+                    <tr class="bg-violet-dark">
+                        <th>Keys</th>
+                        <th>Trigger</th>
+                        <th>Relay</th>
+                        <th>Target</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>&empty;</td>
+                        <td>.class</td>
+                        <td rowspan="3">&empty;</td>
+                        <td>.class</td>
+                    </tr>
+                    <tr>
+                        <td>global</td>
+                        <td>.global</td>
+                        <td>Children of .global</td>
+                    </tr>
+                    <tr>
+                        <td>onto</td>
+                        <td>Hover | Focus .onto</td>
+                        <td>.onto</td>
+                    </tr>
+                    <tr>
+                        <td>check + hub + goal</td>
+                        <td>.check Checked</td>
+                        <td>.hub</td>
+                        <td>.goal</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <i class="fas fa-sort fa-2x mar-bot-lg mar-top-md"
+            aria-hidden="true">
+        </i>
+
+        <section>
+            <h4>
+                Anima Keywords
+            </h4>
+
+            <p>
+                The 
+                <a class="button-violet"
+                    href="#class-anima"
+                    title="Watch Anima Classes">
+                    Anima Classes
+                </a> 
+                use the
+                <b class="color-violet">
+                    Anima Keywords
+                </b>
+            </p>
+
+            <ul class="row placo-evenly">
+                <li>
+                    <code>.anima-grow-this</code>
+                </li>
+                <li>
+                    <code>.anima-turn-loop-this</code>
+                </li>
+                <li>
+                    <code>.anima-shrink-sm-this</code>
+                </li>
+            </ul>
+
+            <i class="fas fa-ellipsis-h mar-top-md"
+                aria-hidden="true">
+            </i>
+            
+            <p>
+                You need to replace
+                <b class="color-violet">
+                    "this"
+                </b>
+                with the
+                <b class="color-violet">
+                    Keyword
+                </b>
+                <br>
+                <b class="color-green deco-under">
+                    After</b> 
+                the
+                <b class="color-violet">
+                    Anima Class
+                </b>
+            </p>
+
+            <ul class="row placo-evenly">
+                <li>
+                    <code>.anima-grow-into</code>
+                </li>
+                <li>
+                    <code>.anima-turn-loop-toall</code>
+                </li>
+                <li>
+                    <code>.anima-shrink-sm-toone</code>
+                </li>
+            </ul>
+
+            <i class="fas fa-ellipsis-h mar-md"
+                aria-hidden="true">
+            </i>
+
+            <table class="table">
+                <caption>Anima Keywords</caption>
+
+                <thead>
+                    <tr class="bg-violet-dark">
+                        <th>Keys</th>
+                        <th>Trigger</th>
+                        <th>Relay</th>
+                        <th>Target</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>this</td>
+                        <td>.class</td>
+                        <td rowspan="6">&empty;</td>
+                        <td>.class</td>
+                    </tr>
+                    <tr>
+                        <td>global</td>
+                        <td>.global</td>
+                        <td>Children of .global</td>
+                    </tr>
+                    <tr>
+                        <td>onto</td>
+                        <td>Hover | Focus .onto</td>
+                        <td>.onto</td>
+                    </tr>
+                    <tr>
+                        <td>into</td>
+                        <td>Hover | Focus parent of .into</td>
+                        <td>.into</td>
+                    </tr>
+                    <tr>
+                        <td>toall</td>
+                        <td>Hover | Focus .toall</td>
+                        <td>Children of .toall</td>
+                    </tr>
+                    <tr>
+                        <td>toone</td>
+                        <td>Hover | Focus child of .toone</td>
+                        <td>Each child of .toone</td>
+                    </tr>
+                    <tr>
+                        <td>check + hub + goal</td>
+                        <td>.check Checked</td>
+                        <td>.hub</td>
+                        <td>.goal</td>
+                    </tr>
+                    <tr>
+                        <td>radio1 + relay + target1</td>
+                        <td>.radio1 Checked</td>
+                        <td rowspan="5">.relay</td>
+                        <td>.target1</td>
+                    </tr>
+                    <tr>
+                        <td>radio2 + relay + target2</td>
+                        <td>.radio2 Checked</td>
+                        <td>.target2</td>
+                    </tr>
+                    <tr>
+                        <td>radio3 + relay + target3</td>
+                        <td>.radio3 Checked</td>
+                        <td>.target3</td>
+                    </tr>
+                    <tr>
+                        <td>radio4 + relay + target4</td>
+                        <td>.radio4 Checked</td>
+                        <td>.target4</td>
+                    </tr>
+                    <tr>
+                        <td>radio5 + relay + target5</td>
+                        <td>.radio5 Checked</td>
+                        <td>.target5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </section>
-</section>
+</article>
