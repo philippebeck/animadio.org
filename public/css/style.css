@@ -10,6 +10,11 @@
   --violet-dark: rgba(58, 58, 173, 0.7);
 }
 
+*:target {
+  padding-top: 50px; 
+  margin-top: -50px; 
+}
+
 body {
   --body-background-color: var(--grey-light);
 }
@@ -31,6 +36,14 @@ h2 {
   --title-xl-color: var(--green);
 }
 
+a {
+  --link-color: var(--violet);
+}
+
+code {
+  line-height: 50px;
+}
+
 .table {
   --table-row-even-hover-background-color: var(--green-dark);
   --table-row-odd-hover-background-color: var(--violet-dark);
@@ -45,8 +58,4 @@ h2 {
 .sidebar {
   --sidebar-child-color: var(--green);
   --sidebar-child-hover-background-color: var(--green-dark);
-}
-
-a {
-  --link-color: var(--violet);
 }
