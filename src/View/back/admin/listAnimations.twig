@@ -1,41 +1,39 @@
 <section class="menu-target3">
     <h2>
-        <i class="fas fa-images"></i> 
-        Keyframes
+        <i class="far fa-images"></i> 
+        Animations
     </h2>
 
     <a class="btn-green btn-lg" 
-        href="{{ url('keyframe!create') }}">
-        New Keyframe
+        href="{{ url('animation!create') }}">
+        New Animation
     </a>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Keyframe</th>
+                <th>Animation</th>
                 <th>Effect (Category)</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
 
-        {% for keyframe in keyframes %}
+        {% for animation in animations %}
             <tr>
                 <td>
-                    {{ keyframe.name }}
+                    {{ animation.name }} ({{ animation.category_id }})
                 </td>
                 <td>
-                    {{ keyframe.effect }}
-                    <br>
-                    ({{ keyframe.category_id }})
+                    {{ animation.effect }}                    
                 </td>
                 <td>
                     <a class="btn-blue" 
-                        href="{{ url('keyframe!update', {'id': keyframe.id}) }}">
+                        href="{{ url('animation!update', {'id': animation.id}) }}">
                         <i class="fas fa-pen-square fa-fw fa-lg"></i>
                     </a>
                     <a class="btn-red" 
-                        href="{{ url('keyframe!delete', {'id': keyframe.id}) }}">
+                        href="{{ url('animation!delete', {'id': animation.id}) }}">
                         <i class="fas fa-times-circle fa-fw fa-lg"></i>
                     </a>
                 </td>

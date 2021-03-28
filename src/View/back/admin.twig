@@ -38,72 +38,62 @@
     class="menu-radio8" 
     type="radio" 
     name="menu">
-<input id="menu-radio9" 
-    class="menu-radio9" 
-    type="radio" 
-    name="menu">
 
 <nav class="menu">
     <label for="menu-radio1" 
         title="Show the Classes">
         <i class="fas fa-magic"></i>
         <span>
-            Class
+            Classes
         </span>
     </label>
     <label for="menu-radio2" 
         title="Show the Variables">
         <i class="fas fa-glass-whiskey"></i>
         <span>
-            Variable
+            Variables
         </span>
     </label>
     <label for="menu-radio3" 
-        title="Show the Keyframes">
-        <i class="fas fa-images"></i>
+        title="Show the Animations">
+        <i class="far fa-images"></i>
         <span>
-            Keyframe
+            Animations
         </span>
     </label>
-    <label for="menu-radio4">
-        <i class="far fa-map"></i>
+    <label for="menu-radio4" 
+        title="Show the Breakpoints">
+        <i class="fas fa-mobile-alt"></i>
         <span>
-            Breakpoint
+            Reponsive
         </span>
     </label>
     <label for="menu-radio5" 
-        title="Show the Mixins">
-        <i class="fas fa-industry"></i>
-        <span>
-            Mixin
-        </span>
-    </label>
-    <label for="menu-radio6" 
         title="Show the Elements">
         <i class="fas fa-sitemap"></i>
         <span>
-            Element
+            Elements
         </span>
     </label>
-    <label for="menu-radio7" 
+    <label for="menu-radio6" 
         title="Show the Themes">
         <i class="fas fa-palette"></i>
         <span>
-            Theme
+            Themes
         </span>
     </label>
-    <label for="menu-radio8" 
+    <label for="menu-radio7" 
         title="Show the Templates">
         <i class="fas fa-box-open"></i>
         <span>
-            Template
+            Templates
         </span>
     </label>
-    <label for="menu-radio9" 
+    <label for="menu-radio8" 
         title="Show the Users">
         <i class="fas fa-user"></i>
         <span>
-            User
+            Users
         </span>
     </label>
 </nav>
@@ -112,9 +102,8 @@
     
     {{ include("back/admin/listClasses.twig") }}
     {{ include("back/admin/listVariables.twig") }}
-    {{ include("back/admin/listKeyframes.twig") }}
+    {{ include("back/admin/listAnimations.twig") }}
     {{ include("back/admin/listBreakpoints.twig") }}
-    {{ include("back/admin/listMixins.twig") }}
     {{ include("back/admin/listElements.twig") }}
     {{ include("back/admin/listThemes.twig") }}
     {{ include("back/admin/listTemplates.twig") }}
