@@ -41,7 +41,7 @@ a {
 }
 
 code {
-  line-height: 50px;
+  --code-color: rgb(50, 205, 50);
 }
 
 .table {
