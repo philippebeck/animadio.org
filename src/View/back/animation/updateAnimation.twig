@@ -1,0 +1,85 @@
+{% extends 'layout/layout.twig' %}
+
+{% block title %}Update an Animation{% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block main %}
+<main>
+    <form class="form" 
+        method="post" 
+        action={{ url('animation!update', {'id': animation.id}) }}>
+        <fieldset>
+            <legend>
+                <i class="far fa-images fa-2x"></i>
+            </legend>
+            <ul>
+                <li>
+                    <label for="name">
+                        Name
+                    </label>
+                    <input id="name" 
+                        name="name" 
+                        type="text" 
+                        maxlength="20" 
+                        value="{{ animation.name }}"
+                        required>
+                </li>
+                <li>
+                    <label for="category_id">
+                        Category
+                    </label>
+                    <select id="category_id" 
+                        name="category_id"
+                        required>
+                        
+                        <option value="">
+                            -- Select a Category
+                        </option>
+
+                    {% for category in categories %}
+
+                        {% if category.id is same as(animation.category_id) %}
+                            <option value="{{ category.id }}" 
+                                selected>
+                                {{ category.category }} (Registred)
+                            </option>
+
+                        {% else %}
+                            <option value="{{ category.id }}">
+                                {{ category.category }}
+                            </option>
+                        {% endif %}
+
+                    {% endfor %}
+
+                    </select>
+                </li>
+               <li>
+                    <label for="effect">
+                        Effect
+                    </label>
+                    <input id="effect" 
+                        name="effect" 
+                        type="text" 
+                        maxlength="20" 
+                        value="{{ animation.effect }}"
+                        required>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <input type="reset" 
+                        value="Reset">
+                    <input type="submit" 
+                        value="Update">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+    <a class="btn-black btn-lg" 
+        href="{{ url('admin') }}">
+        Quit
+    </a>
+</main>
+{% endblock %}
