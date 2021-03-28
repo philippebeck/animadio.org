@@ -1,0 +1,64 @@
+{% extends 'layout/layout.twig' %}
+
+{% block title %}Create a New Variable{% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block main %}
+<main>
+    <form class="form" 
+        method="post" 
+        action={{ url('variable!create') }}>
+        <fieldset>
+            <legend>
+                <i class="fas fa-glass-whiskey fa-2x"></i>
+            </legend>
+            <ul>
+                <li>
+                    <label for="name">
+                        Name
+                    </label>
+                    <input id="name" 
+                        name="name" 
+                        type="text" 
+                        maxlength="20" 
+                        placeholder="Type the Variable Name"
+                        required>
+                </li>
+                <li>
+                    <label for="category_id">
+                        Category
+                    </label>
+                    <select id="category_id" 
+                        name="category_id"
+                        required>
+                        
+                        <option value="">
+                            -- Select a Category
+                        </option>
+
+                    {% for category in categories %}
+                        <option value="{{ category.id }}">
+                            {{ category.category }}
+                        </option>
+                    {% endfor %}
+
+                    </select>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <input type="reset" 
+                        value="Reset">
+                    <input type="submit" 
+                        value="Create">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+    <a class="btn-black btn-lg" 
+        href="{{ url('admin') }}">
+        Quit
+    </a>
+</main>
+{% endblock %}
