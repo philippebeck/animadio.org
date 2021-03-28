@@ -1,4 +1,4 @@
-<section class="menu-target9">
+<section class="menu-target8">
     <h2>
         <i class="fas fa-users"></i> 
         Users
@@ -12,7 +12,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th>User</th>
+                <th>Name (Id)</th>
                 <th>Email</th>
                 <th>Actions</th>
             </tr>
@@ -27,16 +27,19 @@
                             src="img/user/{{ user.image }}" 
                             alt="Screenshot of {{ user.name }}">
                         <figcaption>
-                            {{ user.name }}
+                            {{ user.name }} ({{ user.id }})
                         </figcaption>
                     </figure>
                 </td>
-                <td>{{ user.email }}</td>
+                <td>
+                    {{ user.email }}
+                </td>
                 <td>
                     <a class="btn-blue" 
                         href="{{ url('user!update', {'id': user.id}) }}">
                         <i class="fas fa-pen-square fa-fw fa-lg"></i>
                     </a>
+                    <br>
                     <a class="btn-red" 
                         href="{{ url('user!delete', {'id': user.id}) }}">
                         <i class="fas fa-times-circle fa-fw fa-lg"></i>

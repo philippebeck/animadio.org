@@ -1,6 +1,6 @@
 {% extends 'layout/layout.twig' %}
 
-{% block title %}Create a New User{% endblock %}
+{% block title %}Create a New Element{% endblock %}
 
 {% block description %}{% endblock %}
 
@@ -8,14 +8,14 @@
 <main>
     <form class="form" 
         method="post" 
-        action={{ url('user!create') }} 
+        action={{ url('element!create') }} 
         enctype="multipart/form-data">
         <input name="MAX_FILE_SIZE" 
             type="hidden" 
             value="1000000">
         <fieldset>
             <legend>
-                <i class="far fa-user fa-2x"></i>
+                <i class="fas fa-sitemap fa-2x"></i>
             </legend>
             <ul>
                 <li>
@@ -25,53 +25,39 @@
                     <input id="name" 
                         name="name" 
                         type="text" 
-                        maxlength="50" 
-                        placeholder="Type your Name"
+                        maxlength="20" 
+                        placeholder="Type the Element Name"
                         required>
                 </li>
                 <li>
                     <label for="file">
-                        Photo (max 1Mo)
+                        Photo.png (max 1Mo)
                     </label>
                     <input name="file" 
                         type="file" 
-                        accept=".jpg, .jpeg, .png, .svg, .gif" 
+                        accept=".png" 
                         required>
                 </li>
                 <li>
-                    <label for="email">
-                        Email
+                    <label for="link">
+                        Link
                     </label>
-                    <input id="email" 
-                        name="email" 
-                        type="email" 
-                        maxlength="100" 
-                        minlength="5" 
-                        placeholder="Type your Email"
+                    <input id="link" 
+                        name="link" 
+                        type="text" 
+                        maxlength="40" 
+                        placeholder="https://codepen.io/animadio/pen/"
                         required>
                 </li>
-                <hr>
                 <li>
-                    <label for="pass">
-                        Password
+                    <label for="definition">
+                        Definition
                     </label>
-                    <input id="pass" 
-                        name="pass" 
-                        type="password" 
-                        placeholder="Type your Password" 
-                        maxlength="100" 
-                        minlength="8">
-                </li>
-                <li>
-                    <label for="conf-pass">
-                        Confirm Password
-                    </label>
-                    <input id="conf-pass" 
-                        name="conf-pass" 
-                        type="password" 
-                        placeholder="Confirm your Password" 
-                        maxlength="100" 
-                        minlength="8">
+                    <textarea id="definition"
+                        name="definition"
+                        rows="5"
+                        placeholder="Type the Element Definition"
+                        required></textarea>
                 </li>
             </ul>
             <ul>

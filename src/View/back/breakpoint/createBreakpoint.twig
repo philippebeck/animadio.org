@@ -1,0 +1,55 @@
+{% extends 'layout/layout.twig' %}
+
+{% block title %}Create a New Breakpoint{% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block main %}
+<main>
+    <form class="form" 
+        method="post" 
+        action={{ url('breakpoint!create') }}>
+        <fieldset>
+            <legend>
+                <i class="fas fa-mobile-alt fa-2x"></i>
+            </legend>
+            <ul>
+                <li>
+                    <label for="media">
+                        Key
+                    </label>
+                    <input id="media" 
+                        name="media" 
+                        type="text" 
+                        maxlength="2" 
+                        placeholder="Type the Breakpoint Key"
+                        required>
+                </li>
+               <li>
+                    <label for="width">
+                        Size
+                    </label>
+                    <input id="width" 
+                        name="width" 
+                        type="text" 
+                        maxlength="20" 
+                        placeholder="Type the Breakpoint Width"
+                        required>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <input type="reset" 
+                        value="Reset">
+                    <input type="submit" 
+                        value="Create">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+    <a class="btn-black btn-lg" 
+        href="{{ url('admin') }}">
+        Quit
+    </a>
+</main>
+{% endblock %}

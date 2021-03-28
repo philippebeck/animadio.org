@@ -63,7 +63,6 @@ class UserController extends MainController
         return $this->render("back/user/createUser.twig");
     }
 
-
     private function setUserData()
     {
         $this->user["name"]     = (string) trim($this->getPost()->getPostVar("name"));

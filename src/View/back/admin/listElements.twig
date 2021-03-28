@@ -1,4 +1,4 @@
-<section class="menu-target6">
+<section class="menu-target5">
     <h2>
         <i class="fas fa-sitemap"></i> 
         Elements
@@ -12,7 +12,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Element</th>
+                <th>Name (Id)</th>
                 <th>Definition</th>
                 <th>Actions</th>
             </tr>
@@ -21,11 +21,18 @@
 
         {% for element in elements %}
             <tr>
-                <td>
-                    <a class="button-violet"
+                <td class="width-sm">
+                    <a class="button-green"
                         href="https://codepen.io/animadio/pen/{{ element.link }}"
                         title="Go to the {{ element.name }} Pen">
-                        {{ element.name }}
+                        <figure>
+                            <img src="img/elements/{{ element.name|lower }}.png" 
+                                alt="The {{ element.name }} example">
+                            <figcaption>
+                                {{ element.name }} 
+                                ({{ element.id }})
+                            </figcaption>
+                        </figure>                        
                     </a>
                 </td>
                 <td>
@@ -36,6 +43,7 @@
                         href="{{ url('element!update', {'id': element.id}) }}">
                         <i class="fas fa-pen-square fa-fw fa-lg"></i>
                     </a>
+                    <br>
                     <a class="btn-red" 
                         href="{{ url('element!delete', {'id': element.id}) }}">
                         <i class="fas fa-times-circle fa-fw fa-lg"></i>

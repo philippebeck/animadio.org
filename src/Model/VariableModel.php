@@ -12,7 +12,10 @@ class VariableModel extends MainModel
 {
     public function listVariablesWithCategory()
     {
-        $query = "SELECT * FROM Variable
+        $query = "SELECT 
+            Variable.id, Variable.name, 
+            VariableCat.category
+            FROM Variable
             INNER JOIN VariableCat 
             ON Variable.category_id = VariableCat.id
             ORDER BY Variable.id";
