@@ -1,0 +1,78 @@
+{% extends 'layout/layout.twig' %}
+
+{% block title %}Create a New Theme{% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block main %}
+<main>
+    <form class="form" 
+        method="post" 
+        action={{ url('theme!create') }} 
+        enctype="multipart/form-data">
+        <input name="MAX_FILE_SIZE" 
+            type="hidden" 
+            value="1000000">
+        <fieldset>
+            <legend>
+                <i class="fas fa-palette fa-2x"></i>
+            </legend>
+            <ul>
+                <li>
+                    <label for="name">
+                        Name
+                    </label>
+                    <input id="name" 
+                        name="name" 
+                        type="text" 
+                        maxlength="20" 
+                        placeholder="Type the Theme Name"
+                        required>
+                </li>
+                <li>
+                    <label for="file">
+                        Photo.png (max 1Mo)
+                    </label>
+                    <input name="file" 
+                        type="file" 
+                        accept=".png" 
+                        required>
+                </li>
+                <li>
+                    <label for="link">
+                        Link
+                    </label>
+                    <input id="link" 
+                        name="link" 
+                        type="text" 
+                        maxlength="40" 
+                        placeholder="https://codepen.io/animadio/pen/"
+                        required>
+                </li>
+                <li>
+                    <label for="definition">
+                        Definition
+                    </label>
+                    <textarea id="definition"
+                        name="definition"
+                        rows="5"
+                        placeholder="Type the Theme Definition"
+                        required></textarea>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <input type="reset" 
+                        value="Reset">
+                    <input type="submit" 
+                        value="Create">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+    <a class="btn-black btn-lg" 
+        href="{{ url('admin') }}">
+        Quit
+    </a>
+</main>
+{% endblock %}
