@@ -5,15 +5,15 @@
     </h2>
 
     <a class="btn-green btn-lg" 
-        href="{{ url('mixin!create') }}">
+        href="{{ url('breakpoint!create') }}">
         New Breakpoint
     </a>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Media</th>
-                <th>Width</th>
+                <th>Key</th>
+                <th>Screen Width</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -32,6 +32,7 @@
                         href="{{ url('breakpoint!update', {'id': breakpoint.id}) }}">
                         <i class="fas fa-pen-square fa-fw fa-lg"></i>
                     </a>
+                    <br>
                     <a class="btn-red" 
                         href="{{ url('breakpoint!delete', {'id': breakpoint.id}) }}">
                         <i class="fas fa-times-circle fa-fw fa-lg"></i>

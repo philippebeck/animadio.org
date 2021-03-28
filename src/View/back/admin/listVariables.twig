@@ -12,7 +12,11 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Variable</th>
+                <th>
+                    Name
+                    <br>
+                    (Id)
+                </th>
                 <th>Category</th>
                 <th>Actions</th>
             </tr>
@@ -22,16 +26,19 @@
         {% for variable in variables %}
             <tr>
                 <td>
-                    {{ variable.name }}
+                    --{{ variable.name }} 
+                    <br>
+                    ({{ variable.id }})
                 </td>
                 <td>
-                    {{ variable.category_id }}
+                    {{ variable.category }}
                 </td>
                 <td>
                     <a class="btn-blue" 
                         href="{{ url('variable!update', {'id': variable.id}) }}">
                         <i class="fas fa-pen-square fa-fw fa-lg"></i>
                     </a>
+                    <br>
                     <a class="btn-red" 
                         href="{{ url('variable!delete', {'id': variable.id}) }}">
                         <i class="fas fa-times-circle fa-fw fa-lg"></i>

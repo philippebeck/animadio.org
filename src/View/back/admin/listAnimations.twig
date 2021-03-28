@@ -12,8 +12,16 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Animation</th>
-                <th>Effect (Category)</th>
+                <th>
+                    Name
+                    <br>
+                    (Id)
+                </th>
+                <th>
+                    Effect
+                    <hr>
+                    Category
+                </th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -22,16 +30,21 @@
         {% for animation in animations %}
             <tr>
                 <td>
-                    {{ animation.name }} ({{ animation.category_id }})
+                    {{ animation.name }}
+                    <br>
+                    ({{ animation.id }})
                 </td>
                 <td>
-                    {{ animation.effect }}                    
+                    {{ animation.effect }}  
+                    <hr>
+                    {{ animation.category }}                  
                 </td>
                 <td>
                     <a class="btn-blue" 
                         href="{{ url('animation!update', {'id': animation.id}) }}">
                         <i class="fas fa-pen-square fa-fw fa-lg"></i>
                     </a>
+                    <br>
                     <a class="btn-red" 
                         href="{{ url('animation!delete', {'id': animation.id}) }}">
                         <i class="fas fa-times-circle fa-fw fa-lg"></i>
