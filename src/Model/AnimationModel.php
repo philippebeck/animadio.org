@@ -12,7 +12,10 @@ class AnimationModel extends MainModel
 {
     public function listAnimationsWithCategory()
     {
-        $query = "SELECT * FROM Animation
+        $query = "SELECT 
+            Animation.id, Animation.name, Animation.effect, 
+            AnimationCat.category 
+            FROM Animation
             INNER JOIN AnimationCat 
             ON Animation.category_id = AnimationCat.id
             ORDER BY Animation.id";

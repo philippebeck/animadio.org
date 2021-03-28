@@ -12,7 +12,11 @@ class ClassModel extends MainModel
 {
     public function listClassesWithCategory()
     {
-        $query = "SELECT * FROM Class
+        $query = "SELECT 
+            Class.id, Class.name, Class.media, Class.concat, 
+            ClassCat.category, 
+            ClassState.state
+            FROM Class
             INNER JOIN ClassCat 
             ON Class.category_id = ClassCat.id
             INNER JOIN ClassState 
