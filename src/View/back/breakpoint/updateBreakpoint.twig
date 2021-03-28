@@ -1,0 +1,55 @@
+{% extends 'layout/layout.twig' %}
+
+{% block title %}Update a Breakpoint{% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block main %}
+<main>
+    <form class="form" 
+        method="post" 
+        action={{ url('breakpoint!update', {'id': breakpoint.id}) }}>
+        <fieldset>
+            <legend>
+                <i class="fas fa-mobile-alt fa-2x"></i>
+            </legend>
+            <ul>
+                <li>
+                    <label for="media">
+                        Key
+                    </label>
+                    <input id="media" 
+                        name="media" 
+                        type="text" 
+                        maxlength="2" 
+                        value="{{ breakpoint.media }}"
+                        required>
+                </li>
+               <li>
+                    <label for="width">
+                        Size
+                    </label>
+                    <input id="width" 
+                        name="width" 
+                        type="text" 
+                        maxlength="20" 
+                        value="{{ breakpoint.width }}"
+                        required>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <input type="reset" 
+                        value="Reset">
+                    <input type="submit" 
+                        value="Update">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+    <a class="btn-black btn-lg" 
+        href="{{ url('admin') }}">
+        Quit
+    </a>
+</main>
+{% endblock %}
