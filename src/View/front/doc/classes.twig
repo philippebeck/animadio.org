@@ -1,16 +1,16 @@
 <article id="class-home" 
-    class="menu-target1 container-90tn-80sm-70md-60lg-50xl">
+    class="menu-target1 container-90tn">
     <h2>
         <i class="fas fa-magic fa-lg"></i>
         Classes
     </h2>
 
     <header class="head">
-        Many Animadio Classes can be Concatenated, 
-        <br>
-        some use Pseudo-classes & some use Media Queries,
-        <br>
-        finally you can find here all of the Class Names...
+        Some Animadio Classes can be Concatenated, 
+        some have a Special Naming 
+        because of Pseudo-classes or Media Queries; 
+        but here you can find all Class Names
+        & how to name them...
     </header>
 
     <nav class="sidebar">
@@ -19,19 +19,19 @@
             <i class="fas fa-chevron-circle-up"></i>
         </a>
         <a href="#class-list" 
-            title="Class List">
+            title="Class List Categories">
             <i class="fas fa-list fa-fw"></i>
         </a>
-        <a href="#class-media" 
-            title="Classes with Media Queries">
+        <a href="#class-responsive" 
+            title="Classes with a Responsive Naming">
             <i class="fas fa-mobile-alt fa-fw"></i>
         </a>
         <a href="#class-concat" 
             title="Concatenable Classes">
             <i class="fas fa-link fa-fw"></i>
         </a>
-        <a href="#class-keywords" 
-            title="Classes with Pseudo-classes">
+        <a href="#class-states" 
+            title="Classes with a States Naming">
             <i class="fas fa-key fa-fw"></i>
         </a>
     </nav>
@@ -70,7 +70,7 @@
 
         <section id="class-{{ category }}">
             <h4>
-                <a class="btn-violet btn-lg"
+                <a class="btn-green btn-lg"
                     href="https://github.com/animadio/animadio/tree/master/src/classes/_{{ category }}.scss"
                     title="Go to the {{ category }} file in the GitHub Repository">
                     {{ category|title }} 
@@ -100,11 +100,10 @@
                         <td>
 
                         {% if class.media == 1 %}
-                            <a href="#class-media"
-                                title="Class with Media Queries">
+                            <a href="#class-responsive"
+                                title="Class with Special Naming for Responsive">
                                 <i class="fas fa-mobile-alt"></i>
                             </a>
-                            +
                         {% endif %}
 
                         {% if class.concat == 1 %}
@@ -112,13 +111,19 @@
                                 title="Concatenable Class">
                                 <i class="fas fa-link"></i>
                             </a>
-                            +
                         {% endif %}
-                        
-                            <a href="#class-keywords"
-                                title="Class with Pseudo-classes">
+
+                        {% if class.state != "no" %}
+                            <a href="#class-states"
+                                title="Class with Special Naming for States">
                                 {{ class.state }}
                             </a>
+                        {% else %}
+                            {% if class.media == 0 and class.concat == 0 %}                           
+                                {{ class.state }}
+                            {% endif %}   
+                        {% endif %}
+
                         </td>
                     </tr>
                     {% endfor %}
@@ -134,10 +139,11 @@
         aria-hidden="true">
     </i>
 
-    <section id="class-media">
+    <section id="class-responsive"
+        class="container-90sm-80md-70lg-60xl-50wd">
         <h3>
             <i class="fas fa-mobile-alt"></i> 
-            Specific Naming for Media Queries
+            Special Naming for Responsive
         </h3>
 
         <p>
@@ -153,7 +159,7 @@
             <br>
             have a 
             <b class="color-violet">
-                Specific Naming
+                Special Naming
             </b> 
             for
             <a class="button-violet"
@@ -165,21 +171,21 @@
 
         <ul class="row">
             <li>
-                <a class="btn-violet"
+                <a class="btn-green"
                     href="#class-init"
                     title="Watch the Init Classes">
                     Init
                 </a>
             </li>
             <li>
-                <a class="btn-violet"
+                <a class="btn-green"
                     href="#class-display"
                     title="Watch the Display Classes">
                     Display
                 </a>
             </li>
             <li>
-                <a class="btn-violet"
+                <a class="btn-green"
                     href="#class-position"
                     title="Watch the Position Classes">
                     Position
@@ -226,10 +232,10 @@
             <br>
             (clic the 
             <b class="color-violet">
-                Breakpoints Tab
-                <i class="far fa-map"></i>
+                Responsive Tab
+                <i class="fas fa-mobile-alt"></i>
             </b>
-            for Media Key List)
+            for Responsive Key List)
         </p>
 
         <ul class="row placo-evenly">
@@ -252,7 +258,8 @@
         aria-hidden="true">
     </i>
 
-    <section id="class-concat">
+    <section id="class-concat"
+        class="container-90sm-80md-70lg-60xl-50wd">
         <h3>
             <i class="fas fa-link"></i>
             Concatenable Classes
@@ -277,21 +284,21 @@
 
         <ul class="row">
             <li>
-                <a class="btn-violet"
+                <a class="btn-green"
                     href="#class-init"
                     title="Watch the Init Classes">
                     Init
                 </a>
             </li>
             <li>
-                <a class="btn-violet"
+                <a class="btn-green"
                     href="#class-display"
                     title="Watch the Display Classes">
                     Display
                 </a>
             </li>
             <li>
-                <a class="btn-violet"
+                <a class="btn-green"
                     href="#class-anima"
                     title="Watch the Anima Classes">
                     Anima
@@ -350,53 +357,79 @@
         aria-hidden="true">
     </i>
 
-    <section id="class-keywords">
+    <section id="class-states"
+        class="container-90sm-80md-70lg-60xl-50wd">
         <h3>
             <i class="fas fa-key"></i>
-            Classes using Pseudo-classes
+            Special Naming for States
         </h3>
 
         <p>
-            Many Animadio Classes use 
+            Some Animadio Classes use 
             <b class="color-violet">
                 Pseudo-classes
             </b>
         </p>
         <p>
             <b class="color-violet">
-                4 States Families
+                2 States Families
             </b>
             about that are available :
         </p>
 
-        <ul>
-            <li>
-                <b class="color-violet">
-                    Stateless
-                </b> 
-                <br>
-                (<i>Classes without States</i>)
-            </li>
-            <li>
-                <b class="color-violet">
-                    Specific
-                </b> 
-                <br>
-                (<i>Classes with a Specific Naming</i>)
-            </li>
-            <li>
-                <b class="color-violet">
+        <ul class="row placo-evenly plait-base">
+            <li class="col">
+                <b class="deco color-violet trans-up">
                     Helpers
                 </b> 
-                <br>
-                (<i>Classes using the Helpers Keywords</i>)
+
+                <ul>
+                    <li>
+                        <a class="btn-green"
+                            href="#class-display"
+                            title="Watch the Display Classes">
+                            Display
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn-green"
+                            href="#class-position"
+                            title="Watch the Position Classes">
+                            Position
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn-green"
+                            href="#class-box"
+                            title="Watch the Box Classes">
+                            Box
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn-green"
+                            href="#class-font"
+                            title="Watch the Font Classes">
+                            Font
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn-green"
+                            href="#class-color"
+                            title="Watch the Color Classes">
+                            Color
+                        </a>
+                    </li>
+                </ul>
             </li>
-            <li>
-                <b class="color-violet">
+            <li class="col">
+                <b class="deco color-violet trans-up">
                     Anima
-                </b> 
-                <br>
-                (<i>Classes using the Anima Keywords</i>)
+                </b>
+                <a class="btn-green"
+                    href="#class-anima"
+                    title="Watch the Anima Classes">
+                    Anima
+                </a> 
             </li>
         </ul>
 
@@ -440,6 +473,9 @@
                 <li>
                     <code>.font-bold</code>
                 </li>
+                <li>
+                    <code>.color-blue</code>
+                </li>
             </ul>
 
             <i class="fas fa-ellipsis-h mar-top-md"
@@ -452,7 +488,7 @@
                     Keyword
                 </b>
                 <br>
-                <b class="color-green deco-under">
+                <b class="color-green deco">
                     Before</b> 
                 the
                 <b class="color-violet">
@@ -472,6 +508,9 @@
                 </li>
                 <li>
                     <code>.onto-font-bold</code>
+                </li>
+                <li>
+                    <code>.onto-color-blue</code>
                 </li>
             </ul>
 
@@ -518,7 +557,7 @@
             </table>
         </section>
 
-        <i class="fas fa-sort fa-2x mar-bot-lg mar-top-md"
+        <i class="fas fa-sort fa-2x mar-md"
             aria-hidden="true">
         </i>
 
@@ -545,10 +584,10 @@
                     <code>.anima-grow-this</code>
                 </li>
                 <li>
-                    <code>.anima-turn-loop-this</code>
+                    <code>.anima-slideT-rev-this</code>
                 </li>
                 <li>
-                    <code>.anima-shrink-sm-this</code>
+                    <code>.anima-turn-loop-sm-this</code>
                 </li>
             </ul>
 
@@ -566,11 +605,11 @@
                     Keyword
                 </b>
                 <br>
-                <b class="color-green deco-under">
+                <b class="color-green deco">
                     After</b> 
                 the
                 <b class="color-violet">
-                    Anima Class
+                    Anima Classes
                 </b>
             </p>
 
@@ -579,10 +618,10 @@
                     <code>.anima-grow-into</code>
                 </li>
                 <li>
-                    <code>.anima-turn-loop-toall</code>
+                    <code>.anima-slideT-rev-toall</code>
                 </li>
                 <li>
-                    <code>.anima-shrink-sm-toone</code>
+                    <code>.anima-turn-loop-sm-toone</code>
                 </li>
             </ul>
 

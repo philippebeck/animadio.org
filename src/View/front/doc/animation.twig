@@ -1,35 +1,36 @@
-<article id="keyframes-home"
+<article id="animations-home"
     class="menu-target3">
     <h2>
         <i class="fas fa-images fa-lg"></i>
-        Keyframes
+        Animations
     </h2>
 
     <header class="head">
-        Rules @keyframes are made for basic usage,
-        to build complex animations, 
-        it's necessary to use animation options...
+        Animadio can create Complex Animations, 
+        with the Concatenation of Different Options...
+        <br>
+        You can find all the Names of the Animations here!
     </header>
 
     <nav class="sidebar">
-        <a href="#keyframes-home" 
-            title="keyframes Home">
+        <a href="#animations-home" 
+            title="Animations Home">
             <i class="fas fa-chevron-circle-up fa-fw"></i>
         </a>
-        <a href="#keyframes-translate" 
-            title="Translate Keyframes">
+        <a href="#animations-translate" 
+            title="Translate Animations">
             <i class="fas fa-arrows-alt fa-fw"></i>
         </a>
-        <a href="#keyframes-rotate" 
-            title="Rotate Keyframes">
+        <a href="#animations-rotate" 
+            title="Rotate Animations">
             <i class="fas fa-sync fa-fw"></i>
         </a>
-        <a href="#keyframes-scale" 
-            title="Scale Keyframes">
+        <a href="#animations-scale" 
+            title="Scale Animations">
             <i class="fas fa-search-plus fa-fw"></i>
         </a>
-        <a href="#keyframes-skew" 
-            title="Skew Keyframes">
+        <a href="#animations-skew" 
+            title="Skew Animations">
             <i class="fas fa-random fa-fw"></i>
         </a>                
     </nav>
@@ -38,18 +39,18 @@
         aria-hidden="true">
     </i>
 
-    {% for category, keyframeCat in keyframes %}
+    {% for category, animationCat in animations %}
 
-    <section id="keyframes-{{ category }}">
+    <section id="animations-{{ category }}">
         <h3>
-            {{ category|title }} Keyframes
+            {{ category|title }} Animations
         </h3>
 
         <table class="table">
             <thead>
             <tr class="bg-violet-dark">
                 <th>
-                    Key
+                    Name
                 </th>
                 <th>
                     Producted Effect
@@ -58,13 +59,13 @@
             </thead>
             <tbody>
 
-                {% for keyframe in keyframeCat %} 
+                {% for animation in animationCat %} 
                 <tr>
                     <td>
-                        {{ keyframe.name }}
+                        {{ animation.name }}
                     </td>
                     <td>
-                        {{ keyframe.effect }}
+                        {{ animation.effect }}
                     </td>
                 </tr>
                 {% endfor %}

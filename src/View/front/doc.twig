@@ -26,10 +26,6 @@
     class="menu-radio5" 
     type="radio" 
     name="menu">
-<input id="menu-radio6" 
-    class="menu-radio6" 
-    type="radio" 
-    name="menu">
 
 <nav class="menu">
     <label for="menu-radio1">
@@ -47,13 +43,13 @@
     <label for="menu-radio3">
         <i class="far fa-images fa-lg fa-fw"></i>
         <span>
-            Keyframes
+            Animation
         </span>
     </label>
     <label for="menu-radio4">
-        <i class="far fa-map fa-lg fa-fw"></i>
+        <i class="fas fa-mobile-alt fa-lg fa-fw"></i>
         <span>
-            Breakpoints
+            Responsive
         </span>
     </label>
     <label for="menu-radio5">
@@ -62,22 +58,15 @@
             Tags
         </span>
     </label>
-    <label for="menu-radio6">
-        <i class="fas fa-industry fa-lg fa-fw"></i>
-        <span>
-            Mixins
-        </span>
-    </label>
 </nav>
 
 <main class="menu-relay">
     
     {{ include("front/doc/classes.twig") }}
     {{ include("front/doc/variables.twig") }}
-    {{ include("front/doc/keyframes.twig") }}
-    {{ include("front/doc/breakpoints.twig") }}
+    {{ include("front/doc/animation.twig") }}
+    {{ include("front/doc/responsive.twig") }}
     {{ include("front/doc/tags.twig") }}
-    {{ include("front/doc/mixins.twig") }}
     
 </main>
 {% endblock %}
