@@ -38,81 +38,62 @@
     class="menu-radio8" 
     type="radio" 
     name="menu">
-<input id="menu-radio9" 
-    class="menu-radio9" 
-    type="radio" 
-    name="menu">
 
 <nav class="menu">
-    <label class="button-violet" 
-        for="menu-radio1" 
+    <label for="menu-radio1" 
         title="Show the Classes">
-        <i class="fas fa-magic onto-color-violet"></i>
-        <span class="onto-color-violet">
-            Class
+        <i class="fas fa-magic"></i>
+        <span>
+            Classes
         </span>
     </label>
-    <label class="button-blue" 
-        for="menu-radio2" 
+    <label for="menu-radio2" 
         title="Show the Variables">
-        <i class="fas fa-glass-whiskey onto-color-blue"></i>
-        <span class="onto-color-blue">
-            Variable
+        <i class="fas fa-glass-whiskey"></i>
+        <span>
+            Variables
         </span>
     </label>
-    <label class="button-cyan" 
-        for="menu-radio3" 
-        title="Show the Keyframes">
-        <i class="fas fa-images onto-color-cyan"></i>
-        <span class="onto-color-cyan">
-            Keyframe
+    <label for="menu-radio3" 
+        title="Show the Animations">
+        <i class="far fa-images"></i>
+        <span>
+            Animations
         </span>
     </label>
-    <label class="button-green" 
-        for="menu-radio4">
-        <i class="far fa-map onto-color-green"></i>
-        <span class="onto-color-green">
-            Breakpoint
+    <label for="menu-radio4" 
+        title="Show the Breakpoints">
+        <i class="fas fa-mobile-alt"></i>
+        <span>
+            Reponsive
         </span>
     </label>
-    <label class="button-brown" 
-        for="menu-radio5" 
-        title="Show the Mixins">
-        <i class="fas fa-industry onto-color-brown"></i>
-        <span class="onto-color-brown">
-            Mixin
-        </span>
-    </label>
-    <label class="button-yellow" 
-        for="menu-radio6" 
+    <label for="menu-radio5" 
         title="Show the Elements">
-        <i class="fas fa-sitemap onto-color-yellow"></i>
-        <span class="onto-color-yellow">
-            Element
+        <i class="fas fa-sitemap"></i>
+        <span>
+            Elements
         </span>
     </label>
-    <label class="button-orange" 
-        for="menu-radio7" 
+    <label for="menu-radio6" 
         title="Show the Themes">
-        <i class="fas fa-palette onto-color-orange"></i>
-        <span class="onto-color-orange">
-            Theme
+        <i class="fas fa-palette"></i>
+        <span>
+            Themes
         </span>
     </label>
-    <label class="button-red" 
-        for="menu-radio8" 
+    <label for="menu-radio7" 
         title="Show the Templates">
-        <i class="fas fa-box-open onto-color-red"></i>
-        <span class="onto-color-red">
-            Template
+        <i class="fas fa-box-open"></i>
+        <span>
+            Templates
         </span>
     </label>
-    <label class="button-pink" 
-        for="menu-radio9" 
+    <label for="menu-radio8" 
         title="Show the Users">
-        <i class="fas fa-user onto-color-pink"></i>
-        <span class="onto-color-pink">
-            User
+        <i class="fas fa-user"></i>
+        <span>
+            Users
         </span>
     </label>
 </nav>
@@ -121,9 +102,8 @@
     
     {{ include("back/admin/listClasses.twig") }}
     {{ include("back/admin/listVariables.twig") }}
-    {{ include("back/admin/listKeyframes.twig") }}
+    {{ include("back/admin/listAnimations.twig") }}
     {{ include("back/admin/listBreakpoints.twig") }}
-    {{ include("back/admin/listMixins.twig") }}
     {{ include("back/admin/listElements.twig") }}
     {{ include("back/admin/listThemes.twig") }}
     {{ include("back/admin/listTemplates.twig") }}

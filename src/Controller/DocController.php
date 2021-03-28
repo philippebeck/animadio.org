@@ -28,19 +28,16 @@ class DocController extends MainController
         $variables  = ModelFactory::getModel("Variable")->listVariablesWithCategory();
         $variables  = $this->getArray()->getArrayElements($variables);
 
-        $keyframes  = ModelFactory::getModel("Keyframe")->listKeyframesWithCategory();
-        $keyframes  = $this->getArray()->getArrayElements($keyframes);
+        $animations  = ModelFactory::getModel("Animation")->listAnimationsWithCategory();
+        $animations  = $this->getArray()->getArrayElements($animations);
 
-        $breakpoints    = ModelFactory::getModel("Breakpoint")->listData();
-        $mixins         = ModelFactory::getModel("Mixin")->listData();
-
+        $breakpoints = ModelFactory::getModel("Breakpoint")->listData();
 
         return $this->render("front/doc.twig", [
             "classes"       => $classes,
             "variables"     => $variables,
-            "keyframes"     => $keyframes,
-            "breakpoints"   => $breakpoints,
-            "mixins"        => $mixins
+            "animations"    => $animations,
+            "breakpoints"   => $breakpoints
         ]);
     }
 }

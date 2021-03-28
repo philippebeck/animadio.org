@@ -1,6 +1,7 @@
-<article class="menu-target1">
-    <h2 class="anima-slideB-this">
-        <i class="fas fa-cubes fa-lg color-violet"></i> 
+<article id="package-home"
+    class="menu-target1">
+    <h2 class="anima-grow-this">
+        <i class="fas fa-cubes fa-lg"></i> 
         Package Manager
     </h2>
 
@@ -14,11 +15,37 @@
         Animadio is available through NPM & Yarn ! (recommended)
     </header>
 
-    <i class="fas fa-chevron-down fa-2x mar-top-md"></i>
+    <nav class="sidebar">
+        <a href="#package-home" 
+            title="Package Manager Home">
+            <i class="fas fa-chevron-circle-up fa-fw"></i>
+        </a>
+        <a href="#package-npm" 
+            title="Package Installation with NPM">
+            <i class="fab fa-npm fa-fw"></i>
+        </a>
+        <a href="#package-yarn" 
+            title="Package Installation with Yarn">
+            <i class="fab fa-yarn fa-fw"></i>
+        </a>
+        <a href="#package-dev" 
+            title="Package Integration in Development">
+            <i class="fas fa-code fa-fw"></i>
+        </a>
+        <a href="#package-prod" 
+            title="Package Integration in Production">
+            <i class="fas fa-globe fa-fw"></i>
+        </a>
+    </nav>
 
-    <section class="anima-slideR-this">
-        <h3 class="color-red">
-            <i class="fab fa-npm fa-lg"></i> NPM
+    <i class="fas fa-chevron-down fa-2x mar-top-md"
+        aria-hidden="true">
+    </i>
+
+    <section id="package-npm">
+        <h3 class="color-red anima-openY-into">
+            <i class="fab fa-npm fa-lg"></i> 
+            NPM
         </h3>
 
         <p>
@@ -29,11 +56,14 @@
         <code>$ npm i animadio</code>
     </section>
 
-    <i class="fas fa-sort fa-2x mar-top-lg"></i>
+    <i class="fas fa-sort fa-2x mar-top-lg"
+        aria-hidden="true">
+    </i>
 
-    <section class="anima-slideL-this">
-        <h3 class="color-blue">
-            <i class="fab fa-yarn fa-lg"></i> Yarn
+    <section id="package-yarn">
+        <h3 class="color-blue anima-openY-into">
+            <i class="fab fa-yarn fa-lg"></i> 
+            Yarn
         </h3>
 
         <p>
@@ -44,10 +74,12 @@
         <code>$ yarn add animadio</code>
     </section>
 
-    <i class="fas fa-chevron-down fa-2x mar-top-lg"></i>
+    <i class="fas fa-minus fa-2x mar-top-lg"
+        aria-hidden="true">
+    </i>
 
-    <section class="anima-slideR-this">
-        <h3>
+    <section id="package-dev">
+        <h3 class="anima-openY-into">
             <i class="fas fa-code fa-lg"></i> 
             Development
         </h3>
@@ -90,10 +122,12 @@
             class="color-grey">&gt;</span></code>
     </section>
 
-    <i class="fas fa-sort fa-2x mar-top-lg"></i>
+    <i class="fas fa-sort fa-2x mar-top-lg"
+        aria-hidden="true">
+    </i>
 
-    <section class="anima-slideL-this">
-        <h3>
+    <section id="package-prod">
+        <h3 class="anima-openY-into">
             <i class="fas fa-globe fa-lg"></i> 
             Production
         </h3>

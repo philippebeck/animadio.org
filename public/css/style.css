@@ -10,12 +10,13 @@
   --violet-dark: rgba(58, 58, 173, 0.7);
 }
 
-body {
-  --body-background-color: var(--grey-light);
+*:target {
+  padding-top: 50px; 
+  margin-top: -50px; 
 }
 
-a {
-  --link-color: var(--violet);
+body {
+  --body-background-color: var(--grey-light);
 }
 
 .navbar {
@@ -27,7 +28,34 @@ a {
   --head-color: var(--in);
 }
 
+h1 {
+  --title-wd-color: var(--violet);
+}
+
+h2 {
+  --title-xl-color: var(--green);
+}
+
+a {
+  --link-color: var(--violet);
+}
+
+code {
+  --code-color: rgb(50, 205, 50);
+}
+
 .table {
   --table-row-even-hover-background-color: var(--green-dark);
   --table-row-odd-hover-background-color: var(--violet-dark);
+}
+
+.menu {
+  --menu-child-background-color: var(--violet-dark);
+  --menu-checked-child-color: var(--violet);
+  --menu-child-hover-color: var(--violet);
+}
+
+.sidebar {
+  --sidebar-child-color: var(--green);
+  --sidebar-child-hover-background-color: var(--green-dark);
 }

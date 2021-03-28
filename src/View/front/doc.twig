@@ -26,52 +26,36 @@
     class="menu-radio5" 
     type="radio" 
     name="menu">
-<input id="menu-radio6" 
-    class="menu-radio6" 
-    type="radio" 
-    name="menu">
 
 <nav class="menu">
-    <label class="button-violet" 
-        for="menu-radio1">
-        <i class="fas fa-magic onto-color-violet"></i>
-        <span class="onto-color-violet">
+    <label for="menu-radio1">
+        <i class="fas fa-magic fa-lg fa-fw"></i>
+        <span>
             Classes
         </span>
     </label>
-    <label class="button-violet" 
-        for="menu-radio2">
-        <i class="fas fa-glass-whiskey onto-color-violet"></i>
-        <span class="onto-color-violet">
+    <label for="menu-radio2">
+        <i class="fas fa-glass-whiskey fa-lg fa-fw"></i>
+        <span>
             Variables
         </span>
     </label>
-    <label class="button-violet" 
-        for="menu-radio3">
-        <i class="far fa-images onto-color-violet"></i>
-        <span class="onto-color-violet">
-            Keyframes
+    <label for="menu-radio3">
+        <i class="far fa-images fa-lg fa-fw"></i>
+        <span>
+            Animation
         </span>
     </label>
-    <label class="button-violet" 
-        for="menu-radio4">
-        <i class="far fa-map onto-color-violet"></i>
-        <span class="onto-color-violet">
-            Breakpoints
+    <label for="menu-radio4">
+        <i class="fas fa-mobile-alt fa-lg fa-fw"></i>
+        <span>
+            Responsive
         </span>
     </label>
-    <label class="button-violet" 
-        for="menu-radio5">
-        <i class="fas fa-code onto-color-violet"></i>
-        <span class="onto-color-violet">
+    <label for="menu-radio5">
+        <i class="fas fa-code fa-lg fa-fw"></i>
+        <span>
             Tags
-        </span>
-    </label>
-    <label class="button-violet" 
-        for="menu-radio6">
-        <i class="fas fa-industry onto-color-violet"></i>
-        <span class="onto-color-violet">
-            Mixins
         </span>
     </label>
 </nav>
@@ -80,10 +64,9 @@
     
     {{ include("front/doc/classes.twig") }}
     {{ include("front/doc/variables.twig") }}
-    {{ include("front/doc/keyframes.twig") }}
-    {{ include("front/doc/breakpoints.twig") }}
+    {{ include("front/doc/animation.twig") }}
+    {{ include("front/doc/responsive.twig") }}
     {{ include("front/doc/tags.twig") }}
-    {{ include("front/doc/mixins.twig") }}
     
 </main>
 {% endblock %}

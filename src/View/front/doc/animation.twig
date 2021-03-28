@@ -1,0 +1,78 @@
+<article id="animations-home"
+    class="menu-target3">
+    <h2>
+        <i class="fas fa-images fa-lg"></i>
+        Animations
+    </h2>
+
+    <header class="head">
+        Animadio can create Complex Animations, 
+        with the Concatenation of Different Options...
+        <br>
+        You can find all the Names of the Animations here!
+    </header>
+
+    <nav class="sidebar">
+        <a href="#animations-home" 
+            title="Animations Home">
+            <i class="fas fa-chevron-circle-up fa-fw"></i>
+        </a>
+        <a href="#animations-translate" 
+            title="Translate Animations">
+            <i class="fas fa-arrows-alt fa-fw"></i>
+        </a>
+        <a href="#animations-rotate" 
+            title="Rotate Animations">
+            <i class="fas fa-sync fa-fw"></i>
+        </a>
+        <a href="#animations-scale" 
+            title="Scale Animations">
+            <i class="fas fa-search-plus fa-fw"></i>
+        </a>
+        <a href="#animations-skew" 
+            title="Skew Animations">
+            <i class="fas fa-random fa-fw"></i>
+        </a>                
+    </nav>
+
+    <i class="fas fa-chevron-down fa-2x mar-top-md"
+        aria-hidden="true">
+    </i>
+
+    {% for category, animationCat in animations %}
+
+    <section id="animations-{{ category }}">
+        <h3>
+            {{ category|title }} Animations
+        </h3>
+
+        <table class="table">
+            <thead>
+            <tr class="bg-violet-dark">
+                <th>
+                    Name
+                </th>
+                <th>
+                    Producted Effect
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+
+                {% for animation in animationCat %} 
+                <tr>
+                    <td>
+                        {{ animation.name }}
+                    </td>
+                    <td>
+                        {{ animation.effect }}
+                    </td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </section>
+
+    {% endfor %}
+</article>
