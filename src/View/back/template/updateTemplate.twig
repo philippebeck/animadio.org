@@ -1,0 +1,78 @@
+{% extends 'layout/layout.twig' %}
+
+{% block title %}Update an Template{% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block main %}
+<main>
+    <form class="form" 
+        method="post" 
+        action={{ url('template!update', {'id': template.id}) }} 
+        enctype="multipart/form-data">
+        <input name="MAX_FILE_SIZE" 
+            type="hidden" 
+            value="1000000">
+        <fieldset>
+            <legend>
+                <img class="bord-violet" 
+                    src="img/templates/{{ template.name|lower }}.png" 
+                    alt="Screenshot of {{ template.name }}">
+            </legend>
+            <ul>
+                <li>
+                    <label for="name">
+                        Name
+                    </label>
+                    <input id="name" 
+                        name="name" 
+                        type="text" 
+                        maxlength="20" 
+                        value="{{ template.name }}"
+                        required>
+                </li>
+                <li>
+                    <label for="file">
+                        Photo.png (max 1Mo)
+                    </label>
+                    <input name="file" 
+                        type="file" 
+                        accept=".png">
+                </li>
+                <li>
+                    <label for="link">
+                        Link
+                    </label>
+                    <input id="link" 
+                        name="link" 
+                        type="text" 
+                        maxlength="40" 
+                        value="https://codepen.io/animadio/pen/{{ template.link }}"
+                        required>
+                </li>
+                <li>
+                    <label for="definition">
+                        Definition
+                    </label>
+                    <textarea id="definition"
+                        name="definition"
+                        rows="5"
+                        required>{{ template.definition }}</textarea>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <input type="reset" 
+                        value="Reset">
+                    <input type="submit" 
+                        value="Update">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+    <a class="btn-black btn-lg" 
+        href="{{ url('admin') }}">
+        Quit
+    </a>
+</main>
+{% endblock %}
