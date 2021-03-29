@@ -4,7 +4,7 @@
         Themes
     </h2>
 
-    <a class="btn-green btn-lg" 
+    <a class="btn-secondary btn-lg" 
         href="{{ url('theme!create') }}">
         New Theme
     </a>
@@ -22,7 +22,7 @@
         {% for theme in themes %}
             <tr>
                 <td class="width-sm">
-                    <a class="button-violet"
+                    <a class="button-primary"
                         href="https://codepen.io/animadio/pen/{{ theme.link }}"
                         title="Go to the {{ theme.name }} Pen">
                         <figure>
