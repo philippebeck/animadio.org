@@ -4,15 +4,6 @@
   --sans-serif: 'Text Me One', sans-serif;
   --serif: 'Gabriela', serif;
   --monospace: 'Share Tech Mono', monospace;
-  --green: rgb(52, 133, 86);
-  --green-dark: rgba(52, 133, 86, 0.7);
-  --violet: rgb(58, 58, 173);
-  --violet-dark: rgba(58, 58, 173, 0.7);
-}
-
-*:target {
-  padding-top: 50px; 
-  margin-top: -50px; 
 }
 
 body {
@@ -20,7 +11,7 @@ body {
 }
 
 .navbar {
-  --navbar-background-color: var(--green-dark);
+  --navbar-background-color: var(--secondary-dark);
 }
 
 .head {
@@ -29,33 +20,33 @@ body {
 }
 
 h1 {
-  --title-wd-color: var(--violet);
+  --title-wd-color: var(--primary);
 }
 
 h2 {
-  --title-xl-color: var(--green);
+  --title-xl-color: var(--secondary);
 }
 
 a {
-  --link-color: var(--violet);
-}
-
-code {
-  --code-color: rgb(50, 205, 50);
+  --link-color: var(--primary);
 }
 
 .table {
-  --table-row-even-hover-background-color: var(--green-dark);
-  --table-row-odd-hover-background-color: var(--violet-dark);
+  --table-row-even-hover-background-color: var(--secondary-dark);
+  --table-row-odd-hover-background-color: var(--primary-dark);
 }
 
 .menu {
-  --menu-child-background-color: var(--violet-dark);
-  --menu-checked-child-color: var(--violet);
-  --menu-child-hover-color: var(--violet);
+  --menu-child-background-color: var(--primary-dark);
+  --menu-checked-child-color: var(--primary);
+  --menu-child-hover-color: var(--primary);
 }
 
 .sidebar {
-  --sidebar-child-color: var(--green);
-  --sidebar-child-hover-background-color: var(--green-dark);
+  --sidebar-child-color: var(--secondary);
+  --sidebar-child-hover-background-color: var(--secondary-dark);
+}
+
+.foot {
+  --foot-list-background-color: var(--primary);
 }
