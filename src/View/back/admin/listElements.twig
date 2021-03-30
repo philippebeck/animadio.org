@@ -4,7 +4,7 @@
         Elements
     </h2>
 
-    <a class="btn-green btn-lg" 
+    <a class="btn-secondary btn-lg" 
         href="{{ url('element!create') }}">
         New Element
     </a>
@@ -22,7 +22,7 @@
         {% for element in elements %}
             <tr>
                 <td class="width-sm">
-                    <a class="button-green"
+                    <a class="button-secondary"
                         href="https://codepen.io/animadio/pen/{{ element.link }}"
                         title="Go to the {{ element.name }} Pen">
                         <figure>

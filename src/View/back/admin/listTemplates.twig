@@ -4,7 +4,7 @@
         Templates
     </h2>
 
-    <a class="btn-green btn-lg" 
+    <a class="btn-secondary btn-lg" 
         href="{{ url('template!create') }}">
         New Template
     </a>
@@ -22,7 +22,7 @@
         {% for template in templates %}
             <tr>
                 <td class="width-sm">
-                    <a class="button-green"
+                    <a class="button-secondary"
                         href="https://codepen.io/animadio/pen/{{ template.link }}"
                         title="Go to the {{ template.name }} Pen">
                         <figure>

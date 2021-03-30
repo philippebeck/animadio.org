@@ -37,7 +37,7 @@
             {% for category in variables|keys %}
 
             <li>
-                <a class="button-violet"
+                <a class="button-primary"
                     href="#variable-{{ category }}" 
                     title="Go to {{ category }} Variables !">
                 {{ category }}
@@ -55,7 +55,7 @@
 
         <section id="variable-{{ category }}">
             <h4>
-                <a class="btn-violet btn-lg"
+                <a class="btn-primary btn-lg"
                     href="https://github.com/animadio/animadio/tree/master/src/variables/_{{ category }}.var.scss"
                     title="Go to the {{ category }} file in the GitHub Repository">
                     {{ category|title }} 
