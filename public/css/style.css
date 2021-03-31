@@ -19,12 +19,13 @@ body {
   --head-color: var(--in);
 }
 
-h1 {
-  --title-wd-color: var(--primary);
+h1,
+h3 {
+  --title-color: var(--primary);
 }
 
 h2 {
-  --title-xl-color: var(--secondary);
+  --title-color: var(--secondary);
 }
 
 a {
@@ -32,8 +33,8 @@ a {
 }
 
 .table {
-  --table-row-even-hover-background-color: var(--secondary-dark);
-  --table-row-odd-hover-background-color: var(--primary-dark);
+  --table-even-hover-background-color: var(--secondary-dark);
+  --table-odd-hover-background-color: var(--primary-dark);
 }
 
 .menu {
