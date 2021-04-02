@@ -4,27 +4,22 @@
   --sans-serif: 'Text Me One', sans-serif;
   --serif: 'Gabriela', serif;
   --monospace: 'Share Tech Mono', monospace;
+
+  --slideT: translate(0, 5vw);
+  --slideB: translate(0, -5vw);
 }
 
 body {
   --body-background-color: var(--grey-light);
 }
 
-.navbar {
-  --navbar-background-color: var(--secondary-dark);
-}
-
-.head {
-  --head-border: medium solid var(--fb);
-  --head-color: var(--in);
-}
-
 h1,
-h3 {
+h2 {
   --title-color: var(--primary);
 }
 
-h2 {
+h3,
+h4 {
   --title-color: var(--secondary);
 }
 
@@ -32,9 +27,18 @@ a {
   --link-color: var(--primary);
 }
 
-.table {
-  --table-even-hover-background-color: var(--secondary-dark);
-  --table-odd-hover-background-color: var(--primary-dark);
+.navbar {
+  --navbar-background-color: var(--secondary-dark);
+}
+
+.head {
+  --head-border: double thick var(--secondary);
+  --head-color: var(--primary);
+}
+
+.sidebar {
+  --sidebar-child-color: var(--secondary);
+  --sidebar-child-hover-background-color: var(--secondary-dark);
 }
 
 .menu {
@@ -43,9 +47,16 @@ a {
   --menu-child-hover-color: var(--primary);
 }
 
-.sidebar {
-  --sidebar-child-color: var(--secondary);
-  --sidebar-child-hover-background-color: var(--secondary-dark);
+.table {
+  --table-even-hover-background-color: var(--secondary-dark);
+  --table-odd-hover-background-color: var(--primary-dark);
+}
+
+.form {
+  --form-border: thick outset var(--secondary);
+  --form-field-box-shadow: unset;
+  --form-field-border: medium outset var(--secondary);
+  --form-field-placeholder-color: var(--primary);
 }
 
 .foot {
