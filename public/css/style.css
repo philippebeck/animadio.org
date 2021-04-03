@@ -54,7 +54,6 @@ a {
 
 .form {
   --form-border: thick outset var(--secondary);
-  --form-field-box-shadow: unset;
   --form-field-border: medium outset var(--secondary);
   --form-field-placeholder-color: var(--primary);
 }
