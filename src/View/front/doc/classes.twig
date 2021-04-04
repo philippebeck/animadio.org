@@ -51,7 +51,7 @@
             {% for category in classes|keys %}
 
             <li>
-                <a class="button-secondary"
+                <a class="btn-primary"
                     href="#class-{{ category }}" 
                     title="Go to {{ category }} Classes !">
                 {{ category }}
@@ -70,7 +70,7 @@
 
         <section id="class-{{ category }}">
             <h4>
-                <a class="btn-secondary btn-lg"
+                <a class="button-primary btn-lg"
                     href="https://github.com/animadio/animadio/tree/master/src/classes/_{{ category }}.scss"
                     title="Go to the {{ category }} file in the GitHub Repository">
                     {{ category|title }} 
