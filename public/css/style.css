@@ -5,59 +5,13 @@
   --serif: 'Gabriela', serif;
   --monospace: 'Share Tech Mono', monospace;
 
+  --primary: rgb(22, 28, 91);
+  --primary-dark: rgba(22, 28, 91, var(--opacity-dark));
+  --primary-light: rgba(22, 28, 91, var(--opacity-light));
+  --secondary: rgb(134, 193, 126);
+  --secondary-dark: rgba(134, 193, 126, var(--opacity-dark));
+  --secondary-light: rgba(134, 193, 126, var(--opacity-light));
+
   --slideT: translate(0, 5vw);
   --slideB: translate(0, -5vw);
-}
-
-body {
-  --body-background-color: var(--grey-light);
-}
-
-h1,
-h2 {
-  --title-color: var(--primary);
-}
-
-h3,
-h4 {
-  --title-color: var(--secondary);
-}
-
-a {
-  --link-color: var(--primary);
-}
-
-.navbar {
-  --navbar-background-color: var(--secondary-dark);
-}
-
-.head {
-  --head-border: double thick var(--secondary);
-  --head-color: var(--primary);
-}
-
-.sidebar {
-  --sidebar-child-color: var(--secondary);
-  --sidebar-child-hover-background-color: var(--secondary-dark);
-}
-
-.menu {
-  --menu-child-background-color: var(--primary-dark);
-  --menu-checked-child-color: var(--primary);
-  --menu-child-hover-color: var(--primary);
-}
-
-.table {
-  --table-even-hover-background-color: var(--secondary-dark);
-  --table-odd-hover-background-color: var(--primary-dark);
-}
-
-.form {
-  --form-border: thick outset var(--secondary);
-  --form-field-border: medium outset var(--secondary);
-  --form-field-placeholder-color: var(--primary);
-}
-
-.foot {
-  --foot-list-background-color: var(--primary);
 }
