@@ -29,7 +29,7 @@ class ElementController extends MainController
     {
         $elements = ModelFactory::getModel("Element")->listData();
 
-        return $this->render("front/element.twig", [
+        return $this->render("front/items/element.twig", [
             "elements" => $elements
         ]);
     }

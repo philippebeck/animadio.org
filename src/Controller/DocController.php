@@ -33,7 +33,7 @@ class DocController extends MainController
 
         $breakpoints = ModelFactory::getModel("Breakpoint")->listData();
 
-        return $this->render("front/doc.twig", [
+        return $this->render("front/doc/doc.twig", [
             "classes"       => $classes,
             "variables"     => $variables,
             "animations"    => $animations,

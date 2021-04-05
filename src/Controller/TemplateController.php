@@ -29,7 +29,7 @@ class TemplateController extends MainController
     {
         $templates = ModelFactory::getModel("Template")->listData();
 
-        return $this->render("front/template.twig", [
+        return $this->render("front/items/template.twig", [
             "templates" => $templates
         ]);
     }
