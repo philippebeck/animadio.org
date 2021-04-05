@@ -34,7 +34,7 @@ class AdminController extends MainController
         $themes         = ModelFactory::getModel("Theme")->listData();
         $users          = ModelFactory::getModel("User")->listData();
 
-        return $this->render("back/admin.twig", [
+        return $this->render("back/admin/admin.twig", [
             "classes"       => $classes,
             "variables"     => $variables,
             "animations"    => $animations,

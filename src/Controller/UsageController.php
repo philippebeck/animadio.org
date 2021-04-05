@@ -25,7 +25,7 @@ class UsageController extends MainController
         $variables = ModelFactory::getModel("Variable")->listVariablesWithCategory();
         $variables = $this->getArray()->getArrayElements($variables);
 
-        return $this->render("front/usage.twig", [
+        return $this->render("front/usage/usage.twig", [
             "variables" => $variables
         ]);
     }

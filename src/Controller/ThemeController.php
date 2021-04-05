@@ -29,7 +29,7 @@ class ThemeController extends MainController
     {
         $themes = ModelFactory::getModel("Theme")->listData();
 
-        return $this->render("front/theme.twig", [
+        return $this->render("front/items/theme.twig", [
             "themes" => $themes
         ]);
     }
