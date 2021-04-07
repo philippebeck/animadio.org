@@ -13,16 +13,13 @@
         <thead>
             <tr>
                 <th>
-                    Name
-                    <br>
-                    (Id)
+                    Class
                 </th>
                 <th>
                     Naming
                     <hr>
                     Category
                 </th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -32,7 +29,14 @@
                 <td>
                     .{{ class.name }} 
                     <br>
-                    ({{ class.id }})
+                    <a class="btn-blue" 
+                        href="{{ url('class!update', {'id': class.id}) }}">
+                        <i class="fas fa-pen-square fa-fw fa-lg"></i>
+                    </a>
+                    <a class="btn-red" 
+                        href="{{ url('class!delete', {'id': class.id}) }}">
+                        <i class="fas fa-times-circle fa-fw fa-lg"></i>
+                    </a>
                 </td>
                 <td>
 
@@ -52,20 +56,8 @@
                     {% endif %}   
                 {% endif %}
 
-                <hr>
+                    <hr>
                 {{ class.category }}
-
-                </td>
-                <td>
-                    <a class="btn-blue" 
-                        href="{{ url('class!update', {'id': class.id}) }}">
-                        <i class="fas fa-pen-square fa-fw fa-lg"></i>
-                    </a>
-                    <br>
-                    <a class="btn-red" 
-                        href="{{ url('class!delete', {'id': class.id}) }}">
-                        <i class="fas fa-times-circle fa-fw fa-lg"></i>
-                    </a>
                 </td>
             </tr>
         {% endfor %}

@@ -12,9 +12,8 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Name (Id)</th>
+                <th>Template</th>
                 <th>Definition</th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -30,20 +29,17 @@
                                 alt="The {{ template.name }} example">
                             <figcaption>
                                 {{ template.name }} 
-                                ({{ template.id }})
                             </figcaption>
                         </figure>                        
                     </a>
                 </td>
                 <td>
                     {{ template.definition }}
-                </td>
-                <td>
+                    <br>
                     <a class="btn-blue" 
                         href="{{ url('template!update', {'id': template.id}) }}">
                         <i class="fas fa-pen-square fa-fw fa-lg"></i>
                     </a>
-                    <br>
                     <a class="btn-red" 
                         href="{{ url('template!delete', {'id': template.id}) }}">
                         <i class="fas fa-times-circle fa-fw fa-lg"></i>
