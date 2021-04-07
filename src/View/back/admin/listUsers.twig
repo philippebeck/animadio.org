@@ -12,9 +12,8 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Name (Id)</th>
+                <th>User</th>
                 <th>Email</th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -27,19 +26,17 @@
                             src="img/user/{{ user.image }}" 
                             alt="Screenshot of {{ user.name }}">
                         <figcaption>
-                            {{ user.name }} ({{ user.id }})
+                            {{ user.name }}
                         </figcaption>
                     </figure>
                 </td>
                 <td>
                     {{ user.email }}
-                </td>
-                <td>
+                    <br>
                     <a class="btn-blue" 
                         href="{{ url('user!update', {'id': user.id}) }}">
                         <i class="fas fa-pen-square fa-fw fa-lg"></i>
                     </a>
-                    <br>
                     <a class="btn-red" 
                         href="{{ url('user!delete', {'id': user.id}) }}">
                         <i class="fas fa-times-circle fa-fw fa-lg"></i>

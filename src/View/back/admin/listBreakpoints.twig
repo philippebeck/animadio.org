@@ -14,7 +14,6 @@
             <tr>
                 <th>Key</th>
                 <th>Screen Width</th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -26,13 +25,11 @@
                 </td>
                 <td>
                     {{ breakpoint.width }}
-                </td>
-                <td>
+                    <br>
                     <a class="btn-blue" 
                         href="{{ url('breakpoint!update', {'id': breakpoint.id}) }}">
                         <i class="fas fa-pen-square fa-fw fa-lg"></i>
                     </a>
-                    <br>
                     <a class="btn-red" 
                         href="{{ url('breakpoint!delete', {'id': breakpoint.id}) }}">
                         <i class="fas fa-times-circle fa-fw fa-lg"></i>

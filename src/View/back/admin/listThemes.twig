@@ -12,9 +12,8 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Name (Id)</th>
+                <th>Theme</th>
                 <th>Definition</th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -30,20 +29,17 @@
                                 alt="The {{ theme.name }} example">
                             <figcaption>
                                 {{ theme.name }} 
-                                ({{ theme.id }})
                             </figcaption>
                         </figure>                        
                     </a>
                 </td>
                 <td>
                     {{ theme.definition }}
-                </td>
-                <td>
+                    <br>
                     <a class="btn-blue" 
                         href="{{ url('theme!update', {'id': theme.id}) }}">
                         <i class="fas fa-pen-square fa-fw fa-lg"></i>
                     </a>
-                    <br>
                     <a class="btn-red" 
                         href="{{ url('theme!delete', {'id': theme.id}) }}">
                         <i class="fas fa-times-circle fa-fw fa-lg"></i>

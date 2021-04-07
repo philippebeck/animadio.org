@@ -13,12 +13,9 @@
         <thead>
             <tr>
                 <th>
-                    Name
-                    <br>
-                    (Id)
+                    Variable
                 </th>
                 <th>Category</th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -28,21 +25,17 @@
                 <td>
                     --{{ variable.name }} 
                     <br>
-                    ({{ variable.id }})
-                </td>
-                <td>
-                    {{ variable.category }}
-                </td>
-                <td>
                     <a class="btn-blue" 
                         href="{{ url('variable!update', {'id': variable.id}) }}">
                         <i class="fas fa-pen-square fa-fw fa-lg"></i>
                     </a>
-                    <br>
                     <a class="btn-red" 
                         href="{{ url('variable!delete', {'id': variable.id}) }}">
                         <i class="fas fa-times-circle fa-fw fa-lg"></i>
                     </a>
+                </td>
+                <td>
+                    {{ variable.category }}
                 </td>
             </tr>
         {% endfor %}

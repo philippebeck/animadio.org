@@ -13,16 +13,13 @@
         <thead>
             <tr>
                 <th>
-                    Name
-                    <br>
-                    (Id)
+                    Animation
                 </th>
                 <th>
                     Effect
                     <hr>
                     Category
                 </th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -32,23 +29,19 @@
                 <td>
                     {{ animation.name }}
                     <br>
-                    ({{ animation.id }})
+                    <a class="btn-blue" 
+                        href="{{ url('animation!update', {'id': animation.id}) }}">
+                        <i class="fas fa-pen-square fa-fw fa-lg"></i>
+                    </a>
+                    <a class="btn-red" 
+                        href="{{ url('animation!delete', {'id': animation.id}) }}">
+                        <i class="fas fa-times-circle fa-fw fa-lg"></i>
+                    </a>
                 </td>
                 <td>
                     {{ animation.effect }}  
                     <hr>
                     {{ animation.category }}                  
-                </td>
-                <td>
-                    <a class="btn-blue" 
-                        href="{{ url('animation!update', {'id': animation.id}) }}">
-                        <i class="fas fa-pen-square fa-fw fa-lg"></i>
-                    </a>
-                    <br>
-                    <a class="btn-red" 
-                        href="{{ url('animation!delete', {'id': animation.id}) }}">
-                        <i class="fas fa-times-circle fa-fw fa-lg"></i>
-                    </a>
                 </td>
             </tr>
         {% endfor %}

@@ -12,9 +12,8 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Name (Id)</th>
+                <th>Element</th>
                 <th>Definition</th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -30,26 +29,23 @@
                                 alt="The {{ element.name }} example">
                             <figcaption>
                                 {{ element.name }} 
-                                ({{ element.id }})
                             </figcaption>
                         </figure>                        
                     </a>
                 </td>
                 <td>
                     {{ element.definition }}
-                </td>
-                <td>
+                    <br>
                     <a class="btn-blue" 
                         href="{{ url('element!update', {'id': element.id}) }}">
                         <i class="fas fa-pen-square fa-fw fa-lg"></i>
                     </a>
-                    <br>
                     <a class="btn-red" 
                         href="{{ url('element!delete', {'id': element.id}) }}">
                         <i class="fas fa-times-circle fa-fw fa-lg"></i>
                     </a>
                 </td>
-            </tr>
+             </tr>
         {% endfor %}
 
         </tbody>
