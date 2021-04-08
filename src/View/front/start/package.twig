@@ -16,10 +16,19 @@
     </header>
 
     <nav class="sidebar">
-        <a href="#package-home" 
-            title="Package Manager Home">
-            <i class="fas fa-chevron-circle-up fa-lg fa-fw"></i>
-        </a>
+        <input id="sidebar-package"
+            class="sidebar-check" 
+            type="checkbox">
+        <label for="sidebar-package"
+            class="sidebar-open" 
+            title="Show Sidebar">
+            <i class="far fa-eye fa-lg fa-fw"></i>
+        </label>
+        <label for="sidebar-package"
+            title="Hide Sidebar">
+            <i class="far fa-eye-slash fa-lg fa-fw"></i>
+        </label>
+
         <a href="#package-npm" 
             title="Package Installation with NPM">
             <i class="fab fa-npm fa-lg fa-fw"></i>
@@ -35,6 +44,11 @@
         <a href="#package-prod" 
             title="Package Integration in Production">
             <i class="fas fa-globe fa-lg fa-fw"></i>
+        </a>
+        
+        <a href="#package-home" 
+            title="Package Manager Home">
+            <i class="fas fa-chevron-circle-up fa-lg fa-fw"></i>
         </a>
     </nav>
 

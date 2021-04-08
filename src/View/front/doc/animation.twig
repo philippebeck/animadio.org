@@ -1,4 +1,4 @@
-<article id="animations-home"
+<article id="animation-home"
     class="menu-target3">
     <h2>
         <i class="fas fa-images fa-lg"></i>
@@ -13,26 +13,40 @@
     </header>
 
     <nav class="sidebar">
-        <a href="#animations-home" 
-            title="Animations Home">
-            <i class="fas fa-chevron-circle-up fa-lg fa-fw"></i>
-        </a>
-        <a href="#animations-translate" 
+        <input id="sidebar-animation"
+            class="sidebar-check" 
+            type="checkbox">
+        <label for="sidebar-animation"
+            class="sidebar-open" 
+            title="Show Sidebar">
+            <i class="far fa-eye fa-lg fa-fw"></i>
+        </label>
+        <label for="sidebar-animation"
+            title="Hide Sidebar">
+            <i class="far fa-eye-slash fa-lg fa-fw"></i>
+        </label>
+
+        <a href="#animation-translate" 
             title="Translate Animations">
             <i class="fas fa-arrows-alt fa-lg fa-fw"></i>
         </a>
-        <a href="#animations-rotate" 
+        <a href="#animation-rotate" 
             title="Rotate Animations">
             <i class="fas fa-sync fa-lg fa-fw"></i>
         </a>
-        <a href="#animations-scale" 
+        <a href="#animation-scale" 
             title="Scale Animations">
             <i class="fas fa-search-plus fa-lg fa-fw"></i>
         </a>
-        <a href="#animations-skew" 
+        <a href="#animation-skew" 
             title="Skew Animations">
             <i class="fas fa-random fa-lg fa-fw"></i>
-        </a>                
+        </a>
+
+        <a href="#animation-home" 
+            title="Animations Home">
+            <i class="fas fa-chevron-circle-up fa-lg fa-fw"></i>
+        </a>
     </nav>
 
     <i class="fas fa-chevron-down fa-2x mar-top-md"
@@ -41,7 +55,7 @@
 
     {% for category, animationCat in animations %}
 
-    <section id="animations-{{ category }}">
+    <section id="animation-{{ category }}">
         <h3>
             {{ category|title }} Animations
         </h3>
