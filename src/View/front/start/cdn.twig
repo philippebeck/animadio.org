@@ -16,10 +16,19 @@
     </header>
 
     <nav class="sidebar">
-        <a href="#cdn-home" 
-            title="CDN Home">
-            <i class="fas fa-chevron-circle-up fa-lg fa-fw"></i>
-        </a>
+        <input id="sidebar-cdn"
+            class="sidebar-check" 
+            type="checkbox">
+        <label for="sidebar-cdn"
+            class="sidebar-open" 
+            title="Show Sidebar">
+            <i class="far fa-eye fa-lg fa-fw"></i>
+        </label>
+        <label for="sidebar-cdn"
+            title="Hide Sidebar">
+            <i class="far fa-eye-slash fa-lg fa-fw"></i>
+        </label>
+
         <a href="#cdn-dev" 
             title="CDN Integration in Development">
             <i class="fas fa-code fa-lg fa-fw"></i>
@@ -27,6 +36,11 @@
         <a href="#cdn-prod" 
             title="CDN Integration in Production">
             <i class="fas fa-globe fa-lg fa-fw"></i>
+        </a>
+
+        <a href="#cdn-home" 
+            title="CDN Home">
+            <i class="fas fa-chevron-circle-up fa-lg fa-fw"></i>
         </a>
     </nav>
 

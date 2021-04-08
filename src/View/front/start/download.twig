@@ -11,10 +11,19 @@
     </header>
 
     <nav class="sidebar">
-        <a href="#download-home" 
-            title="Download Home">
-            <i class="fas fa-chevron-circle-up fa-lg fa-fw"></i>
-        </a>
+        <input id="sidebar-download"
+            class="sidebar-check" 
+            type="checkbox">
+        <label for="sidebar-download"
+            class="sidebar-open" 
+            title="Show Sidebar">
+            <i class="far fa-eye fa-lg fa-fw"></i>
+        </label>
+        <label for="sidebar-download"
+            title="Hide Sidebar">
+            <i class="far fa-eye-slash fa-lg fa-fw"></i>
+        </label>
+
         <a href="#download-clone" 
             title="Download Installation with Git Clone">
             <i class="fab fa-git-alt fa-lg fa-fw"></i>
@@ -34,6 +43,11 @@
         <a href="#download-prod" 
             title="Download Integration in Production">
             <i class="fas fa-globe fa-lg fa-fw"></i>
+        </a>
+        
+        <a href="#download-home" 
+            title="Download Home">
+            <i class="fas fa-chevron-circle-up fa-lg fa-fw"></i>
         </a>
     </nav>
 
