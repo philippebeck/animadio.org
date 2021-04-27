@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aabc730d6cc02c32b45f8badcf535dee",
+    "content-hash": "26d091b64f149edb2685d1c63c3ee5fc",
     "packages": [
         {
             "name": "devsagency/pam",
-            "version": "4.7.1",
+            "version": "5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/devsagency/pam.git",
-                "reference": "f0be5afcddb2321e734815313c2d77976af987e2"
+                "reference": "1c3de94ddcbd821ee1a119b884f2d08b2ca0edf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/devsagency/pam/zipball/f0be5afcddb2321e734815313c2d77976af987e2",
-                "reference": "f0be5afcddb2321e734815313c2d77976af987e2",
+                "url": "https://api.github.com/repos/devsagency/pam/zipball/1c3de94ddcbd821ee1a119b884f2d08b2ca0edf5",
+                "reference": "1c3de94ddcbd821ee1a119b884f2d08b2ca0edf5",
                 "shasum": ""
             },
             "require": {
@@ -69,7 +69,7 @@
                 "superglobals",
                 "twig"
             ],
-            "time": "2021-04-18T13:34:19+00:00"
+            "time": "2021-04-25T15:54:01+00:00"
         },
         {
             "name": "doctrine/lexer",
