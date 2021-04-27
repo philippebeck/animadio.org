@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b680bd41013bccc4a6ae03e907cddf79",
+    "content-hash": "26d091b64f149edb2685d1c63c3ee5fc",
     "packages": [
         {
             "name": "devsagency/pam",
-            "version": "4.6.1",
+            "version": "5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/devsagency/pam.git",
-                "reference": "e58aab32584606bb134e34c482a8e4636ae6fd39"
+                "reference": "1c3de94ddcbd821ee1a119b884f2d08b2ca0edf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/devsagency/pam/zipball/e58aab32584606bb134e34c482a8e4636ae6fd39",
-                "reference": "e58aab32584606bb134e34c482a8e4636ae6fd39",
+                "url": "https://api.github.com/repos/devsagency/pam/zipball/1c3de94ddcbd821ee1a119b884f2d08b2ca0edf5",
+                "reference": "1c3de94ddcbd821ee1a119b884f2d08b2ca0edf5",
                 "shasum": ""
             },
             "require": {
@@ -28,11 +28,11 @@
                 "ext-pdo": "*",
                 "google/recaptcha": "^1.2.4",
                 "php": "^7.3",
-                "swiftmailer/swiftmailer": "^6.2.3",
-                "twig/twig": "^3.0.3"
+                "swiftmailer/swiftmailer": "^6.2.7",
+                "twig/twig": "^3.3.0"
             },
             "require-dev": {
-                "tracy/tracy": "^2.7.5"
+                "tracy/tracy": "^2.8.3"
             },
             "type": "library",
             "autoload": {
@@ -69,7 +69,7 @@
                 "superglobals",
                 "twig"
             ],
-            "time": "2021-02-03T17:09:01+00:00"
+            "time": "2021-04-25T15:54:01+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -149,16 +149,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "62c3b73c581c834885acf6e120b412b76acc495a"
+                "reference": "c81f18a3efb941d8c4d2e025f6183b5c6d697307"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/62c3b73c581c834885acf6e120b412b76acc495a",
-                "reference": "62c3b73c581c834885acf6e120b412b76acc495a",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/c81f18a3efb941d8c4d2e025f6183b5c6d697307",
+                "reference": "c81f18a3efb941d8c4d2e025f6183b5c6d697307",
                 "shasum": ""
             },
             "require": {
@@ -209,7 +209,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-07T14:33:28+00:00"
+            "time": "2021-04-01T18:37:14+00:00"
         },
         {
             "name": "google/recaptcha",
