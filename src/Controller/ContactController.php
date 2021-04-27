@@ -14,6 +14,11 @@ use Twig\Error\SyntaxError;
 class ContactController extends MainController
 {
     /**
+     * @var array
+     */
+    private $mail = [];
+
+    /**
      * @return string
      * @throws LoaderError
      * @throws RuntimeError
@@ -22,30 +27,36 @@ class ContactController extends MainController
     public function defaultMethod()
     {
         if ($this->checkArray($this->getPost())) {
-            $mail = $this->getPost();
 
-            if (isset($mail["g-recaptcha-response"]) && !empty($mail["g-recaptcha-response"])) {
-                
-                if ($this->checkRecaptcha($mail["g-recaptcha-response"])) {
-                    $this->sendMail($mail);
-
-                    $this->setSession([
-                        "message"   => "Message successfully sent to " . MAIL_USERNAME . " !", 
-                        "type"      => "green"
-                    ]);
-
-                    $this->redirect("home");
-                }
-            }
-
-            $this->setSession([
-                "message"   => "Check the reCAPTCHA !", 
-                "type"      => "red"
-            ]);
-
-            $this->redirect("contact");
+            $this->mail = $this->getPost();
+            $this->checkSecurity();
         }
 
         return $this->render("front/contact.twig");
+    }
+
+    private function checkSecurity()
+    {
+        if (isset($this->mail["g-recaptcha-response"]) && !empty($this->mail["g-recaptcha-response"])) {
+            if ($this->checkRecaptcha(
+
+                $this->mail["g-recaptcha-response"])) {
+                $this->sendMail($this->mail);
+
+                $this->setSession([
+                    "message"   => "Message sent successfully to " . MAIL_USERNAME . " !",
+                    "type"      => "green"
+                ]);
+
+                $this->redirect("home");
+            }
+        }
+
+        $this->setSession([
+            "message"   => "Check the reCAPTCHA !", 
+            "type"      => "red"
+        ]);
+
+        $this->redirect("contact");
     }
 }
