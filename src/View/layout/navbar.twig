@@ -65,13 +65,13 @@
 
     <ul>
 
-    {% if (isLogged()) %}
+    {% if (checkUser()) %}
         <li>
             <a href="{{ url('admin') }}" 
-                title="{{ getUserVar('name') }} Admin">
+                title="{{ getSession('name') }} Admin">
                 <img class="bord-circle" 
-                    src="img/user/{{ getUserVar('image') }}" 
-                    alt="{{ getUserVar('name') }} Picture">
+                    src="img/user/{{ getSession('image') }}" 
+                    alt="{{ getSession('name') }} Picture">
             </a>
         </li>
         <li>
