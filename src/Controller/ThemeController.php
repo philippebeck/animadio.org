@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use Pam\Controller\MainController;
-use Pam\Model\Factory\ModelFactory;
+use Pam\Model\ModelFactory;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
@@ -29,10 +29,27 @@ class ThemeController extends MainController
     {
         $themes = ModelFactory::getModel("Theme")->listData();
 
-        return $this->render("front/items/theme.twig", [
-            "themes" => $themes
-        ]);
+        return $this->render("front/theme.twig", ["themes" => $themes]);
     }
+
+    // ******************** SETTERS ******************** \\
+
+    private function setThemeData()
+    {
+        $this->theme["name"]          = (string) trim($this->getPost("name"));
+        $this->theme["definition"]    = (string) trim($this->getPost("definition"));
+
+        $this->theme["link"]  = (string) trim($this->getPost("link"));
+        $this->theme["link"]  = str_replace("https://codepen.io/animadio/pen/", "", $this->theme["link"]);
+    }
+
+    private function setThemeImage()
+    {
+        $this->getUploadedFile("img/themes/", $this->theme["name"] . ".png");
+        $this->getThumbnail("img/themes/" . $this->theme["name"] . ".png", 600);
+    }
+
+    // ******************** CRUD ******************** \\
 
     /**
      * @return string
@@ -42,36 +59,25 @@ class ThemeController extends MainController
      */
     public function createMethod()
     {
-        if ($this->getSecurity()->checkIsAdmin() !== true) {
+        if ($this->checkAdmin() !== true) {
             $this->redirect("home");
         }
 
-        if (!empty($this->getPost()->getPostArray())) {
+        if ($this->checkArray($this->getPost())) {
             $this->setThemeData();
             $this->setThemeImage();
 
             ModelFactory::getModel("Theme")->createData($this->theme);
-            $this->getSession()->createAlert("New theme successfully created !", "green");
+
+            $this->setSession([
+                "message"   => "New Theme successfully created !", 
+                "type"      => "green"
+            ]);
 
             $this->redirect("admin");
         }
 
-        return $this->render("back/theme/createTheme.twig");
-    }
-
-    private function setThemeData()
-    {
-        $this->theme["name"]          = (string) trim($this->getPost()->getPostVar("name"));
-        $this->theme["definition"]    = (string) trim($this->getPost()->getPostVar("definition"));
-
-        $this->theme["link"]  = (string) trim($this->getPost()->getPostVar("link"));
-        $this->theme["link"]  = str_replace("https://codepen.io/animadio/pen/", "", $this->theme["link"]);
-    }
-
-    private function setThemeImage()
-    {
-        $this->getFiles()->uploadFile("img/themes/", $this->theme["name"] . ".png");
-        $this->getImage()->makeThumbnail("img/themes/" . $this->theme["name"] . ".png", 600);
+        return $this->render("back/createTheme.twig");
     }
 
     /**
@@ -82,38 +88,47 @@ class ThemeController extends MainController
      */
     public function updateMethod()
     {
-        if ($this->getSecurity()->checkIsAdmin() !== true) {
+        if ($this->checkAdmin() !== true) {
             $this->redirect("home");
         }
 
-        if (!empty($this->getPost()->getPostArray())) {
+        if ($this->checkArray($this->getPost())) {
             $this->setThemeData();
 
-            if (!empty($this->getFiles()->getFileVar("name"))) {
+            if ($this->checkArray($this->getFiles("file"), "name")) {
                 $this->setThemeImage();
             }
 
-            ModelFactory::getModel("Theme")->updateData($this->getGet()->getGetVar("id"), $this->theme);
-            $this->getSession()->createAlert("Successful modification of the theme !", "blue");
+            ModelFactory::getModel("Theme")->updateData(
+                $this->getGet("id"), 
+                $this->theme
+            );
+
+            $this->setSession([
+                "message"   => "Successful modification of the Theme !", 
+                "type"      => "blue"
+            ]);
 
             $this->redirect("admin");
         }
 
-        $theme = ModelFactory::getModel("Theme")->readData($this->getGet()->getGetVar("id"));
+        $theme = ModelFactory::getModel("Theme")->readData($this->getGet("id"));
 
-        return $this->render("back/theme/updateTheme.twig", [
-            "theme" => $theme
-        ]);
+        return $this->render("back/updateTheme.twig", ["theme" => $theme]);
     }
 
     public function deleteMethod()
     {
-        if ($this->getSecurity()->checkIsAdmin() !== true) {
+        if ($this->checkAdmin() !== true) {
             $this->redirect("home");
         }
 
-        ModelFactory::getModel("Theme")->deleteData($this->getGet()->getGetVar("id"));
-        $this->getSession()->createAlert("Theme actually deleted !", "red");
+        ModelFactory::getModel("Theme")->deleteData($this->getGet("id"));
+
+        $this->setSession([
+            "message"   => "Theme actually deleted !", 
+            "type"      => "red"
+        ]);
 
         $this->redirect("admin");
     }

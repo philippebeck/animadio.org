@@ -1,19 +1,18 @@
 <section class="menu-target8">
     <h2>
-        <i class="fas fa-users"></i> 
-        Users
+        <i class="fas fa-user-ninja"></i> 
+        Administrators
     </h2>
 
     <a class="btn-green btn-lg" 
         href="{{ url('user!create') }}">
-        New User
+        New Administrator
     </a>
 
     <table class="table">
         <thead>
             <tr>
-                <th>User</th>
-                <th>Email</th>
+                <th>Administrator</th>
             </tr>
         </thead>
         <tbody>
@@ -22,25 +21,27 @@
             <tr>
                 <td>
                     <figure>
-                        <img class="bord-primary" 
+                        <img class="bord-violet" 
                             src="img/user/{{ user.image }}" 
-                            alt="Screenshot of {{ user.name }}">
+                            alt="Photo de {{ user.name }}">
                         <figcaption>
                             {{ user.name }}
                         </figcaption>
                     </figure>
-                </td>
-                <td>
-                    {{ user.email }}
-                    <br>
                     <a class="btn-blue" 
-                        href="{{ url('user!update', {'id': user.id}) }}">
+                        href="{{ url('user!update', {'id': user.id}) }}"
+                        title="Edit the Administrator">
                         <i class="fas fa-pen-square fa-fw fa-lg"></i>
                     </a>
                     <a class="btn-red" 
-                        href="{{ url('user!delete', {'id': user.id}) }}">
+                        href="{{ url('user!delete', {'id': user.id}) }}"
+                        title="Delete the Administrator">
                         <i class="fas fa-times-circle fa-fw fa-lg"></i>
                     </a>
+                    <br>
+                    <p>
+                        {{ user.email }}
+                    </p>
                 </td>
             </tr>
         {% endfor %}

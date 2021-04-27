@@ -68,11 +68,11 @@
     {{ include('layout/navbar.twig') }}
 
     <header>
-        {% if (hasAlert()) %}
+        {% if (checkUser(true)) %}
 
         <p id="alert" 
-            class="bg-{{ getAlertType() }} color-white align-center">
-            {{ getAlertMessage() }}
+            class="bg-{{ getAlert(true) }} color-white align-center">
+            {{ getAlert() }}
         </p>
 
         {% endif %}

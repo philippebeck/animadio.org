@@ -21,6 +21,6 @@ class StartController extends MainController
      */
     public function defaultMethod()
     {
-        return $this->render("front/start/start.twig");
+        return $this->render("front/start.twig");
     }
 }

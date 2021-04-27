@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use Pam\Controller\MainController;
-use Pam\Model\Factory\ModelFactory;
+use Pam\Model\ModelFactory;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
@@ -30,6 +30,16 @@ class ClassController extends MainController
         $this->redirect("doc");
     }
 
+    private function setClassData()
+    {
+        $this->class["name"] = (string) trim($this->getPost("name"));
+
+        $this->class["category_id"] = (int) $this->getPost("category_id");
+        $this->class["media"]       = (int) $this->getPost("media");
+        $this->class["concat"]      = (int) $this->getPost("concat");
+        $this->class["state_id"]    = (int) $this->getPost("state_id");
+    }
+
     /**
      * @return string
      * @throws LoaderError
@@ -38,15 +48,19 @@ class ClassController extends MainController
      */
     public function createMethod()
     {
-        if ($this->getSecurity()->checkIsAdmin() !== true) {
+        if ($this->checkAdmin() !== true) {
             $this->redirect("home");
         }
 
-        if (!empty($this->getPost()->getPostArray())) {
+        if ($this->checkArray($this->getPost())) {
             $this->setClassData();
 
             ModelFactory::getModel("Class")->createData($this->class);
-            $this->getSession()->createAlert("New class successfully created !", "green");
+
+            $this->setSession([
+                "message"   => "New Class successfully created !", 
+                "type"      => "green"
+            ]);
 
             $this->redirect("admin");
         }
@@ -54,20 +68,10 @@ class ClassController extends MainController
         $categories = ModelFactory::getModel("ClassCat")->listData();
         $states     = ModelFactory::getModel("ClassState")->listData();
 
-        return $this->render("back/class/createClass.twig", [
+        return $this->render("back/createClass.twig", [
             "categories"    => $categories,
             "states"        => $states
         ]);
-    }
-
-    private function setClassData()
-    {
-        $this->class["name"] = (string) trim($this->getPost()->getPostVar("name"));
-
-        $this->class["category_id"] = (int) $this->getPost()->getPostVar("category_id");
-        $this->class["media"]       = (int) $this->getPost()->getPostVar("media");
-        $this->class["concat"]      = (int) $this->getPost()->getPostVar("concat");
-        $this->class["state_id"]    = (int) $this->getPost()->getPostVar("state_id");
     }
 
     /**
@@ -78,24 +82,31 @@ class ClassController extends MainController
      */
     public function updateMethod()
     {
-        if ($this->getSecurity()->checkIsAdmin() !== true) {
+        if ($this->checkAdmin() !== true) {
             $this->redirect("home");
         }
 
-        if (!empty($this->getPost()->getPostArray())) {
+        if ($this->checkArray($this->getPost())) {
             $this->setClassData();
 
-            ModelFactory::getModel("Class")->updateData($this->getGet()->getGetVar("id"), $this->class);
-            $this->getSession()->createAlert("Successful modification of the class !", "blue");
+            ModelFactory::getModel("Class")->updateData(
+                $this->getGet("id"), 
+                $this->class
+            );
+
+            $this->setSession([
+                "message"   => "Successful modification of the Class !", 
+                "type"      => "blue"
+            ]);
 
             $this->redirect("admin");
         }
 
-        $class      = ModelFactory::getModel("Class")->readData($this->getGet()->getGetVar("id"));
+        $class      = ModelFactory::getModel("Class")->readData($this->getGet("id"));
         $categories = ModelFactory::getModel("ClassCat")->listData();
         $states     = ModelFactory::getModel("ClassState")->listData();
 
-        return $this->render("back/class/updateClass.twig", [
+        return $this->render("back/updateClass.twig", [
             "class"         => $class,
             "categories"    => $categories,
             "states"        => $states
@@ -104,12 +115,16 @@ class ClassController extends MainController
 
     public function deleteMethod()
     {
-        if ($this->getSecurity()->checkIsAdmin() !== true) {
+        if ($this->checkAdmin() !== true) {
             $this->redirect("home");
         }
 
-        ModelFactory::getModel("Class")->deleteData($this->getGet()->getGetVar("id"));
-        $this->getSession()->createAlert("Class actually deleted !", "red");
+        ModelFactory::getModel("Class")->deleteData($this->getGet("id"));
+
+        $this->setSession([
+            "message"   => "Class actually deleted !", 
+            "type"      => "red"
+        ]);
 
         $this->redirect("admin");
     }

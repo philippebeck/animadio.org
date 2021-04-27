@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use Pam\Controller\MainController;
-use Pam\Model\Factory\ModelFactory;
+use Pam\Model\ModelFactory;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
@@ -29,10 +29,27 @@ class TemplateController extends MainController
     {
         $templates = ModelFactory::getModel("Template")->listData();
 
-        return $this->render("front/items/template.twig", [
-            "templates" => $templates
-        ]);
+        return $this->render("front/template.twig", ["templates" => $templates]);
     }
+
+    // ******************** SETTERS ******************** \\
+
+    private function setTemplateData()
+    {
+        $this->template["name"]          = (string) trim($this->getPost("name"));
+        $this->template["definition"]    = (string) trim($this->getPost("definition"));
+
+        $this->template["link"]  = (string) trim($this->getPost("link"));
+        $this->template["link"]  = str_replace("https://codepen.io/animadio/pen/", "", $this->template["link"]);
+    }
+
+    private function setTemplateImage()
+    {
+        $this->getUploadedFile("img/templates/", $this->template["name"] . ".png");
+        $this->getThumbnail("img/templates/" . $this->template["name"] . ".png", 600);
+    }
+
+    // ******************** CRUD ******************** \\
 
     /**
      * @return string
@@ -42,36 +59,25 @@ class TemplateController extends MainController
      */
     public function createMethod()
     {
-        if ($this->getSecurity()->checkIsAdmin() !== true) {
+        if ($this->checkAdmin() !== true) {
             $this->redirect("home");
         }
 
-        if (!empty($this->getPost()->getPostArray())) {
+        if ($this->checkArray($this->getPost())) {
             $this->setTemplateData();
             $this->setTemplateImage();
 
             ModelFactory::getModel("Template")->createData($this->template);
-            $this->getSession()->createAlert("New template successfully created !", "green");
+
+            $this->setSession([
+                "message"   => "New Template successfully created !", 
+                "type"      => "green"
+            ]);
 
             $this->redirect("admin");
         }
 
-        return $this->render("back/template/createTemplate.twig");
-    }
-
-    private function setTemplateData()
-    {
-        $this->template["name"]          = (string) trim($this->getPost()->getPostVar("name"));
-        $this->template["definition"]    = (string) trim($this->getPost()->getPostVar("definition"));
-
-        $this->template["link"]  = (string) trim($this->getPost()->getPostVar("link"));
-        $this->template["link"]  = str_replace("https://codepen.io/animadio/pen/", "", $this->template["link"]);
-    }
-
-    private function setTemplateImage()
-    {
-        $this->getFiles()->uploadFile("img/templates/", $this->template["name"] . ".png");
-        $this->getImage()->makeThumbnail("img/templates/" . $this->template["name"] . ".png", 600);
+        return $this->render("back/createTemplate.twig");
     }
 
     /**
@@ -82,38 +88,47 @@ class TemplateController extends MainController
      */
     public function updateMethod()
     {
-        if ($this->getSecurity()->checkIsAdmin() !== true) {
+        if ($this->checkAdmin() !== true) {
             $this->redirect("home");
         }
 
-        if (!empty($this->getPost()->getPostArray())) {
+        if ($this->checkArray($this->getPost())) {
             $this->setTemplateData();
 
-            if (!empty($this->getFiles()->getFileVar("name"))) {
+            if ($this->checkArray($this->getFiles("file"), "name")) {
                 $this->setTemplateImage();
             }
 
-            ModelFactory::getModel("Template")->updateData($this->getGet()->getGetVar("id"), $this->template);
-            $this->getSession()->createAlert("Successful modification of the template !", "blue");
+            ModelFactory::getModel("Template")->updateData(
+                $this->getGet("id"), 
+                $this->template
+            );
+
+            $this->setSession([
+                "message"   => "Successful modification of the Template !", 
+                "type"      => "blue"
+            ]);
 
             $this->redirect("admin");
         }
 
-        $template = ModelFactory::getModel("Template")->readData($this->getGet()->getGetVar("id"));
+        $template = ModelFactory::getModel("Template")->readData($this->getGet("id"));
 
-        return $this->render("back/template/updateTemplate.twig", [
-            "template" => $template
-        ]);
+        return $this->render("back/updateTemplate.twig", ["template" => $template]);
     }
 
     public function deleteMethod()
     {
-        if ($this->getSecurity()->checkIsAdmin() !== true) {
+        if ($this->checkAdmin() !== true) {
             $this->redirect("home");
         }
 
-        ModelFactory::getModel("Template")->deleteData($this->getGet()->getGetVar("id"));
-        $this->getSession()->createAlert("Template actually deleted !", "red");
+        ModelFactory::getModel("Template")->deleteData($this->getGet("id"));
+
+        $this->setSession([
+            "message"   => "Template actually deleted !", 
+            "type"      => "red"
+        ]);
 
         $this->redirect("admin");
     }

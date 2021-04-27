@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use Pam\Controller\MainController;
-use Pam\Model\Factory\ModelFactory;
+use Pam\Model\ModelFactory;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
@@ -23,17 +23,17 @@ class DocController extends MainController
     public function defaultMethod()
     {
         $classes    = ModelFactory::getModel("Class")->listClassesWithCategory();
-        $classes    = $this->getArray()->getArrayElements($classes);
+        $classes    = $this->getArrayElements($classes);
 
         $variables  = ModelFactory::getModel("Variable")->listVariablesWithCategory();
-        $variables  = $this->getArray()->getArrayElements($variables);
+        $variables  = $this->getArrayElements($variables);
 
         $animations  = ModelFactory::getModel("Animation")->listAnimationsWithCategory();
-        $animations  = $this->getArray()->getArrayElements($animations);
+        $animations  = $this->getArrayElements($animations);
 
         $breakpoints = ModelFactory::getModel("Breakpoint")->listData();
 
-        return $this->render("front/doc/doc.twig", [
+        return $this->render("front/doc.twig", [
             "classes"       => $classes,
             "variables"     => $variables,
             "animations"    => $animations,
