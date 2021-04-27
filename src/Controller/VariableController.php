@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use Pam\Controller\MainController;
-use Pam\Model\Factory\ModelFactory;
+use Pam\Model\ModelFactory;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
@@ -30,6 +30,12 @@ class VariableController extends MainController
         $this->redirect("doc");
     }
 
+    private function setVariableData()
+    {
+        $this->variable["name"]         = (string) trim($this->getPost("name"));
+        $this->variable["category_id"]  = (int) $this->getPost("category_id");
+    }
+
     /**
      * @return string
      * @throws LoaderError
@@ -38,30 +44,26 @@ class VariableController extends MainController
      */
     public function createMethod()
     {
-        if ($this->getSecurity()->checkIsAdmin() !== true) {
+        if ($this->checkAdmin() !== true) {
             $this->redirect("home");
         }
 
-        if (!empty($this->getPost()->getPostArray())) {
+        if ($this->checkArray($this->getPost())) {
             $this->setVariableData();
 
             ModelFactory::getModel("Variable")->createData($this->variable);
-            $this->getSession()->createAlert("New variable successfully created !", "green");
+
+            $this->setSession([
+                "message"   => "New variable successfully created !", 
+                "type"      => "green"
+            ]);
 
             $this->redirect("admin");
         }
 
         $categories = ModelFactory::getModel("VariableCat")->listData();
 
-        return $this->render("back/variable/createVariable.twig", [
-            "categories" => $categories
-        ]);
-    }
-
-    private function setVariableData()
-    {
-        $this->variable["name"]         = (string) trim($this->getPost()->getPostVar("name"));
-        $this->variable["category_id"]  = (int) $this->getPost()->getPostVar("category_id");
+        return $this->render("back/createVariable.twig", ["categories" => $categories]);
     }
 
     /**
@@ -72,23 +74,30 @@ class VariableController extends MainController
      */
     public function updateMethod()
     {
-        if ($this->getSecurity()->checkIsAdmin() !== true) {
+        if ($this->checkAdmin() !== true) {
             $this->redirect("home");
         }
 
-        if (!empty($this->getPost()->getPostArray())) {
+        if ($this->checkArray($this->getPost())) {
             $this->setVariableData();
 
-            ModelFactory::getModel("Variable")->updateData($this->getGet()->getGetVar("id"), $this->variable);
-            $this->getSession()->createAlert("Successful modification of the variable !", "blue");
+            ModelFactory::getModel("Variable")->updateData(
+                $this->getGet("id"), 
+                $this->variable
+            );
+            
+            $this->setSession([
+                "message"   => "Successful modification of the variable !", 
+                "type"      => "blue"
+            ]);
 
             $this->redirect("admin");
         }
 
-        $variable   = ModelFactory::getModel("Variable")->readData($this->getGet()->getGetVar("id"));
+        $variable   = ModelFactory::getModel("Variable")->readData($this->getGet("id"));
         $categories = ModelFactory::getModel("VariableCat")->listData();
 
-        return $this->render("back/variable/updateVariable.twig", [
+        return $this->render("back/updateVariable.twig", [
             "variable"      => $variable,
             "categories"    => $categories
         ]);
@@ -96,12 +105,16 @@ class VariableController extends MainController
 
     public function deleteMethod()
     {
-        if ($this->getSecurity()->checkIsAdmin() !== true) {
+        if ($this->checkAdmin() !== true) {
             $this->redirect("home");
         }
 
-        ModelFactory::getModel("Variable")->deleteData($this->getGet()->getGetVar("id"));
-        $this->getSession()->createAlert("Variable actually deleted !", "red");
+        ModelFactory::getModel("Variable")->deleteData($this->getGet("id"));
+
+        $this->setSession([
+            "message"   => "Variable actually deleted !", 
+            "type"      => "red"
+        ]);
 
         $this->redirect("admin");
     }

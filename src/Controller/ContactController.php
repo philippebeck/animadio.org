@@ -21,20 +21,27 @@ class ContactController extends MainController
      */
     public function defaultMethod()
     {
-        if (!empty($this->getPost()->getPostArray())) {
-            $mail = $this->getPost()->getPostArray();
+        if ($this->checkArray($this->getPost())) {
+            $mail = $this->getPost();
 
             if (isset($mail["g-recaptcha-response"]) && !empty($mail["g-recaptcha-response"])) {
+                
+                if ($this->checkRecaptcha($mail["g-recaptcha-response"])) {
+                    $this->sendMail($mail);
 
-                if ($this->getSecurity()->checkRecaptcha($mail["g-recaptcha-response"])) {
-                    $this->getMail()->sendMessage($mail);
-                    $this->getSession()->createAlert("Message successfully sent to " . MAIL_USERNAME . " !", "green");
+                    $this->setSession([
+                        "message"   => "Message successfully sent to " . MAIL_USERNAME . " !", 
+                        "type"      => "green"
+                    ]);
 
                     $this->redirect("home");
                 }
             }
 
-            $this->getSession()->createAlert("Check the reCAPTCHA !", "red");
+            $this->setSession([
+                "message"   => "Check the reCAPTCHA !", 
+                "type"      => "red"
+            ]);
 
             $this->redirect("contact");
         }

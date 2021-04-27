@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use Pam\Controller\MainController;
-use Pam\Model\Factory\ModelFactory;
+use Pam\Model\ModelFactory;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
@@ -30,6 +30,12 @@ class BreakpointController extends MainController
         $this->redirect("doc");
     }
 
+    private function setBreakpointData()
+    {
+        $this->breakpoint["media"]  = (string) trim($this->getPost("media"));
+        $this->breakpoint["width"]  = (string) trim($this->getPost("width"));
+    }
+
     /**
      * @return string
      * @throws LoaderError
@@ -38,26 +44,24 @@ class BreakpointController extends MainController
      */
     public function createMethod()
     {
-        if ($this->getSecurity()->checkIsAdmin() !== true) {
+        if ($this->checkAdmin() !== true) {
             $this->redirect("home");
         }
 
-        if (!empty($this->getPost()->getPostArray())) {
+        if ($this->checkArray($this->getPost())) {
             $this->setBreakpointData();
 
             ModelFactory::getModel("Breakpoint")->createData($this->breakpoint);
-            $this->getSession()->createAlert("New breakpoint successfully created !", "green");
+            
+            $this->setSession([
+                "message"   => "New breakpoint successfully created !", 
+                "type"      => "green"
+            ]);
 
             $this->redirect("admin");
         }
 
-        return $this->render("back/breakpoint/createBreakpoint.twig");
-    }
-
-    private function setBreakpointData()
-    {
-        $this->breakpoint["media"]  = (string) trim($this->getPost()->getPostVar("media"));
-        $this->breakpoint["width"]  = (string) trim($this->getPost()->getPostVar("width"));
+        return $this->render("back/createBreakpoint.twig");
     }
 
     /**
@@ -68,34 +72,43 @@ class BreakpointController extends MainController
      */
     public function updateMethod()
     {
-        if ($this->getSecurity()->checkIsAdmin() !== true) {
+        if ($this->checkAdmin() !== true) {
             $this->redirect("home");
         }
 
-        if (!empty($this->getPost()->getPostArray())) {
+        if ($this->checkArray($this->getPost())) {
             $this->setBreakpointData();
 
-            ModelFactory::getModel("Breakpoint")->updateData($this->getGet()->getGetVar("id"), $this->breakpoint);
-            $this->getSession()->createAlert("Successful modification of the breakpoint !", "blue");
+            ModelFactory::getModel("Breakpoint")->updateData(
+                $this->getGet("id"), 
+                $this->breakpoint
+            );
+
+            $this->setSession([
+                "message"   => "Successful modification of the breakpoint !", 
+                "type"      => "blue"
+            ]);
 
             $this->redirect("admin");
         }
 
-        $breakpoint = ModelFactory::getModel("Breakpoint")->readData($this->getGet()->getGetVar("id"));
+        $breakpoint = ModelFactory::getModel("Breakpoint")->readData($this->getGet("id"));
 
-        return $this->render("back/breakpoint/updateBreakpoint.twig", [
-            "breakpoint" => $breakpoint
-        ]);
+        return $this->render("back/updateBreakpoint.twig", ["breakpoint" => $breakpoint]);
     }
 
     public function deleteMethod()
     {
-        if ($this->getSecurity()->checkIsAdmin() !== true) {
+        if ($this->checkAdmin() !== true) {
             $this->redirect("home");
         }
 
-        ModelFactory::getModel("Breakpoint")->deleteData($this->getGet()->getGetVar("id"));
-        $this->getSession()->createAlert("Breakpoint actually deleted !", "red");
+        ModelFactory::getModel("Breakpoint")->deleteData($this->getGet("id"));
+
+        $this->setSession([
+            "message"   => "Breakpoint actually deleted !", 
+            "type"      => "red"
+        ]);
 
         $this->redirect("admin");
     }

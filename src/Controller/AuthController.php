@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use Pam\Controller\MainController;
-use Pam\Model\Factory\ModelFactory;
+use Pam\Model\ModelFactory;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
@@ -27,8 +27,8 @@ class AuthController extends MainController
      */
     public function defaultMethod()
     {
-        if (!empty($this->getPost()->getPostArray())) {
-            $this->user = $this->getPost()->getPostArray();
+        if ($this->checkArray($this->getPost())) {
+            $this->user = $this->getPost();
 
             $this->checkSecurity();
         }
@@ -39,14 +39,16 @@ class AuthController extends MainController
     private function checkSecurity()
     {
         if (isset($this->user["g-recaptcha-response"]) && !empty($this->user["g-recaptcha-response"])) {
-
-            if ($this->getSecurity()->checkRecaptcha($this->user["g-recaptcha-response"])) {
+            if ($this->checkRecaptcha($this->user["g-recaptcha-response"])) {
                 
                 $this->checkLogin();
             }
         }
 
-        $this->getSession()->createAlert("Check the reCAPTCHA !", "red");
+        $this->setSession([
+            "message"   => "Check the reCAPTCHA !", 
+            "type"      => "red"
+        ]);
 
         $this->redirect("auth");
     }
@@ -56,20 +58,28 @@ class AuthController extends MainController
         $user = ModelFactory::getModel("User")->readData($this->user["email"], "email");
 
         if (!password_verify($this->user["pass"], $user["pass"])) {
-            $this->getSession()->createAlert("Failed authentication !", "black");
+            
+            $this->setSession([
+                "message"   => "Failed authentication !", 
+                "type"      => "black"
+            ]);
 
             $this->redirect("auth");
         }
 
-        $this->getSession()->createSession($user);
-        $this->getSession()->createAlert("Successful authentication, welcome " . $user["name"] . " !", "violet");
+        $this->setSession($user);
+
+        $this->setSession([
+            "message"   => "Successful authentication, welcome " . $user["name"] . " !", 
+            "type"      => "violet"
+        ]);
 
         $this->redirect("admin");
     }
 
     public function logoutMethod()
     {
-        $this->getSession()->destroySession();
+        $this->destroyGlobal();
 
         $this->redirect("home");
     }
