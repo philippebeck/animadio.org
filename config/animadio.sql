@@ -1257,5 +1257,6 @@ INSERT INTO `Theme`
 ('Anima',   'KKNOgZG',   'The Animadio theme'),
 ('Astro',   'yLVmYqp',   'A dark theme like space'),
 ('Magic',   'yLVmeYq',   'A theme with magic effect'),
+('Numeric', 'rNjbypv',   'A monochrome theme'),
 ('Spirit',  'BaQXjyR',   'A visual theme for the mind'),
 ('Tool',    'NWbQGZv',   'A theme about mecanic');
