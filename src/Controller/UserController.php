@@ -50,7 +50,7 @@ class UserController extends MainController
     {
         $this->setUserData();
 
-        if ($this->checkArray($this->getFiles(), "name")) {
+        if ($this->checkArray($this->getFiles("file"), "name")) {
             $this->setUserImage();
         }
 
