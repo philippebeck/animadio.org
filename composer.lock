@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7ee9e071ed6b97d149183cb7a0f6dffe",
+    "content-hash": "8ce930891df2445b98b0febb5bdbbfdf",
     "packages": [
         {
             "name": "devsagency/pam",
@@ -873,16 +873,16 @@
     "packages-dev": [
         {
             "name": "tracy/tracy",
-            "version": "v2.8.4",
+            "version": "v2.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tracy.git",
-                "reference": "cb7d3dcd9469aa2aa6722edf6bee2d5d75188079"
+                "reference": "b23da41363546aa750d9f698f21e14815bd78913"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tracy/zipball/cb7d3dcd9469aa2aa6722edf6bee2d5d75188079",
-                "reference": "cb7d3dcd9469aa2aa6722edf6bee2d5d75188079",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/b23da41363546aa750d9f698f21e14815bd78913",
+                "reference": "b23da41363546aa750d9f698f21e14815bd78913",
                 "shasum": ""
             },
             "require": {
@@ -939,7 +939,7 @@
                 "nette",
                 "profiler"
             ],
-            "time": "2021-04-27T21:47:10+00:00"
+            "time": "2021-06-02T15:42:54+00:00"
         }
     ],
     "aliases": [],
