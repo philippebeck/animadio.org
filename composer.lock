@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7ee9e071ed6b97d149183cb7a0f6dffe",
+    "content-hash": "8ce930891df2445b98b0febb5bdbbfdf",
     "packages": [
         {
             "name": "devsagency/pam",
@@ -327,6 +327,7 @@
                     "type": "tidelift"
                 }
             ],
+            "abandoned": "symfony/mailer",
             "time": "2021-03-09T12:30:35+00:00"
         },
         {
@@ -873,22 +874,22 @@
     "packages-dev": [
         {
             "name": "tracy/tracy",
-            "version": "v2.8.4",
+            "version": "v2.8.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tracy.git",
-                "reference": "cb7d3dcd9469aa2aa6722edf6bee2d5d75188079"
+                "reference": "81c769040cd0396eabed3c6d5cebe68399531c7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tracy/zipball/cb7d3dcd9469aa2aa6722edf6bee2d5d75188079",
-                "reference": "cb7d3dcd9469aa2aa6722edf6bee2d5d75188079",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/81c769040cd0396eabed3c6d5cebe68399531c7b",
+                "reference": "81c769040cd0396eabed3c6d5cebe68399531c7b",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-session": "*",
-                "php": ">=7.2 <8.1"
+                "php": ">=7.2 <8.2"
             },
             "conflict": {
                 "nette/di": "<3.0"
@@ -899,8 +900,8 @@
                 "nette/mail": "^3.0",
                 "nette/tester": "^2.2",
                 "nette/utils": "^3.0",
-                "phpstan/phpstan": "^0.12",
-                "psr/log": "^1.0"
+                "phpstan/phpstan": "^1.0",
+                "psr/log": "^1.0 || ^2.0 || ^3.0"
             },
             "type": "library",
             "extra": {
@@ -939,7 +940,7 @@
                 "nette",
                 "profiler"
             ],
-            "time": "2021-04-27T21:47:10+00:00"
+            "time": "2021-11-24T16:04:35+00:00"
         }
     ],
     "aliases": [],
