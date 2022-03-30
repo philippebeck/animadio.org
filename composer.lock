@@ -685,12 +685,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -880,16 +880,16 @@
     "packages-dev": [
         {
             "name": "tracy/tracy",
-            "version": "v2.9.0",
+            "version": "v2.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tracy.git",
-                "reference": "551a7d936dfbd7075ced9a604b9527d1f7bfa8b4"
+                "reference": "4180b3221ff852fe10d5eab30d80be6f6ab7221e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tracy/zipball/551a7d936dfbd7075ced9a604b9527d1f7bfa8b4",
-                "reference": "551a7d936dfbd7075ced9a604b9527d1f7bfa8b4",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/4180b3221ff852fe10d5eab30d80be6f6ab7221e",
+                "reference": "4180b3221ff852fe10d5eab30d80be6f6ab7221e",
                 "shasum": ""
             },
             "require": {
@@ -946,7 +946,7 @@
                 "nette",
                 "profiler"
             ],
-            "time": "2021-12-20T18:19:46+00:00"
+            "time": "2022-02-15T16:38:30+00:00"
         }
     ],
     "aliases": [],
