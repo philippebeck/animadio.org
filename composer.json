@@ -1,6 +1,6 @@
 {
-  "name": "animadio/animadio.org",
-  "version": "3.2.2",
+  "name": "philippebeck/animadio.org",
+  "version": "3.3.0",
   "description": "Animadio Website & Documentation - Grid & Flexbox Layouts - Reusable & Customizable Elements - Perform Complex Animations - Controls by Radio Buttons",
   "type": "project",
   "keywords": [
@@ -46,8 +46,8 @@
   },
   "support": {
     "email": "css@animadio.org",
-    "issues": "https://github.com/animadio/animadio.org/issues",
-    "wiki": "https://github.com/animadio/animadio.org/wiki",
-    "source": "https://github.com/animadio/animadio.org"
+    "issues": "https://github.com/philippebeck/animadio.org/issues",
+    "wiki": "https://github.com/philippebeck/animadio.org/wiki",
+    "source": "https://github.com/philippebeck/animadio.org"
   }
 }
