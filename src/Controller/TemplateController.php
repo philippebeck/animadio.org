@@ -40,7 +40,7 @@ class TemplateController extends MainController
         $this->template["definition"]    = (string) trim($this->getPost("definition"));
 
         $this->template["link"]  = (string) trim($this->getPost("link"));
-        $this->template["link"]  = str_replace("https://codepen.io/animadio/pen/", "", $this->template["link"]);
+        $this->template["link"]  = str_replace("https://codepen.io/philippebeck/pen/", "", $this->template["link"]);
     }
 
     private function setTemplateImage()

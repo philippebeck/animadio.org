@@ -18,12 +18,12 @@
   "license": "MIT",
   "main": "index.php",
   "homepage": "https://animadio.org",
-  "repository": "github:animadio/animadio.org",
+  "repository": "github:philippebeck/animadio.org",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@fortawesome/fontawesome-free": "^6.1.1",
     "animadio": "^4.2.9"
   },
-  "bugs": "https://github.com/animadio/animadio.org/issues",
+  "bugs": "https://github.com/philippebeck/animadio.org/issues",
   "author": {
     "name": "Philippe Beck",
     "email": "philippe@philippebeck.net",
