@@ -1238,25 +1238,25 @@ INSERT INTO `Class`
 
 INSERT INTO `Element`
 (`name`, `link`, `definition`) VALUES
-('Navbar',  'rRvxRe',   'The main Navigation Bar'),
-('Head',    'BaQgVJe',  'The content Header'),
-('Slider',  'QoryoX',   'A Slider for medias presentation'),
-('Card',    'KKPmGvE',  'Containers for informations & elements'),
-('Btn',     'LamGvj',   'Buttons for all actions'),
-('Sidebar', 'mdOZKpQ',  'Another Navigation Bar'),
-('Menu',    'rRvxbe',   'A Menu for navigation'),
-('Gallery', 'NJMxmm',   'A Gallery for Visual Medias'),
-('Form',    'EMLPzN',   'A Form for all user entries'),
-('Canvas',  'LYbKreQ',  'A Canvas for drawing or signing'),
-('Table',   'ZPoQNb',   'A Table to show many informations'),
-('Foot',    'YgLwbe',   'The Footer for more links');
+('Navbar',  'BaJWXEM',  'The main Navigation Bar'),
+('Head',    'yLpMmrN',  'The content Header'),
+('Slider',  'WNdpVWq',  'A Slider for medias presentation'),
+('Card',    'oNpZKOo',  'Containers for informations & elements'),
+('Btn',     'bGaqXJJ',  'Buttons for all actions'),
+('Sidebar', 'ZEvegZQ',  'Another Navigation Bar'),
+('Menu',    'NWXpQmV',  'A Menu for navigation'),
+('Gallery', 'PoEpMgx',  'A Gallery for Visual Medias'),
+('Form',    'mdpWNgj',  'A Form for all user entries'),
+('Canvas',  'XWVMvQj',  'A Canvas for drawing or signing'),
+('Table',   'PoEpMgx',  'A Table to show many informations'),
+('Foot',    'dyJvxLJ',  'The Footer for more links');
 
 INSERT INTO `Theme`
 (`name`, `link`, `definition`) VALUES
-('Age',     'YzpmyMP',   'A theme about our time'),
-('Anima',   'KKNOgZG',   'The Animadio theme'),
-('Astro',   'yLVmYqp',   'A dark theme like space'),
-('Magic',   'yLVmeYq',   'A theme with magic effect'),
-('Numeric', 'rNjbypv',   'A monochrome theme'),
-('Spirit',  'BaQXjyR',   'A visual theme for the mind'),
-('Tool',    'NWbQGZv',   'A theme about mecanic');
+('Age',     'gOomVEB',   'A theme about our time'),
+('Anima',   'zYpZgRq',   'The Animadio theme'),
+('Astro',   'rNpyXRL',   'A dark theme like space'),
+('Magic',   'yLpMmwN',   'A theme with magic effect'),
+('Numeric', 'oNpZKVo',   'A monochrome theme'),
+('Spirit',  'wvpJVOO',   'A visual theme for the mind'),
+('Tool',    'zYpZgbo',   'A theme about mecanic');
