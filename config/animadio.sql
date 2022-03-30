@@ -1245,7 +1245,7 @@ INSERT INTO `Element`
 ('Btn',     'bGaqXJJ',  'Buttons for all actions'),
 ('Sidebar', 'ZEvegZQ',  'Another Navigation Bar'),
 ('Menu',    'NWXpQmV',  'A Menu for navigation'),
-('Gallery', 'PoEpMgx',  'A Gallery for Visual Medias'),
+('Gallery', 'OJzpKGr',  'A Gallery for Visual Medias'),
 ('Form',    'mdpWNgj',  'A Form for all user entries'),
 ('Canvas',  'XWVMvQj',  'A Canvas for drawing or signing'),
 ('Table',   'PoEpMgx',  'A Table to show many informations'),
