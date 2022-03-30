@@ -40,7 +40,7 @@ class ElementController extends MainController
         $this->element["definition"]    = (string) trim($this->getPost("definition"));
 
         $this->element["link"]  = (string) trim($this->getPost("link"));
-        $this->element["link"]  = str_replace("https://codepen.io/animadio/pen/", "", $this->element["link"]);
+        $this->element["link"]  = str_replace("https://codepen.io/philippebeck/pen/", "", $this->element["link"]);
     }
 
     private function setElementImage()

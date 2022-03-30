@@ -40,7 +40,7 @@ class ThemeController extends MainController
         $this->theme["definition"]    = (string) trim($this->getPost("definition"));
 
         $this->theme["link"]  = (string) trim($this->getPost("link"));
-        $this->theme["link"]  = str_replace("https://codepen.io/animadio/pen/", "", $this->theme["link"]);
+        $this->theme["link"]  = str_replace("https://codepen.io/philippebeck/pen/", "", $this->theme["link"]);
     }
 
     private function setThemeImage()
