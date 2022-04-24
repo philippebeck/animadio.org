@@ -6,23 +6,26 @@
 
 {% block main %}
 <main>
-    <form class="form" 
+    <form 
+        class="form" 
         method="post" 
         action={{ url('user!create') }} 
         enctype="multipart/form-data">
-        <input name="MAX_FILE_SIZE" 
+        <input 
+            name="MAX_FILE_SIZE" 
             type="hidden" 
             value="1000000">
         <fieldset>
             <legend>
-                <i class="far fa-user fa-2x"></i>
+                <i class="fa-regular fa-user fa-2x"></i>
             </legend>
             <ul>
                 <li>
                     <label for="name">
                         Name
                     </label>
-                    <input id="name" 
+                    <input 
+                        id="name" 
                         name="name" 
                         type="text" 
                         maxlength="50" 
@@ -33,7 +36,8 @@
                     <label for="file">
                         Photo (max 1Mo)
                     </label>
-                    <input name="file" 
+                    <input 
+                        name="file" 
                         type="file" 
                         accept=".jpg, .jpeg, .png, .svg, .gif" 
                         required>
@@ -42,7 +46,8 @@
                     <label for="email">
                         Email
                     </label>
-                    <input id="email" 
+                    <input 
+                        id="email" 
                         name="email" 
                         type="email" 
                         maxlength="100" 
@@ -55,7 +60,8 @@
                     <label for="pass">
                         Password
                     </label>
-                    <input id="pass" 
+                    <input 
+                        id="pass" 
                         name="pass" 
                         type="password" 
                         placeholder="Type your Password" 
@@ -66,7 +72,8 @@
                     <label for="conf-pass">
                         Confirm Password
                     </label>
-                    <input id="conf-pass" 
+                    <input 
+                        id="conf-pass" 
                         name="conf-pass" 
                         type="password" 
                         placeholder="Confirm your Password" 
@@ -76,15 +83,18 @@
             </ul>
             <ul>
                 <li>
-                    <input type="reset" 
+                    <input 
+                        type="reset" 
                         value="Reset">
-                    <input type="submit" 
+                    <input 
+                        type="submit" 
                         value="Create">
                 </li>
             </ul>
         </fieldset>
     </form>
-    <a class="btn-black btn-lg" 
+    <a 
+        class="btn-black btn-lg" 
         href="{{ url('admin') }}">
         Quit
     </a>
