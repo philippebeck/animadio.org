@@ -7,11 +7,26 @@
     </h2>
 
     <header class="head">
-        Some Animadio Classes can be Concatenated, 
-        some have a Special Naming 
-        because of Pseudo-classes or Media Queries; 
-        but here you can find all Class Names
-        & how to name them...
+        Look at Classes on GitHub here :
+        <ul class="row">
+            <li>
+                <a 
+                    class="btn-primary"
+                    href="https://github.com/philippebeck/animadio/tree/master/src/scss/_mixins.scss"
+                    title="Go to the Mixins file in the GitHub Repository">
+                    Mixins
+                </a>
+            </li>
+            <li>
+                <a 
+                    class="btn-primary"
+                    href="https://github.com/philippebeck/animadio/tree/master/src/scss/_classes.scss"
+                    title="Go to the Classes file in the GitHub Repository">
+                    Classes
+                </a>
+            </li>
+        </ul>
+        Or you can find their full list bellow...
     </header>
 
     <nav class="sidebar">
@@ -30,11 +45,15 @@
             title="Hide Sidebar">
             <i class="fa-regular fa-eye-slash fa-fw"></i>
         </label>
+
+        {% for category in classes|keys %}
         <a 
-            href="#class-list" 
-            title="Class List Categories">
-            <i class="fa-solid fa-list fa-fw"></i>
+            href="#class-{{ category }}" 
+            title="Go to {{ category }} Classes !">
+        {{ category }}
         </a>
+        {% endfor %}
+
         <a 
             href="#class-responsive" 
             title="Classes with a Responsive Naming">
@@ -89,12 +108,7 @@
 
         <section id="class-{{ category }}">
             <h4>
-                <a 
-                    class="button-primary btn-lg"
-                    href="https://github.com/philippebeck/animadio/tree/master/src/classes/_{{ category }}.scss"
-                    title="Go to the {{ category }} file in the GitHub Repository">
-                    {{ category|title }} 
-                </a>
+                {{ category|title }} 
             </h4>
 
             <table class="table">

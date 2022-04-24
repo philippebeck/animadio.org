@@ -7,9 +7,26 @@
     </h2>
 
     <header class="head">
-        Animadio has over 500 CSS Variables that can be Overloaded!
-        <br>
-        And you can find all Variables here...
+        Look at Variables on GitHub here :
+        <ul class="row">
+            <li>
+                <a 
+                    class="btn-primary"
+                    href="https://github.com/philippebeck/animadio/tree/master/src/scss/_maps.scss"
+                    title="Go to the Maps file in the GitHub Repository">
+                    Maps
+                </a>
+            </li>
+            <li>
+                <a 
+                    class="btn-primary"
+                    href="https://github.com/philippebeck/animadio/tree/master/src/scss/_vars.scss"
+                    title="Go to the Vars file in the GitHub Repository">
+                    Vars
+                </a>
+            </li>
+        </ul>
+        Or you can find their full list bellow...
     </header>
 
     <nav class="sidebar">
@@ -29,11 +46,13 @@
             <i class="fa-regular fa-eye-slash fa-fw"></i>
         </label>
 
+        {% for category in variables|keys %}
         <a 
-            href="#variable-list" 
-            title="Variable List Categories">
-            <i class="fa-solid fa-list fa-fw"></i>
+            href="#variable-{{ category }}" 
+            title="Go to {{ category }} Variables !">
+        {{ category }}
         </a>
+        {% endfor %}
 
         <a 
             href="#variable-home" 
@@ -77,14 +96,7 @@
         {% for category, variableCat in variables %}
 
         <section id="variable-{{ category }}">
-            <h4>
-                <a 
-                    class="btn-primary btn-lg"
-                    href="https://github.com/philippebeck/animadio/tree/master/src/variables/_{{ category }}.var.scss"
-                    title="Go to the {{ category }} file in the GitHub Repository">
-                    {{ category|title }} 
-                </a>
-            </h4>
+            <h4>{{ category|title }}</h4>
 
             <table class="table">
                 <tbody>
