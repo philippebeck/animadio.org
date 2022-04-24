@@ -1,7 +1,8 @@
-<article id="variable-home"
+<article 
+    id="variable-home"
     class="menu-target2">
     <h2>
-        <i class="fas fa-glass-whiskey fa-lg"></i>
+        <i class="fa-solid fa-glass-whiskey fa-lg"></i>
         Variables
     </h2>
 
@@ -12,37 +13,43 @@
     </header>
 
     <nav class="sidebar">
-        <input id="sidebar-variable"
+        <input 
+            id="sidebar-variable"
             class="sidebar-check" 
             type="checkbox">
-        <label for="sidebar-variable"
+        <label 
+            for="sidebar-variable"
             class="sidebar-open" 
             title="Show Sidebar">
-            <i class="far fa-eye fa-lg fa-fw"></i>
+            <i class="fa-regular fa-eye fa-fw"></i>
         </label>
-        <label for="sidebar-variable"
+        <label 
+            for="sidebar-variable"
             title="Hide Sidebar">
-            <i class="far fa-eye-slash fa-lg fa-fw"></i>
+            <i class="fa-regular fa-eye-slash fa-fw"></i>
         </label>
 
-        <a href="#variable-list" 
+        <a 
+            href="#variable-list" 
             title="Variable List Categories">
-            <i class="fas fa-list fa-lg fa-fw"></i>
+            <i class="fa-solid fa-list fa-fw"></i>
         </a>
 
-        <a href="#variable-home" 
+        <a 
+            href="#variable-home" 
             title="Variable Home">
-            <i class="fas fa-chevron-circle-up fa-lg fa-fw"></i>
+            <i class="fa-solid fa-chevron-circle-up fa-fw"></i>
         </a>
     </nav>
 
-    <i class="fas fa-chevron-down fa-2x mar-top-md"
+    <i 
+        class="fa-solid fa-chevron-down fa-2x mar-top-md"
         aria-hidden="true">
     </i>
 
     <section id="variable-list">
         <h3>
-            <i class="fas fa-list"></i> 
+            <i class="fa-solid fa-list"></i> 
             Variable List
         </h3>
 
@@ -51,7 +58,8 @@
             {% for category in variables|keys %}
 
             <li>
-                <a class="button-primary"
+                <a 
+                    class="button-primary"
                     href="#variable-{{ category }}" 
                     title="Go to {{ category }} Variables !">
                 {{ category }}
@@ -61,7 +69,8 @@
             {% endfor %}
         </ul>
 
-        <i class="fas fa-sort fa-2x mar-top-lg"
+        <i 
+            class="fa-solid fa-sort fa-2x mar-top-lg"
             aria-hidden="true">
         </i>
 
@@ -69,7 +78,8 @@
 
         <section id="variable-{{ category }}">
             <h4>
-                <a class="btn-primary btn-lg"
+                <a 
+                    class="btn-primary btn-lg"
                     href="https://github.com/philippebeck/animadio/tree/master/src/variables/_{{ category }}.var.scss"
                     title="Go to the {{ category }} file in the GitHub Repository">
                     {{ category|title }} 

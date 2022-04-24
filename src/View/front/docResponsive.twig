@@ -1,6 +1,6 @@
 <article class="menu-target4">
     <h2>
-        <i class="fas fa-mobile-alt fa-lg"></i>
+        <i class="fa-solid fa-mobile-alt fa-lg"></i>
         Responsive
     </h2>
 
@@ -12,7 +12,8 @@
         You can find each screen sizes here
     </header>
 
-    <i class="fas fa-chevron-down fa-2x mar-top-md mar-bot-lg"
+    <i 
+        class="fa-solid fa-chevron-down fa-2x mar-top-md mar-bot-lg"
         aria-hidden="true">
     </i>
 
@@ -34,7 +35,7 @@
                 {{ breakpoint.media }}
             </td>
             <td>
-                {{ breakpoint.width }}
+                min-width: {{ breakpoint.width }}
             </td>
         </tr>
         {% endfor %}
