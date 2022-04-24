@@ -19,3 +19,7 @@
 .head {
   --head-hover-transform: none;
 }
+
+.sidebar {
+  --sidebar-child-padding: 2px 0;
+}
