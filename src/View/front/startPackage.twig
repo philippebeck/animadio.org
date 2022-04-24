@@ -1,14 +1,17 @@
-<article id="package-home"
+<article 
+    id="package-home"
     class="menu-target1">
     <h2 class="anima-grow-this">
-        <i class="fas fa-cubes fa-lg"></i> 
+        <i class="fa-solid fa-cubes fa-lg"></i> 
         Package Manager
     </h2>
 
     <header class="head">
-        <a href="https://www.npmjs.com/package/animadio" 
+        <a 
+            href="https://www.npmjs.com/package/animadio" 
             title="Go to Animadio NPM Package !">
-            <img src="https://img.shields.io/npm/dm/animadio.svg?label=NPM+Downloads" 
+            <img 
+                src="https://img.shields.io/npm/dm/animadio.svg?label=NPM+Downloads" 
                 alt="NPM Montly Download of Animadio">
         </a>
         <br>
@@ -16,49 +19,57 @@
     </header>
 
     <nav class="sidebar">
-        <input id="sidebar-package"
+        <input 
+            id="sidebar-package"
             class="sidebar-check" 
             type="checkbox">
-        <label for="sidebar-package"
+        <label 
+            for="sidebar-package"
             class="sidebar-open" 
             title="Show Sidebar">
-            <i class="far fa-eye fa-lg fa-fw"></i>
+            <i class="fa-regular fa-eye fa-fw"></i>
         </label>
-        <label for="sidebar-package"
+        <label 
+            for="sidebar-package"
             title="Hide Sidebar">
-            <i class="far fa-eye-slash fa-lg fa-fw"></i>
+            <i class="fa-regular fa-eye-slash fa-fw"></i>
         </label>
 
-        <a href="#package-npm" 
+        <a 
+            href="#package-npm" 
             title="Package Installation with NPM">
-            <i class="fab fa-npm fa-lg fa-fw"></i>
+            <i class="fa-brands fa-npm fa-fw"></i>
         </a>
-        <a href="#package-yarn" 
+        <a 
+            href="#package-yarn" 
             title="Package Installation with Yarn">
-            <i class="fab fa-yarn fa-lg fa-fw"></i>
+            <i class="fa-brands fa-yarn fa-fw"></i>
         </a>
-        <a href="#package-dev" 
+        <a 
+            href="#package-dev" 
             title="Package Integration in Development">
-            <i class="fas fa-code fa-lg fa-fw"></i>
+            <i class="fa-solid fa-code fa-fw"></i>
         </a>
-        <a href="#package-prod" 
+        <a 
+            href="#package-prod" 
             title="Package Integration in Production">
-            <i class="fas fa-globe fa-lg fa-fw"></i>
+            <i class="fa-solid fa-globe fa-fw"></i>
         </a>
         
-        <a href="#package-home" 
+        <a 
+            href="#package-home" 
             title="Package Manager Home">
-            <i class="fas fa-chevron-circle-up fa-lg fa-fw"></i>
+            <i class="fa-solid fa-chevron-circle-up fa-fw"></i>
         </a>
     </nav>
 
-    <i class="fas fa-chevron-down fa-2x mar-top-md"
+    <i class="fa-solid fa-chevron-down fa-2x mar-top-md"
         aria-hidden="true">
     </i>
 
     <section id="package-npm">
         <h3 class="color-red">
-            <i class="fab fa-npm fa-lg"></i> 
+            <i class="fa-brands fa-npm fa-lg"></i> 
             NPM
         </h3>
 
@@ -70,13 +81,14 @@
         <code>$ npm i animadio</code>
     </section>
 
-    <i class="fas fa-sort fa-2x mar-top-lg"
+    <i 
+        class="fa-solid fa-sort fa-2x mar-top-lg"
         aria-hidden="true">
     </i>
 
     <section id="package-yarn">
         <h3 class="color-blue">
-            <i class="fab fa-yarn fa-lg"></i> 
+            <i class="fa-brands fa-yarn fa-lg"></i> 
             Yarn
         </h3>
 
@@ -88,13 +100,14 @@
         <code>$ yarn add animadio</code>
     </section>
 
-    <i class="fas fa-minus fa-2x mar-top-lg"
+    <i 
+        class="fa-solid fa-minus fa-2x mar-top-lg"
         aria-hidden="true">
     </i>
 
     <section id="package-dev">
         <h3>
-            <i class="fas fa-code fa-lg"></i> 
+            <i class="fa-solid fa-code fa-lg"></i> 
             Development
         </h3>
 
@@ -115,34 +128,16 @@
             class="color-orange font-italic"> rel</span><span 
             class="color-grey">=</span>"stylesheet"<span 
             class="color-grey">&gt;</span></code>
-
-        <p>
-            For JavaScript Features 
-            <em class="color-secondary">(Slider & Canvas only)</em>, 
-            <br>
-            add this 
-            <b class="color-red">&lt;script&gt;</b> 
-            tag at the end of your HTML 
-            <b class="color-red">&lt;body&gt;</b> 
-            tag :
-        </p>
-        <code><span 
-            class="color-grey">&lt;</span><span 
-            class="color-red">script</span><span 
-            class="color-orange font-italic"> src</span><span 
-            class="color-grey">=</span>"node_modules/animadio/dist/animadio.js"<span 
-            class="color-grey">&gt&lt;</span><span 
-            class="color-red">script</span><span 
-            class="color-grey">&gt;</span></code>
     </section>
 
-    <i class="fas fa-sort fa-2x mar-top-lg"
+    <i 
+        class="fa-solid fa-sort fa-2x mar-top-lg"
         aria-hidden="true">
     </i>
 
     <section id="package-prod">
         <h3>
-            <i class="fas fa-globe fa-lg"></i> 
+            <i class="fa-solid fa-globe fa-lg"></i> 
             Production
         </h3>
 
@@ -160,23 +155,6 @@
             class="color-grey">=</span>"node_modules/animadio/dist/animadio.min.css"<span 
             class="color-orange font-italic"> rel</span><span 
             class="color-grey">=</span>"stylesheet"<span 
-            class="color-grey">&gt;</span></code>
-
-        <p>
-            And for JavaScript Features 
-            <em class="color-secondary">(Slider & Canvas only)</em>, 
-            <br>
-            replace the 
-            <b class="color-red">&lt;script&gt;</b> 
-            tag by this one :
-        </p>
-        <code><span 
-            class="color-grey">&lt;</span><span 
-            class="color-red">script</span><span 
-            class="color-orange font-italic"> src</span><span 
-            class="color-grey">=</span>"node_modules/animadio/dist/animadio.min.js"<span 
-            class="color-grey">&gt&lt;</span><span 
-            class="color-red">script</span><span 
             class="color-grey">&gt;</span></code>
     </section>
 </article>
