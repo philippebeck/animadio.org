@@ -1,10 +1,11 @@
 <section class="menu-target3">
     <h2>
-        <i class="far fa-images"></i> 
+        <i class="fa-regular fa-images"></i> 
         Animations
     </h2>
 
-    <a class="btn-green btn-lg" 
+    <a 
+        class="btn-green btn-lg" 
         href="{{ url('animation!create') }}">
         New Animation
     </a>
@@ -29,19 +30,21 @@
                 <td>
                     {{ animation.name }}
                     <br>
-                    <a class="btn-blue" 
+                    <a 
+                        class="btn-blue" 
                         href="{{ url('animation!update', {'id': animation.id}) }}">
-                        <i class="fas fa-pen-square fa-fw fa-lg"></i>
+                        <i class="fa-solid fa-pen-square fa-fw"></i>
                     </a>
-                    <a class="btn-red" 
+                    <a 
+                        class="btn-red" 
                         href="{{ url('animation!delete', {'id': animation.id}) }}">
-                        <i class="fas fa-times-circle fa-fw fa-lg"></i>
+                        <i class="fa-solid fa-times-circle fa-fw"></i>
                     </a>
                 </td>
                 <td>
-                    {{ animation.effect }}  
+                    {{ animation.effect }}
                     <hr>
-                    {{ animation.category }}                  
+                    {{ animation.category }}
                 </td>
             </tr>
         {% endfor %}

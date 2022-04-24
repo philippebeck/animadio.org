@@ -1,10 +1,11 @@
 <section class="menu-target1">
     <h2>
-        <i class="fas fa-magic"></i> 
+        <i class="fa-solid fa-magic"></i> 
         Classes
     </h2>
 
-    <a class="btn-green btn-lg" 
+    <a 
+        class="btn-green btn-lg" 
         href="{{ url('class!create') }}">
         New Class
     </a>
@@ -29,23 +30,25 @@
                 <td>
                     .{{ class.name }} 
                     <br>
-                    <a class="btn-blue" 
+                    <a 
+                        class="btn-blue" 
                         href="{{ url('class!update', {'id': class.id}) }}">
-                        <i class="fas fa-pen-square fa-fw fa-lg"></i>
+                        <i class="fa-solid fa-pen-square fa-fw"></i>
                     </a>
-                    <a class="btn-red" 
+                    <a 
+                        class="btn-red" 
                         href="{{ url('class!delete', {'id': class.id}) }}">
-                        <i class="fas fa-times-circle fa-fw fa-lg"></i>
+                        <i class="fa-solid fa-times-circle fa-fw"></i>
                     </a>
                 </td>
                 <td>
 
                 {% if class.media == 1 %}
-                    <i class="fas fa-mobile-alt"></i>
+                    <i class="fa-solid fa-mobile-alt"></i>
                 {% endif %}
 
                 {% if class.concat == 1 %}
-                    <i class="fas fa-link"></i>
+                    <i class="fa-solid fa-link"></i>
                 {% endif %}
 
                 {% if class.state != "no" %}
