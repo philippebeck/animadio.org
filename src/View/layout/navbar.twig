@@ -1,126 +1,136 @@
 <nav class="navbar">
-    <input id="navbar-close" 
+    <input 
+        id="navbar-close" 
         class="navbar-close" 
         type="radio" 
         name="navbar" 
         checked>
-    <input id="navbar-open" 
+    <input 
+        id="navbar-open" 
         class="navbar-open" 
         type="radio" 
         name="navbar">
 
-    <a class="anima-slideB-sm-this" 
+    <a 
+        class="anima-slideB-sm-this" 
         href="./" 
         title="Home">
-        <img src="img/logo-nav.png" 
-        alt="Logo Animadio"
-        width="40"
-        height="40">
+        <img 
+            src="img/logo-nav.png" 
+            alt="Logo Animadio"
+            width="40"
+            height="40">
     </a>
 
     <ul>
         <li>
-            <a href="{{ url('start') }}" 
+            <a 
+                href="{{ url('home') }}" 
+                title="Back to Home">
+                <i class="fa-solid fa-house-signal fa-fw"></i>
+                <span>Home</span>
+            </a>
+        </li>
+        <li>
+            <a 
+                href="{{ url('start') }}" 
                 title="Getting Start">
-                <i class="fas fa-play fa-lg"></i>
+                <i class="fa-solid fa-play fa-fw"></i>
                 <span>Start</span>
             </a>
         </li>
         <li>
-            <a href="{{ url('usage') }}" 
+            <a 
+                href="{{ url('usage') }}" 
                 title="Common Usage">
-                <i class="far fa-keyboard fa-lg"></i>
+                <i class="fa-regular fa-keyboard fa-fw"></i>
                 <span>Usage</span>
             </a>
         </li>
         <li>
-            <a href="{{ url('element') }}" 
-                title="Elements of Animadio">
-                <i class="fas fa-sitemap fa-lg"></i>
-                <span>Elements</span>
-            </a>
-        </li>
-        <li>
-            <a href="{{ url('theme') }}" 
+            <a 
+                href="{{ url('theme') }}" 
                 title="Themes for Animadio">
-                <i class="fas fa-palette fa-lg"></i>
+                <i class="fa-solid fa-palette fa-fw"></i>
                 <span>Themes</span>
             </a>
         </li>
         <li>
-            <a href="{{ url('template') }}" 
-                title="Templates for Animadio">
-                <i class="fas fa-box-open fa-lg"></i>
-                <span>Templates</span>
-            </a>
-        </li>
-        <li>
-            <a href="{{ url('doc') }}" 
+            <a 
+                href="{{ url('doc') }}" 
                 title="Classes & Variables Documentation">
-                <i class="fas fa-book fa-lg"></i>
+                <i class="fa-solid fa-book fa-fw"></i>
                 <span>Doc</span>
             </a>
         </li>
     </ul>
 
     <ul>
-
     {% if (checkUser()) %}
         <li>
-            <a href="{{ url('admin') }}" 
+            <a  
+                href="{{ url('admin') }}" 
                 title="{{ getSession('name') }} Admin">
-                <img class="bord-circle" 
+                <img 
+                    class="bord-circle" 
                     src="img/user/{{ getSession('image') }}" 
                     alt="{{ getSession('name') }} Picture">
             </a>
         </li>
         <li>
-            <a class="onto-color-red" 
+            <a 
+                class="onto-color-red" 
                 href="{{ url('auth!logout') }}" 
                 title="Logout">
-                <i class="fas fa-sign-out-alt fa-lg"></i>
+                <i class="fa-solid fa-sign-out-alt fa-lg"></i>
             </a>
         </li>
 
     {% else %}
         <li>
-            <a class="onto-color-blue" 
+            <a 
+                class="onto-color-cyan" 
                 href="{{ url('contact') }}" 
                 title="Contact">
-                <i class="fas fa-at fa-lg fa-fw"></i>
+                <i class="fa-solid fa-at fa-lg fa-fw"></i>
             </a>
         </li>
         <li>
-            <a class="onto-color-pink" 
+            <a 
+                class="onto-color-pink" 
                 href="https://github.com/sponsors/philippebeck" 
                 title="Sponsor">
-                <i class="far fa-heart fa-lg fa-fw"></i>
+                <i class="fa-regular fa-heart fa-lg fa-fw"></i>
             </a>
         </li>
         <li>
-            <a class="onto-color-pp" 
+            <a 
+                class="onto-color-tw" 
                 href="https://www.paypal.me/philippebeck" 
                 title="Donation">
-                <i class="fab fa-paypal fa-lg fa-fw"></i>
+                <i class="fa-brands fa-paypal fa-lg fa-fw"></i>
             </a>
         </li>
         <li>
-            <a class="onto-color-orange" 
+            <a 
+                class="onto-color-orange" 
                 href="{{ url('auth') }}" 
                 title="Login">
-                <i class="fas fa-sign-in-alt fa-lg fa-fw"></i>
+                <i class="fa-solid fa-sign-in-alt fa-lg fa-fw"></i>
             </a>
         </li>
     {% endif %}
 
     </ul>
 
-    <label for="navbar-close" 
+    <label 
+        for="navbar-close" 
         title="Close the Navigation Menu">
-        <i class="fas fa-angle-double-up fa-lg"></i>
+        <i class="fa-solid fa-angle-double-up fa-lg"></i>
     </label>
-    <label for="navbar-open" 
+    <label 
+        for="navbar-open" 
         title="Open the Navigation Menu">
-        <i class="fas fa-angle-double-down fa-lg"></i>
+        <i class="fa-solid fa-angle-double-down fa-lg"></i>
     </label>
 </nav>
