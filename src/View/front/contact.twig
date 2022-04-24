@@ -5,11 +5,13 @@
 {% block description %}You can contact us by message{% endblock %}
 
 {% block script %}
-<script src="js/recaptcha.js"
+<script 
+    src="js/recaptcha.js"
     async
     defer>
 </script>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" 
+<script 
+    src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" 
     async 
     defer>
 </script>
@@ -17,17 +19,20 @@
 
 {% block main %}
 <main>
-    <form class="form" 
+    <form 
+        class="form" 
         method="post" 
         action={{ url('contact') }}>
         <fieldset>
             <ul>
                 <li>
-                    <label class="anima-slideR-this" 
+                    <label 
+                        class="anima-slideR-this" 
                         for="name">
                         Name
                     </label>
-                    <input class="anima-slideL-this" 
+                    <input 
+                        class="anima-slideL-this" 
                         id="name" 
                         name="name" 
                         type="text" 
@@ -36,11 +41,13 @@
                         required>
                 </li>
                 <li>
-                    <label class="anima-slideR-this" 
+                    <label 
+                        class="anima-slideR-this" 
                         for="email">
                         Email
                     </label>
-                    <input class="anima-slideL-this" 
+                    <input 
+                        class="anima-slideL-this" 
                         id="email" 
                         name="email" 
                         type="email" 
@@ -49,11 +56,13 @@
                         required>
                 </li>
                 <li>
-                    <label class="anima-slideR-this" 
+                    <label 
+                        class="anima-slideR-this" 
                         for="subject">
                         Subject
                     </label>
-                    <input class="anima-slideL-this" 
+                    <input 
+                        class="anima-slideL-this" 
                         id="subject" 
                         name="subject" 
                         type="text" 
@@ -62,11 +71,13 @@
                         required>
                 </li>
                 <li>
-                    <label class="anima-slideR-this" 
+                    <label 
+                        class="anima-slideR-this" 
                         for="message">
                         Message
                     </label>
-                    <textarea class="anima-slideL-this" 
+                    <textarea 
+                        class="anima-slideL-this" 
                         id="message" 
                         name="message" 
                         placeholder="Your message" 
@@ -76,23 +87,27 @@
             </ul>
             <ul>
                 <li>
-                    <div id="recaptcha" 
+                    <div 
+                        id="recaptcha" 
                         class="g-recaptcha" 
                         data-sitekey="6LdFb9gZAAAAAKhXW4J94doHONA3jpGbKUkcxueq">
                     </div>
                 </li>
                 <li>
-                    <input class="anima-slideR-this" 
+                    <input 
+                        class="anima-slideR-this" 
                         type="reset" 
                         value="Reset">
-                    <input class="anima-slideL-this" 
+                    <input 
+                        class="anima-slideL-this" 
                         type="submit" 
                         value="Send">
                 </li>
             </ul>
         </fieldset>
     </form>
-    <a class="btn-black btn-lg" 
+    <a 
+        class="btn-black btn-lg" 
         href="{{ url('home') }}">
         Quit
     </a>
