@@ -6,16 +6,19 @@
 
 {% block main %}
 <main>
-    <form class="form" 
+    <form 
+        class="form" 
         method="post" 
         action={{ url('theme!update', {'id': theme.id}) }} 
         enctype="multipart/form-data">
-        <input name="MAX_FILE_SIZE" 
+        <input 
+            name="MAX_FILE_SIZE" 
             type="hidden" 
             value="1000000">
         <fieldset>
             <legend>
-                <img class="bord-primary" 
+                <img 
+                    class="bord-primary" 
                     src="img/themes/{{ theme.name|lower }}.png" 
                     alt="Screenshot of {{ theme.name }}">
             </legend>
@@ -24,7 +27,8 @@
                     <label for="name">
                         Name
                     </label>
-                    <input id="name" 
+                    <input 
+                        id="name" 
                         name="name" 
                         type="text" 
                         maxlength="20" 
@@ -35,7 +39,8 @@
                     <label for="file">
                         Photo.png (max 1Mo)
                     </label>
-                    <input name="file" 
+                    <input 
+                        name="file" 
                         type="file" 
                         accept=".png">
                 </li>
@@ -43,7 +48,8 @@
                     <label for="link">
                         Link
                     </label>
-                    <input id="link" 
+                    <input 
+                        id="link" 
                         name="link" 
                         type="text" 
                         maxlength="40" 
@@ -54,7 +60,8 @@
                     <label for="definition">
                         Definition
                     </label>
-                    <textarea id="definition"
+                    <textarea 
+                        id="definition"
                         name="definition"
                         rows="5"
                         required>{{ theme.definition }}</textarea>
@@ -62,15 +69,18 @@
             </ul>
             <ul>
                 <li>
-                    <input type="reset" 
+                    <input 
+                        type="reset" 
                         value="Reset">
-                    <input type="submit" 
+                    <input 
+                        type="submit" 
                         value="Update">
                 </li>
             </ul>
         </fieldset>
     </form>
-    <a class="btn-black btn-lg" 
+    <a 
+        class="btn-black btn-lg" 
         href="{{ url('admin') }}">
         Quit
     </a>

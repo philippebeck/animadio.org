@@ -6,19 +6,21 @@
 
 {% block main %}
 <main>
-    <form class="form" 
+    <form 
+        class="form" 
         method="post" 
         action={{ url('animation!update', {'id': animation.id}) }}>
         <fieldset>
             <legend>
-                <i class="far fa-images fa-2x"></i>
+                <i class="fa-regular fa-images fa-2x"></i>
             </legend>
             <ul>
                 <li>
                     <label for="name">
                         Name
                     </label>
-                    <input id="name" 
+                    <input 
+                        id="name" 
                         name="name" 
                         type="text" 
                         maxlength="20" 
@@ -29,7 +31,8 @@
                     <label for="category_id">
                         Category
                     </label>
-                    <select id="category_id" 
+                    <select 
+                        id="category_id" 
                         name="category_id"
                         required>
                         
@@ -40,7 +43,8 @@
                     {% for category in categories %}
 
                         {% if category.id is same as(animation.category_id) %}
-                            <option value="{{ category.id }}" 
+                            <option 
+                                value="{{ category.id }}" 
                                 selected>
                                 {{ category.category }} (Registred)
                             </option>
@@ -55,11 +59,12 @@
 
                     </select>
                 </li>
-               <li>
+                <li>
                     <label for="effect">
                         Effect
                     </label>
-                    <input id="effect" 
+                    <input 
+                        id="effect" 
                         name="effect" 
                         type="text" 
                         maxlength="20" 
@@ -69,15 +74,18 @@
             </ul>
             <ul>
                 <li>
-                    <input type="reset" 
+                    <input 
+                        type="reset" 
                         value="Reset">
-                    <input type="submit" 
+                    <input 
+                        type="submit" 
                         value="Update">
                 </li>
             </ul>
         </fieldset>
     </form>
-    <a class="btn-black btn-lg" 
+    <a 
+        class="btn-black btn-lg" 
         href="{{ url('admin') }}">
         Quit
     </a>

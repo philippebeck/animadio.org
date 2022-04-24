@@ -6,16 +6,19 @@
 
 {% block main %}
 <main>
-    <form class="form" 
+    <form 
+        class="form" 
         method="post" 
         action={{ url('user!update', {'id': user.id}) }} 
         enctype="multipart/form-data">
-        <input name="MAX_FILE_SIZE" 
+        <input 
+            name="MAX_FILE_SIZE" 
             type="hidden" 
             value="1000000">
         <fieldset>
             <legend>
-                <img class="bord-primary" 
+                <img 
+                    class="bord-primary" 
                     src="img/user/{{ user.image }}" 
                     alt="Screenshot of {{ user.name }}">
             </legend>
@@ -24,7 +27,8 @@
                     <label for="name">
                         Name
                     </label>
-                    <input id="name" 
+                    <input 
+                        id="name" 
                         name="name" 
                         type="text" 
                         maxlength="50" 
@@ -35,7 +39,8 @@
                     <label for="file">
                         Photo (max 1Mo)
                     </label>
-                    <input name="file" 
+                    <input 
+                        name="file" 
                         type="file" 
                         accept=".jpg, .jpeg, .png, .gif">
                 </li>
@@ -43,7 +48,8 @@
                     <label for="email">
                         Email
                     </label>
-                    <input id="email" 
+                    <input 
+                        id="email" 
                         name="email" 
                         type="email" 
                         maxlength="100" 
@@ -56,7 +62,8 @@
                     <label for="old-pass">
                         Old Password
                     </label>
-                    <input id="old-pass" 
+                    <input 
+                        id="old-pass" 
                         name="old-pass" 
                         type="password" 
                         placeholder="Type your Old Password" 
@@ -67,7 +74,8 @@
                     <label for="new-pass">
                         New Password
                     </label>
-                    <input id="new-pass" 
+                    <input 
+                        id="new-pass" 
                         name="new-pass" 
                         type="password" 
                         placeholder="Type your New Password" 
@@ -78,7 +86,8 @@
                     <label for="conf-pass">
                         Confirm Password
                     </label>
-                    <input id="conf-pass" 
+                    <input 
+                        id="conf-pass" 
                         name="conf-pass" 
                         type="password" 
                         placeholder="Confirm your New Password" 
@@ -88,15 +97,18 @@
             </ul>
             <ul>
                 <li>
-                    <input type="reset" 
+                    <input 
+                        type="reset" 
                         value="Reset">
-                    <input type="submit" 
+                    <input 
+                        type="submit" 
                         value="Update">
                 </li>
             </ul>
         </fieldset>
     </form>
-    <a class="btn-black btn-lg" 
+    <a 
+        class="btn-black btn-lg" 
         href="{{ url('admin') }}">
         Quit
     </a>
