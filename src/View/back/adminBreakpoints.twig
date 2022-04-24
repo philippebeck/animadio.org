@@ -1,10 +1,11 @@
 <section class="menu-target4">
     <h2>
-        <i class="fas fa-map"></i> 
+        <i class="fa-solid fa-map"></i> 
         Breakpoints
     </h2>
 
-    <a class="btn-green btn-lg" 
+    <a 
+        class="btn-green btn-lg" 
         href="{{ url('breakpoint!create') }}">
         New Breakpoint
     </a>
@@ -24,15 +25,17 @@
                     {{ breakpoint.media }}
                 </td>
                 <td>
-                    {{ breakpoint.width }}
+                    min-width: {{ breakpoint.width }}
                     <br>
-                    <a class="btn-blue" 
+                    <a 
+                        class="btn-blue" 
                         href="{{ url('breakpoint!update', {'id': breakpoint.id}) }}">
-                        <i class="fas fa-pen-square fa-fw fa-lg"></i>
+                        <i class="fa-solid fa-pen-square fa-fw"></i>
                     </a>
-                    <a class="btn-red" 
+                    <a 
+                        class="btn-red" 
                         href="{{ url('breakpoint!delete', {'id': breakpoint.id}) }}">
-                        <i class="fas fa-times-circle fa-fw fa-lg"></i>
+                        <i class="fa-solid fa-times-circle fa-fw"></i>
                     </a>
                 </td>
             </tr>

@@ -15,3 +15,11 @@
   --slideT: translate(0, 5vw);
   --slideB: translate(0, -5vw);
 }
+
+.head {
+  --head-hover-transform: none;
+}
+
+.sidebar {
+  --sidebar-child-padding: 2px 0;
+}

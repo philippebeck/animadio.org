@@ -6,19 +6,21 @@
 
 {% block main %}
 <main>
-    <form class="form" 
+    <form 
+        class="form" 
         method="post" 
         action={{ url('class!create') }}>
         <fieldset>
             <legend>
-                <i class="fas fa-magic fa-2x"></i>
+                <i class="fa-solid fa-magic fa-2x"></i>
             </legend>
             <ul>
                 <li>
                     <label for="name">
                         Name
                     </label>
-                    <input id="name" 
+                    <input 
+                        id="name" 
                         name="name" 
                         type="text" 
                         maxlength="20" 
@@ -29,7 +31,8 @@
                     <label for="category_id">
                         Category
                     </label>
-                    <select id="category_id" 
+                    <select 
+                        id="category_id" 
                         name="category_id"
                         required>
                         
@@ -49,7 +52,8 @@
                     <label for="state_id">
                         State
                     </label>
-                    <select id="state_id" 
+                    <select 
+                        id="state_id" 
                         name="state_id"
                         required>
                         
@@ -69,10 +73,12 @@
                     <label for="media">
                         Media
                     </label>
-                    <input name="media"
+                    <input 
+                        name="media"
                         type="hidden"
                         value="0">
-                    <input id="media" 
+                    <input 
+                        id="media" 
                         name="media" 
                         type="checkbox"
                         value="1">
@@ -81,10 +87,12 @@
                     <label for="concat">
                         Concat
                     </label>
-                    <input name="concat"
+                    <input 
+                        name="concat"
                         type="hidden"
                         value="0">
-                    <input id="concat" 
+                    <input 
+                        id="concat" 
                         name="concat" 
                         type="checkbox"
                         value="1">
@@ -92,15 +100,18 @@
             </ul>
             <ul>
                 <li>
-                    <input type="reset" 
+                    <input 
+                        type="reset" 
                         value="Reset">
-                    <input type="submit" 
+                    <input 
+                        type="submit" 
                         value="Create">
                 </li>
             </ul>
         </fieldset>
     </form>
-    <a class="btn-black btn-lg" 
+    <a 
+        class="btn-black btn-lg" 
         href="{{ url('admin') }}">
         Quit
     </a>

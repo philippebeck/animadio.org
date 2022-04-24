@@ -5,11 +5,13 @@
 {% block description %}{% endblock %}
 
 {% block script %}
-<script src="js/recaptcha.js"
+<script 
+    src="js/recaptcha.js"
     async
     defer>
 </script>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" 
+<script 
+    src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" 
     async 
     defer>
 </script>
@@ -17,17 +19,20 @@
 
 {% block main %}
 <main>
-    <form class="form" 
+    <form 
+        class="form" 
         action="{{ url('auth')}}" 
         method="post">
         <fieldset>
             <ul>
                 <li>
-                    <label class="anima-slideR-this" 
+                    <label 
+                        class="anima-slideR-this" 
                         for="email">
                         Email
                     </label>
-                    <input class="anima-slideL-this"
+                    <input 
+                        class="anima-slideL-this"
                         id="email" 
                         name="email" 
                         type="email" 
@@ -35,11 +40,13 @@
                         required>
                 </li>
                 <li>
-                    <label class="anima-slideR-this" 
+                    <label 
+                        class="anima-slideR-this" 
                         for="pass">
                         Password
                     </label>
-                    <input class="anima-slideL-this" 
+                    <input 
+                        class="anima-slideL-this" 
                         id="pass" 
                         name="pass" 
                         type="password" 
@@ -50,23 +57,27 @@
             </ul>
             <ul>
                 <li>
-                    <div id="recaptcha" 
+                    <div 
+                        id="recaptcha" 
                         class="g-recaptcha" 
                         data-sitekey="6LdFb9gZAAAAAKhXW4J94doHONA3jpGbKUkcxueq">
                     </div>
                 </li>
                 <li>
-                    <input class="anima-slideR-this" 
+                    <input 
+                        class="anima-slideR-this" 
                         type="reset" 
                         value="Reset">
-                    <input class="anima-slideL-this" 
+                    <input 
+                        class="anima-slideL-this" 
                         type="submit" 
                         value="Login">
                 </li>
             </ul>
         </fieldset>
     </form>
-    <a class="btn-black btn-lg" 
+    <a 
+        class="btn-black btn-lg" 
         href="{{ url('home') }}">
         Quit
     </a>

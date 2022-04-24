@@ -1,10 +1,11 @@
-<section class="menu-target8">
+<section class="menu-target6">
     <h2>
-        <i class="fas fa-user-ninja"></i> 
+        <i class="fa-solid fa-user-ninja"></i> 
         Administrators
     </h2>
 
-    <a class="btn-green btn-lg" 
+    <a 
+        class="btn-green btn-lg" 
         href="{{ url('user!create') }}">
         New Administrator
     </a>
@@ -21,22 +22,25 @@
             <tr>
                 <td>
                     <figure>
-                        <img class="bord-violet" 
+                        <img 
+                            class="bord-violet" 
                             src="img/user/{{ user.image }}" 
                             alt="Photo de {{ user.name }}">
                         <figcaption>
                             {{ user.name }}
                         </figcaption>
                     </figure>
-                    <a class="btn-blue" 
+                    <a 
+                        class="btn-blue" 
                         href="{{ url('user!update', {'id': user.id}) }}"
                         title="Edit the Administrator">
-                        <i class="fas fa-pen-square fa-fw fa-lg"></i>
+                        <i class="fa-solid fa-pen-square fa-fw"></i>
                     </a>
-                    <a class="btn-red" 
+                    <a 
+                        class="btn-red" 
                         href="{{ url('user!delete', {'id': user.id}) }}"
                         title="Delete the Administrator">
-                        <i class="fas fa-times-circle fa-fw fa-lg"></i>
+                        <i class="fa-solid fa-times-circle fa-fw"></i>
                     </a>
                     <br>
                     <p>

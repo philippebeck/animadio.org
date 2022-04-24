@@ -6,30 +6,33 @@
 
 {% block main %}
 <main>
-    <form class="form" 
+    <form 
+        class="form" 
         method="post" 
         action={{ url('breakpoint!create') }}>
         <fieldset>
             <legend>
-                <i class="fas fa-mobile-alt fa-2x"></i>
+                <i class="fa-solid fa-mobile-alt fa-2x"></i>
             </legend>
             <ul>
                 <li>
                     <label for="media">
                         Key
                     </label>
-                    <input id="media" 
+                    <input 
+                        id="media" 
                         name="media" 
                         type="text" 
                         maxlength="2" 
                         placeholder="Type the Breakpoint Key"
                         required>
                 </li>
-               <li>
+                <li>
                     <label for="width">
                         Size
                     </label>
-                    <input id="width" 
+                    <input 
+                        id="width" 
                         name="width" 
                         type="text" 
                         maxlength="20" 
@@ -39,15 +42,18 @@
             </ul>
             <ul>
                 <li>
-                    <input type="reset" 
+                    <input 
+                        type="reset" 
                         value="Reset">
-                    <input type="submit" 
+                    <input 
+                        type="submit" 
                         value="Create">
                 </li>
             </ul>
         </fieldset>
     </form>
-    <a class="btn-black btn-lg" 
+    <a 
+        class="btn-black btn-lg" 
         href="{{ url('admin') }}">
         Quit
     </a>

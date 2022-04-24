@@ -1,62 +1,84 @@
-<article id="class-home" 
+<article 
+    id="class-home" 
     class="menu-target1">
     <h2>
-        <i class="fas fa-magic fa-lg"></i>
+        <i class="fa-solid fa-magic fa-lg"></i>
         Classes
     </h2>
 
     <header class="head">
-        Some Animadio Classes can be Concatenated, 
-        some have a Special Naming 
-        because of Pseudo-classes or Media Queries; 
-        but here you can find all Class Names
-        & how to name them...
+        Look at Classes on GitHub here :
+        <ul class="row">
+            <li>
+                <a 
+                    class="btn-primary"
+                    href="https://github.com/philippebeck/animadio/tree/master/src/scss/_mixins.scss"
+                    title="Go to the Mixins file in the GitHub Repository">
+                    Mixins
+                </a>
+            </li>
+            <li>
+                <a 
+                    class="btn-primary"
+                    href="https://github.com/philippebeck/animadio/tree/master/src/scss/_classes.scss"
+                    title="Go to the Classes file in the GitHub Repository">
+                    Classes
+                </a>
+            </li>
+        </ul>
+        Or you can find their full list bellow...
     </header>
 
     <nav class="sidebar">
-        <input id="sidebar-class"
+        <input 
+            id="sidebar-class"
             class="sidebar-check" 
             type="checkbox">
-        <label for="sidebar-class"
+        <label 
+            for="sidebar-class"
             class="sidebar-open" 
             title="Show Sidebar">
-            <i class="far fa-eye fa-lg fa-fw"></i>
+            <i class="fa-regular fa-eye fa-fw"></i>
         </label>
-        <label for="sidebar-class"
+        <label 
+            for="sidebar-class"
             title="Hide Sidebar">
-            <i class="far fa-eye-slash fa-lg fa-fw"></i>
+            <i class="fa-regular fa-eye-slash fa-fw"></i>
         </label>
 
-        <a href="#class-list" 
-            title="Class List Categories">
-            <i class="fas fa-list fa-lg fa-fw"></i>
+        {% for category in classes|keys %}
+        <a 
+            href="#class-{{ category }}" 
+            title="Go to {{ category }} Classes !">
+        {{ category }}
         </a>
-        <a href="#class-responsive" 
-            title="Classes with a Responsive Naming">
-            <i class="fas fa-mobile-alt fa-lg fa-fw"></i>
-        </a>
-        <a href="#class-concat" 
-            title="Concatenable Classes">
-            <i class="fas fa-link fa-lg fa-fw"></i>
-        </a>
-        <a href="#class-states" 
-            title="Classes with a States Naming">
-            <i class="fas fa-key fa-lg fa-fw"></i>
-        </a>
+        {% endfor %}
 
-        <a href="#class-home" 
+        <a 
+            href="#class-responsive" 
+            title="Classes with a Responsive Naming">
+            <i class="fa-solid fa-mobile-alt fa-fw"></i>
+        </a>
+        <a 
+            href="#class-states" 
+            title="Classes with a States Naming">
+            <i class="fa-solid fa-key fa-fw"></i>
+        </a>
+        <a 
+            href="#class-home" 
             title="Class Home">
-            <i class="fas fa-chevron-circle-up fa-lg fa-fw"></i>
+            <i class="fa-solid fa-chevron-circle-up fa-fw"></i>
         </a>
     </nav>
 
-    <i class="fas fa-chevron-down fa-2x mar-top-md"
+    <i 
+        class="fa-solid fa-chevron-down fa-2x mar-top-md"
         aria-hidden="true">
     </i>
 
     <section id="class-list">
         <h3>
-        <i class="fas fa-list"></i> 
+        <i class="fa-solid fa-list"></i> 
             Class List
         </h3>
 
@@ -65,7 +87,8 @@
             {% for category in classes|keys %}
 
             <li>
-                <a class="btn-primary"
+                <a 
+                    class="btn-primary"
                     href="#class-{{ category }}" 
                     title="Go to {{ category }} Classes !">
                 {{ category }}
@@ -76,7 +99,8 @@
 
         </ul>
 
-        <i class="fas fa-sort fa-2x mar-top-lg"
+        <i 
+            class="fa-solid fa-sort fa-2x mar-top-lg"
             aria-hidden="true">
         </i>
 
@@ -84,11 +108,7 @@
 
         <section id="class-{{ category }}">
             <h4>
-                <a class="button-primary btn-lg"
-                    href="https://github.com/philippebeck/animadio/tree/master/src/classes/_{{ category }}.scss"
-                    title="Go to the {{ category }} file in the GitHub Repository">
-                    {{ category|title }} 
-                </a>
+                {{ category|title }} 
             </h4>
 
             <table class="table">
@@ -114,21 +134,24 @@
                         <td>
 
                         {% if class.media == 1 %}
-                            <a href="#class-responsive"
+                            <a 
+                                href="#class-responsive"
                                 title="Class with Special Naming for Responsive">
-                                <i class="fas fa-mobile-alt"></i>
+                                <i class="fa-solid fa-mobile-alt"></i>
                             </a>
                         {% endif %}
 
                         {% if class.concat == 1 %}
-                            <a href="#class-concat"
+                            <a 
+                                href="#class-concat"
                                 title="Concatenable Class">
-                                <i class="fas fa-link"></i>
+                                <i class="fa-solid fa-link"></i>
                             </a>
                         {% endif %}
 
                         {% if class.state != "no" %}
-                            <a href="#class-states"
+                            <a 
+                                href="#class-states"
                                 title="Class with Special Naming for States">
                                 {{ class.state }}
                             </a>
@@ -149,14 +172,16 @@
         {% endfor %}
     </section>
 
-    <i class="fas fa-minus fa-2x mar-top-lg"
+    <i 
+        class="fa-solid fa-minus fa-2x mar-top-lg"
         aria-hidden="true">
     </i>
 
-    <section id="class-responsive"
+    <section 
+        id="class-responsive"
         class="container-90sm-80md-70lg-60xl-50wd">
         <h3>
-            <i class="fas fa-mobile-alt"></i> 
+            <i class="fa-solid fa-mobile-alt"></i> 
             Special Naming for Responsive
         </h3>
 
@@ -165,7 +190,8 @@
                 3 Class Families
             </b> 
             in the 
-            <a class="button-primary"
+            <a 
+                class="button-primary"
                 href="#class-list"
                 title="Watch the Class List">
                 Class List
@@ -176,7 +202,8 @@
                 Special Naming
             </b> 
             for
-            <a class="button-primary"
+            <a 
+                class="button-primary"
                 href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries"
                 title="Watch the Web Docs of MDN about Media Queries">
                 Media Queries
@@ -185,21 +212,24 @@
 
         <ul class="row">
             <li>
-                <a class="btn-secondary"
+                <a 
+                    class="btn-secondary"
                     href="#class-init"
                     title="Watch the Init Classes">
                     Init
                 </a>
             </li>
             <li>
-                <a class="btn-secondary"
+                <a 
+                    class="btn-secondary"
                     href="#class-display"
                     title="Watch the Display Classes">
                     Display
                 </a>
             </li>
             <li>
-                <a class="btn-secondary"
+                <a 
+                    class="btn-secondary"
                     href="#class-position"
                     title="Watch the Position Classes">
                     Position
@@ -207,13 +237,14 @@
             </li>
         </ul>
 
-        <i class="fas fa-ellipsis-h"
+        <i 
+            class="fa-solid fa-ellipsis-h"
             aria-hidden="true">
         </i>
     
         <p>
             Those in these 3 Families with
-            <i class="fas fa-mobile-alt fa-lg color-primary"></i>
+            <i class="fa-solid fa-mobile-alt fa-lg color-primary"></i>
             <br>
             have Different Names for each 
             <br>
@@ -236,7 +267,8 @@
             </li>
         </ul>
 
-        <i class="fas fa-ellipsis-h mar-top-md"
+        <i 
+            class="fa-solid fa-ellipsis-h mar-top-md"
             aria-hidden="true">
         </i>
     
@@ -247,7 +279,7 @@
             (clic the 
             <b class="color-primary">
                 Responsive Tab
-                <i class="fas fa-mobile-alt"></i>
+                <i class="fa-solid fa-mobile-alt"></i>
             </b>
             for Responsive Key List)
         </p>
@@ -268,113 +300,16 @@
         </ul>
     </section>
 
-    <i class="fas fa-minus fa-2x mar-top-lg"
+    <i 
+        class="fa-solid fa-minus fa-2x mar-top-lg"
         aria-hidden="true">
     </i>
 
-    <section id="class-concat"
+    <section 
+        id="class-states"
         class="container-90sm-80md-70lg-60xl-50wd">
         <h3>
-            <i class="fas fa-link"></i>
-            Concatenable Classes
-        </h3>
-
-        <p>
-            <b class="color-primary">
-                3 Class Families
-            </b> 
-            in the 
-            <a class="button-primary"
-                href="#class-list"
-                title="Watch the Class List">
-                Class List
-            </a> 
-            <br>
-            can be 
-            <b class="color-primary">
-                Concatenated
-            </b> 
-        </p>
-
-        <ul class="row">
-            <li>
-                <a class="btn-secondary"
-                    href="#class-init"
-                    title="Watch the Init Classes">
-                    Init
-                </a>
-            </li>
-            <li>
-                <a class="btn-secondary"
-                    href="#class-display"
-                    title="Watch the Display Classes">
-                    Display
-                </a>
-            </li>
-            <li>
-                <a class="btn-secondary"
-                    href="#class-anima"
-                    title="Watch the Anima Classes">
-                    Anima
-                </a>
-            </li>
-        </ul>
-
-        <i class="fas fa-ellipsis-h"
-            aria-hidden="true">
-        </i>
-    
-        <p>
-            Those in these 3 Families with
-            <i class="fas fa-link fa-lg color-primary"></i>
-            <br>
-            could Concatenate other Media or Options
-        </p>
-
-        <ul class="flex placo-evenly">
-            <li>
-                <code>.container-90tn</code>
-            </li>
-            <li>
-                <code>.grid-2tn</code>
-            </li>
-            <li>
-                <code>.anima-grow-this</code>
-            </li>
-        </ul>
-
-        <i class="fas fa-ellipsis-h mar-top-md"
-            aria-hidden="true">
-        </i>
-    
-        <p>
-            You just have to add the necessary
-            <br>
-            <b class="color-primary">Options</b> 
-            like this
-        </p>
-
-        <ul class="flex placo-evenly">
-            <li>
-                <code>.container-70xl-80md-90tn</code>
-            </li>
-            <li>
-                <code>.grid-2tn-3md-4xl</code>
-            </li>
-            <li>
-                <code>.anima-grow-loop-altrev-this</code>
-            </li>
-        </ul>
-    </section>
-
-    <i class="fas fa-minus fa-2x mar-top-lg"
-        aria-hidden="true">
-    </i>
-
-    <section id="class-states"
-        class="container-90sm-80md-70lg-60xl-50wd">
-        <h3>
-            <i class="fas fa-key"></i>
+            <i class="fa-solid fa-key"></i>
             Special Naming for States
         </h3>
 
@@ -399,35 +334,40 @@
 
                 <ul>
                     <li>
-                        <a class="btn-secondary"
+                        <a 
+                            class="btn-secondary"
                             href="#class-display"
                             title="Watch the Display Classes">
                             Display
                         </a>
                     </li>
                     <li>
-                        <a class="btn-secondary"
+                        <a 
+                            class="btn-secondary"
                             href="#class-position"
                             title="Watch the Position Classes">
                             Position
                         </a>
                     </li>
                     <li>
-                        <a class="btn-secondary"
+                        <a 
+                            class="btn-secondary"
                             href="#class-box"
                             title="Watch the Box Classes">
                             Box
                         </a>
                     </li>
                     <li>
-                        <a class="btn-secondary"
+                        <a 
+                            class="btn-secondary"
                             href="#class-font"
                             title="Watch the Font Classes">
                             Font
                         </a>
                     </li>
                     <li>
-                        <a class="btn-secondary"
+                        <a 
+                            class="btn-secondary"
                             href="#class-color"
                             title="Watch the Color Classes">
                             Color
@@ -439,7 +379,8 @@
                 <b class="deco color-primary trans-up">
                     Anima
                 </b>
-                <a class="btn-secondary"
+                <a 
+                    class="btn-secondary"
                     href="#class-anima"
                     title="Watch the Anima Classes">
                     Anima
@@ -447,7 +388,8 @@
             </li>
         </ul>
 
-        <i class="fas fa-sort fa-lg mar-top-lg"
+        <i 
+            class="fa-solid fa-sort fa-lg mar-top-lg"
             aria-hidden="true">
         </i>
 
@@ -458,7 +400,8 @@
 
             <p>
                 Those in the 
-                <a class="button-primary"
+                <a 
+                    class="button-primary"
                     href="#class-list"
                     title="Watch the Class List">
                     Class List
@@ -492,7 +435,8 @@
                 </li>
             </ul>
 
-            <i class="fas fa-ellipsis-h mar-top-md"
+            <i 
+                class="fa-solid fa-ellipsis-h mar-top-md"
                 aria-hidden="true">
             </i>
             
@@ -528,7 +472,8 @@
                 </li>
             </ul>
 
-            <i class="fas fa-ellipsis-h mar-md"
+            <i 
+                class="fa-solid fa-ellipsis-h mar-md"
                 aria-hidden="true">
             </i>
 
@@ -538,25 +483,25 @@
                 <thead>
                     <tr class="bg-primary-dark">
                         <th title="Keyword">
-                            <i class="fas fa-key"></i> 
+                            <i class="fa-solid fa-key"></i> 
                             <span class="hide block-md">
                                 Keyword
                             </span>
                         </th>
                         <th title="Trigger">
-                            <i class="fas fa-toggle-on"></i>
+                            <i class="fa-solid fa-toggle-on"></i>
                             <span class="hide block-md">
                                 Trigger
                             </span>
                         </th>
                         <th title="Relay">
-                            <i class="fas fa-map-signs"></i>
+                            <i class="fa-solid fa-map-signs"></i>
                             <span class="hide block-md">
                                 Relay
                             </span>
                         </th>
                         <th title="Target">
-                            <i class="fas fa-bullseye"></i>
+                            <i class="fa-solid fa-bullseye"></i>
                             <span class="hide block-md">
                                 Target
                             </span>
@@ -591,7 +536,8 @@
             </table>
         </section>
 
-        <i class="fas fa-sort fa-2x mar-md"
+        <i 
+            class="fa-solid fa-sort fa-2x mar-md"
             aria-hidden="true">
         </i>
 
@@ -602,7 +548,8 @@
 
             <p>
                 The 
-                <a class="button-primary"
+                <a 
+                    class="button-primary"
                     href="#class-anima"
                     title="Watch Anima Classes">
                     Anima Classes
@@ -625,7 +572,8 @@
                 </li>
             </ul>
 
-            <i class="fas fa-ellipsis-h mar-top-md"
+            <i 
+                class="fa-solid fa-ellipsis-h mar-top-md"
                 aria-hidden="true">
             </i>
             
@@ -659,7 +607,8 @@
                 </li>
             </ul>
 
-            <i class="fas fa-ellipsis-h mar-md"
+            <i 
+                class="fa-solid fa-ellipsis-h mar-md"
                 aria-hidden="true">
             </i>
 
@@ -669,25 +618,25 @@
                 <thead>
                     <tr class="bg-primary-dark">
                         <th title="Keyword">
-                            <i class="fas fa-key"></i> 
+                            <i class="fa-solid fa-key"></i> 
                             <span class="hide block-md">
                                 Keyword
                             </span>
                         </th>
                         <th title="Trigger">
-                            <i class="fas fa-toggle-on"></i>
+                            <i class="fa-solid fa-toggle-on"></i>
                             <span class="hide block-md">
                                 Trigger
                             </span>
                         </th>
                         <th title="Relay">
-                            <i class="fas fa-map-signs"></i>
+                            <i class="fa-solid fa-map-signs"></i>
                             <span class="hide block-md">
                                 Relay
                             </span>
                         </th>
                         <th title="Target">
-                            <i class="fas fa-bullseye"></i>
+                            <i class="fa-solid fa-bullseye"></i>
                             <span class="hide block-md">
                                 Target
                             </span>
