@@ -30,7 +30,6 @@ class AdminController extends MainController
         $variables      = ModelFactory::getModel("Variable")->listVariablesWithCategory();
         $animations     = ModelFactory::getModel("Animation")->listAnimationsWithCategory();
         $breakpoints    = ModelFactory::getModel("Breakpoint")->listData();
-        $themes         = ModelFactory::getModel("Theme")->listData();
         $users          = ModelFactory::getModel("User")->listData();
 
         return $this->render("back/admin.twig", [
@@ -38,7 +37,6 @@ class AdminController extends MainController
             "variables"     => $variables,
             "animations"    => $animations,
             "breakpoints"   => $breakpoints,
-            "themes"        => $themes,
             "users"         => $users
         ]);
     }
