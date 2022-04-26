@@ -45,6 +45,20 @@
             title="Hide Sidebar">
             <i class="fa-regular fa-eye-slash fa-fw"></i>
         </label>
+        <a 
+            href="#class-responsive" 
+            title="Classes with a Responsive Naming">
+            <i class="fa-solid fa-mobile-alt fa-fw"></i>
+        </a>
+        <a href="#class-concat" 
+            title="Concatenable Classes">
+            <i class="fa-solid fa-link fa-fw"></i>
+        </a>
+        <a 
+            href="#class-states" 
+            title="Classes with a States Naming">
+            <i class="fa-solid fa-key fa-fw"></i>
+        </a>
 
         {% for category in classes|keys %}
         <a 
@@ -55,16 +69,6 @@
         {% endfor %}
 
         <a 
-            href="#class-responsive" 
-            title="Classes with a Responsive Naming">
-            <i class="fa-solid fa-mobile-alt fa-fw"></i>
-        </a>
-        <a 
-            href="#class-states" 
-            title="Classes with a States Naming">
-            <i class="fa-solid fa-key fa-fw"></i>
-        </a>
-        <a 
             href="#class-home" 
             title="Class Home">
             <i class="fa-solid fa-chevron-circle-up fa-fw"></i>
@@ -73,6 +77,666 @@
 
     <i 
         class="fa-solid fa-chevron-down fa-2x mar-top-md"
+        aria-hidden="true">
+    </i>
+
+
+    <section 
+        id="class-responsive"
+        class="container-90sm-80md-70lg-60xl-50wd">
+        <h3>
+            <i class="fa-solid fa-mobile-alt"></i> 
+            Special Naming for Responsive
+        </h3>
+
+        <p>
+            <b class="color-primary">
+                6 Class Families
+            </b> 
+            in the 
+            <a 
+                class="button-primary"
+                href="#class-list"
+                title="Watch the Class List">
+                Class List
+            </a> 
+            <br>
+            have a 
+            <b class="color-primary">
+                Special Naming
+            </b> 
+            for
+            <a 
+                class="button-primary"
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries"
+                title="Watch the Web Docs of MDN about Media Queries">
+                Media Queries
+            </a>
+        </p>
+
+        <ul class="flex">
+            <li>
+                <a 
+                    class="btn-secondary"
+                    href="#class-display"
+                    title="Watch the Display Classes">
+                    Display
+                </a>
+            </li>
+            <li>
+                <a 
+                    class="btn-secondary"
+                    href="#class-grid"
+                    title="Watch the Grid Classes">
+                    Grid
+                </a>
+            </li>
+            <li>
+                <a 
+                    class="btn-secondary"
+                    href="#class-gap"
+                    title="Watch the Gap Classes">
+                    Gap
+                </a>
+            </li>
+            <li>
+                <a 
+                    class="btn-secondary"
+                    href="#class-place"
+                    title="Watch the Place Classes">
+                    Place
+                </a>
+            </li>
+            <li>
+                <a 
+                    class="btn-secondary"
+                    href="#class-position"
+                    title="Watch the Position Classes">
+                    Position
+                </a>
+            </li>
+            <li>
+                <a 
+                    class="btn-secondary"
+                    href="#class-container"
+                    title="Watch the Container Classes">
+                    Container
+                </a>
+            </li>
+        </ul>
+
+        <i 
+            class="fa-solid fa-ellipsis-h"
+            aria-hidden="true">
+        </i>
+    
+        <p>
+            Those in these 6 Families with
+            <i class="fa-solid fa-mobile-alt fa-lg color-primary"></i>
+            <br>
+            have Different Names for each 
+            <br>
+            <b class="color-primary">Media Query</b>, 
+            watch examples here :
+        </p>
+
+        <ul>
+            <li>
+                <code>.hide</code>
+            </li>
+            <li>
+                <code>.grid</code>
+            </li>
+            <li>
+                <code>.absolute</code>
+            </li>
+        </ul>
+
+        <i 
+            class="fa-solid fa-ellipsis-h mar-top-md"
+            aria-hidden="true">
+        </i>
+    
+        <p>
+            You need to add or change the  
+            <b class="color-primary">Media Key</b> 
+            <br>
+            (clic the 
+            <b class="color-primary">
+                Responsive Tab
+                <i class="fa-solid fa-mobile-alt"></i>
+            </b>
+            for Responsive Key List)
+        </p>
+
+        <ul>
+            <li>
+                <code>.hide-md</code>
+            </li>
+            <li>
+                <code>.grid-2md</code>
+            </li>
+            <li>
+                <code>.absolute-md</code>
+            </li>
+        </ul>
+    </section>
+
+    <i 
+        class="fa-solid fa-minus fa-2x mar-top-lg"
+        aria-hidden="true">
+    </i>
+
+    <section id="class-concat"
+        class="container-90sm-80md-70lg-60xl-50wd">
+        <h3>
+            <i class="fas fa-link"></i>
+            Concatenable Classes
+        </h3>
+
+        <p>
+            <b class="color-primary">
+                4 Class Families
+            </b> 
+            in the 
+            <a class="button-primary"
+                href="#class-list"
+                title="Watch the Class List">
+                Class List
+            </a> 
+            <br>
+            can be 
+            <b class="color-primary">
+                Concatenated
+            </b> 
+        </p>
+
+        <ul class="row">
+            <li>
+                <a class="btn-secondary"
+                    href="#class-grid"
+                    title="Watch the Grid Classes">
+                    Grid
+                </a>
+            </li>
+            <li>
+                <a class="btn-secondary"
+                    href="#class-gap"
+                    title="Watch the Gap Classes">
+                    Gap
+                </a>
+            </li>
+            <li>
+                <a class="btn-secondary"
+                    href="#class-container"
+                    title="Watch the Container Classes">
+                    Container
+                </a>
+            </li>
+            <li>
+                <a class="btn-secondary"
+                    href="#class-anima"
+                    title="Watch the Anima Classes">
+                    Anima
+                </a>
+            </li>
+        </ul>
+
+        <i class="fas fa-ellipsis-h"
+            aria-hidden="true">
+        </i>
+    
+        <p>
+            Those in these 4 Families with
+            <i class="fas fa-link fa-lg color-primary"></i>
+            <br>
+            could Concatenate other Media or Options
+        </p>
+
+        <ul>
+            <li>
+                <code>.grid-2tn</code>
+            </li>
+            <li>
+                <code>.gap-2md</code>
+            </li>
+            <li>
+                <code>.container-90tn</code>
+            </li>
+            <li>
+                <code>.anima-grow-this</code>
+            </li>
+        </ul>
+
+        <i class="fas fa-ellipsis-h mar-top-md"
+            aria-hidden="true">
+        </i>
+    
+        <p>
+            You just have to add the necessary
+            <br>
+            <b class="color-primary">Options</b> 
+            like this
+        </p>
+
+        <ul>
+            <li>
+                <code>.grid-2tn-3md-4xl</code>
+            </li>
+            <li>
+                <code>.gap-2tn-3sm-4md</code>
+            </li>
+            <li>
+                <code>.container-70xl-80md-90tn</code>
+            </li>
+            <li>
+                <code>.anima-grow-loop-altrev-this</code>
+            </li>
+        </ul>
+    </section>
+
+    <i class="fas fa-minus fa-2x mar-top-lg"
+        aria-hidden="true">
+    </i>
+
+    <section 
+        id="class-states"
+        class="container-90sm-80md-70lg-60xl-50wd">
+        <h3>
+            <i class="fa-solid fa-key"></i>
+            Special Naming for States
+        </h3>
+
+        <p>
+            Some Animadio Classes use 
+            <b class="color-primary">
+                Advanced Selector
+            </b>
+            or
+            <b class="color-primary">
+                Pseudo-classes
+            </b>
+        </p>
+        <p>
+            <b class="color-primary">
+                2 States Families
+            </b>
+            about that are available :
+        </p>
+
+        <ul class="flex placo-evenly plait-base">
+            <li class="col">
+                <b class="deco color-primary trans-up">
+                    Global
+                </b> 
+
+                <ul>
+                    <li>
+                        <a 
+                            class="btn-secondary"
+                            href="#class-display"
+                            title="Watch the Display Classes">
+                            Display
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            class="btn-secondary"
+                            href="#class-position"
+                            title="Watch the Position Classes">
+                            Position
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            class="btn-secondary"
+                            href="#class-margin"
+                            title="Watch the Margin Classes">
+                            Margin
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            class="btn-secondary"
+                            href="#class-padding"
+                            title="Watch the Padding Classes">
+                            Padding
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            class="btn-secondary"
+                            href="#class-height"
+                            title="Watch the Height Classes">
+                            Height
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            class="btn-secondary"
+                            href="#class-width"
+                            title="Watch the Width Classes">
+                            Width
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            class="btn-secondary"
+                            href="#class-cursor"
+                            title="Watch the Cursor Classes">
+                            Cursor
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="col">
+                <b class="deco color-primary trans-up">
+                    Helpers
+                </b>
+
+                <ul>
+                    <li>
+                        <a 
+                            class="btn-secondary"
+                            href="#class-border"
+                            title="Watch the Border Classes">
+                            Border
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            class="btn-secondary"
+                            href="#class-font"
+                            title="Watch the Font Classes">
+                            Font
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            class="btn-secondary"
+                            href="#class-text"
+                            title="Watch the Text Classes">
+                            Text
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            class="btn-secondary"
+                            href="#class-color"
+                            title="Watch the Color Classes">
+                            Color
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            class="btn-secondary"
+                            href="#class-shadow"
+                            title="Watch the Shadow Classes">
+                            Shadow
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            class="btn-secondary"
+                            href="#class-anima"
+                            title="Watch the Anima Classes">
+                            Anima
+                        </a> 
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <i 
+            class="fa-solid fa-sort fa-lg mar-top-lg"
+            aria-hidden="true">
+        </i>
+
+        <section>
+            <h4>
+                Global Keyword
+            </h4>
+
+            <p>
+                Those in the 
+                <a 
+                    class="button-primary"
+                    href="#class-list"
+                    title="Watch the Class List">
+                    Class List
+                </a> 
+                with
+                <b class="color-red">
+                    global
+                </b>
+                <br>
+                can use the
+                <b class="color-primary">
+                    Global Keyword
+                </b>
+            </p>
+
+            <ul>
+                <li>
+                    <code>.hide</code>
+                </li>
+                <li>
+                    <code>.absolute</code>
+                </li>
+                <li>
+                    <code>.mar-md</code>
+                </li>
+            </ul>
+
+            <i class="fas fa-ellipsis-h mar-top-md"
+                aria-hidden="true">
+            </i>
+        
+            <p>
+                You just have to add the necessary
+                <br>
+                <b class="color-primary">Global</b> 
+                keyword like this
+            </p>
+
+            <ul>
+                <li>
+                    <code>.hide-global</code>
+                </li>
+                <li>
+                    <code>.absolute-global</code>
+                </li>
+                <li>
+                    <code>.mar-md-global</code>
+                </li>
+            </ul>
+
+            <i 
+                class="fa-solid fa-ellipsis-h mar-md"
+                aria-hidden="true">
+            </i>
+
+            <table class="table">
+                <caption>Global Keyword</caption>
+
+                <thead>
+                    <tr class="bg-primary-dark">
+                        <th title="Keyword">
+                            <i class="fa-solid fa-key"></i> 
+                            <span class="hide block-md">
+                                Keyword
+                            </span>
+                        </th>
+                        <th title="Trigger">
+                            <i class="fa-solid fa-toggle-on"></i>
+                            <span class="hide block-md">
+                                Trigger
+                            </span>
+                        </th>
+                        <th title="Target">
+                            <i class="fa-solid fa-bullseye"></i>
+                            <span class="hide block-md">
+                                Target
+                            </span>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>&empty;</td>
+                        <td>.class</td>
+                        <td>.class</td>
+                    </tr>
+                    <tr>
+                        <td>global</td>
+                        <td>.global</td>
+                        <td>Children of .global</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <i 
+            class="fa-solid fa-sort fa-2x mar-md"
+            aria-hidden="true">
+        </i>
+
+        <section>
+            <h4>
+                Helpers Keywords
+            </h4>
+
+            <p>
+            <p>
+                Those in the 
+                <a 
+                    class="button-primary"
+                    href="#class-list"
+                    title="Watch the Class List">
+                    Class List
+                </a> 
+                with
+                <b class="color-red">
+                    helpers
+                </b>
+                <br>
+                can use the
+                <b class="color-primary">
+                    Helpers Keywords
+                </b>
+            </p>
+
+            <ul>
+                <li>
+                    <code>.bord-dash</code>
+                </li>
+                <li>
+                    <code>.font-bold</code>
+                </li>
+                <li>
+                    <code>.deco-over</code>
+                </li>
+                <li>
+                    <code>.blue</code>
+                </li>
+            </ul>
+
+            <i class="fas fa-ellipsis-h mar-top-md"
+                aria-hidden="true">
+            </i>
+        
+            <p>
+                You just have to add the necessary
+                <br>
+                <b class="color-primary">Helpers</b> 
+                keyword like this
+            </p>
+
+            <ul>
+                <li>
+                    <code>.bord-dash-into</code>
+                </li>
+                <li>
+                    <code>.font-bold-toall</code>
+                </li>
+                <li>
+                    <code>.deco-over-onto</code>
+                </li>
+                <li>
+                    <code>.blue-toone</code>
+                </li>
+            </ul>
+
+            <i 
+                class="fa-solid fa-ellipsis-h mar-md"
+                aria-hidden="true">
+            </i>
+
+            <table class="table">
+                <caption>Helpers Keywords</caption>
+
+                <thead>
+                    <tr class="bg-primary-dark">
+                        <th title="Keyword">
+                            <i class="fa-solid fa-key"></i> 
+                            <span class="hide block-md">
+                                Keyword
+                            </span>
+                        </th>
+                        <th title="Trigger">
+                            <i class="fa-solid fa-toggle-on"></i>
+                            <span class="hide block-md">
+                                Trigger
+                            </span>
+                        </th>
+                        <th title="Target">
+                            <i class="fa-solid fa-bullseye"></i>
+                            <span class="hide block-md">
+                                Target
+                            </span>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>&empty;</td>
+                        <td>.class</td>
+                        <td>.class</td>
+                    </tr>
+                    <tr>
+                        <td>global</td>
+                        <td>.global</td>
+                        <td>Children of .global</td>
+                    </tr>
+                    <tr>
+                        <td>onto</td>
+                        <td>Hover | Focus .onto</td>
+                        <td>.onto</td>
+                    </tr>
+                    <tr>
+                        <td>into</td>
+                        <td>Hover | Focus parent of .into</td>
+                        <td>.into</td>
+                    </tr>
+                    <tr>
+                        <td>toall</td>
+                        <td>Hover | Focus .toall</td>
+                        <td>Children of .toall</td>
+                    </tr>
+                    <tr>
+                        <td>toone</td>
+                        <td>Hover | Focus child of .toone</td>
+                        <td>Each child of .toone</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+
+    <i 
+        class="fa-solid fa-minus fa-2x mar-top-lg"
         aria-hidden="true">
     </i>
 
@@ -170,546 +834,5 @@
         </section>
 
         {% endfor %}
-    </section>
-
-    <i 
-        class="fa-solid fa-minus fa-2x mar-top-lg"
-        aria-hidden="true">
-    </i>
-
-    <section 
-        id="class-responsive"
-        class="container-90sm-80md-70lg-60xl-50wd">
-        <h3>
-            <i class="fa-solid fa-mobile-alt"></i> 
-            Special Naming for Responsive
-        </h3>
-
-        <p>
-            <b class="color-primary">
-                3 Class Families
-            </b> 
-            in the 
-            <a 
-                class="button-primary"
-                href="#class-list"
-                title="Watch the Class List">
-                Class List
-            </a> 
-            <br>
-            have a 
-            <b class="color-primary">
-                Special Naming
-            </b> 
-            for
-            <a 
-                class="button-primary"
-                href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries"
-                title="Watch the Web Docs of MDN about Media Queries">
-                Media Queries
-            </a>
-        </p>
-
-        <ul class="row">
-            <li>
-                <a 
-                    class="btn-secondary"
-                    href="#class-init"
-                    title="Watch the Init Classes">
-                    Init
-                </a>
-            </li>
-            <li>
-                <a 
-                    class="btn-secondary"
-                    href="#class-display"
-                    title="Watch the Display Classes">
-                    Display
-                </a>
-            </li>
-            <li>
-                <a 
-                    class="btn-secondary"
-                    href="#class-position"
-                    title="Watch the Position Classes">
-                    Position
-                </a>
-            </li>
-        </ul>
-
-        <i 
-            class="fa-solid fa-ellipsis-h"
-            aria-hidden="true">
-        </i>
-    
-        <p>
-            Those in these 3 Families with
-            <i class="fa-solid fa-mobile-alt fa-lg color-primary"></i>
-            <br>
-            have Different Names for each 
-            <br>
-            <b class="color-primary">Media Query</b>, 
-            watch examples here :
-        </p>
-
-        <ul class="flex placo-evenly">
-            <li>
-                <code>.container-50tn</code>
-            </li>
-            <li>
-                <code>.hide</code>
-            </li>
-            <li>
-                <code>.grid-2tn</code>
-            </li>
-            <li>
-                <code>.absolute</code>
-            </li>
-        </ul>
-
-        <i 
-            class="fa-solid fa-ellipsis-h mar-top-md"
-            aria-hidden="true">
-        </i>
-    
-        <p>
-            You need to add or change the  
-            <b class="color-primary">Media Key</b> 
-            <br>
-            (clic the 
-            <b class="color-primary">
-                Responsive Tab
-                <i class="fa-solid fa-mobile-alt"></i>
-            </b>
-            for Responsive Key List)
-        </p>
-
-        <ul class="flex placo-evenly">
-            <li>
-                <code>.container-50md</code>
-            </li>
-            <li>
-                <code>.hide-md</code>
-            </li>
-            <li>
-                <code>.grid-2md</code>
-            </li>
-            <li>
-                <code>.absolute-md</code>
-            </li>
-        </ul>
-    </section>
-
-    <i 
-        class="fa-solid fa-minus fa-2x mar-top-lg"
-        aria-hidden="true">
-    </i>
-
-    <section 
-        id="class-states"
-        class="container-90sm-80md-70lg-60xl-50wd">
-        <h3>
-            <i class="fa-solid fa-key"></i>
-            Special Naming for States
-        </h3>
-
-        <p>
-            Some Animadio Classes use 
-            <b class="color-primary">
-                Pseudo-classes
-            </b>
-        </p>
-        <p>
-            <b class="color-primary">
-                2 States Families
-            </b>
-            about that are available :
-        </p>
-
-        <ul class="row placo-evenly plait-base">
-            <li class="col">
-                <b class="deco color-primary trans-up">
-                    Helpers
-                </b> 
-
-                <ul>
-                    <li>
-                        <a 
-                            class="btn-secondary"
-                            href="#class-display"
-                            title="Watch the Display Classes">
-                            Display
-                        </a>
-                    </li>
-                    <li>
-                        <a 
-                            class="btn-secondary"
-                            href="#class-position"
-                            title="Watch the Position Classes">
-                            Position
-                        </a>
-                    </li>
-                    <li>
-                        <a 
-                            class="btn-secondary"
-                            href="#class-box"
-                            title="Watch the Box Classes">
-                            Box
-                        </a>
-                    </li>
-                    <li>
-                        <a 
-                            class="btn-secondary"
-                            href="#class-font"
-                            title="Watch the Font Classes">
-                            Font
-                        </a>
-                    </li>
-                    <li>
-                        <a 
-                            class="btn-secondary"
-                            href="#class-color"
-                            title="Watch the Color Classes">
-                            Color
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="col">
-                <b class="deco color-primary trans-up">
-                    Anima
-                </b>
-                <a 
-                    class="btn-secondary"
-                    href="#class-anima"
-                    title="Watch the Anima Classes">
-                    Anima
-                </a> 
-            </li>
-        </ul>
-
-        <i 
-            class="fa-solid fa-sort fa-lg mar-top-lg"
-            aria-hidden="true">
-        </i>
-
-        <section>
-            <h4>
-                Helpers Keywords
-            </h4>
-
-            <p>
-                Those in the 
-                <a 
-                    class="button-primary"
-                    href="#class-list"
-                    title="Watch the Class List">
-                    Class List
-                </a> 
-                with
-                <b class="color-primary">
-                    helpers
-                </b>
-                <br>
-                can use the
-                <b class="color-primary">
-                    Helpers Keywords
-                </b>
-            </p>
-
-            <ul class="flex placo-evenly">
-                <li>
-                    <code>.hide</code>
-                </li>
-                <li>
-                    <code>.absolute</code>
-                </li>
-                <li>
-                    <code>.bord</code>
-                </li>
-                <li>
-                    <code>.font-bold</code>
-                </li>
-                <li>
-                    <code>.color-blue</code>
-                </li>
-            </ul>
-
-            <i 
-                class="fa-solid fa-ellipsis-h mar-top-md"
-                aria-hidden="true">
-            </i>
-            
-            <p>
-                You need to add the
-                <b class="color-primary">
-                    Keyword
-                </b>
-                <br>
-                <b class="color-secondary deco">
-                    Before</b> 
-                the
-                <b class="color-primary">
-                    Helper Class
-                </b>
-            </p>
-
-            <ul class="flex placo-evenly">
-                <li>
-                    <code>.global-hide</code>
-                </li>
-                <li>
-                    <code>.global-absolute</code>
-                </li>
-                <li>
-                    <code>.onto-bord</code>
-                </li>
-                <li>
-                    <code>.onto-font-bold</code>
-                </li>
-                <li>
-                    <code>.onto-color-blue</code>
-                </li>
-            </ul>
-
-            <i 
-                class="fa-solid fa-ellipsis-h mar-md"
-                aria-hidden="true">
-            </i>
-
-            <table class="table">
-                <caption>Helpers Keywords</caption>
-
-                <thead>
-                    <tr class="bg-primary-dark">
-                        <th title="Keyword">
-                            <i class="fa-solid fa-key"></i> 
-                            <span class="hide block-md">
-                                Keyword
-                            </span>
-                        </th>
-                        <th title="Trigger">
-                            <i class="fa-solid fa-toggle-on"></i>
-                            <span class="hide block-md">
-                                Trigger
-                            </span>
-                        </th>
-                        <th title="Relay">
-                            <i class="fa-solid fa-map-signs"></i>
-                            <span class="hide block-md">
-                                Relay
-                            </span>
-                        </th>
-                        <th title="Target">
-                            <i class="fa-solid fa-bullseye"></i>
-                            <span class="hide block-md">
-                                Target
-                            </span>
-                        </th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>&empty;</td>
-                        <td>.class</td>
-                        <td rowspan="3">&empty;</td>
-                        <td>.class</td>
-                    </tr>
-                    <tr>
-                        <td>global</td>
-                        <td>.global</td>
-                        <td>Children of .global</td>
-                    </tr>
-                    <tr>
-                        <td>onto</td>
-                        <td>Hover | Focus .onto</td>
-                        <td>.onto</td>
-                    </tr>
-                    <tr>
-                        <td>check + hub + goal</td>
-                        <td>.check Checked</td>
-                        <td>.hub</td>
-                        <td>.goal</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <i 
-            class="fa-solid fa-sort fa-2x mar-md"
-            aria-hidden="true">
-        </i>
-
-        <section>
-            <h4>
-                Anima Keywords
-            </h4>
-
-            <p>
-                The 
-                <a 
-                    class="button-primary"
-                    href="#class-anima"
-                    title="Watch Anima Classes">
-                    Anima Classes
-                </a> 
-                use the
-                <b class="color-primary">
-                    Anima Keywords
-                </b>
-            </p>
-
-            <ul class="flex placo-evenly">
-                <li>
-                    <code>.anima-grow-this</code>
-                </li>
-                <li>
-                    <code>.anima-slideT-rev-this</code>
-                </li>
-                <li>
-                    <code>.anima-turn-loop-sm-this</code>
-                </li>
-            </ul>
-
-            <i 
-                class="fa-solid fa-ellipsis-h mar-top-md"
-                aria-hidden="true">
-            </i>
-            
-            <p>
-                You need to replace
-                <b class="color-primary">
-                    "this"
-                </b>
-                with the
-                <b class="color-primary">
-                    Keyword
-                </b>
-                <br>
-                <b class="color-secondary deco">
-                    After</b> 
-                the
-                <b class="color-primary">
-                    Anima Classes
-                </b>
-            </p>
-
-            <ul class="flex placo-evenly">
-                <li>
-                    <code>.anima-grow-into</code>
-                </li>
-                <li>
-                    <code>.anima-slideT-rev-toall</code>
-                </li>
-                <li>
-                    <code>.anima-turn-loop-sm-toone</code>
-                </li>
-            </ul>
-
-            <i 
-                class="fa-solid fa-ellipsis-h mar-md"
-                aria-hidden="true">
-            </i>
-
-            <table class="table">
-                <caption>Anima Keywords</caption>
-
-                <thead>
-                    <tr class="bg-primary-dark">
-                        <th title="Keyword">
-                            <i class="fa-solid fa-key"></i> 
-                            <span class="hide block-md">
-                                Keyword
-                            </span>
-                        </th>
-                        <th title="Trigger">
-                            <i class="fa-solid fa-toggle-on"></i>
-                            <span class="hide block-md">
-                                Trigger
-                            </span>
-                        </th>
-                        <th title="Relay">
-                            <i class="fa-solid fa-map-signs"></i>
-                            <span class="hide block-md">
-                                Relay
-                            </span>
-                        </th>
-                        <th title="Target">
-                            <i class="fa-solid fa-bullseye"></i>
-                            <span class="hide block-md">
-                                Target
-                            </span>
-                        </th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>this</td>
-                        <td>.class</td>
-                        <td rowspan="6">&empty;</td>
-                        <td>.class</td>
-                    </tr>
-                    <tr>
-                        <td>global</td>
-                        <td>.global</td>
-                        <td>Children of .global</td>
-                    </tr>
-                    <tr>
-                        <td>onto</td>
-                        <td>Hover | Focus .onto</td>
-                        <td>.onto</td>
-                    </tr>
-                    <tr>
-                        <td>into</td>
-                        <td>Hover | Focus parent of .into</td>
-                        <td>.into</td>
-                    </tr>
-                    <tr>
-                        <td>toall</td>
-                        <td>Hover | Focus .toall</td>
-                        <td>Children of .toall</td>
-                    </tr>
-                    <tr>
-                        <td>toone</td>
-                        <td>Hover | Focus child of .toone</td>
-                        <td>Each child of .toone</td>
-                    </tr>
-                    <tr>
-                        <td>check + hub + goal</td>
-                        <td>.check Checked</td>
-                        <td>.hub</td>
-                        <td>.goal</td>
-                    </tr>
-                    <tr>
-                        <td>radio1 + relay + target1</td>
-                        <td>.radio1 Checked</td>
-                        <td rowspan="5">.relay</td>
-                        <td>.target1</td>
-                    </tr>
-                    <tr>
-                        <td>radio2 + relay + target2</td>
-                        <td>.radio2 Checked</td>
-                        <td>.target2</td>
-                    </tr>
-                    <tr>
-                        <td>radio3 + relay + target3</td>
-                        <td>.radio3 Checked</td>
-                        <td>.target3</td>
-                    </tr>
-                    <tr>
-                        <td>radio4 + relay + target4</td>
-                        <td>.radio4 Checked</td>
-                        <td>.target4</td>
-                    </tr>
-                    <tr>
-                        <td>radio5 + relay + target5</td>
-                        <td>.radio5 Checked</td>
-                        <td>.target5</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
     </section>
 </article>
