@@ -20,7 +20,8 @@
   --head-hover-transform: none;
 }
 
-.sidebar {
+#class-home .sidebar,
+#variable-home .sidebar {
   --sidebar-child-padding: 0;
   --sidebar-child-margin: 2px;
 }
