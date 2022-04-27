@@ -55,13 +55,6 @@ CREATE TABLE `Class` (
     CONSTRAINT `class_state`    FOREIGN KEY (`state_id`)    REFERENCES `ClassState`(`id`)
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
-CREATE TABLE `Theme` (
-    `id`            TINYINT     UNSIGNED    PRIMARY KEY AUTO_INCREMENT,
-    `name`          VARCHAR(10) NOT NULL    UNIQUE,
-    `link`          VARCHAR(10) NOT NULL    UNIQUE,
-    `definition`    VARCHAR(50) NOT NULL    UNIQUE
-) ENGINE=INNODB DEFAULT CHARSET=UTF8;
-
 INSERT INTO `Breakpoint`
 (`media`, `width`) VALUES
 ('tn',  '0'),
@@ -678,13 +671,3 @@ INSERT INTO `Class`
 (18,    0,  0,  2,  'cursor-move'),
 (18,    0,  0,  2,  'cursor-none'),
 (18,    0,  0,  2,  'cursor-text');
-
-INSERT INTO `Theme`
-(`name`, `link`, `definition`) VALUES
-('Age',     'gOomVEB',   'A theme about our time'),
-('Anima',   'zYpZgRq',   'The Animadio theme'),
-('Astro',   'rNpyXRL',   'A dark theme like space'),
-('Magic',   'yLpMmwN',   'A theme with magic effect'),
-('Numeric', 'oNpZKVo',   'A monochrome theme'),
-('Spirit',  'wvpJVOO',   'A visual theme for the mind'),
-('Tool',    'zYpZgbo',   'A theme about mecanic');
