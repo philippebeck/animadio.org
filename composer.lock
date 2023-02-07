@@ -922,22 +922,22 @@
     "packages-dev": [
         {
             "name": "tracy/tracy",
-            "version": "v2.9.4",
+            "version": "v2.9.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tracy.git",
-                "reference": "0ed605329b095f5f5fe2db2adc3d1ee80c917294"
+                "reference": "80533f4bda19ce8138c0fc984743533e2a0e1c5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tracy/zipball/0ed605329b095f5f5fe2db2adc3d1ee80c917294",
-                "reference": "0ed605329b095f5f5fe2db2adc3d1ee80c917294",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/80533f4bda19ce8138c0fc984743533e2a0e1c5c",
+                "reference": "80533f4bda19ce8138c0fc984743533e2a0e1c5c",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-session": "*",
-                "php": ">=7.2 <8.2"
+                "php": ">=7.2 <8.3"
             },
             "conflict": {
                 "nette/di": "<3.0"
@@ -988,7 +988,11 @@
                 "nette",
                 "profiler"
             ],
-            "time": "2022-07-19T14:06:15+00:00"
+            "support": {
+                "issues": "https://github.com/nette/tracy/issues",
+                "source": "https://github.com/nette/tracy/tree/v2.9.6"
+            },
+            "time": "2023-02-06T15:31:40+00:00"
         }
     ],
     "aliases": [],
